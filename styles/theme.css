@@ -1,3 +1,6 @@
+/* CDN Fonts */
+@import url('https://fonts.cdnfonts.com/css/bruno-ace-2');
+
 /* Font Faces */
 @font-face {
   font-family: 'GyeonggiMillenniumBackground';
@@ -6,9 +9,18 @@
   font-display: swap;
 }
 
+@font-face {
+    font-family: 'Cafe24SurroundAir';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
 /* CSS Variables */
 :root {
   --font-ko-main: 'GyeonggiMillenniumBackground', sans-serif;
+  --font-ko-sub: 'Cafe24SurroundAir', sans-serif;
+  --font-en-main: 'Bruno Ace', sans-serif;
   --color-primary: #F5F5F5;
   --color-secondary: #706964;
 }
