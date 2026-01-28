@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../styles/header.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="고성 1박2일펜션" />
+  <meta property="og:description" content="동해바다와 함께 하는 1박2일 펜션입니다." />
+  
+  <meta property="og:url" content="https://1n2d.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="고성 1박2일펜션" />
+  <meta name="twitter:description" content="동해바다와 함께 하는 1박2일 펜션입니다." />
+  
+</head>
+<body>
+    <header id="main-header" class="fixed top-0 left-0 right-0 w-full bg-transparent border-0 z-40 transition-all duration-300">
+        <div class="flex items-center justify-between p-6 md:p-8">
+            <!-- Brand Logo -->
+            <div class="brand-logo">
+                <button id="pension-logo" class="hover:opacity-80 transition-opacity flex items-center gap-3">
+                    <div>
+                        <div class="logo-text hero-logo-text text-white text-xl md:text-2xl lg:text-3xl ko-title" data-property-name></div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Menu Button -->
+            <button id="hamburger-menu" 
+                    class="p-2 hover:bg-white/20 rounded-lg transition-colors duration-200"
+                    aria-label="메뉴">
+                <div class="w-6 h-6 flex flex-col justify-center items-center space-y-1">
+                    <div id="line1" class="w-5 h-0.5 bg-white drop-shadow-lg transition-all duration-300"></div>
+                    <div id="line2" class="w-5 h-0.5 bg-white drop-shadow-lg transition-all duration-300"></div>
+                    <div id="line3" class="w-5 h-0.5 bg-white drop-shadow-lg transition-all duration-300"></div>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <div id="fullscreen-menu-container"></div>
+</body>
+</html>

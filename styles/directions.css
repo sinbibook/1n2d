@@ -1,0 +1,96 @@
+/* Directions Page Specific Styles */
+
+/* 애니메이션 클래스들은 common.css로 이동됨 */
+
+/* Directions page specific styles */
+.directions-circular-image {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.directions-circular-image:hover {
+    transform: scale(1.05);
+}
+
+/* Directions page placeholder override for circular images */
+img.empty-image-placeholder.rounded-full {
+    border-radius: 50% !important;
+    border: 3px dashed #9ca3af !important;
+}
+
+img.empty-image-placeholder.rounded-full::before {
+    border-radius: 50% !important;
+}
+
+img.empty-image-placeholder.rounded-full::after {
+    /* 아이콘 표시용이므로 border-radius 불필요 */
+}
+
+/* Info cards hover effects */
+.info-card {
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* 이미지 영역 애니메이션 효과 */
+.floating-circle {
+    animation: floatingCircle 4s ease-in-out infinite;
+}
+
+@keyframes floatingCircle {
+    0%, 100% {
+        transform: translateY(0px) scale(1);
+    }
+    50% {
+        transform: translateY(-15px) scale(1.05);
+    }
+}
+
+.hover-scale {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* 페이지 로드 시 이미지 영역 전체 애니메이션 */
+.fade-in-scale.animate .floating-circle {
+    animation-delay: 0.5s;
+}
+
+/* 안내사항 섹션 스타일 */
+.directions-notice-section {
+    border-color: var(--brand-color-primary);
+}
+
+.directions-notice-icon {
+    color: var(--brand-color-primary);
+}
+
+.directions-notice-title {
+    color: var(--brand-color-primary);
+}
+
+.directions-notice-description {
+    color: var(--brand-color-primary);
+}
+
+/* 모바일에서 empty-image-placeholder min-height 제거 */
+@media (max-width: 768px) {
+    img.empty-image-placeholder {
+        min-height: auto !important;
+    }
+}
+
+/* 카카오맵 컨테이너 스타일 */
+#kakao-map {
+    width: 100%;
+    height: 100%;
+}

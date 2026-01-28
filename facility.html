@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-homepage-seo-title></title>
+    <meta name="description" content="" data-homepage-seo-description>
+    <meta name="keywords" content="" data-homepage-seo-keywords>
+    <link rel="icon" type="image/png" href="" data-homepage-favicon>
+
+    <script src="js/config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles/theme.css"/>
+    <link rel="stylesheet" href="styles/common.css"/>
+    <link rel="stylesheet" href="styles/facility.css"/>
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="고성 1박2일펜션 - 시설안내" />
+  <meta property="og:description" content="동해바다와 함께 하는 1박2일 펜션입니다." />
+  
+  <meta property="og:url" content="https://1n2d.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="고성 1박2일펜션 - 시설안내" />
+  <meta name="twitter:description" content="동해바다와 함께 하는 1박2일 펜션입니다." />
+  
+</head>
+<body>
+
+    <!-- Fullscreen Menu Container -->
+    <div id="fullscreen-menu-container"></div>
+
+    <div class="main-container" data-name="시설페이지">
+
+        <!-- Section 1: Hero with Background Image and Facility Name -->
+        <section id="section1" class="relative w-full overflow-hidden" style="height: 100vh; height: 100dvh; min-height: 100vh; min-height: 100dvh;">
+            <!-- Hero Background Image -->
+            <div id="hero-image-container" class="absolute inset-0 w-full h-full">
+                <img src=""
+                     alt="시설 이미지"
+                     class="absolute inset-0 w-full h-full object-cover empty-image-placeholder"
+                     style="width: 100%; height: 100vh; min-height: 100vh; object-fit: cover; display: block; position: absolute; inset: 0px;"
+                     data-facility-hero-image>
+            </div>
+
+            <!-- 오버레이 그라데이션 -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+
+            <!-- Specials 텍스트 -->
+            <div class="absolute bottom-8 left-8 md:bottom-12 md:left-8 lg:bottom-16 lg:left-12 xl:left-24 slide-in-left">
+                <h1 class="responsive-title text-white font-bold drop-shadow-lg en-title text-center">
+                    Specials
+                </h1>
+                <div class="w-[300px] md:w-[400px] lg:w-[500px] h-px bg-white mt-4"></div>
+            </div>
+        </section>
+
+        <!-- Section 2: Facility Info with Image and Text -->
+        <section class="facility-info-section relative w-full py-16 lg:py-24">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+
+                    <!-- Left: Rounded Rectangle Image -->
+                    <div class="flex justify-center lg:justify-start slide-in-left">
+                        <div class="relative w-[320px] h-[320px] md:w-[380px] md:h-[380px] lg:w-[450px] lg:h-[450px]">
+                            <!-- Shadow Rounded Rectangle Background with Animation -->
+                            <div class="absolute top-4 left-4 w-full h-full rounded-3xl opacity-60 z-0 floating-circle" style="background-color: #d2c9bf;"></div>
+
+                            <!-- Main Image with Hover Effect -->
+                            <img src=""
+                                 alt="facility-img"
+                                 class="relative z-10 w-full h-full object-cover rounded-3xl shadow-xl hover-scale empty-image-placeholder"
+                                 style="min-height: auto !important;"
+                                 data-facility-main-image>
+                        </div>
+                    </div>
+
+                    <!-- Right: Facility Info -->
+                    <div class="space-y-8 slide-in-right">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-2xl md:text-3xl font-bold ko-title pb-5" style="color: var(--color-secondary);" data-facility-name></h3>
+                                <div class="w-full h-px" style="background-color: var(--color-secondary);"></div>
+                            </div>
+                            <div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="space-y-3">
+                                        <span class="facility-about-title ko-body" style="color: var(--color-secondary);" data-facility-description></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 추가 안내사항 -->
+                            <div class="bg-stone-50 rounded-lg p-6 border" style="border-color: var(--color-secondary);">
+                                <div class="flex items-start space-x-3" style="color: var(--color-secondary);">
+                                    <div class="facility-usage-guide ko-body" data-facility-usage-guide></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Facility Experience - 추가정보, 특별기능, 특별혜택 -->
+        <section class="experience-section relative w-full pt-8 md:pt-0">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- 주요특징 -->
+                    <div class="bg-stone-50 rounded-lg p-6 border hidden" style="border-color: var(--color-secondary);" data-features-section>
+                        <h3 class="text-xl font-bold mb-4 ko-title" style="color: var(--color-secondary);">주요특징</h3>
+                        <div data-facility-experience-features class="space-y-3 ko-body">
+                            <!-- 내용이 동적으로 로드됩니다 -->
+                        </div>
+                    </div>
+
+                    <!-- 추가정보 -->
+                    <div class="bg-stone-50 rounded-lg p-6 border hidden" style="border-color: var(--color-secondary);" data-additional-info-section>
+                        <h3 class="text-xl font-bold mb-4 ko-title" style="color: var(--color-secondary);">추가정보</h3>
+                        <div data-facility-experience-additional-info class="space-y-3 ko-body">
+                            <!-- 내용이 동적으로 로드됩니다 -->
+                        </div>
+                    </div>
+
+                    <!-- 이용혜택 -->
+                    <div class="bg-stone-50 rounded-lg p-6 border hidden" style="border-color: var(--color-secondary);" data-benefits-section>
+                        <h3 class="text-xl font-bold mb-4 ko-title" style="color: var(--color-secondary);">이용혜택</h3>
+                        <div data-facility-experience-benefits class="space-y-3 ko-body">
+                            <!-- 내용이 동적으로 로드됩니다 -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Facility Gallery -->
+        <section class="gallery-section relative w-full py-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6">
+                <!-- Gallery Container - Will be dynamically filled -->
+                <div id="facility-gallery-container" class="relative">
+                    <!-- Content will be generated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Wave Background Section -->
+        <section class="wave-bg-section relative overflow-hidden">
+            <div class="wave-bg relative w-full">
+                <!-- SVG Clipping Path -->
+                <svg width="0" height="0" style="position: absolute;">
+                    <defs>
+                        <clipPath id="wave-clip" clipPathUnits="objectBoundingBox">
+                            <path d="M0,0.08 Q0.25,0.02 0.5,0.08 T1,0.08 L1,1 L0,1 Z"/>
+                        </clipPath>
+                        <clipPath id="wave-clip-mobile" clipPathUnits="objectBoundingBox">
+                            <path d="M0,0.12 Q0.25,0.06 0.5,0.12 T1,0.12 L1,1 L0,1 Z"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+
+                <!-- Background Image -->
+                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed empty-image-placeholder"
+                     style="background-image: url(''); background-attachment: fixed; clip-path: url(#wave-clip);"
+                     data-facility-wave-background>
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center" style="z-index: 10001;">
+        <div class="relative max-w-4xl max-h-[90vh] w-full mx-4">
+            <!-- Close Button -->
+            <button id="modal-close" class="absolute top-4 right-4 text-white text-3xl z-10 hover:text-gray-300">
+                ×
+            </button>
+
+            <!-- Previous Button -->
+            <button id="modal-prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-4xl z-10 hover:text-gray-300">
+                ‹
+            </button>
+
+            <!-- Next Button -->
+            <button id="modal-next" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-4xl z-10 hover:text-gray-300">
+                ›
+            </button>
+
+            <!-- Modal Image -->
+            <img id="modal-image" src="" alt="" class="w-full h-auto max-h-[90vh] object-contain rounded-lg">
+        </div>
+    </div>
+
+    <!-- Page Specific Scripts -->
+    <script src="js/image-helpers.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+    <script src="js/data-mapper/pages/facility-mapper.js"></script>
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+    <script src="js/preview-handler.js"></script>
+    <script src="js/common/scroll-animation.js"></script>
+    <script src="js/pages/facility.js"></script>
+
+</body>
+</html>

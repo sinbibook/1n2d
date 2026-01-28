@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-homepage-seo-title></title>
+    <meta name="description" content="" data-homepage-seo-description>
+    <meta name="keywords" content="" data-homepage-seo-keywords>
+    <link rel="icon" type="image/png" href="" data-homepage-favicon>
+
+    <script src="js/config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles/theme.css"/>
+    <link rel="stylesheet" href="styles/common.css"/>
+    <link rel="stylesheet" href="styles/index.css"/>
+    <link rel="stylesheet" href="styles/popup.css"/>
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="고성 1박2일펜션 - 홈" />
+  <meta property="og:description" content="동해바다와 함께 하는 1박2일 펜션입니다." />
+  
+  <meta property="og:url" content="https://1n2d.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="고성 1박2일펜션 - 홈" />
+  <meta name="twitter:description" content="동해바다와 함께 하는 1박2일 펜션입니다." />
+  
+</head>
+<body>
+
+    <div id="fullscreen-menu-container"></div>
+
+    <div class="w-full min-h-screen overflow-x-hidden" data-name="랜딩페이지">
+        <!-- Hero Section -->
+        <section id="section1" class="relative w-full overflow-hidden" style="height: 100vh; height: 100dvh; min-height: 100vh; min-height: 100dvh;">
+            <!-- Hero Swiper Container -->
+            <div id="hero-swiper" class="swiper hero-swiper absolute inset-0 w-full h-full">
+                <div class="swiper-wrapper" data-homepage-customFields-pages-index-sections-0-hero-images>
+                </div>
+
+                <!-- Swiper 컨트롤들 -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+
+            <!-- 오버레이 -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+
+            <div class="absolute inset-0 flex flex-col justify-center items-start text-left z-20 pt-16 pl-6 md:pt-20 md:pl-16 lg:pl-20">
+                <div class="relative z-30 max-w-4xl px-4 md:px-6 hero-text">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl text-white mb-4 md:mb-6 ko-title hero-title-animation text-left">
+                        <p class="block hero-title ko-title hero-title-1" data-property-name></p>
+                    </h1>
+                    <p class="text-sm md:text-md text-white/90 mb-4 md:mb-6 hero-description ko-body font-light leading-relaxed hero-description-animation text-left" data-homepage-customFields-pages-index-sections-0-hero-description>
+                    </p>
+
+                    <div class="hero-controls hero-controls-animation">
+                        <div class="swiper-button-prev"></div>
+                        <div class="hero-progress-bar">
+                            <div class="hero-progress"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex items-center justify-center pt-16">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-3xl font-bold ko-title en-title fade-in-up" style="color: var(--color-secondary);" data-homepage-customFields-pages-index-sections-0-essence-title>
+                </h3>
+                <div class="w-full h-px mt-6 fade-in-up" style="background-color: var(--color-secondary);"></div>
+                <p class="text-lg text-gray-600 ko-body mt-6 fade-in-up" data-homepage-customFields-pages-index-sections-0-essence-description>
+                </p>
+            </div>
+        </section>
+
+        <!-- Signature Section -->
+        <section class="about-section">
+            <div data-homepage-customFields-pages-index-sections-signature-items>
+            </div>
+        </section>
+
+        <!-- Closing Section -->
+        <section class="wave-bg-section relative overflow-hidden">
+            <div class="wave-bg relative w-full">
+                <svg width="0" height="0" style="position: absolute;">
+                    <defs>
+                        <clipPath id="wave-clip" clipPathUnits="objectBoundingBox">
+                            <path d="M0,0.08 Q0.25,0.02 0.5,0.08 T1,0.08 L1,1 L0,1 Z"/>
+                        </clipPath>
+                        <clipPath id="wave-clip-mobile" clipPathUnits="objectBoundingBox">
+                            <path d="M0,0.12 Q0.25,0.06 0.5,0.12 T1,0.12 L1,1 L0,1 Z"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+
+                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed empty-image-placeholder"
+                     style="background-image: url(''); background-attachment: fixed; clip-path: url(#wave-clip);"
+                     data-index-wave-background>
+
+                    <div class="absolute inset-0"></div>
+
+                    <div class="absolute inset-0 z-10 flex items-center justify-center px-6">
+                        <div class="banner-content text-center text-white max-w-3xl md:pt-20">
+                            <div class="animated-text">
+                                <h1 class="banner-title font-bold mb-8 fade-in-up ko-title en-title" data-homepage-customFields-pages-index-sections-0-closing-title>
+                                </h1>
+                                <p class="banner-description font-light leading-relaxed fade-in-up ko-body" data-homepage-customFields-pages-index-sections-0-closing-description>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Popup System -->
+    <div id="popup-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/image-helpers.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+    <script src="js/data-mapper/pages/index-mapper.js"></script>
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+    <script src="js/preview-handler.js"></script>
+    <script src="js/common/scroll-animation.js"></script>
+    <script src="js/pages/index.js"></script>
+    <script src="js/popup.js"></script>
+</body>
+</html>

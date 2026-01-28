@@ -1,0 +1,190 @@
+/* Room Page Styles */
+
+.hero-section {
+    background: #FFF4E1;
+    position: relative;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fade-slide-enter {
+    opacity: 0;
+    transition: opacity 1000ms ease-in-out;
+}
+
+.fade-slide-active {
+    opacity: 1;
+}
+
+.modal-backdrop {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.animate-zoom-in {
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+/* Hero 섹션에서 공통 header 활성화 */
+#main-header {
+    display: block;
+}
+
+/* Fix border-radius mismatch between dashed border and image container */
+.border-2.border-dashed.rounded-t-full > div {
+    border-radius: 258px 258px 8px 8px !important;
+}
+
+/* Tablet responsive border-radius */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .border-2.border-dashed.rounded-t-full {
+        border-radius: 200px 200px 10px 10px !important;
+    }
+
+    .border-2.border-dashed.rounded-t-full > div {
+        border-radius: 198px 198px 8px 8px !important;
+    }
+}
+
+/* Mobile Responsive - Room Layout */
+/* Gallery Item Styles */
+.gallery-item {
+    border-bottom: 1px solid var(--brand-color-primary);
+}
+
+.gallery-item-first {
+    border-top: 1px solid var(--brand-color-primary);
+}
+
+.gallery-item-text-container {
+    border-right: 1px solid var(--brand-color-primary);
+}
+
+.gallery-placeholder {
+    border-top: 1px solid var(--brand-color-primary);
+    border-bottom: 1px solid var(--brand-color-primary);
+}
+
+/* Gallery 영역에서만 영어 폰트 사이즈 조정 및 중앙정렬 */
+#room-gallery-container .en-title {
+    font-size: 1.1em; /* 기본 크기의 110% */
+}
+
+#room-gallery-container h4 {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    /* Change main container to column layout */
+    .max-w-7xl.mx-auto.px-6 .flex.flex-row {
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+
+    /* Make both left and right sections 100% width */
+    .max-w-7xl.mx-auto.px-6 .flex.flex-row > div {
+        width: 100% !important;
+    }
+
+    /* Remove sticky positioning on mobile */
+    .sticky {
+        position: static !important;
+    }
+
+    /* Adjust image container for mobile */
+    .max-w-7xl.mx-auto.px-6 .w-full.px-8 {
+        padding: 0 !important;
+    }
+
+    /* Reduce image height significantly on mobile */
+    .h-\\[650px\\] {
+        height: 300px !important;
+    }
+
+    /* Adjust image border radius for mobile - rounded top, straight bottom */
+    .border-2.border-dashed.rounded-t-full {
+        border-radius: 250px 250px 0 0 !important;
+    }
+
+    /* Make inner image container match the dashed border radius */
+    .border-2.border-dashed.rounded-t-full > div {
+        border-radius: 248px 248px 0 0 !important;
+    }
+
+    /* Reduce section padding */
+    .py-16.lg\\:py-24 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    /* Adjust accordion button padding */
+    .py-6.flex.items-center {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    /* Reduce accordion margins */
+    .border-b.mb-4 {
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* Make section title smaller on mobile */
+    .text-2xl.md\\:text-3xl {
+        font-size: 1.5rem !important;
+    }
+
+    /* Hide gallery borders on mobile */
+    .gallery-item,
+    .gallery-item-first,
+    .gallery-item-text-container,
+    .gallery-placeholder {
+        border: none !important;
+    }
+
+    /* Modal navigation buttons on mobile */
+    #modal-prev,
+    #modal-next {
+        width: 40px !important;
+        height: 40px !important;
+        padding: 8px !important;
+        left: 8px !important;
+        top: 35% !important;
+    }
+
+    #modal-next {
+        right: 8px !important;
+        left: auto !important;
+        top: 35% !important;
+    }
+
+    #modal-prev svg,
+    #modal-next svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+}
+

@@ -1,0 +1,251 @@
+/* Footer Styles */
+
+/* Responsive Container */
+.responsive-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .responsive-container {
+        padding: 0 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .responsive-container {
+        padding: 0 3rem;
+    }
+}
+
+@media (max-width: 767px) {
+     footer {
+        padding: 0rem 0 2rem !important;
+    }
+}
+
+footer,
+footer.w-full,
+body footer {
+    background-color: var(--brand-color-primary) !important;
+    color: #ffffff;
+    padding: 3rem 0 2rem;
+    margin-top: 0;
+    width: 100%;
+    z-index: 10;
+    position: relative;
+    font-family: var(--font-ko-sub);
+}
+
+/* 소셜 링크 기본 스타일 - 모든 footer 내 소셜 링크에 적용 */
+footer a[data-homepage-socialLinks-facebook],
+footer a[data-homepage-socialLinks-instagram],
+footer a[data-homepage-socialLinks-blog],
+footer a[data-homepage-socialLinks-youtube] {
+    align-items: center;
+    justify-content: center;
+}
+
+/* JS에서 추가하는 hidden-social-link 클래스 */
+.hidden-social-link {
+    display: none !important;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-section h3 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--font-ko-sub);
+}
+
+.footer-section p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    color: #e2e8f0;
+    font-size: 1rem;
+    font-family: var(--font-ko-sub);
+}
+
+.footer-section div {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    color: #e2e8f0;
+    font-size: 1rem;
+    font-family: var(--font-ko-sub);
+}
+
+/* Footer 내부 space-y-3 안의 p 태그 스타일 */
+.space-y-3 p {
+    font-family: var(--font-ko-sub);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.social-links a {
+    color: #666666;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.social-links a:hover {
+    color: #4d7959;
+    transform: translateY(-2px);
+    background-color: rgba(77, 121, 89, 0.1);
+    border-color: #4d7959;
+}
+
+.social-links a svg {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #a0aec0;
+    font-size: 0.9rem;
+    font-family: var(--font-ko-sub);
+}
+
+.footer-copyright,
+.footer-copyright a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        padding: 0;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        padding: 0 1rem;
+        gap: 2rem;
+    }
+
+    .footer-section {
+        min-width: auto;
+        text-align: left;
+    }
+
+    .footer-section h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-section div,
+    .footer-section p {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .social-links {
+        justify-content: flex-start;
+        gap: 1.2rem;
+    }
+
+    .social-links a {
+        width: 44px;
+        height: 44px;
+    }
+
+    .social-links a svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .footer-bottom {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 0;
+        margin-top: 2rem;
+    }
+
+    .footer-container {
+        padding: 0 1rem;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-section h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .footer-section div,
+    .footer-section p {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+    }
+
+    .social-links {
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-links a svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer-bottom {
+        margin-top: 1rem;
+        padding-top: 0.8rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
+}

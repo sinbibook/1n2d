@@ -1,0 +1,182 @@
+/* Reservation Page Styles */
+
+/* Section Container Styles */
+.reservation-sections-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0rem 2rem;
+}
+
+/* Two Column Grid */
+.reservation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: stretch;
+}
+
+/* Section Box Styles */
+.con3 {
+    background: rgba(255, 248, 240, 0.5);
+    border: 2px solid var(--brand-color-primary);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.con3:hover {
+    box-shadow: 0 8px 20px rgba(96, 83, 71, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Section Header */
+.sectionHeader {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(96, 83, 71, 0.3);
+    padding-bottom: 1rem;
+}
+
+.sectionTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--brand-color-primary);
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* Content Styles */
+.usageContent,
+.checkinCheckoutContent,
+.refundContent {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.usageRules,
+.checkinCheckoutRules,
+.refundRules {
+    color: #4a4a4a;
+    line-height: 1.8;
+}
+
+.usageRules p,
+.checkinCheckoutRules p,
+.refundRules p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+/* Cancellation Fee Section - No box, just table */
+.cancellation-fee-section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.tableWrapper {
+    overflow-x: auto;
+    height: 100%;
+}
+
+.refundTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 2px solid var(--brand-color-primary);
+    background: rgba(255, 248, 240, 0.5);
+}
+
+.refundTable thead {
+    background-color: var(--brand-color-primary);
+    color: white;
+    border-bottom: 2px solid var(--brand-color-primary);
+}
+
+.refundTable th {
+    padding: 1rem;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.refundTable tbody tr {
+    border-bottom: 1px solid rgba(96, 83, 71, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.refundTable tbody tr:hover {
+    background-color: rgba(96, 83, 71, 0.05);
+}
+
+.refundTable td {
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #4a4a4a;
+}
+
+.noRefund {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reservation-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .con3 {
+        padding: 1.5rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.25rem;
+    }
+
+    .refundTable {
+        font-size: 0.9rem;
+    }
+
+    .refundTable th,
+    .refundTable td {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .reservation-sections-container {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Override floating shape for reservation page */
+.main-image-wrapper::before {
+    display: none !important;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.con3,
+.cancellation-fee-section {
+    animation: fadeIn 0.6s ease-out;
+}

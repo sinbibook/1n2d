@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-homepage-seo-title></title>
+    <meta name="description" content="" data-homepage-seo-description>
+    <meta name="keywords" content="" data-homepage-seo-keywords>
+    <link rel="icon" type="image/png" href="" data-homepage-favicon>
+
+    <script src="js/config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles/theme.css"/>
+    <link rel="stylesheet" href="styles/common.css"/>
+    <link rel="stylesheet" href="styles/main.css"/>
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="고성 1박2일펜션 - 숙소소개" />
+  <meta property="og:description" content="동해바다와 함께 하는 1박2일 펜션입니다." />
+  
+  <meta property="og:url" content="https://1n2d.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="고성 1박2일펜션 - 숙소소개" />
+  <meta name="twitter:description" content="동해바다와 함께 하는 1박2일 펜션입니다." />
+  
+</head>
+<body>
+
+    <!-- Fullscreen Menu Container -->
+    <div id="fullscreen-menu-container"></div>
+
+    <!-- Main Container with Normal Scroll -->
+    <div class="main-container" data-name="메인페이지">
+
+        <!-- Section 1: Hero with Background Image and Property Description -->
+        <section id="section1" class="relative w-full overflow-hidden" style="height: 100vh; height: 100dvh; min-height: 100vh; min-height: 100dvh;">
+            <!-- Hero Background Image -->
+            <div id="hero-image-container" class="absolute inset-0 w-full h-full">
+                <img src=""
+                     alt="히어로 이미지"
+                     class="absolute inset-0 w-full h-full object-cover empty-image-placeholder"
+                     style="width: 100%; height: 100vh; min-height: 100vh; object-fit: cover; display: block; position: absolute; inset: 0px;"
+                     data-homepage-customFields-pages-main-sections-0-hero-images-0-url>
+            </div>
+
+            <!-- 오버레이 그라데이션 -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+
+            <!-- About 텍스트 -->
+            <div class="absolute bottom-8 left-8 md:bottom-12 md:left-8 lg:bottom-16 lg:left-12 xl:left-24 slide-in-left">
+                <h1 class="responsive-title text-white font-bold drop-shadow-lg en-title text-center">
+                    About us
+                </h1>
+                <div class="w-[300px] md:w-[400px] lg:w-[500px] h-px bg-white mt-4"></div>
+            </div>
+        </section>
+
+        <!-- About Sections - 동적 생성 -->
+        <div data-homepage-customFields-pages-main-sections-about-items>
+        </div>
+
+       <!-- Wave Background Section -->
+        <section class="wave-bg-section relative overflow-hidden">
+            <div class="wave-bg relative w-full">
+                <!-- SVG Clipping Path -->
+                <svg width="0" height="0" style="position: absolute;">
+                    <defs>
+                        <clipPath id="wave-clip" clipPathUnits="objectBoundingBox">
+                            <path d="M0,0.08 Q0.25,0.02 0.5,0.08 T1,0.08 L1,1 L0,1 Z"/>
+                        </clipPath>
+                        <clipPath id="wave-clip-mobile" clipPathUnits="objectBoundingBox">
+                            <path d="M0,0.12 Q0.25,0.06 0.5,0.12 T1,0.12 L1,1 L0,1 Z"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+
+                <!-- Background Image -->
+                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed empty-image-placeholder"
+                     style="background-image: url(''); background-attachment: fixed; clip-path: url(#wave-clip);"
+                     data-property-exterior-images-0-url>
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0"></div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <!-- Page Specific Scripts -->
+    <script src="js/image-helpers.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+    <script src="js/data-mapper/pages/main-mapper.js"></script>
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+    <script src="js/preview-handler.js"></script>
+    <script src="js/common/scroll-animation.js"></script>
+    <script src="js/pages/main.js"></script>
+
+
+</body>
+</html>

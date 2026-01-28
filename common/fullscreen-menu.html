@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/fullscreen-menu.css">
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="고성 1박2일펜션" />
+  <meta property="og:description" content="동해바다와 함께 하는 1박2일 펜션입니다." />
+  
+  <meta property="og:url" content="https://1n2d.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="고성 1박2일펜션" />
+  <meta name="twitter:description" content="동해바다와 함께 하는 1박2일 펜션입니다." />
+  
+</head>
+<body>
+    <div id="fullscreen-menu" class="fixed inset-0 overflow-hidden bg-white" style="display: none; z-index: 9999;">
+        <!-- 닫기 버튼 -->
+        <button id="close-menu-btn"
+                class="absolute top-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-[#5D4037] hover:bg-white/30 transition-all duration-200"
+                style="z-index: 10000;">
+            <!-- X Icon -->
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 6-12 12"></path>
+                <path d="m6 6 12 12"></path>
+            </svg>
+        </button>
+
+        <!-- 모바일 레이아웃 (md 미만) -->
+        <div class="md:hidden h-full p-6 pt-20">
+            <div class="flex flex-col h-full">
+
+                <!-- 중단: 2행 2열 메뉴 카드 -->
+                <div class="flex-1 flex items-start justify-center pt-4">
+                    <div class="grid grid-cols-2 gap-3 w-full max-w-sm" id="mobile-menu-grid">
+                        <!-- 메뉴 카드들이 동적으로 추가됨 -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 데스크탑 레이아웃 (md 이상) -->
+        <div class="hidden md:flex h-full items-center justify-center">
+            <div class="w-full max-w-[1800px] mx-auto px-4 md:px-8 lg:px-12 flex items-center justify-center">
+                <!-- 왼쪽: 이미지 슬라이드 영역 -->
+                <div class="w-1/2 flex items-center justify-center">
+                    <div class="relative w-[480px] h-[360px] lg:w-[640px] lg:h-[480px] rounded-2xl overflow-hidden shadow-2xl" style="aspect-ratio: 4/3;">
+                        <div id="desktop-menu-slides" style="width: 100%; height: 100%;">
+                            <!-- 기본 placeholder 이미지 -->
+                            <div class="w-full h-full relative overflow-hidden rounded-2xl">
+                                <img src=""
+                                     alt="No Image Available"
+                                     class="w-full h-full object-cover empty-image-placeholder">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 오른쪽: 메뉴 영역 -->
+                <div class="w-1/2 pl-12 lg:pl-16">
+                    <!-- 메인 메뉴 (서브메뉴가 각 메인 메뉴 아래에 표시됨) -->
+                    <div class="flex flex-col space-y-4" id="main-menu-list">
+                        <!-- 메인 메뉴들과 서브메뉴들이 동적으로 추가됨 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/components/fullscreen-menu.js"></script>
+</body>
+</html>

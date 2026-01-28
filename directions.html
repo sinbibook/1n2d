@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-homepage-seo-title></title>
+    <meta name="description" content="" data-homepage-seo-description>
+    <meta name="keywords" content="" data-homepage-seo-keywords>
+    <link rel="icon" type="image/png" href="" data-homepage-favicon>
+
+    <script src="js/config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/theme.css"/>
+    <link rel="stylesheet" href="styles/common.css"/>
+    <link rel="stylesheet" href="styles/footer.css"/>
+    <link rel="stylesheet" href="styles/directions.css"/>
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="고성 1박2일펜션 - 오시는길" />
+  <meta property="og:description" content="동해바다와 함께 하는 1박2일 펜션입니다." />
+  
+  <meta property="og:url" content="https://1n2d.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="고성 1박2일펜션 - 오시는길" />
+  <meta name="twitter:description" content="동해바다와 함께 하는 1박2일 펜션입니다." />
+  
+</head>
+<body>
+
+    <!-- Fullscreen Menu Container -->
+    <div id="fullscreen-menu-container"></div>
+
+    <div class="main-container" data-name="오시는길페이지">
+
+        <!-- Section 1: Hero with Background Image and Property Description -->
+        <section id="section1" class="relative w-full overflow-hidden" style="height: 100vh; height: 100dvh; min-height: 100vh; min-height: 100dvh;">
+            <!-- Hero Background Image -->
+            <div id="hero-image-container" class="absolute inset-0 w-full h-full">
+                <img src=""
+                     alt="히어로 이미지"
+                     class="absolute inset-0 w-full h-full object-cover empty-image-placeholder"
+                     style="width: 100%; height: 100vh; min-height: 100vh; object-fit: cover; display: block; position: absolute; inset: 0px;"
+                     data-homepage-customFields-pages-directions-sections-0-hero-images-0-url>
+            </div>
+
+            <!-- 오버레이 그라데이션 -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+
+            <!-- Directions 텍스트 -->
+            <div class="absolute bottom-8 left-8 md:bottom-12 md:left-8 lg:bottom-16 lg:left-12 xl:left-24 slide-in-left">
+                <h1 class="responsive-title text-white font-bold drop-shadow-lg en-title text-center">
+                    Directions
+                </h1>
+                <div class="w-[250px] md:w-[500px] lg:w-[600px] h-px bg-white mt-4"></div>
+            </div>
+        </section>
+
+        <!-- Section 2: Directions Info with Image and Text -->
+        <section class="relative w-full pt-16 pb-8 lg:py-24">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+                    <!-- Left: Circular Image -->
+                    <div class="flex justify-center lg:justify-start slide-in-left">
+                        <div class="relative w-[280px] h-[280px] md:w-[320px] md:h-[320px] lg:w-[350px] lg:h-[350px]">
+                            <!-- Shadow Circle Background with Animation -->
+                            <div class="absolute top-4 left-4 w-full h-full rounded-full opacity-60 z-0 floating-circle" style="background-color: #d2c9bf;"></div>
+
+                            <!-- Main Image with Hover Effect -->
+                            <img src=""
+                                 alt="오시는길 이미지"
+                                 class="relative z-10 w-full h-full object-cover rounded-full shadow-xl hover-scale empty-image-placeholder"
+                                data-homepage-customFields-pages-directions-sections-0-hero-images-1-url>
+                        </div>
+                    </div>
+
+                    <!-- Right: Directions Info -->
+                    <div class="space-y-8 slide-in-right">
+                        <!-- Navigation Section -->
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-2xl md:text-3xl font-bold en-title" style="color: var(--color-secondary);">Navigation</h3>
+                                <div class="w-full h-px" style="background-color: var(--color-secondary);"></div>
+                            </div>
+
+                            <!-- 주소 정보 -->
+                            <div class="bg-stone-50 rounded-lg p-6 border" style="border-color: var(--color-secondary);">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-6 h-6 flex-shrink-0" style="color: var(--color-secondary);">
+                                        <svg fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div>
+                                            <h4 class="font-semibold mb-1 ui-font" style="color: var(--color-secondary);">도로명 주소</h4>
+                                            <p class="ko-body" style="color: var(--color-secondary);" data-property-address></p>
+                                        </div>
+                                        <!-- 향후 지번 주소 활성화 예정-->
+                                        <!-- <div>
+                                            <h4 class="font-semibold mb-1 ui-font" style="color: rgb(96, 83, 71);">지번 주소</h4>
+                                            <p class="ko-body" style="color: rgb(96, 83, 71);" data-property-address></p>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 추가 안내사항 -->
+                            <div class="directions-notice-section bg-stone-50 rounded-lg p-6 border hidden" data-directions-notice-section>
+                                <div class="flex items-start space-x-3">
+                                    <div class="directions-notice-icon w-6 h-6 flex-shrink-0">
+                                        <svg fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="directions-notice-title font-semibold mb-2 ui-font" data-directions-notice-title></h4>
+                                        <pre class="directions-notice-description ko-body text-sm whitespace-pre-wrap" data-directions-notice-description></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Map -->
+        <section class="relative w-full pb-6">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="relative w-full h-[75vh] fade-in-scale rounded-lg overflow-hidden">
+                    <!-- Kakao Map -->
+                    <div id="kakao-map"></div>
+                </div>
+
+                <!-- Map Info Footer -->
+                <div class="bg-white p-6 border border-gray-100 mt-6 rounded-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 flex-shrink-0" style="color: var(--color-secondary);">
+                                <svg fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold ui-font" style="color: var(--color-secondary);">주소</h4>
+                                <p class="ko-body text-sm" style="color: var(--color-secondary);" data-property-address></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 flex-shrink-0" style="color: var(--color-secondary);">
+                                <svg fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold ui-font" style="color: var(--color-secondary);">문의전화</h4>
+                                <p class="ko-body text-sm" style="color: var(--color-secondary);" data-property-phone></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+
+    <!-- Scripts -->
+    <!-- Kakao Map SDK - Local File -->
+    <script type="text/javascript" src="js/kakao-maps-sdk.js"></script>
+
+    <script src="js/image-helpers.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+    <script src="js/data-mapper/pages/directions-mapper.js"></script>
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+    <script src="js/preview-handler.js"></script>
+    <script src="js/common/scroll-animation.js"></script>
+    <script src="js/pages/directions.js"></script>
+
+</body>
+</html>

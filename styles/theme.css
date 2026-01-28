@@ -1,0 +1,14 @@
+/* Font Faces */
+@font-face {
+  font-family: 'GyeonggiMillenniumBackground';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Batang_Regular.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* CSS Variables */
+:root {
+  --font-ko-main: 'GyeonggiMillenniumBackground', sans-serif;
+  --color-primary: #F5F5F5;
+  --color-secondary: #706964;
+}
