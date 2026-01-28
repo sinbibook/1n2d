@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.0.0",
-    "generatedAt": "2026-01-28T02:55:37.295Z",
+    "version": "1.1.0",
+    "generatedAt": "2026-01-28T03:30:36.715Z",
     "templateType": "full_banner_slider",
     "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
     "homepageId": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
@@ -77,7 +77,50 @@
         "description": "공용 바베큐장에서 바비큐 파티를 즐겨보세요!",
         "usageGuide": "[공용바베큐]\n- 아름다운 동해바다를 배경으로 한 아늑하고 낭만적인 바베큐 파티를 즐겨보세요.\n- 이용 비용(숯+석쇠) : 2인 기준 20,000원 현장결제\n※ 인원 추가 시 1인당 5,000원 추가비용 발생\n- 공용 바베큐 이용 객실: 바다A201, A202, A203, 설악A103, A106, 설악B206, B304, B305, B306, 패밀리A102, B205 ",
         "displayOrder": 0,
-        "images": []
+        "images": [
+          {
+            "id": "5e59eed3-0acb-4410-b7d5-12cfaa20f50f",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/e3273f22-68e0-44bf-937d-84af0db386e7/main/1769569480755-usgc7qg2d7.jpg",
+            "sortOrder": 2,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "b8fe5397-403e-4c7e-9021-37ef56e22b42",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/e3273f22-68e0-44bf-937d-84af0db386e7/main/1769569480755-2bnyybzi3x5.jpg",
+            "sortOrder": 1,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "771a3f6d-8e88-4ab9-8691-e8b94d3afbe8",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/e3273f22-68e0-44bf-937d-84af0db386e7/main/1769569480755-0bpyi08moryt.jpg",
+            "sortOrder": 1,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "9476444c-dafe-483e-a460-628d2b4319c7",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/e3273f22-68e0-44bf-937d-84af0db386e7/main/1769569480756-ieaqygrk1q.jpg",
+            "sortOrder": 3,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "4505797b-79fc-4f4a-918e-538832998f57",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/e3273f22-68e0-44bf-937d-84af0db386e7/main/1769569480756-w0cmrqtj49e.jpg",
+            "sortOrder": 4,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "87f2c4c4-205b-4241-b295-0f86e4609709",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/e3273f22-68e0-44bf-937d-84af0db386e7/main/1769570788924-ir9zimezzqh.jpg",
+            "sortOrder": 0,
+            "description": "",
+            "isSelected": true
+          }
+        ]
       },
       {
         "id": "7af14405-32d5-4f57-9df5-7eab0e32b02e",
@@ -85,7 +128,57 @@
         "description": "바다C401, 바다S403 객실은 개별 테라스에서 숯&그릴 바비큐를 즐기실 수 있으며, \n바다B301, B302, B303객실은 객실 내에서 자이글 바비큐 파티를 즐길 수 있습니다. ",
         "usageGuide": "[개별바베큐]\n- 바다B301, B302, B303객실 : 개별테라스 자이글 이용\n- 바다C401, S403객실 : 개별 숯불 바베큐 이용\n※ 위 객실 이외는 객실 테라스 바베큐가 불가, 야외 공동 바베큐장 이용\n- 자이글 이용 비용 : 2인 기준 20,000원 현장결제\n- 숯불 이용 비용 : 2인 기준 20,000원 현장결제\n※ 인원 추가 시 1인당 5,000원 추가비용 발생\n- 이용 시간 : 22:30까지 ",
         "displayOrder": 1,
-        "images": []
+        "images": [
+          {
+            "id": "9b0beac8-7415-4ec3-ab72-f334ed6ff465",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7af14405-32d5-4f57-9df5-7eab0e32b02e/main/1769569482433-cr7m7rn28r.jpg",
+            "sortOrder": 6,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "53c6de92-f53f-4187-82c3-2cf6e1a4c830",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7af14405-32d5-4f57-9df5-7eab0e32b02e/main/1769569482433-dzc3megpmtv.jpg",
+            "sortOrder": 3,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "350887be-9739-41b1-84aa-1ef8d021ab1e",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7af14405-32d5-4f57-9df5-7eab0e32b02e/main/1769569482433-soobs6tsmpa.jpg",
+            "sortOrder": 5,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "3811eb74-860d-4055-bf04-92d9363aa06a",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7af14405-32d5-4f57-9df5-7eab0e32b02e/main/1769569482433-k55852uu67d.jpg",
+            "sortOrder": 0,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "87c5fef5-f67d-4210-a8b4-de3889b70017",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7af14405-32d5-4f57-9df5-7eab0e32b02e/main/1769569787451-r40gcezwyz.jpg",
+            "sortOrder": 1,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "b9966ff5-d2ae-415f-91da-b3fd6e80daa3",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7af14405-32d5-4f57-9df5-7eab0e32b02e/main/1769569787451-c43am5dnhnq.jpg",
+            "sortOrder": 2,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "2d1c5c17-d296-4da5-82c7-5425646cc35c",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7af14405-32d5-4f57-9df5-7eab0e32b02e/main/1769569482433-w4qeu4jgmh.jpg",
+            "sortOrder": 4,
+            "description": "",
+            "isSelected": true
+          }
+        ]
       },
       {
         "id": "233891e9-1775-4c67-8947-23371f287f5c",
@@ -93,7 +186,36 @@
         "description": "1박2일 펜션에는 애견동반 가능한 객실이 있습니다. \n사랑하는 반려견과 함께 즐거운 시간을 보내보세요. ",
         "usageGuide": "[애견동반]\n- 애견동반 가능 객실 : 바다 A201, A202, 설악A103, A106, B304, B305 \n- 동반 비용 : 5kg미만 1마리당 20,000원 / 5kg~10kg 1마리당 3만원 (1박당/현장결제)\n※ 대형견 입실불가\n※ 연박일경우 1박은 무료\n※ 반려견 동반 불가 객실 오예약으로 인한 취소 및 환불은 불가합니다. ",
         "displayOrder": 2,
-        "images": []
+        "images": [
+          {
+            "id": "cc374e7a-555b-44d1-8e22-3ba0e0f2b32c",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/233891e9-1775-4c67-8947-23371f287f5c/main/1769570790064-p2ilyk8vaql.jpg",
+            "sortOrder": 1,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "1cd448e8-c637-465a-bf0f-b492278d575f",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/233891e9-1775-4c67-8947-23371f287f5c/main/1769570790064-efcxoxdgwrb.jpg",
+            "sortOrder": 3,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "8236350a-edbb-4ab1-a8bb-19e4b9901f36",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/233891e9-1775-4c67-8947-23371f287f5c/main/1769570790064-g2gm9faokii.jpg",
+            "sortOrder": 2,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "2cb35f80-de83-4f48-9c2b-81057569cfc1",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/233891e9-1775-4c67-8947-23371f287f5c/main/1769570790064-afw6v4ocvv6.jpg",
+            "sortOrder": 0,
+            "description": "",
+            "isSelected": true
+          }
+        ]
       },
       {
         "id": "540f0231-2c9e-4eab-89eb-871c7902af87",
@@ -101,7 +223,36 @@
         "description": "1박2일 펜션 바로 앞에 푸른 해수욕장이 펼쳐져 있습니다. 넓고 시원한 동해바다를 느껴보세요.",
         "usageGuide": "[해수욕장 바로 앞]\n- 펜션 앞 봉포해수욕장에서 물놀이, 바다낚시가 가능합니다.",
         "displayOrder": 3,
-        "images": []
+        "images": [
+          {
+            "id": "1e03b06b-7d31-4bf5-8967-8326ccc0b298",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/540f0231-2c9e-4eab-89eb-871c7902af87/main/1769569483705-l083r71e5de.jpg",
+            "sortOrder": 2,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "409feea4-bdb4-471f-aa1f-17e7d415b026",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/540f0231-2c9e-4eab-89eb-871c7902af87/main/1769569483705-oavusz0twf8.jpg",
+            "sortOrder": 1,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "c3c766f6-dfee-438f-9237-9a267339309a",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/540f0231-2c9e-4eab-89eb-871c7902af87/main/1769569483705-38bfntlzzgj.jpg",
+            "sortOrder": 3,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "10f9e4d9-8905-41ae-9f20-c7fc33ed6a8b",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/540f0231-2c9e-4eab-89eb-871c7902af87/main/1769569483705-ykn8sg90xxq.jpg",
+            "sortOrder": 0,
+            "description": "",
+            "isSelected": true
+          }
+        ]
       },
       {
         "id": "c48bc77a-b965-407a-bdb7-e94be6a9c675",
@@ -109,7 +260,36 @@
         "description": "해변가를 향해 뻗어있는 낭만적인 산책로가 있습니다.  1박2일 펜션에서 아름다운 추억과 로맨스를 남겨보세요. 바다 내음과 은은한 파도 소리가 있습니다.",
         "usageGuide": "해변가를 향해 뻗어있는 낭만적인 산책로가 있습니다.  1박2일 펜션에서 아름다운 추억과 로맨스를 남겨보세요. 바다 내음과 은은한 파도 소리가 있습니다.",
         "displayOrder": 4,
-        "images": []
+        "images": [
+          {
+            "id": "c69dda9e-ac1d-43ac-96a3-53d564e19028",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/c48bc77a-b965-407a-bdb7-e94be6a9c675/main/1769569485014-39we3gwledi.jpg",
+            "sortOrder": 2,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "0fc03c33-85ab-43e4-9197-3f3b2c159f2a",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/c48bc77a-b965-407a-bdb7-e94be6a9c675/main/1769569485015-qkd23dadff.jpg",
+            "sortOrder": 3,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "877178d7-b0a3-4e7f-ba96-cdc140c0544e",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/c48bc77a-b965-407a-bdb7-e94be6a9c675/main/1769569485014-f1eskl8aoe.jpg",
+            "sortOrder": 1,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "fe5e416e-6469-4d5c-92a1-cdfae9371117",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/c48bc77a-b965-407a-bdb7-e94be6a9c675/main/1769569485014-ppd2gedhzk.jpg",
+            "sortOrder": 0,
+            "description": "",
+            "isSelected": true
+          }
+        ]
       },
       {
         "id": "7734ac4a-3ffc-47d4-a11e-4b92dd23655e",
@@ -117,7 +297,22 @@
         "description": "1박2일 펜션에서 제공하는 서비스를 안내드립니다. ",
         "usageGuide": "[서비스]\n- IPTV/WiFi\n- 정수기, 전자레인지, 오븐, 공용세탁기 구비\n\n[주차장]\n- 주차 10대가능 (늦은시간 오시는 손님은 봉포해수욕장 주차장 이용가능)",
         "displayOrder": 5,
-        "images": []
+        "images": [
+          {
+            "id": "9e3d1cee-9ba5-4ff1-b7e9-702780c3fcf2",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7734ac4a-3ffc-47d4-a11e-4b92dd23655e/main/1769569486059-12tnsnjxvt1.jpg",
+            "sortOrder": 0,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "1dbb021a-808f-4833-89e2-c9d67c7a9a65",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7734ac4a-3ffc-47d4-a11e-4b92dd23655e/main/1769569486059-nrrakml26rm.jpg",
+            "sortOrder": 1,
+            "description": "",
+            "isSelected": true
+          }
+        ]
       },
       {
         "id": "11bf460f-5270-4355-91d4-005423d77c91",
@@ -875,15 +1070,74 @@
             {
               "hero": {
                 "title": "",
-                "images": []
+                "images": [
+                  {
+                    "id": "e31c8cac-b8f0-4da8-971c-dae3094191bd",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769570683111-oqrioe68nu.jpg",
+                    "sortOrder": 0,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "8f80879b-a737-47d3-bd74-d420d436e519",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769570683112-unfyaqi6pv.jpg",
+                    "sortOrder": 1,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "9f4b3b8c-9bc6-4bfd-a82c-db2b89baa2e8",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769570683112-64j41216j44.jpg",
+                    "sortOrder": 2,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "643e5f3b-22b7-4386-a536-9b3a10e1857a",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769570683112-lple8oe1cs.jpg",
+                    "sortOrder": 3,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "c12e10c7-5c61-4e8e-9536-4da2f39a76bc",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769570683113-txay0v8e2v.jpg",
+                    "sortOrder": 4,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "c7481ae4-dee8-468c-81a2-e047575a0c9c",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769570683113-m3x86sc37ri.jpg",
+                    "sortOrder": 5,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "d9e58f53-3fbf-4e21-a962-c598ef3d12f7",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769570683113-lqllba92hjj.jpg",
+                    "sortOrder": 6,
+                    "description": "",
+                    "isSelected": true
+                  }
+                ]
               },
               "closing": {
                 "title": "",
-                "images": []
+                "images": [
+                  {
+                    "id": "319fc455-8b33-4f37-8638-906df5597a9b",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_closing/1769570683113-k7bxz85uf4.jpg",
+                    "sortOrder": 0,
+                    "description": "",
+                    "isSelected": true
+                  }
+                ]
               },
               "essence": {
-                "title": "",
-                "images": []
+                "title": "ㅇㅇㅇㅇㅇㅇㅇ",
+                "images": [],
+                "description": "ㅇㅇㅇㅇㅇㅇㅇ"
               },
               "gallery": {
                 "title": "",
@@ -891,7 +1145,43 @@
               },
               "signature": {
                 "title": "",
-                "images": []
+                "images": [
+                  {
+                    "id": "91ce52f2-8051-4c92-884e-f97fe88813ca",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_signature/1769570683113-x6o5vasdno.jpg",
+                    "sortOrder": 0,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "c1873065-8ff2-4fa3-9eeb-35e6a93482c6",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_signature/1769570683113-0qid1hnmrwk.jpg",
+                    "sortOrder": 1,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "3edbfe67-d1a0-44ea-977c-b9fc5e806b64",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_signature/1769570683113-3a6vravc5v6.jpg",
+                    "sortOrder": 2,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "6ad7f49e-a0f8-461b-9e09-8b778c9e2d3a",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_signature/1769570683113-juum1hsgiga.jpg",
+                    "sortOrder": 3,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "99e7a43b-731a-4128-9870-433c44eca8ba",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_signature/1769571029989-av5et99ieq9.jpg",
+                    "sortOrder": 4,
+                    "description": "",
+                    "isSelected": true
+                  }
+                ]
               }
             }
           ]
