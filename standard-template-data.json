@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.1.0",
-    "generatedAt": "2026-01-28T03:30:36.715Z",
+    "version": "1.2.0",
+    "generatedAt": "2026-01-29T00:29:42.719Z",
     "templateType": "full_banner_slider",
     "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
     "homepageId": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
@@ -1069,7 +1069,7 @@
           "sections": [
             {
               "hero": {
-                "title": "",
+                "title": " ",
                 "images": [
                   {
                     "id": "e31c8cac-b8f0-4da8-971c-dae3094191bd",
@@ -1100,27 +1100,35 @@
                     "isSelected": true
                   },
                   {
+                    "id": "26c7a0ad-1a75-490c-9681-42f976e14501",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769646103165-0wph09ivxrd.jpg",
+                    "sortOrder": 4,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
                     "id": "c12e10c7-5c61-4e8e-9536-4da2f39a76bc",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769570683113-txay0v8e2v.jpg",
-                    "sortOrder": 4,
+                    "sortOrder": 5,
                     "description": "",
                     "isSelected": true
                   },
                   {
                     "id": "c7481ae4-dee8-468c-81a2-e047575a0c9c",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769570683113-m3x86sc37ri.jpg",
-                    "sortOrder": 5,
+                    "sortOrder": 6,
                     "description": "",
                     "isSelected": true
                   },
                   {
                     "id": "d9e58f53-3fbf-4e21-a962-c598ef3d12f7",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769570683113-lqllba92hjj.jpg",
-                    "sortOrder": 6,
+                    "sortOrder": 7,
                     "description": "",
                     "isSelected": true
                   }
-                ]
+                ],
+                "description": "고성의 풍경과 함께하는 하루"
               },
               "closing": {
                 "title": "",
@@ -1135,9 +1143,9 @@
                 ]
               },
               "essence": {
-                "title": "ㅇㅇㅇㅇㅇㅇㅇ",
+                "title": "Preiview",
                 "images": [],
-                "description": "ㅇㅇㅇㅇㅇㅇㅇ"
+                "description": "고성 1박2일 펜션의 객실과 분위기를 미리 살펴보세요."
               },
               "gallery": {
                 "title": "",
@@ -1150,35 +1158,28 @@
                     "id": "91ce52f2-8051-4c92-884e-f97fe88813ca",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_signature/1769570683113-x6o5vasdno.jpg",
                     "sortOrder": 0,
-                    "description": "",
+                    "description": "문을 나서면 바로 만나는 봉포해변\n바다를 가장 가까이에서 즐길 수 있는 펜션입니다.",
                     "isSelected": true
                   },
                   {
                     "id": "c1873065-8ff2-4fa3-9eeb-35e6a93482c6",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_signature/1769570683113-0qid1hnmrwk.jpg",
                     "sortOrder": 1,
-                    "description": "",
+                    "description": "야외 풍경을 바라보며 즐기는 바베큐 시간\n따뜻한 난로가 함께해 사계절 편안합니다.",
                     "isSelected": true
                   },
                   {
                     "id": "3edbfe67-d1a0-44ea-977c-b9fc5e806b64",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_signature/1769570683113-3a6vravc5v6.jpg",
                     "sortOrder": 2,
-                    "description": "",
+                    "description": "봉포해변을 따라 여유롭게 산책하고\n시원한 바다에서 물놀이까지 즐길 수 있습니다.",
                     "isSelected": true
                   },
                   {
                     "id": "6ad7f49e-a0f8-461b-9e09-8b778c9e2d3a",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_signature/1769570683113-juum1hsgiga.jpg",
                     "sortOrder": 3,
-                    "description": "",
-                    "isSelected": true
-                  },
-                  {
-                    "id": "99e7a43b-731a-4128-9870-433c44eca8ba",
-                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_signature/1769571029989-av5et99ieq9.jpg",
-                    "sortOrder": 4,
-                    "description": "",
+                    "description": "각 객실마다 자이글이 준비되어 있어\n실내에서도 편리하게 조리를 즐기실 수 있습니다.",
                     "isSelected": true
                   }
                 ]
@@ -1205,7 +1206,15 @@
             {
               "hero": {
                 "title": "",
-                "images": []
+                "images": [
+                  {
+                    "id": "57ca4449-0b08-4923-a96f-bec4b814f9de",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/main_hero/1769646103167-835uigcy48v.jpg",
+                    "sortOrder": 0,
+                    "description": "",
+                    "isSelected": true
+                  }
+                ]
               },
               "about": []
             }
@@ -1259,9 +1268,17 @@
             "category": "property_thumbnail"
           },
           {
+            "id": "d2afd6ee-229b-45fd-8d30-a9c2ebff921a",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/property_exterior/1769567098819-879kj8q8e7f.jpg",
+            "sortOrder": 0,
+            "description": "",
+            "isSelected": true,
+            "category": "property_exterior"
+          },
+          {
             "id": "1ba99bd6-13b3-46ec-86ad-29170ecc66d7",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/property_exterior/1769567098819-4rl7llgv898.jpg",
-            "sortOrder": 0,
+            "sortOrder": 1,
             "description": "",
             "isSelected": true,
             "category": "property_exterior"
@@ -1269,7 +1286,7 @@
           {
             "id": "da44313d-7052-46df-b8fe-452c99e90d2e",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/property_exterior/1769567098819-nwr0axz2e4k.jpg",
-            "sortOrder": 1,
+            "sortOrder": 2,
             "description": "",
             "isSelected": true,
             "category": "property_exterior"
@@ -1277,7 +1294,7 @@
           {
             "id": "0e62c513-f3b2-4a3f-bc50-a71e8c72451c",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/property_exterior/1769567098819-brr96q2jfjn.jpg",
-            "sortOrder": 2,
+            "sortOrder": 3,
             "description": "",
             "isSelected": true,
             "category": "property_exterior"
@@ -1285,14 +1302,6 @@
           {
             "id": "368ba0c1-64ae-4b37-879c-489de9736d8f",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/property_exterior/1769567098819-s3bxqo7gj2i.jpg",
-            "sortOrder": 3,
-            "description": "",
-            "isSelected": true,
-            "category": "property_exterior"
-          },
-          {
-            "id": "d2afd6ee-229b-45fd-8d30-a9c2ebff921a",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/property_exterior/1769567098819-879kj8q8e7f.jpg",
             "sortOrder": 4,
             "description": "",
             "isSelected": true,
