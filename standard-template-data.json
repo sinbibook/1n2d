@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.13.0",
-    "generatedAt": "2026-01-29T05:50:56.484Z",
+    "version": "1.14.0",
+    "generatedAt": "2026-01-29T06:44:38.822Z",
     "templateType": "full_banner_slider",
     "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
     "homepageId": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
@@ -1149,7 +1149,7 @@
                     "id": "6ad7f49e-a0f8-461b-9e09-8b778c9e2d3a",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_signature/1769570683113-juum1hsgiga.jpg",
                     "sortOrder": 3,
-                    "description": "각 객실마다 자이글이 준비되어 있어\n실내에서도 편리하게 조리를 즐기실 수 있습니다.",
+                    "description": "자이글이 마련된 객실에 한해 \n실내 조리가 가능합니다.",
                     "isSelected": true
                   }
                 ]
