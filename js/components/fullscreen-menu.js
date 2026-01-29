@@ -344,19 +344,13 @@ class FullScreenMenu {
             let subMenuContainerStyle = '';
 
             if (key === 'spaces' || key === 'specials') {
-                // Grid layout for spaces and specials (responsive)
-                if (subMenuCount <= 3) {
-                    subMenuLayout = 'flex flex-col space-y-2';
-                } else if (subMenuCount <= 6) {
-                    subMenuLayout = 'grid grid-cols-2 gap-2';
-                } else {
-                    subMenuLayout = 'grid grid-cols-3 gap-1';
-                }
-                subMenuContainerStyle = '';
+                // Single column layout for spaces and specials to prevent text overlap
+                subMenuLayout = 'flex flex-col space-y-2';
+                subMenuContainerStyle = 'max-height: 300px; overflow-y: auto; overflow-x: hidden;';
             } else {
                 // Original layout for other menus
                 subMenuLayout = subMenuCount >= 4 ? 'grid grid-cols-2 gap-2' : 'flex flex-col space-y-2';
-                subMenuContainerStyle = '';
+                subMenuContainerStyle = 'max-height: 300px; overflow-y: auto; overflow-x: hidden;';
             }
 
             menuCard.innerHTML = `
@@ -446,7 +440,8 @@ class FullScreenMenu {
             // Create submenu container
             if (hasSubmenus) {
                 const subMenuContainer = document.createElement('div');
-                subMenuContainer.className = 'submenu-accordion-content overflow-hidden transition-all duration-300';
+                subMenuContainer.className = 'submenu-accordion-content overflow-y-auto overflow-x-hidden transition-all duration-300';
+                subMenuContainer.style.position = 'relative';
                 subMenuContainer.style.maxHeight = '0';
                 subMenuContainer.dataset.menuKey = key;
 
@@ -456,6 +451,7 @@ class FullScreenMenu {
                 // Apply grid layout for spaces and specials
                 if (key === 'spaces' || key === 'specials') {
                     innerContainer.className = 'py-4 pl-8 grid grid-cols-3 gap-3';
+                    innerContainer.style.alignItems = 'start';
                 } else {
                     innerContainer.className = 'py-4 pl-8';
                 }
@@ -520,9 +516,8 @@ class FullScreenMenu {
             this.activeMainMenu = menuKey;
             const innerContainer = submenuContent.firstElementChild;
 
-            // Calculate height dynamically
-            const containerHeight = Math.min(innerContainer.scrollHeight, 250) + 32;
-            submenuContent.style.maxHeight = containerHeight + 'px';
+            // Set fixed max height for scroll behavior
+            submenuContent.style.maxHeight = '300px';
 
             if (icon) icon.style.transform = 'rotate(45deg)';
         }
@@ -580,6 +575,7 @@ class FullScreenMenu {
 
         // 스크롤 비활성화
         document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
 
         // 이미지 표시 로직 개선
         if (!this.menuHeroImages && this.data) {
@@ -610,6 +606,7 @@ class FullScreenMenu {
 
         // 스크롤 복구
         document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
 
         // 헤더의 햄버거 아이콘 상태 업데이트
         if (window.headerComponent) {

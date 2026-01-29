@@ -1,1 +1,1 @@
-# 1n2d
+# template-full-banner-slider
