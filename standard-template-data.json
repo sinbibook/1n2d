@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.10.0",
-    "generatedAt": "2026-01-29T01:31:59.780Z",
+    "version": "1.11.0",
+    "generatedAt": "2026-01-29T05:35:08.990Z",
     "templateType": "full_banner_slider",
     "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
     "homepageId": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
@@ -287,59 +287,6 @@
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/c48bc77a-b965-407a-bdb7-e94be6a9c675/main/1769569485014-ppd2gedhzk.jpg",
             "sortOrder": 0,
             "description": "",
-            "isSelected": true
-          }
-        ]
-      },
-      {
-        "id": "7734ac4a-3ffc-47d4-a11e-4b92dd23655e",
-        "name": "서비스",
-        "description": "1박2일 펜션에서 제공하는 서비스를 안내드립니다. ",
-        "usageGuide": "[서비스]\n- IPTV/WiFi\n- 정수기, 전자레인지, 오븐, 공용세탁기 구비\n\n[주차장]\n- 주차 10대가능 (늦은시간 오시는 손님은 봉포해수욕장 주차장 이용가능)",
-        "displayOrder": 5,
-        "images": [
-          {
-            "id": "9e3d1cee-9ba5-4ff1-b7e9-702780c3fcf2",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7734ac4a-3ffc-47d4-a11e-4b92dd23655e/main/1769569486059-12tnsnjxvt1.jpg",
-            "sortOrder": 0,
-            "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "1dbb021a-808f-4833-89e2-c9d67c7a9a65",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7734ac4a-3ffc-47d4-a11e-4b92dd23655e/main/1769569486059-nrrakml26rm.jpg",
-            "sortOrder": 1,
-            "description": "",
-            "isSelected": true
-          }
-        ]
-      },
-      {
-        "id": "11bf460f-5270-4355-91d4-005423d77c91",
-        "name": "주변 관광지",
-        "description": "1박2일 펜션 주변 관광지 정보입니다. ",
-        "usageGuide": "· 봉호활어회센터(펜션 바로 앞)\n· 봉포해수욕장(펜션 바로 앞)\n· 천진해수욕장(펜션에서 자가용으로 2분거리)\n· 청간정(펜션에서 자가용으로 2분거리)\n· 영랑호(펜션에서 자가용으로 5분거리)\n· 장사항/횟집(펜션에서 자가용으로 5분거리)\n· 영금정 해돋이정자(펜션에서 자가용으로 7분거리)\n· 속초관광수산시장(펜션에서 자동차로 7분거리)\n· 아바이마을(갯배)(펜션에서 자가용으로 7분거리)\n· 등대전망대(펜션에서 자가용으로 7분거리)\n· 속초해수욕장(펜션에서 자가용으로 10분거리)\n· 엑스포공원(펜션에서 자가용으로 10분거리)\n· 대포항(펜션에서 자가용으로 15분거리)\n· 설악워터피아(펜션에서 자가용으로 15분거리)\n· 척산온천(펜션에서 자가용으로 15분거리)\n· 설악해맞이공원(펜션에서 자가용으로 16분거리)\n· 화암사(펜션에서 자가용으로 20분거리)\n· 설악산(펜션에서 자가용으로 20분거리)\n· 설악 벚꽃축제\n· 대한민국음악대향연\n· 강원 고성 명태축제",
-        "displayOrder": 6,
-        "images": [
-          {
-            "id": "c1412f5f-cccd-4f9d-a0bd-4d7c7300e044",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/11bf460f-5270-4355-91d4-005423d77c91/main/1769649369969-rj7bnf5nc5.jpg",
-            "sortOrder": 0,
-            "description": "봉포 해수욕장",
-            "isSelected": true
-          },
-          {
-            "id": "254cd2b9-e141-4488-be7d-8b561528edfe",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/11bf460f-5270-4355-91d4-005423d77c91/main/1769649370050-j8f7utfc8gf.jpg",
-            "sortOrder": 3,
-            "description": "영랑호",
-            "isSelected": true
-          },
-          {
-            "id": "223de536-fd08-4b98-a842-401b1578680b",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/11bf460f-5270-4355-91d4-005423d77c91/main/1769649370050-quqyiolzxje.jpg",
-            "sortOrder": 4,
-            "description": "영금정",
             "isSelected": true
           }
         ]
@@ -1101,15 +1048,15 @@
                     "isSelected": true
                   },
                   {
-                    "id": "8f80879b-a737-47d3-bd74-d420d436e519",
-                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769570683112-unfyaqi6pv.jpg",
+                    "id": "92215c31-2a74-4e04-9e3f-e9680a7b5d59",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769664872962-x6c6ex5v9gj.jpg",
                     "sortOrder": 1,
                     "description": "",
                     "isSelected": true
                   },
                   {
-                    "id": "e7a1cb31-1d6f-4850-b4b0-16a760f9eec2",
-                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769647913396-ekktaf6sklu.jpg",
+                    "id": "8f80879b-a737-47d3-bd74-d420d436e519",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769570683112-unfyaqi6pv.jpg",
                     "sortOrder": 2,
                     "description": "",
                     "isSelected": true
@@ -1122,30 +1069,37 @@
                     "isSelected": true
                   },
                   {
+                    "id": "e7a1cb31-1d6f-4850-b4b0-16a760f9eec2",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769647913396-ekktaf6sklu.jpg",
+                    "sortOrder": 4,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
                     "id": "26c7a0ad-1a75-490c-9681-42f976e14501",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769646103165-0wph09ivxrd.jpg",
-                    "sortOrder": 4,
+                    "sortOrder": 5,
                     "description": "",
                     "isSelected": true
                   },
                   {
                     "id": "c12e10c7-5c61-4e8e-9536-4da2f39a76bc",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769570683113-txay0v8e2v.jpg",
-                    "sortOrder": 5,
+                    "sortOrder": 6,
                     "description": "",
                     "isSelected": true
                   },
                   {
                     "id": "c7481ae4-dee8-468c-81a2-e047575a0c9c",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769570683113-m3x86sc37ri.jpg",
-                    "sortOrder": 6,
+                    "sortOrder": 7,
                     "description": "",
                     "isSelected": true
                   },
                   {
                     "id": "d9e58f53-3fbf-4e21-a962-c598ef3d12f7",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769570683113-lqllba92hjj.jpg",
-                    "sortOrder": 7,
+                    "sortOrder": 8,
                     "description": "",
                     "isSelected": true
                   }
@@ -1153,7 +1107,7 @@
                 "description": "고성의 풍경과 함께하는 하루"
               },
               "closing": {
-                "title": "",
+                "title": " ",
                 "images": [
                   {
                     "id": "319fc455-8b33-4f37-8638-906df5597a9b",
@@ -1162,12 +1116,13 @@
                     "description": "",
                     "isSelected": true
                   }
-                ]
+                ],
+                "description": " "
               },
               "essence": {
-                "title": "Preiview",
+                "title": "펜션 미리보기",
                 "images": [],
-                "description": "고성 1박2일 펜션의 객실과 분위기를 미리 살펴보세요."
+                "description": "객실과 분위기를 미리 살펴보세요."
               },
               "gallery": {
                 "title": "",
@@ -1537,7 +1492,12 @@
       },
       "theme": {
         "font": {
-          "koSub": null,
+          "koSub": {
+            "cdn": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css",
+            "key": "pretendard",
+            "woff2": null,
+            "family": "Pretendard"
+          },
           "enMain": null,
           "koMain": {
             "cdn": null,
