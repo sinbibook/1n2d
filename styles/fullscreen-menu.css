@@ -1,4 +1,9 @@
 /* Fullscreen Menu Styles */
+#fullscreen-menu {
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
 
 .menu-slide-in {
     animation: slideInFromLeft 0.3s ease-out;
@@ -61,12 +66,12 @@
 
 .accordion-content {
     max-height: 0;
-    overflow: hidden;
+    overflow-y: auto;
     transition: max-height 0.3s ease;
 }
 
 .accordion-content.open {
-    max-height: 500px;
+    max-height: none;
 }
 
 .accordion-arrow {
@@ -75,4 +80,22 @@
 
 .accordion-arrow.open {
     transform: rotate(180deg);
+}
+
+/* 서브메뉴 스크롤바 스타일링 */
+.submenu-accordion-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.submenu-accordion-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.submenu-accordion-content::-webkit-scrollbar-thumb {
+    background: rgba(93, 64, 55, 0.3);
+    border-radius: 3px;
+}
+
+.submenu-accordion-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(93, 64, 55, 0.5);
 }
