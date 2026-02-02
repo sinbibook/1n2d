@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.19.0",
-    "generatedAt": "2026-02-02T07:30:21.700Z",
+    "version": "1.20.0",
+    "generatedAt": "2026-02-02T07:55:06.334Z",
     "templateType": "full_banner_accordion",
     "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
     "homepageId": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
@@ -1121,50 +1121,51 @@
                 "description": " "
               },
               "essence": {
-                "title": "1박2일 미리보기",
+                "title": "Prologue",
                 "images": [
-                  {
-                    "id": "566154d8-591a-4f35-9b46-019213c85861",
-                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_essence/1770017252647-49mu85ko1q5.jpg",
-                    "sortOrder": 1,
-                    "description": "",
-                    "isSelected": true
-                  },
                   {
                     "id": "87161ba1-400e-4081-b2d9-e25e6754ec10",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_essence/1770017252647-4403c0pk0ho.jpg",
+                    "sortOrder": 0,
+                    "description": "",
+                    "isSelected": true
+                  }
+                ],
+                "description": "하루를 머물러도 기억에 남는 쉼\n봉포해변 앞에서 보내는 여유로운 1박 2일\n바다와 함께 쉬어가는 고성 1박2일 펜션"
+              },
+              "gallery": {
+                "title": "OceanView ",
+                "images": [
+                  {
+                    "id": "41d3a369-a032-49fe-a3cd-6bfe836cca76",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_gallery/1770018843172-cyruhaj6l6e.jpg",
+                    "sortOrder": 0,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "15c0ba1e-925b-45c7-91ea-eecad7759cf2",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_gallery/1770018843172-0smsizdsxzb.jpg",
                     "sortOrder": 1,
                     "description": "",
                     "isSelected": true
                   },
                   {
-                    "id": "1fad1db2-7f6c-4bfb-a233-e72e1a9fb578",
-                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_essence/1770017252647-8ieh4k12t8g.jpg",
+                    "id": "c52b6d2e-a858-4090-a8b9-ca2b381828fc",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_gallery/1770018843172-g29twuckyiq.jpg",
                     "sortOrder": 2,
                     "description": "",
                     "isSelected": true
                   },
                   {
-                    "id": "363911de-f1f0-4bb9-8d7c-dfb31a7bc6f5",
-                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_essence/1770017252647-33hrm4gizqg.jpg",
+                    "id": "f563cc2a-97b8-46dd-8068-dac8aa5fd3cf",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_gallery/1770018843172-0n2g0bk64md.jpg",
                     "sortOrder": 3,
-                    "description": "",
-                    "isSelected": true
-                  },
-                  {
-                    "id": "f60cd43f-51e9-4f28-9c58-20a99538ca96",
-                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_essence/1770017252647-icr3de99lzi.jpg",
-                    "sortOrder": 4,
                     "description": "",
                     "isSelected": true
                   }
                 ],
-                "description": "객실과 분위기를 미리 살펴보세요."
-              },
-              "gallery": {
-                "title": " ",
-                "images": [],
-                "description": " "
+                "description": "봉포해변의 오션뷰를 즐길 수 있어\n머무는 공간마다 바다의 풍경이 다르게 펼쳐집니다."
               },
               "signature": {
                 "title": "Specials",
@@ -1198,7 +1199,7 @@
                     "isSelected": true
                   }
                 ],
-                "description": " 머무는 동안 불편함 없이 이용할 수 있도록\n다양한 부대시설이 준비되어 있습니다."
+                "description": "봉포해변을 가까이에서 즐길 수 있고,\n바베큐장이 준비되어 있어 머무는 시간에 여유를 더합니다."
               }
             }
           ]
@@ -1535,10 +1536,10 @@
             "family": "Pretendard"
           },
           "enMain": {
-            "cdn": "https://use.typekit.net/vll4umt.css",
-            "key": "chloe",
+            "cdn": "https://fonts.cdnfonts.com/css/gloock-2",
+            "key": "gloock",
             "woff2": null,
-            "family": "chloe"
+            "family": "Gloock"
           },
           "koMain": {
             "cdn": "https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css",
@@ -3461,6 +3462,7 @@
           ]
         }
       ]
-    }
+    },
+    "id": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
   }
 }
