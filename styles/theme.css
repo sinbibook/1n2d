@@ -1,18 +1,13 @@
 /* CDN Fonts */
+@import url('https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css');
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css');
-
-/* Font Faces */
-@font-face {
-  font-family: 'GyeonggiMillenniumBackground';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Batang_Regular.woff') format('woff');
-  font-weight: 400;
-  font-display: swap;
-}
+@import url('https://use.typekit.net/vll4umt.css');
 
 /* CSS Variables */
 :root {
-  --font-ko-main: 'GyeonggiMillenniumBackground', sans-serif;
+  --font-ko-main: 'MaruBuri', sans-serif;
   --font-ko-sub: 'Pretendard', sans-serif;
+  --font-en-main: 'chloe', sans-serif;
   --color-primary: #F5F5F5;
   --color-secondary: #706964;
 }
