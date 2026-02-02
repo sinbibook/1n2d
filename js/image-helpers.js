@@ -49,15 +49,26 @@ const ImageHelpers = {
     },
 
     /**
-     * 플레이스홀더 적용
+     * 플레이스홀더 적용 (img 태그용)
      */
     applyPlaceholder(imageElement, overlayElement = null) {
         if (!imageElement) return;
-        imageElement.src = this.EMPTY_IMAGE_WITH_ICON;
-        imageElement.alt = '이미지 없음';
-        imageElement.classList.add('empty-image-placeholder');
-        imageElement.style.opacity = '1';
-        if (overlayElement) overlayElement.style.display = 'none';
+
+        // img 태그인 경우
+        if (imageElement.tagName === 'IMG') {
+            imageElement.src = this.EMPTY_IMAGE_WITH_ICON;
+            imageElement.alt = '이미지 없음';
+            imageElement.classList.add('empty-image-placeholder');
+            imageElement.style.opacity = '1';
+            if (overlayElement) overlayElement.style.display = 'none';
+        } else {
+            // background-image용 (div, section 등)
+            imageElement.style.backgroundImage = `url('${this.EMPTY_IMAGE_WITH_ICON}')`;
+            imageElement.style.backgroundSize = 'cover';
+            imageElement.style.backgroundPosition = 'center';
+            imageElement.style.backgroundRepeat = 'no-repeat';
+            imageElement.classList.add('empty-background-placeholder');
+        }
     },
 
     /**

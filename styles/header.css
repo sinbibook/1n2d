@@ -28,6 +28,45 @@
 }
 
 /* ================================
+   Header Right Section (Booking + Menu)
+   ================================ */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ================================
+   Header Booking Button
+   ================================ */
+.header-booking-btn {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    border-radius: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10001;
+}
+
+.header-booking-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.header-booking-btn span {
+    color: #fff;
+    font-family: var(--font-en-main), serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+
+/* ================================
    Menu Button (Right)
    ================================ */
 .menu-toggle {
@@ -44,7 +83,7 @@
 
 .menu-text {
     color: #fff;
-    font-family: var(--font-ko-main), sans-serif;
+    font-family: var(--font-en-main), serif;
     font-size: 0.875rem;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -60,6 +99,16 @@
 .transparent-header.scrolled .menu-text {
     color: var(--color-primary);
 }
+
+.transparent-header.scrolled .header-booking-btn {
+    background: var(--color-secondary);
+    border-color: var(--color-primary);
+}
+
+.transparent-header.scrolled .header-booking-btn span {
+    color: var(--color-primary);
+}
+
 
 .menu-toggle:hover {
     background: rgba(255, 255, 255, 0.3);
@@ -280,6 +329,8 @@ body.dark-section-active .ybs-booking-btn {
 .menu-item {
     cursor: pointer;
     transition: all 0.3s ease;
+    max-height: 50vh; /* 최대 높이 50vh 설정 */
+    overflow-y: auto; /* 세로 스크롤 활성화 */
 }
 
 /* 아코디언 닫힌 상태 */
@@ -332,7 +383,8 @@ body.dark-section-active .ybs-booking-btn {
     padding: 0;
     margin: 0;
     max-height: 500px; /* 아코디언 열렸을 때 최대 높이 */
-    overflow: hidden; /* 스크롤 제거 */
+    overflow-y: auto; /* 세로 스크롤 활성화 */
+    overflow-x: hidden; /* 가로 스크롤은 숨김 */
     transition: max-height 0.3s ease, opacity 0.3s ease;
     opacity: 1;
 }
@@ -451,6 +503,29 @@ body.dark-section-active .ybs-booking-btn {
         display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
+        font-size: 0.75rem;
+    }
+
+    .header-booking-btn {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+    }
+
+    .header-booking-btn span {
+        font-size: 0;
+    }
+
+    .header-booking-btn span::before {
+        content: 'BOOK';
+        font-size: 0.75rem;
+        color: #fff;
+        font-family: var(--font-en-main), serif;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+    }
+
+    .transparent-header.scrolled .header-booking-btn span::before {
+        color: var(--color-primary);
     }
 
     .ybs-booking-btn {
@@ -501,6 +576,14 @@ body.dark-section-active .ybs-booking-btn {
     .menu-close-btn {
         top: 20px;
         left: 20px;
+    }
+
+    .menu-item {
+        max-height: 100%;
+    }
+
+    .menu-item-list {
+        max-height: 100%;
     }
 
     .menu-item-title {

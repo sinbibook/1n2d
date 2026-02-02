@@ -290,6 +290,56 @@ document.addEventListener('DOMContentLoaded', () => {
     initAnimations();
 });
 
+/**
+ * Room Gallery Accordion - facility와 동일한 구조
+ */
+window.initRoomGallery = function initRoomGallery() {
+    console.log('=== Room Gallery Initialization ===');
+    const galleryContainer = document.querySelector('[data-room-gallery]');
+    console.log('Gallery container found:', galleryContainer);
+
+    if (!galleryContainer) {
+        console.error('Room gallery container not found!');
+        return;
+    }
+
+    const galleryItems = Array.from(galleryContainer.querySelectorAll('.gallery-item'));
+    console.log('Gallery items found:', galleryItems.length);
+
+    if (galleryItems.length === 0) {
+        console.error('No gallery items found!');
+        return;
+    }
+
+    // 각 갤러리 아이템에 클릭 이벤트 추가 (facility와 동일)
+    galleryItems.forEach((item, index) => {
+        console.log(`Adding click event to item ${index}`);
+        item.addEventListener('click', () => {
+            console.log(`Gallery item ${index} clicked`);
+
+            // 모든 아이템에서 active 클래스 제거
+            galleryItems.forEach(otherItem => {
+                otherItem.classList.remove('gallery-item-active');
+            });
+
+            // 클릭된 아이템에 active 클래스 추가
+            item.classList.add('gallery-item-active');
+            console.log(`Item ${index} activated`);
+        });
+    });
+
+    // 첫 번째 아이템을 기본 활성화 (facility와 동일)
+    setTimeout(() => {
+        if (galleryItems[0]) {
+            galleryItems[0].classList.add('gallery-item-active');
+            console.log('First gallery item activated by default');
+        }
+    }, 100);
+
+    console.log('Room gallery initialization completed');
+};
+
 // 전역 네임스페이스에 노출
 window.initRoomHeroSlider = initRoomHeroSlider;
 window.initRoomDetailSlider = initRoomDetailSlider;
+window.initRoomGallery = initRoomGallery;

@@ -110,50 +110,7 @@
     position: relative;
 }
 
-.facility-main-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 60%;
-    height: 50%;
-    background-image: url('../images/shadow1.png');
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-size: contain;
-    opacity: 0.5;
-    pointer-events: none;
-    z-index: 1;
-}
 
-/* Facility Label */
-.facility-label {
-    position: absolute;
-    left: 0;
-    margin: -55px;
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: all 1s ease;
-    z-index: 3;
-}
-
-.facility-label.animate {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.facility-label span {
-    font-family: var(--font-en-main), serif;
-    font-size: 4rem;
-    font-style: italic;
-    color: #b5bebb;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    position: relative;
-    display: inline-block;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
-                 0px 0px 20px rgba(255, 255, 255, 0.5);
-}
 
 .facility-main-content {
     position: relative;
@@ -167,6 +124,7 @@
     font-weight: 700;
     color: var(--color-secondary);
     margin-bottom: 30px;
+    margin-top: 110px;
     line-height: 1.4;
     letter-spacing: 0.02em;
     opacity: 0;
@@ -180,6 +138,7 @@
 }
 
 .facility-main-description {
+    font-family: var(--font-ko-sub);
     font-size: 1.125rem;
     font-weight: 400;
     color: #666;
@@ -203,6 +162,7 @@
     opacity: 0;
     transform: translateY(30px);
     transition: all 1s ease;
+    position: relative;
 }
 
 .facility-thumbnail.animate {
@@ -210,15 +170,39 @@
     transform: translateY(0);
 }
 
-.facility-thumbnail-hexagon {
+/* 썸네일 아래 세로 라인 */
+.facility-thumbnail::after {
+    content: '';
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 70px;
+    background: var(--color-secondary);
+}
+
+/* 세로선 끝에 바로 이어지는 가로선 - width 100%, 1px 두께 */
+.facility-thumbnail::before {
+    content: '';
+    position: absolute;
+    bottom: -70px; /* 세로선 끝지점과 동일한 위치 */
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--color-secondary);
+    z-index: 1;
+}
+
+.facility-thumbnail-house {
     position: relative;
     width: 180px;
     height: 180px;
     margin: 0 auto;
 }
 
-/* Green border for thumbnail */
-.facility-thumbnail-hexagon::before {
+/* Green border for house thumbnail */
+.facility-thumbnail-house::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -227,12 +211,12 @@
     width: 100%;
     height: 100%;
     background: var(--color-secondary);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%);
     z-index: 1;
 }
 
-/* White padding for thumbnail */
-.facility-thumbnail-hexagon::after {
+/* White padding for house thumbnail */
+.facility-thumbnail-house::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -241,11 +225,11 @@
     width: calc(100% - 4px);
     height: calc(100% - 4px);
     background: var(--color-primary);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%);
     z-index: 2;
 }
 
-.facility-thumbnail-hexagon img {
+.facility-thumbnail-house img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -254,19 +238,19 @@
     height: calc(100% - 20px);
     object-fit: cover;
     object-position: center;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%);
     z-index: 3;
 }
 
 
 .facility-full-image {
     width: 100%;
-    height: 600px;
-    margin-top: 60px;
+    max-width: 1200px;
+    height: 500px;
+    margin: 60px auto 0 auto;
     position: relative;
     overflow: hidden;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
     opacity: 0;
     transform: translateY(30px);
     transition: all 1s ease;
@@ -287,7 +271,7 @@
 
 /* Facility Details Wrapper */
 .facility-details-wrapper {
-    padding: 0;
+    padding: 0 0 30px 0;
     background: var(--color-primary);
 }
 
@@ -462,14 +446,6 @@
         width: 90%;
     }
 
-    .facility-label {
-        left: 35px;
-        margin-top: 30px;
-    }
-
-    .facility-label span {
-        font-size: 2.5rem;
-    }
 
     .facility-main-title {
         font-size: 1.7rem;
@@ -481,18 +457,19 @@
         margin-bottom: 40px;
     }
 
-    .facility-thumbnail-hexagon {
+    .facility-thumbnail-house {
         width: 150px;
         height: 135px;
     }
 
     .facility-full-image {
-        height: 400px;
-        margin-top: 40px;
+        height: 350px;
+        margin: 40px 20px 0 20px;
+        max-width: calc(100% - 40px);
     }
 
     .facility-details-wrapper {
-        padding: 10px 20px;
+        padding: 10px 20px 30px 20px;
     }
 
     .facility-detail-title {
@@ -531,7 +508,7 @@
         font-size: 0.95rem;
     }
 
-    .facility-gallery-section {
+    /* .facility-gallery-section {
         min-height: 800px;
         padding-top: 150px;
     }
@@ -543,9 +520,9 @@
 
     .facility-gallery-label span {
         font-size: 2.5rem;
-    }
+    } */
 
-    .facility-gallery-container {
+    /* .facility-gallery-container {
         max-width: 100%;
         position: relative;
         bottom: auto;
@@ -564,7 +541,7 @@
         width: 100%;
         max-width: 350px;
         height: 350px;
-    }
+    } */
 
     .gallery-item img {
         height: 100%;
@@ -572,8 +549,8 @@
 }
 
 /* Large Desktop */
-@media (min-width: 1600px) {
+@media (min-width: 1800px) {
     .facility-main-content {
-        max-width: 1400px;
+        max-width: 1600px;
     }
 }

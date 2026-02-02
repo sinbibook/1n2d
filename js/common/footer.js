@@ -50,8 +50,9 @@
     async function handleGpensionReservation() {
         const realtimeBookingId = await getPropertyData('realtimeBookingId');
 
-        if (realtimeBookingId && realtimeBookingId.startsWith('http')) {
-            window.open(realtimeBookingId, '_blank');
+        if (realtimeBookingId && realtimeBookingId !== '지펜션ID') {
+            const reservationUrl = `https://www.bookingplay.co.kr/booking/1/${realtimeBookingId}`;
+            window.open(reservationUrl, '_blank');
         }
     }
 

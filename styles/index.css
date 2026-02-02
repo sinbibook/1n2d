@@ -45,9 +45,50 @@ body {
 .hero-property-name {
     flex: 0 0 auto;
     font-family: var(--font-en-main), serif;
-    font-size: 1.125rem;
+    font-size: 1.8rem;
     color: #fff;
     letter-spacing: 0.05em;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 8px;
+    margin-bottom: 30px;
+}
+
+/* Index page hero content - 우측 중앙 위치 */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    transform: translateY(-50%);
+    text-align: right;
+    color: #fff;
+    z-index: 3;
+    width: auto;
+    padding: 0;
+}
+
+/* 데스크탑에서만 max-width 적용 */
+@media (min-width: 769px) {
+    .hero-content {
+        max-width: 60%;
+    }
+}
+
+/* 큰 화면에서 더 우측으로 이동 */
+@media (min-width: 1800px) {
+    .hero-content {
+        right: 15%;
+        left: auto;
+        transform: translateY(-50%);
+    }
+}
+
+/* 매우 큰 화면에서 빨간선 위치까지 이동 */
+@media (min-width: 1920px) {
+    .hero-content {
+        right: 10%;
+        left: auto;
+        transform: translateY(-50%);
+    }
 }
 
 /* Index page progress container - 중앙 위치 */
@@ -120,11 +161,12 @@ body {
     .fp-section,
     .section {
         height: auto !important;
-        min-height: 100vh !important;
+        min-height: auto !important;
         position: relative !important;
         transform: none !important;
         top: auto !important;
         left: auto !important;
+        padding: 40px 0;
     }
 
     /* Signature Section 모바일 조정 */
@@ -149,13 +191,6 @@ body {
         text-align: center;
     }
 
-    .signature-section .signature-thumbnails {
-        display: none;
-    }
-
-    .signature-right {
-        display: none;
-    }
 
     /* Navigation dots 완전히 숨기기 */
     .fp-nav {
@@ -185,7 +220,14 @@ body {
     }
 
     .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        transform: translateY(-50%);
+        text-align: center;
         padding: 0 40px;
+        bottom: auto;
     }
 
     /* 모바일에서 히어로 섹션 텍스트만 즉시 표시 */
@@ -209,41 +251,111 @@ body {
         transform: translateY(0) !important;
     }
 
-    /* 모바일 갤러리 스타일 수정 */
+    /* 모바일 갤러리 영역 - 가로 스크롤 스타일 */
     .gallery-section {
-        min-height: 100vh !important;
+        padding: 80px 0 40px 0 !important;
+        min-height: auto !important;
         height: auto !important;
-        background: linear-gradient(to bottom, var(--color-secondary) 0%, var(--color-secondary) 50%, var(--color-primary) 50%, var(--color-primary) 100%) !important;
-    }
-
-    .gallery-container {
-        height: auto !important;
-        min-height: 100vh !important;
-        padding: 40px 0 !important;
-    }
-
-    .gallery-slider-wrapper {
-        height: 300px !important;
-        min-height: 300px !important;
-        overflow: visible !important;
-        transform: translateY(-50px) !important;
-    }
-
-    .gallery-slider {
-        height: 300px !important;
-        min-height: 300px !important;
-        padding: 0 20px !important;
-    }
-
-    .gallery-item {
-        width: 250px !important;
-        height: 280px !important;
-        flex-shrink: 0 !important;
+        background: transparent !important;
+        position: relative !important;
+        overflow: hidden !important;
+        z-index: 1 !important;
     }
 
     .gallery-header {
-        padding: 40px 20px !important;
+        margin-bottom: 40px !important;
         text-align: center !important;
+        padding: 0 20px !important;
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .gallery-title,
+    .gallery-description {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .gallery-container {
+        display: flex !important;
+        flex-direction: column !important;
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-content: flex-start !important;
+    }
+
+    .gallery-slider-wrapper {
+        width: 100% !important;
+        overflow: hidden !important;
+        position: relative !important;
+    }
+
+    /* 강력한 가로 슬라이더 스타일 - common.css 완전 덮어쓰기 */
+    .gallery-section .gallery-slider-wrapper .gallery-slider {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        gap: 0px !important;
+        padding: 0 20px !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+        height: auto !important;
+        width: 100% !important;
+        grid-template-columns: unset !important;
+        grid-template-rows: unset !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .gallery-section .gallery-slider-wrapper .gallery-slider::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .gallery-section .gallery-slider .gallery-item {
+        flex: 0 0 calc(100vw - 60px) !important;
+        width: calc(100vw - 60px) !important;
+        height: 350px !important;
+        border-radius: 8px !important;
+        overflow: hidden !important;
+        scroll-snap-align: center !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+        margin: 0 10px !important;
+        margin-bottom: 0 !important;
+        max-width: calc(100vw - 60px) !important;
+        min-width: calc(100vw - 40px) !important;
+    }
+
+
+    .gallery-item img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* 갤러리 아이템 콘텐츠 숨김 (모바일용) */
+    .gallery-item .gallery-content,
+    .gallery-item .gallery-item-overlay,
+    .gallery-item-description {
+        display: none !important;
+    }
+
+    /* 모든 갤러리 관련 호버/애니메이션 효과 제거 */
+    .gallery-item:hover,
+    .gallery-item.active {
+        transform: none !important;
+    }
+
+    /* Closing section이 갤러리 아래 오도록 */
+    .closing-section {
+        position: relative !important;
+        margin-top: 0 !important;
+        height: 100vh !important;
+        min-height: 100vh !important;
     }
 }
 
@@ -278,7 +390,7 @@ body {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.3);
+    background: rgba(49, 66, 61, 0.3);
     border: 1px solid rgba(0,0,0,0.3);
     transition: all 0.3s ease;
     cursor: pointer;
@@ -287,7 +399,7 @@ body {
 
 .fp-nav a:hover span,
 .fp-nav a.active span {
-    background: #fff;
+    background: var(--color-secondary);
     transform: scale(1.3);
     border: 1px solid rgba(0,0,0,0.4);
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
@@ -338,46 +450,37 @@ body {
 }
 
 /* ================================
-   Section 2: Essence Section - Split Layout
+   Section 2: Essence Section - Overlapping Layout
    ================================ */
 .essence-section {
-    background: #f5f5f5;
     position: relative;
     height: 100vh;
+    overflow: hidden;
 }
 
-/* Property Name EN Styling */
-.property-name-en {
-    position: absolute;
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: var(--font-en-main), serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    font-style: italic;
-    background: linear-gradient(to right, var(--color-primary) 0%, var(--color-primary) 50%, var(--color-secondary) 50%, var(--color-secondary) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-align: center;
-    z-index: 10;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(99, 89, 85, 0.1);
+/* 큰 화면에서만 최대 너비 제한 */
+@media (min-width: 1920px) {
+    .essence-section {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
 }
 
 .essence-container {
-    display: flex;
+    position: relative;
     height: 100%;
     width: 100%;
 }
 
-/* 왼쪽: 이미지 영역 */
+/* 이미지 영역 - 우측 75% */
 .essence-left {
-    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 75%;
     height: 100%;
     overflow: hidden;
-    position: relative;
+    padding: 30px;
 }
 
 .essence-image {
@@ -386,261 +489,178 @@ body {
     object-fit: cover;
 }
 
-/* 오른쪽: 텍스트 영역 */
+/* 텍스트 영역 - 좌측에서 시작하여 이미지 위로 확장 */
 .essence-right {
-    position: relative;
-    width: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    max-width: 800px;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 60px;
-    background: var(--color-primary);
-    overflow: hidden;
-}
-
-.essence-right::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../images/shadow1.png') no-repeat right top;
-    background-size: cover;
-    opacity: 0.3;
-    z-index: 0;
-    animation: floatingShadow 8s ease-in-out infinite;
-    pointer-events: none;
-}
-
-@keyframes floatingShadow {
-    0%, 100% {
-        transform: rotate(0deg) scale(1) translate(0, 0);
-    }
-    20% {
-        transform: rotate(-1deg) scale(1.02) translate(2px, -3px);
-    }
-    40% {
-        transform: rotate(1deg) scale(1.01) translate(-3px, 2px);
-    }
-    60% {
-        transform: rotate(-0.5deg) scale(1.03) translate(4px, -2px);
-    }
-    80% {
-        transform: rotate(0.5deg) scale(1.01) translate(-2px, 3px);
-    }
+    z-index: 2;
 }
 
 .essence-content {
     position: relative;
-    max-width: 500px;
     width: 100%;
-    text-align: center;
-    z-index: 1;
+    max-width: 800px;
+    text-align: left;
+    padding: 0;
 }
 
 .essence-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 600;
     color: var(--color-secondary);
     margin-bottom: 20px;
-    letter-spacing: 0.02em;
+    letter-spacing: -0.02em;
     line-height: 1.3;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.essence-title.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .essence-divider {
-    width: 1px;
-    height: 60px;
-    background: #333;
-    margin: 0 auto 30px auto;
+    width: 40px;
+    height: 2px;
+    background: var(--color-secondary);
+    margin: 0 0 30px 0;
 }
 
 .essence-description {
+    font-family: var(--font-ko-sub);
     font-size: 1rem;
     font-weight: 400;
-    color: #666;
+    color: var(--text-secondary);
     line-height: 1.8;
     letter-spacing: 0.01em;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+    transition-delay: 0.6s;
+}
+
+.essence-description.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ================================
-   Section 3: Signature Section (Like Essence Section)
+   Section 3: Signature Section - New Layout
    ================================ */
 .signature-section {
     background: var(--color-primary);
     position: relative;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
 }
 
 .signature-container {
-    display: flex;
-    height: 100%;
     width: 100%;
-}
-
-/* 왼쪽: 텍스트 영역 */
-.signature-left {
-    width: 50%;
-    height: 100%;
+    max-width: 1200px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background: var(--color-primary);
-    padding: 60px;
-    position: relative;
-    overflow: hidden;
+    margin: 0 auto;
 }
 
-.signature-left::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+/* 상단 텍스트 영역 */
+.signature-left {
     width: 100%;
-    height: 100%;
-    background-image: url('../images/shadow2.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.3;
-    pointer-events: none;
-    animation: leafFloat 15s ease-in-out infinite;
-    transform-origin: center center;
-}
-
-@keyframes leafFloat {
-    0%, 100% {
-        transform: rotate(0deg) scale(1) translate(0, 0);
-    }
-    15% {
-        transform: rotate(2deg) scale(1.02) translate(3px, -5px);
-    }
-    30% {
-        transform: rotate(-1deg) scale(1.01) translate(-2px, 2px);
-    }
-    45% {
-        transform: rotate(1.5deg) scale(1.03) translate(5px, -3px);
-    }
-    60% {
-        transform: rotate(-2deg) scale(1.01) translate(-4px, 4px);
-    }
-    75% {
-        transform: rotate(0.5deg) scale(1.02) translate(2px, -6px);
-    }
-    85% {
-        transform: rotate(-1.5deg) scale(1.01) translate(-3px, 3px);
-    }
-}
-
-.signature-content {
-    max-width: 500px;
+    text-align: left;
 }
 
 .signature-title {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: 600;
     color: var(--color-secondary);
-    margin-bottom: 30px;
-    line-height: 1.4;
-    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+}
+
+.essence-divider {
+    width: 40px;
+    height: 2px;
+    background: var(--color-secondary);
+    margin: 0 0 30px 0;
 }
 
 .signature-description {
+    font-family: var(--font-ko-sub);
     font-size: 1rem;
     font-weight: 400;
-    color: #666;
+    color: var(--text-secondary);
     line-height: 1.8;
     letter-spacing: 0.01em;
-    margin-bottom: 30px;
-    text-align: center;
+    margin-bottom: 15px;
 }
 
-/* Signature Thumbnails */
+/* 하단 이미지 영역 */
+.signature-right {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* 메인 이미지 */
+.signature-image {
+    width: 70%;
+    height: 450px;
+    object-fit: cover;
+}
+
+/* 썸네일 영역 */
 .signature-thumbnails {
     display: flex;
-    gap: 25px;
-    margin-top: 80px;
-    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 30%;
 }
 
 .signature-thumb {
-    width: 80px;
-    height: 80px;
-    position: relative;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-/* Hexagon border (only visible when active or hover) */
-.signature-thumb::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
-    height: 100%;
-    background: transparent;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    transition: background 0.3s ease;
-    z-index: 1;
-}
-
-/* White padding inner layer */
-.signature-thumb::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 4px);
-    height: calc(100% - 4px);
-    background: var(--color-primary);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    z-index: 2;
+    height: calc((450px - 30px) / 3);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 2px solid transparent;
 }
 
 .signature-thumb img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 8px);
-    height: calc(100% - 8px);
-    object-fit: cover;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    transition: transform 0.3s ease;
-    z-index: 3;
-}
-
-.signature-thumb:hover img {
-    transform: translate(-50%, -50%) scale(1.1);
-}
-
-/* Active state - show border */
-.signature-thumb.active::before {
-    background: var(--color-secondary);
-}
-
-/* Hover state - show semi-transparent border */
-.signature-thumb:hover:not(.active)::before {
-    background: rgba(99, 89, 85, 0.3);
-}
-
-/* 오른쪽: 이미지 영역 */
-.signature-right {
-    width: 50%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.signature-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.5s ease;
+}
+
+.signature-thumb.active {
+    border-color: var(--color-secondary);
+}
+
+.signature-thumb:not(.active) {
+    opacity: 0.7;
+}
+
+.signature-image {
+    flex: 1;
+    height: 450px;
+    object-fit: cover;
 }
 
 /* ================================
@@ -706,11 +726,13 @@ body {
     align-items: center;
     gap: 25px;
     z-index: 2;
+    width: 90%;
+    margin: 0 auto;
 }
 
 /* 타이틀 */
 .closing-title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -728,7 +750,8 @@ body {
 
 /* 설명 */
 .closing-description {
-    font-size: 1.25rem;
+    font-family: var(--font-ko-sub);
+    font-size: 16px;
     line-height: 1.8;
     font-weight: 400;
     letter-spacing: 0.02em;
@@ -746,62 +769,27 @@ body {
 }
 
 
-/* Closing Section CTA Buttons */
-.closing-cta-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
+/* Closing Section Property Name */
+.closing-property-name {
+    font-family: var(--font-en-main), serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--color-primary);
+    margin: 0 auto 30px auto;
+    width: 90%;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     opacity: 0;
     transform: translateY(30px);
     transition: all 1s ease;
+    transition-delay: 0.2s;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.5);
+    padding-bottom: 10px;
 }
 
-.closing-cta-buttons.animate {
+.closing-property-name.animate {
     opacity: 1;
     transform: translateY(0);
-    transition-delay: 1s;
-}
-
-
-.closing-btn {
-    padding: 12px 32px;
-    background: transparent;
-    border: 1px solid var(--color-primary);
-    border-radius: 0;
-    color: var(--color-primary);
-    font-family: var(--font-ko-main), sans-serif;
-    font-size: 0.9375rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s ease;
-}
-
-.closing-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: var(--color-primary);
-    transition: left 0.3s ease;
-    z-index: -1;
-}
-
-.closing-btn:hover {
-    color: #333;
-}
-
-.closing-btn:hover::before {
-    left: 0;
-}
-
-.closing-btn span {
-    display: inline-block;
 }
 
 
@@ -826,7 +814,8 @@ body {
 
     .section {
         height: auto !important;
-        min-height: 100vh;
+        min-height: auto;
+        padding: 40px 0;
     }
 
     .fp-nav a {
@@ -843,35 +832,105 @@ body {
         padding: 60px 20px;
     }
 
-    /* Essence section mobile */
+    /* Essence section mobile - 세로 레이아웃 */
+    .essence-section {
+        height: auto;
+        min-height: auto;
+        padding: 40px 0;
+    }
+
     .essence-container {
-        flex-direction: column-reverse;
+        display: flex;
+        flex-direction: column;
+        position: static;
+        padding: 30px;
     }
 
-    .essence-left,
-    .essence-right {
+    .essence-left {
+        position: static;
         width: 100%;
-        height: 50vh;
+        height: 60vh;
+        min-height: 400px;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .essence-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0;
     }
 
     .essence-right {
+        position: static;
+        width: 100%;
+        max-width: none;
+        height: auto;
         padding: 40px 20px;
+        display: block;
+    }
+
+    .essence-content {
+        max-width: none;
+        width: 100%;
+        text-align: left;
+    }
+
+    .essence-title {
+        font-size: 1.8rem;
     }
 
     /* Signature section mobile */
-    .signature-container {
-        flex-direction: column;
-    }
-
-    .signature-left,
-    .signature-right {
-        width: 100%;
-        height: 50vh;
-        padding: 0;
+    .signature-section {
+        padding: 40px 30px;
+        height: auto;
+        min-height: auto;
+        background: rgba(29, 58, 95, 0.1);
     }
 
     .signature-left {
-        padding: 40px 20px;
+        margin-bottom: 40px;
+    }
+
+    .signature-content {
+        padding: 0;
+    }
+
+    .signature-title {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .signature-description {
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    .signature-right {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .signature-image {
+        width: 100%;
+        height: 50vh;
+        min-height: 300px;
+        object-fit: cover;
+    }
+
+    .signature-thumbnails {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .signature-thumb {
+        flex: 1;
+        height: 100px;
+        max-width: calc((100% - 20px) / 3);
     }
 
     .essence-title {
@@ -882,7 +941,6 @@ body {
         font-size: 0.9rem;
     }
 
-    .gallery-container,
     .closing-content {
         padding: 0 20px;
     }
@@ -897,7 +955,7 @@ body {
     }
 
     .closing-description {
-        font-size: 1.25rem;
+        font-size: 16px;
     }
 
     .closing-title {
@@ -909,23 +967,14 @@ body {
     .closing-description {
         bottom: 60px;
         left: 20px;
-        font-size: 1rem;
+        font-size: 16px;
     }
 
-    .closing-cta-buttons {
-        flex-direction: column;
-        gap: 12px;
-        padding: 0 20px;
+    .closing-property-name {
+        font-size: 2rem;
+        margin-bottom: 20px;
     }
 
-    .closing-btn {
-        width: 100%;
-        padding: 14px 24px;
-    }
-
-    .gallery-slider {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (max-width: 480px) {
@@ -933,17 +982,11 @@ body {
         font-size: 1.25rem;
     }
 
-    .essence-divider {
-        height: 40px;
-    }
 
     .essence-description {
         font-size: 0.875rem;
     }
 
-    .signature-section {
-        padding: 3rem 0 0 0 !important;
-    }
 
     .signature-title,
     .gallery-title {
@@ -955,13 +998,23 @@ body {
         font-size: 1rem;
     }
 
+    /* 480px 이하에서도 동일한 갤러리 슬라이딩 스타일 적용 */
+    .gallery-section .gallery-slider .gallery-item {
+        height: 300px !important;
+        flex: 0 0 calc(100vw - 60px) !important;
+        width: calc(100vw - 60px) !important;
+        max-width: calc(100vw - 60px) !important;
+        min-width: calc(100vw - 60px) !important;
+        margin: 0 10px !important;
+    }
+
 
     .closing-title {
         font-size: 1.5rem;
     }
 
     .closing-description {
-        font-size: 1rem;
+        font-size: 16px;
     }
 }
 
@@ -1013,9 +1066,6 @@ body {
     transition-delay: 0.7s;
 }
 
-.signature-thumb.animate-element:nth-child(3) {
-    transition-delay: 0.8s;
-}
 
 .gallery-title.animate-element {
     transition-delay: 0.1s;
@@ -1025,3 +1075,15 @@ body {
     transition-delay: 0.3s;
 }
 
+
+
+/* ================================
+   모바일 히어로 섹션 100vh 설정  
+   ================================ */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 100vh !important;
+        min-height: 100vh !important;
+        padding: 0 !important;
+    }
+}
