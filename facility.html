@@ -54,7 +54,7 @@
             <div class="facility-main-content">
                 <!-- 시설 썸네일 이미지 매핑 -->
                 <div class="facility-thumbnail animate-element" data-facility-thumbnail>
-                    <div class="facility-thumbnail-house">
+                    <div class="facility-thumbnail-hexagon">
                         <img src="" alt="Facility Thumbnail">
                     </div>
                 </div>
@@ -64,6 +64,10 @@
                 <!-- 시설 메인 소개 설명 매핑 -->
                 <p class="facility-main-description animate-element" data-facility-description></p>
 
+                <!-- Facility Label - 동적 생성시 숫자 변경 -->
+                <div class="facility-label animate-element">
+                    <span>#SPECIAL <span data-facility-number></span></span>
+                </div>
 
                 <!-- 시설 메인 이미지 매핑 -->
                 <div class="facility-full-image animate-element" data-facility-main-image>
@@ -121,7 +125,7 @@
         <section class="facility-gallery-section">
             <div class="facility-gallery-label animate-element">
                 <!-- 하드코딩 -->
-                <span>Special Gallery</span>
+                <span>#GALLERY</span>
             </div>
             <div class="facility-gallery-container" data-facility-gallery>
                 <!-- 동적으로 gallery-item이 생성됩니다 -->
@@ -129,6 +133,14 @@
         </section>
     </main>
 
+    <!-- property.nameEn 매핑 (uppercase, 5개 span 반복) -->
+    <div class="marquee-section">
+        <div class="marquee-container">
+            <div class="marquee-text" data-marquee-property-name>
+                <!-- 동적으로 span이 생성됩니다 -->
+            </div>
+        </div>
+    </div>
 
     <!-- Include ImageWithFallback script (standard-template-data.json에서만 필요) -->
     <!-- <script src="js/image-with-fallback.js"></script> -->

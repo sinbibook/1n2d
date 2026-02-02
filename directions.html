@@ -55,24 +55,18 @@
                 </h2>
                 <div class="location-details animate-element">
                     <div class="location-address-wrapper animate-element">
-                        <div class="location-address-section">
-                            <svg class="location-icon" xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 0 25 25" fill="none">
-                                <path d="M12 12C14.4853 12 16.5 9.98528 16.5 7.5C16.5 5.01472 14.4853 3 12 3C9.51472 3 7.5 5.01472 7.5 7.5C7.5 9.98528 9.51472 12 12 12Z" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round"/>
-                                <path d="M12 14.0137V22" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round"/>
-                            </svg>
-                            <!-- property.address 매핑 -->
-                            <p class="location-address" data-directions-address></p>
-                        </div>
-
-                        <!-- 구분선 -->
-                        <div class="location-divider"></div>
-
-                        <!-- homepage.customFields.pages.directions.sections[0].notice.description 매핑 -->
-                        <!-- 데이터 없으면 display: none -->
-                        <div class="location-note" data-directions-notes>
-                            <!-- 동적으로 p 태그가 생성됩니다 -->
-                        </div>
+                        <svg class="location-icon" xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 0 25 25" fill="none">
+                            <path d="M12 12C14.4853 12 16.5 9.98528 16.5 7.5C16.5 5.01472 14.4853 3 12 3C9.51472 3 7.5 5.01472 7.5 7.5C7.5 9.98528 9.51472 12 12 12Z" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round"/>
+                            <path d="M12 14.0137V22" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round"/>
+                        </svg>
+                        <!-- property.address 매핑 -->
+                        <p class="location-address" data-directions-address></p>
                     </div>
+                </div>
+                <!-- homepage.customFields.pages.directions.sections[0].notice.description 매핑 -->
+                <!-- 데이터 없으면 display: none -->
+                <div class="location-note animate-element" data-directions-notes>
+                    <!-- 동적으로 p 태그가 생성됩니다 -->
                 </div>
 
                 <!-- 지도 섹션 -->
@@ -89,8 +83,17 @@
     <section class="full-banner">
       <!-- property.nameEn 매핑 (uppercase) -->
       <h2 class="full-banner-title" data-directions-banner-title></h2>
+      <div class="full-banner-circle" data-directions-banner-bg></div>
     </section>
 
+    <!-- property.nameEn 매핑 (uppercase, 5개 span 반복) -->
+    <div class="marquee-section">
+      <div class="marquee-container">
+        <div class="marquee-text" data-marquee-property-name>
+          <!-- 동적으로 span이 생성됩니다 -->
+        </div>
+      </div>
+    </div>
 
 
     <!-- Kakao Map SDK -->
