@@ -1,1 +1,1 @@
-# template-full-banner-accordion Template
+# template-fullpage-scroll Template

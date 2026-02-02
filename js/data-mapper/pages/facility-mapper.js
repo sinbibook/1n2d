@@ -191,7 +191,12 @@ class FacilityMapper extends BaseDataMapper {
             facilityDescription.innerHTML = this._formatTextWithLineBreaks(heroTitle, '메인 소개 타이틀');
         }
 
-        // 시설 번호 매핑 제거됨 - 동적 생성 비활성화
+        // 시설 번호 매핑 (인덱스 기반)
+        const facilityNumber = this.safeSelect('[data-facility-number]');
+        if (facilityNumber) {
+            const index = this.currentFacilityIndex !== null ? this.currentFacilityIndex + 1 : 1;
+            facilityNumber.textContent = index.toString().padStart(2, '0');
+        }
     }
 
     /**
@@ -331,8 +336,22 @@ class FacilityMapper extends BaseDataMapper {
     }
 
     /**
-     * Marquee 매핑 (property.nameEn)
+     * Marquee 매핑 (customFields 우선)
      */
+    mapMarquee() {
+        const marqueeContainer = this.safeSelect('[data-marquee-property-name]');
+        if (!marqueeContainer) return;
+
+        // customFields 우선
+        const propertyNameEn = this.getPropertyNameEn();
+
+        marqueeContainer.innerHTML = '';
+        for (let i = 0; i < 5; i++) {
+            const span = document.createElement('span');
+            span.textContent = propertyNameEn;
+            marqueeContainer.appendChild(span);
+        }
+    }
 
     /**
      * 갤러리 매핑 (facility.images 4장 동적 생성)
@@ -346,7 +365,7 @@ class FacilityMapper extends BaseDataMapper {
 
         // 갤러리 상수 정의
         const HERO_IMAGES_COUNT = 2; // Hero/Thumbnail에서 사용하는 이미지 수
-        const GALLERY_IMAGES_COUNT = 6; // 갤러리에 표시할 이미지 수
+        const GALLERY_IMAGES_COUNT = 3; // 갤러리에 표시할 이미지 수
 
         // ImageHelpers로 선택된 이미지 가져오기
         const selectedImages = ImageHelpers.getSelectedImages(facility.images);
@@ -357,24 +376,26 @@ class FacilityMapper extends BaseDataMapper {
         // 갤러리용 이미지 (Hero/Thumbnail 이후 이미지들)
         const galleryImages = selectedImages.slice(HERO_IMAGES_COUNT, HERO_IMAGES_COUNT + GALLERY_IMAGES_COUNT);
 
-        // 4개 고정 갤러리 아이템 생성
-        for (let i = 0; i < 4; i++) {
-            const imgData = galleryImages[i] || null; // 이미지가 없으면 null
-            const item = this._createGalleryItem(imgData, facility.name);
-            galleryContainer.appendChild(item);
+        if (galleryImages.length === 0) {
+            // 이미지가 없으면 placeholder로 채움
+            for (let i = 0; i < GALLERY_IMAGES_COUNT; i++) {
+                const item = this._createGalleryItem(null, facility.name);
+                galleryContainer.appendChild(item);
+            }
+            return;
         }
 
-        // DOM에 추가된 후 첫 번째 아이템을 활성화
-        setTimeout(() => {
-            const firstItem = galleryContainer.querySelector('.gallery-item');
-            if (firstItem) {
-                firstItem.classList.add('gallery-item-active');
-                console.log('첫 번째 갤러리 아이템 활성화됨:', firstItem);
-                console.log('클래스 목록:', firstItem.classList);
-            } else {
-                console.error('첫 번째 갤러리 아이템을 찾을 수 없음');
-            }
-        }, 100);
+        // 갤러리 아이템 생성
+        galleryImages.forEach(image => {
+            const item = this._createGalleryItem(image, facility.name);
+            galleryContainer.appendChild(item);
+        });
+
+        // 부족한 이미지를 placeholder로 채움
+        for (let i = galleryImages.length; i < GALLERY_IMAGES_COUNT; i++) {
+            const item = this._createGalleryItem(null, facility.name);
+            galleryContainer.appendChild(item);
+        }
     }
 
     /**
@@ -384,7 +405,10 @@ class FacilityMapper extends BaseDataMapper {
         const item = document.createElement('div');
         item.className = 'gallery-item animate-element';
 
-        // 이미지 요소
+        const title = document.createElement('h3');
+        title.className = 'gallery-item-title';
+        title.textContent = image ? this.sanitizeText(image.description, '이미지 설명') : '이미지 설명';
+
         const img = document.createElement('img');
         if (image && image.url) {
             img.src = image.url;
@@ -394,44 +418,10 @@ class FacilityMapper extends BaseDataMapper {
             ImageHelpers.applyPlaceholder(img);
         }
 
-        // 축소시 나타나는 어두운 오버레이 (텍스트 없음)
-        const overlay = document.createElement('div');
-        overlay.className = 'gallery-item-overlay';
-
-        // 확장시 이미지 설명 (하단 우측)
-        const description = document.createElement('p');
-        description.className = 'gallery-item-description';
-        // JSON description 매핑
-        description.textContent = image ? image.description || '' : '';
-
-        // 클릭 이벤트 추가
-        item.addEventListener('click', () => {
-            this.setActiveGalleryItem(item);
-        });
-
-        // 구조 조립
+        item.appendChild(title);
         item.appendChild(img);
-        item.appendChild(overlay); // 빈 오버레이 (어두운 필터용)
-        item.appendChild(description);
 
         return item;
-    }
-
-    /**
-     * 활성 갤러리 아이템 설정
-     */
-    setActiveGalleryItem(activeItem) {
-        const container = this.safeSelect('[data-facility-gallery]');
-        if (!container) return;
-
-        // 모든 아이템에서 active 클래스 제거
-        const allItems = container.querySelectorAll('.gallery-item');
-        allItems.forEach(item => {
-            item.classList.remove('gallery-item-active');
-        });
-
-        // 클릭된 아이템에 active 클래스 추가
-        activeItem.classList.add('gallery-item-active');
     }
 
     // ============================================================================
@@ -461,12 +451,13 @@ class FacilityMapper extends BaseDataMapper {
         this.mapDetailDescription();    // 시설 상세 설명
         this.mapInfoCards();            // 주요특징, 추가정보, 이용혜택
         this.mapGallery();              // Gallery
+        this.mapMarquee();              // Marquee
 
-        // 메타 태그 업데이트 (페이지별 SEO 적용)
-        const property = this.data.property;
+        // 메타 태그 업데이트 (페이지별 SEO 적용, customFields 우선)
+        const propertyNameForSEO = this.getPropertyName();
         const pageSEO = {
-            title: (facility?.name && property?.name) ? `${facility.name} - ${property.name}` : 'SEO 타이틀',
-            description: facility?.description || property?.description || 'SEO 설명'
+            title: `${facility?.name || '시설'} - ${propertyNameForSEO}`,
+            description: facility?.description || this.data.property?.description || 'SEO 설명'
         };
         this.updateMetaTags(pageSEO);
 
@@ -497,28 +488,6 @@ class FacilityMapper extends BaseDataMapper {
 
         // 이용혜택 매핑
         this.mapBenefits(experience?.benefits);
-
-        // 모든 카드가 숨겨졌는지 확인하고 전체 섹션 숨김 처리
-        this.checkAndHideAdditionalWrapper();
-    }
-
-    /**
-     * 모든 추가 정보 카드가 비어있으면 전체 섹션 숨김
-     */
-    checkAndHideAdditionalWrapper() {
-        const additionalWrapper = this.safeSelect('.facility-additional-wrapper');
-        if (!additionalWrapper) return;
-
-        const infoCards = additionalWrapper.querySelectorAll('.facility-info-card');
-        const visibleCards = Array.from(infoCards).filter(card =>
-            card.style.display !== 'none'
-        );
-
-        if (visibleCards.length === 0) {
-            additionalWrapper.style.display = 'none';
-        } else {
-            additionalWrapper.style.display = '';
-        }
     }
 }
 

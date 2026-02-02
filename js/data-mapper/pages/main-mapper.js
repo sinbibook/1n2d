@@ -86,39 +86,54 @@ class MainMapper extends BaseDataMapper {
         }
     }
 
+    /**
+     * Marquee 섹션 매핑 (customFields 우선)
+     * customFields.property.nameEn → [data-marquee-property-name] 내부 span들 (uppercase)
+     */
+    mapMarqueeSection() {
+        if (!this.isDataLoaded) return;
+
+        const marqueeContainer = this.safeSelect('[data-marquee-property-name]');
+        if (!marqueeContainer) return;
+
+        // 기존 span 제거
+        marqueeContainer.innerHTML = '';
+
+        // 5개의 span 생성 (customFields 우선)
+        const nameEnUpper = this.getPropertyNameEn().toUpperCase();
+
+        for (let i = 0; i < 5; i++) {
+            const span = document.createElement('span');
+            span.textContent = nameEnUpper;
+            marqueeContainer.appendChild(span);
+        }
+    }
 
     /**
-     * Full Banner 섹션 매핑
-     * property.nameEn (영문명) → [data-main-banner-title]
-     * main hero images → [data-main-banner] 배경 이미지
+     * Full Banner 섹션 매핑 (customFields 우선)
+     * customFields.property.nameEn → [data-main-banner-title]
+     * customFields.property.images (property_exterior) → [data-main-banner-bg] 배경 이미지
      */
     mapFullBanner() {
         if (!this.isDataLoaded) return;
 
-        // 배너 타이틀 매핑 (property.nameEn)
+        // 배너 타이틀 매핑 (customFields 우선)
         const bannerTitle = this.safeSelect('[data-main-banner-title]');
         if (bannerTitle) {
-            const nameEn = this.safeGet(this.data, 'property.nameEn');
-            bannerTitle.textContent = this.sanitizeText(nameEn, 'PROPERTY NAME').toUpperCase();
+            bannerTitle.textContent = this.getPropertyNameEn().toUpperCase();
         }
 
-        // 배너 배경 이미지 매핑 - 섹션 자체에 배경 설정
-        const bannerSection = this.safeSelect('[data-main-banner]');
-        if (!bannerSection) return;
+        // 배너 배경 이미지 매핑 (customFields 우선)
+        const bannerBg = this.safeSelect('[data-main-banner-bg]');
+        if (!bannerBg) return;
 
-        // main hero 이미지 사용
-        const heroData = this.safeGet(this.data, 'homepage.customFields.pages.main.sections.0.hero');
-        const selectedImages = ImageHelpers.getSelectedImages(heroData?.images);
+        // customFields에서 property_exterior 카테고리 이미지 가져오기
+        const exteriorImages = this.getPropertyImages('property_exterior');
 
-        if (selectedImages.length > 0) {
-            const firstImage = selectedImages[0];
-            bannerSection.style.backgroundImage = `url('${firstImage.url}')`;
-            bannerSection.style.backgroundSize = 'cover';
-            bannerSection.style.backgroundPosition = 'center';
-            bannerSection.style.backgroundRepeat = 'no-repeat';
+        if (exteriorImages.length > 0) {
+            bannerBg.style.backgroundImage = `url('${exteriorImages[0].url}')`;
         } else {
-            // placeholder 배경 이미지
-            ImageHelpers.applyPlaceholder(bannerSection);
+            bannerBg.style.backgroundImage = `url('${ImageHelpers.EMPTY_IMAGE_WITH_ICON}')`;
         }
     }
 
@@ -280,6 +295,7 @@ class MainMapper extends BaseDataMapper {
         // Main 페이지 섹션들 순차 매핑
         this.mapHeroSlider();
         this.mapAboutSection();
+        this.mapMarqueeSection();
         this.mapFullBanner();
         this.mapIntroductionSection();
 

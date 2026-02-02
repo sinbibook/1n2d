@@ -51,12 +51,13 @@
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <!-- 메인 소개섹션 타이틀 매핑 -->
-                  <div class="hero-property-name" data-hero-property-name-en></div>
                 <h2 class="hero-title fade-in-up" data-hero-title style="animation-delay: 0.2s;"></h2>
                 <!-- 메인 소개섹션 설명 매핑 -->
                 <p class="hero-description fade-in-up" data-hero-description style="animation-delay: 1.2s;"></p>
             </div>
             <div class="hero-bottom-info">
+                <!-- 숙소 영문명 매핑 -->
+                <div class="hero-property-name" data-hero-property-name-en></div>
                 <div class="hero-progress-container">
                     <span class="current-slide hero-indicators" data-current-slide></span>
                     <div class="hero-progress-bar">
@@ -98,24 +99,23 @@
                         <div class="essence-divider animate-element"></div>
                         <!-- 특색 섹션 설명 매핑 -->
                         <p class="signature-description animate-element" data-signature-description></p>
-                        <!-- 이미지 갤러리 영역 -->
-                        <div class="signature-right">
-                            <!-- 메인 이미지 -->
-                            <img class="signature-image" data-signature-main-img src="" alt="">
-                            <!-- 썸네일 갤러리 매핑 (최대 3장) -->
-                            <div class="signature-thumbnails animate-element">
-                                <div class="signature-thumb animate-element" data-thumb-index="0">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="signature-thumb animate-element" data-thumb-index="1">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="signature-thumb animate-element" data-thumb-index="2">
-                                    <img src="" alt="">
-                                </div>
+                        <!-- 썸네일 갤러리 매핑 (최대 4장) -->
+                        <div class="signature-thumbnails animate-element">
+                            <div class="signature-thumb animate-element">
+                                <img src="" alt="">
+                            </div>
+                            <div class="signature-thumb animate-element">
+                                <img src="" alt="">
+                            </div>
+                            <div class="signature-thumb animate-element">
+                                <img src="" alt="">
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="signature-right">
+                    <!-- 썸네일 이미지가 순서대로 이 영역에 보여짐 -->
+                    <img class="signature-image" data-signature-main-img src="" alt="">
                 </div>
             </div>
         </section>
@@ -149,12 +149,19 @@
 
                 <!-- 중앙 콘텐츠 그룹 -->
                 <div class="closing-center-content">
-                    <!-- property.nameEn 매핑 -->
-                    <div class="closing-property-name animate-element" data-closing-property-name></div>
                     <!-- 타이틀 -->
                     <div class="closing-title animate-element" data-closing-title></div>
                     <!-- 설명 -->
                     <div class="closing-description animate-element" data-closing-description></div>
+                    <!-- 버튼들 -->
+                    <div class="closing-cta-buttons animate-element">
+                        <button class="closing-btn" onclick="navigateTo('room')">
+                            <span>객실 둘러보기</span>
+                        </button>
+                        <button class="closing-btn" onclick="navigateTo('facility')">
+                            <span>시설 둘러보기</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>

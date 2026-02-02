@@ -90,17 +90,15 @@ class ReservationMapper extends BaseDataMapper {
 
 
     /**
-     * 숙소명 매핑
+     * 숙소명 매핑 (customFields 우선)
      */
     mapPropertyName() {
         if (!this.isDataLoaded || !this.data.property) return;
 
-        const property = this.data.property;
-
-        // 숙소명 한글 매핑
+        // 숙소명 한글 매핑 (customFields 우선)
         const propertyNameEl = this.safeSelect('[data-property-name]');
         if (propertyNameEl) {
-            propertyNameEl.textContent = property.name || '숙소명';
+            propertyNameEl.textContent = this.getPropertyName();
         }
     }
 
@@ -254,122 +252,76 @@ class ReservationMapper extends BaseDataMapper {
     }
 
     /**
-     * 예약 페이지 About 이미지 매핑 (reservation > about > images)
-     */
-    mapReservationAboutImage() {
-        if (!this.isDataLoaded || !this.data.property) return;
-
-        const reservationData = this.safeGet(this.data, 'homepage.customFields.pages.reservation.sections.0');
-        const imageContainer = this.safeSelect('[data-reservation-about-image]');
-        if (!imageContainer) return;
-
-        const img = imageContainer.querySelector('img');
-        if (!img) return;
-
-        // reservation.about.images에서 첫 번째 선택된 이미지 사용
-        const aboutImages = reservationData?.about?.images;
-        const selectedImages = ImageHelpers.getSelectedImages(aboutImages);
-
-        if (selectedImages.length > 0) {
-            img.src = selectedImages[0].url;
-            img.alt = selectedImages[0].description || 'Reservation About Image';
-        } else {
-            ImageHelpers.applyPlaceholder(img);
-        }
-    }
-
-    /**
-     * 예약 이미지 섹션 매핑
+     * 예약 이미지 섹션 매핑 (customFields 우선)
      */
     mapReservationImage() {
         if (!this.isDataLoaded || !this.data.property) return;
 
-        const property = this.data.property;
         const imageContainer = this.safeSelect('[data-reservation-image]');
         if (!imageContainer) return;
 
         const img = imageContainer.querySelector('img');
         if (!img) return;
 
-        // property.images[0].exterior에서 첫 번째 이미지 사용
-        const propertyImages = this.safeGet(this.data, 'property.images');
-        const exteriorImages = this.safeGet(propertyImages?.[0], 'exterior');
-        const targetImage = ImageHelpers.getFirstSelectedImage(exteriorImages);
+        // customFields property_exterior 이미지 사용
+        const exteriorImages = this.getPropertyImages('property_exterior');
 
-        if (targetImage) {
-            img.src = targetImage.url;
-            img.alt = targetImage.description || property.name;
+        if (exteriorImages.length > 0) {
+            img.src = exteriorImages[0].url;
+            img.alt = exteriorImages[0].description || this.getPropertyName();
         } else {
             ImageHelpers.applyPlaceholder(img);
         }
     }
 
     /**
-     * 배너 이미지 및 숙소명 매핑
+     * 배너 이미지 및 숙소명 매핑 (customFields 우선)
      */
     mapBannerAndMarquee() {
         if (!this.isDataLoaded || !this.data.property) return;
 
-        // 숙소 영문명 매핑 (배너 타이틀)
+        // 숙소 영문명 매핑 (customFields 우선)
         const bannerTitleElement = this.safeSelect('[data-property-name-en]');
         if (bannerTitleElement) {
-            const nameEn = this.safeGet(this.data, 'property.nameEn');
-            bannerTitleElement.textContent = this.sanitizeText(nameEn, 'PROPERTY NAME').toUpperCase();
+            bannerTitleElement.textContent = this.getPropertyNameEn().toUpperCase();
         }
 
-        // 배너 이미지 매핑
+        // 배너 이미지 매핑 (customFields)
         const bannerImageElement = this.safeSelect('[data-banner-image]');
         if (bannerImageElement) {
-            const propertyImages = this.safeGet(this.data, 'property.images');
-            const exteriorImages = this.safeGet(propertyImages?.[0], 'exterior');
-            // 두 번째 외경 이미지 사용 (인덱스 1)
-            const selectedImages = ImageHelpers.getSelectedImages(exteriorImages);
-            const bannerImage = selectedImages[1];
+            // customFields에서 property_exterior 카테고리 이미지 가져오기
+            const exteriorImages = this.getPropertyImages('property_exterior');
 
-            if (bannerImage && bannerImage.url) {
-                bannerImageElement.style.backgroundImage = `url('${bannerImage.url}')`;
+            if (exteriorImages.length > 1) {
+                // 두 번째 외경 이미지 사용 (인덱스 1)
+                bannerImageElement.style.backgroundImage = `url('${exteriorImages[1].url}')`;
+            } else if (exteriorImages.length > 0) {
+                // 첫 번째 이미지라도 사용
+                bannerImageElement.style.backgroundImage = `url('${exteriorImages[0].url}')`;
             } else {
-                // placeholder 배경 이미지
-                ImageHelpers.applyPlaceholder(bannerImageElement);
+                bannerImageElement.style.backgroundImage = `url('${ImageHelpers.EMPTY_IMAGE_WITH_ICON}')`;
             }
         }
 
+        // Marquee 매핑
+        this.mapMarquee();
     }
 
     /**
-     * Full Banner 섹션 매핑
-     * property.nameEn → [data-property-name-en]
-     * property.images[0].exterior[] → [data-main-banner] 배경 이미지
+     * Marquee 매핑 (customFields 우선)
      */
-    mapFullBanner() {
-        if (!this.isDataLoaded) return;
+    mapMarquee() {
+        const marqueeContainer = this.safeSelect('[data-marquee-property-name]');
+        if (!marqueeContainer) return;
 
-        // 배너 타이틀 매핑 (property.nameEn)
-        const bannerTitle = this.safeSelect('[data-property-name-en]');
-        if (bannerTitle) {
-            const nameEn = this.safeGet(this.data, 'property.nameEn');
-            bannerTitle.textContent = this.sanitizeText(nameEn, 'PROPERTY NAME').toUpperCase();
-        }
+        // customFields 우선
+        const propertyNameEn = this.getPropertyNameEn();
 
-        // 배너 배경 이미지 매핑 - 섹션 자체에 배경 설정
-        const bannerSection = this.safeSelect('[data-main-banner]');
-        if (!bannerSection) return;
-
-        const propertyImages = this.safeGet(this.data, 'property.images');
-        const exteriorImages = this.safeGet(propertyImages?.[0], 'exterior');
-
-        // ImageHelpers를 사용하여 첫 번째 선택된 이미지 가져오기
-        const selectedImages = ImageHelpers.getSelectedImages(exteriorImages);
-
-        if (selectedImages.length > 0) {
-            const firstImage = selectedImages[0];
-            bannerSection.style.backgroundImage = `url('${firstImage.url}')`;
-            bannerSection.style.backgroundSize = 'cover';
-            bannerSection.style.backgroundPosition = 'center';
-            bannerSection.style.backgroundRepeat = 'no-repeat';
-        } else {
-            // placeholder 배경 이미지
-            ImageHelpers.applyPlaceholder(bannerSection);
+        marqueeContainer.innerHTML = '';
+        for (let i = 0; i < 5; i++) {
+            const span = document.createElement('span');
+            span.textContent = propertyNameEn;
+            marqueeContainer.appendChild(span);
         }
     }
 
@@ -394,17 +346,15 @@ class ReservationMapper extends BaseDataMapper {
         this.mapReservationGuideSection();
         this.mapCheckInOutSection();
         this.mapRefundSection();
-        this.mapReservationAboutImage();
         this.mapReservationImage();
         this.mapBannerAndMarquee();
-        this.mapFullBanner();
 
-        // 메타 태그 업데이트 (페이지별 SEO 적용)
-        const property = this.data.property;
+        // 메타 태그 업데이트 (페이지별 SEO 적용, customFields 우선)
+        const propertyNameForSEO = this.getPropertyName();
         const reservationData = this.safeGet(this.data, 'homepage.customFields.pages.reservation.sections.0.hero');
         const pageSEO = {
-            title: property?.name ? `예약안내 - ${property.name}` : 'SEO 타이틀',
-            description: reservationData?.description || property?.description || 'SEO 설명'
+            title: `예약안내 - ${propertyNameForSEO}`,
+            description: reservationData?.description || this.data.property?.description || 'SEO 설명'
         };
         this.updateMetaTags(pageSEO);
 

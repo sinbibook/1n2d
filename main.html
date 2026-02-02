@@ -65,8 +65,18 @@
       <section class="full-banner" data-main-banner>
         <!-- property.nameEn 매핑 -->
         <h2 class="full-banner-title" data-main-banner-title></h2>
+        <!-- property.images[0].exterior[] 첫번째 이미지 매핑 -->
+        <div class="full-banner-circle" data-main-banner-bg></div>
       </section>
 
+      <!-- property.nameEn 매핑 (uppercase, 5개 span 반복) -->
+      <div class="marquee-section">
+        <div class="marquee-container">
+          <div class="marquee-text" data-marquee-property-name>
+            <!-- 동적으로 span이 생성됩니다 -->
+          </div>
+        </div>
+      </div>
   </main>
 
   <!-- Include ImageWithFallback script (standard-template-data.json에서만 필요) -->
