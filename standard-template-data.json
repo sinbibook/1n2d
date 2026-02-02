@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.16.0",
-    "generatedAt": "2026-01-29T08:12:51.087Z",
+    "version": "1.17.0",
+    "generatedAt": "2026-02-02T07:27:57.610Z",
     "templateType": "full_banner_slider",
     "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
     "homepageId": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
@@ -49,10 +49,10 @@
       "businessNumber": "209-04-64744",
       "representativeName": "이재국",
       "businessAddress": "강원특별자치도 고성군 토성면 토성로 53",
-      "businessPhone": "",
-      "businessEmail": "",
-      "businessType": "",
-      "businessCategory": "",
+      "businessPhone": "010-7504-9986",
+      "businessEmail": "quick8515@naver.com",
+      "businessType": "individual",
+      "businessCategory": "숙박업",
       "eCommerceRegistrationNumber": ""
     },
     "contractInfo": {
@@ -355,7 +355,7 @@
   "rooms": [
     {
       "id": "ad91d762-0e23-4d20-95b4-2edb8931605f",
-      "name": "바다A201(애견동반가능,취사불가)",
+      "name": "바다A201",
       "description": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.",
       "roomInfo": "TV,침대,식탁,에어컨,냉장고,전자레인지,욕실용품,객실샤워실,OTT,인터넷,드라이기",
       "group": "바다A201(애견동반가능,취사불가)",
@@ -396,7 +396,7 @@
     },
     {
       "id": "c5a53ad0-002e-4136-bed6-32fe7a35a57f",
-      "name": "바다A202(애견동반가능,취사불가)",
+      "name": "바다A202",
       "description": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.",
       "roomInfo": "TV,침대,식탁,에어컨,냉장고,전자레인지,욕실용품,객실샤워실,OTT,인터넷,드라이기",
       "group": "바다A202(애견동반가능,취사불가)",
@@ -437,7 +437,7 @@
     },
     {
       "id": "c76aae2f-ca9b-4c9c-a059-5f1ec6adc54a",
-      "name": "바다A203(취사불가)",
+      "name": "바다A203",
       "description": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 객실 내 취사불가, 공용취사장 이용\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.",
       "roomInfo": "TV,침대,식탁,에어컨,냉장고,전자레인지,욕실용품,객실샤워실,OTT,인터넷,드라이기",
       "group": "바다A203(취사불가)",
@@ -478,7 +478,7 @@
     },
     {
       "id": "47a53275-d079-46bd-a72e-d8ef2e34c78e",
-      "name": "바다B301(개별바베큐,취사불가)",
+      "name": "바다B301",
       "description": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 객실 내 취사불가, 공용취사장 이용\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.",
       "roomInfo": "TV,침대,식탁,에어컨,냉장고,전자레인지,욕실용품,객실샤워실,OTT,인터넷,드라이기",
       "group": "바다B301(개별바베큐,취사불가)",
@@ -519,7 +519,7 @@
     },
     {
       "id": "38906a4c-3d77-4def-b615-347c5c2661f7",
-      "name": "바다B302(개별바베큐,취사불가)",
+      "name": "바다B302",
       "description": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 객실 내 취사불가, 공용취사장 이용\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.",
       "roomInfo": "TV,침대,식탁,에어컨,냉장고,전자레인지,욕실용품,객실샤워실,OTT,인터넷,드라이기",
       "group": "바다B302(개별바베큐,취사불가)",
@@ -560,7 +560,7 @@
     },
     {
       "id": "cef28d41-923c-413c-972a-be492f9f33ff",
-      "name": "바다B303(개별바베큐,취사불가)",
+      "name": "바다B303",
       "description": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 객실 내 취사불가, 공용취사장 이용\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.",
       "roomInfo": "TV,침대,식탁,에어컨,냉장고,전자레인지,욕실용품,객실샤워실,OTT,인터넷,드라이기",
       "group": "바다B303(개별바베큐,취사불가)",
@@ -601,7 +601,7 @@
     },
     {
       "id": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-      "name": "바다C401(개별숯불바베큐,취사가능)",
+      "name": "바다C401",
       "description": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.",
       "roomInfo": "TV,침대,식탁,에어컨,냉장고,취사도구,전기밥솥,가스렌지,인터넷,욕실용품,객실샤워실",
       "group": "바다C401(개별숯불바베큐,취사가능)",
@@ -644,7 +644,7 @@
     },
     {
       "id": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-      "name": "바다S403(개별숯불바베큐,취사가능)",
+      "name": "바다S403",
       "description": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.",
       "roomInfo": "TV,침대,식탁,에어컨,냉장고,취사도구,전기밥솥,가스렌지,인터넷,욕실용품,객실샤워실",
       "group": "바다S403(개별숯불바베큐,취사가능)",
@@ -687,7 +687,7 @@
     },
     {
       "id": "265a284e-dc17-41ff-90a6-a10206321117",
-      "name": "설악A103(애견동반가능,취사불가)",
+      "name": "설악A103",
       "description": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.",
       "roomInfo": "TV,침대,식탁,에어컨,냉장고,전자레인지,욕실용품,객실샤워실,OTT,인터넷,드라이기",
       "group": "설악A103(애견동반가능,취사불가)",
@@ -728,7 +728,7 @@
     },
     {
       "id": "e5bb89ee-174f-4542-be48-7a4cfa080adb",
-      "name": "설악A106(애견동반가능,취사불가)",
+      "name": "설악A106",
       "description": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.",
       "roomInfo": "TV,침대,식탁,에어컨,냉장고,전자레인지,욕실용품,객실샤워실,OTT,인터넷,드라이기",
       "group": "설악A106(애견동반가능,취사불가)",
@@ -769,7 +769,7 @@
     },
     {
       "id": "55f678cc-3745-46f7-ad03-93cbcc244273",
-      "name": "설악B206(취사불가)",
+      "name": "설악B206",
       "description": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 객실 내 취사불가, 공용취사장 이용\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.",
       "roomInfo": "TV,침대,식탁,에어컨,냉장고,전자레인지,욕실용품,객실샤워실,OTT,인터넷,드라이기",
       "group": "설악B206(취사불가)",
@@ -810,7 +810,7 @@
     },
     {
       "id": "625a58bc-a99b-4f1f-a6d7-507afb3c251a",
-      "name": "설악B304(애견동반가능,취사불가)",
+      "name": "설악B304",
       "description": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.",
       "roomInfo": "TV,침대,식탁,에어컨,냉장고,전자레인지,욕실용품,객실샤워실,OTT,인터넷,드라이기",
       "group": "설악B304(애견동반가능,취사불가)",
@@ -851,7 +851,7 @@
     },
     {
       "id": "e6179387-4ea4-4fea-a796-9737d0ede2ae",
-      "name": "설악B305(애견동반가능,취사불가)",
+      "name": "설악B305",
       "description": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.",
       "roomInfo": "TV,침대,식탁,에어컨,냉장고,전자레인지,욕실용품,객실샤워실,OTT,인터넷,드라이기",
       "group": "설악B305(애견동반가능,취사불가)",
@@ -892,7 +892,7 @@
     },
     {
       "id": "b94e1d71-922a-4ad8-be0e-2ed9e602f233",
-      "name": "설악B306(취사불가)",
+      "name": "설악B306",
       "description": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 객실 내 취사불가, 공용취사장 이용\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.",
       "roomInfo": "TV,침대,식탁,에어컨,냉장고,전자레인지,욕실용품,객실샤워실,OTT,인터넷,드라이기",
       "group": "설악B306(취사불가)",
@@ -933,7 +933,7 @@
     },
     {
       "id": "7aa56223-6e22-4040-b38d-e90d81aa5f03",
-      "name": "패밀리A102(애견동반가능,취사불가)",
+      "name": "패밀리A102",
       "description": "침실분리형 : 거실 겸 주방+침대룸A(퀸1)+화장실1\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.",
       "roomInfo": "TV,침대,식탁,에어컨,냉장고,전자레인지,욕실용품,객실샤워실,OTT,인터넷,드라이기",
       "group": "패밀리A102(애견동반가능,취사불가)",
@@ -976,7 +976,7 @@
     },
     {
       "id": "94863de8-b79b-430e-80f2-f778cf399b81",
-      "name": "패밀리B205(취사불가)",
+      "name": "패밀리B205",
       "description": "침실분리형 : 거실 겸 주방+침대룸A(퀸1)+화장실1\n※ 객실 내 취사불가, 공용취사장 이용\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.",
       "roomInfo": "TV,침대,식탁,에어컨,냉장고,전자레인지,욕실용품,객실샤워실,OTT,인터넷,드라이기",
       "group": "패밀리B205(취사불가)",
@@ -1020,10 +1020,18 @@
   ],
   "homepage": {
     "domain": "1n2d.kr",
-    "templateType": "full_banner_slider",
+    "templateType": "full_banner_accordion",
     "images": [
       {
-        "logo": []
+        "logo": [
+          {
+            "id": "5c25a4de-85bc-4fc8-9319-93cdbe3394b5",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/logo/1770017252646-9r93kx8svd.png",
+            "sortOrder": 0,
+            "description": "",
+            "isSelected": true
+          }
+        ]
       }
     ],
     "seo": {
@@ -1113,16 +1121,53 @@
                 "description": " "
               },
               "essence": {
-                "title": "펜션 미리보기",
-                "images": [],
+                "title": "1박2일 미리보기",
+                "images": [
+                  {
+                    "id": "566154d8-591a-4f35-9b46-019213c85861",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_essence/1770017252647-49mu85ko1q5.jpg",
+                    "sortOrder": 1,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "87161ba1-400e-4081-b2d9-e25e6754ec10",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_essence/1770017252647-4403c0pk0ho.jpg",
+                    "sortOrder": 1,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "1fad1db2-7f6c-4bfb-a233-e72e1a9fb578",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_essence/1770017252647-8ieh4k12t8g.jpg",
+                    "sortOrder": 2,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "363911de-f1f0-4bb9-8d7c-dfb31a7bc6f5",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_essence/1770017252647-33hrm4gizqg.jpg",
+                    "sortOrder": 3,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "f60cd43f-51e9-4f28-9c58-20a99538ca96",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_essence/1770017252647-icr3de99lzi.jpg",
+                    "sortOrder": 4,
+                    "description": "",
+                    "isSelected": true
+                  }
+                ],
                 "description": "객실과 분위기를 미리 살펴보세요."
               },
               "gallery": {
-                "title": "",
-                "images": []
+                "title": " ",
+                "images": [],
+                "description": " "
               },
               "signature": {
-                "title": "",
+                "title": "Specials",
                 "images": [
                   {
                     "id": "91ce52f2-8051-4c92-884e-f97fe88813ca",
@@ -1152,7 +1197,8 @@
                     "description": "일부 객실은 자이글을 이용한 \n개별 바베큐 파티가 가능합니다. ",
                     "isSelected": true
                   }
-                ]
+                ],
+                "description": " 머무는 동안 불편함 없이 이용할 수 있도록\n다양한 부대시설이 준비되어 있습니다."
               }
             }
           ]
@@ -1488,12 +1534,17 @@
             "woff2": null,
             "family": "Pretendard"
           },
-          "enMain": null,
+          "enMain": {
+            "cdn": "https://use.typekit.net/vll4umt.css",
+            "key": "chloe",
+            "woff2": null,
+            "family": "chloe"
+          },
           "koMain": {
-            "cdn": null,
-            "key": "gyeonggimillenniumbackground",
-            "woff2": "https://cdn.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Batang_Regular.woff",
-            "family": "GyeonggiMillenniumBackground"
+            "cdn": "https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css",
+            "key": "maruburi",
+            "woff2": null,
+            "family": "MaruBuri"
           }
         },
         "color": {
@@ -3410,6 +3461,7 @@
           ]
         }
       ]
-    }
+    },
+    "id": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
   }
 }
