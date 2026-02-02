@@ -298,7 +298,6 @@ body.dark-section-active .ybs-booking-btn {
     justify-content: center;
     padding: 120px 40px 40px 40px; /* 상단 패딩 더 추가 (헤더 높이 고려) */
     height: 100vh;
-    overflow-y: auto; /* 섹션 전체 스크롤 활성화 */
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch; /* iOS 부드러운 스크롤 지원 */
 }
@@ -329,7 +328,7 @@ body.dark-section-active .ybs-booking-btn {
 .menu-item {
     cursor: pointer;
     transition: all 0.3s ease;
-    max-height: 50vh; /* 최대 높이 50vh 설정 */
+    height: 45vh; /* 높이 45vh로 설정 */
     overflow-y: auto; /* 세로 스크롤 활성화 */
 }
 
