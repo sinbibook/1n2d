@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.21.0",
-    "generatedAt": "2026-02-02T07:56:02.671Z",
+    "version": "1.22.0",
+    "generatedAt": "2026-02-02T08:15:04.824Z",
     "templateType": "full_banner_accordion",
     "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
     "homepageId": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
@@ -1178,10 +1178,10 @@
                     "isSelected": true
                   },
                   {
-                    "id": "c1873065-8ff2-4fa3-9eeb-35e6a93482c6",
-                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_signature/1769570683113-0qid1hnmrwk.jpg",
+                    "id": "13657c22-fe24-44a8-abc5-f2f470ef344a",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_signature/1770019630745-xxd9mvben6.jpg",
                     "sortOrder": 1,
-                    "description": "야외 풍경을 바라보며 즐기는 바베큐 시간\n따뜻한 난로가 함께해 사계절 편안합니다.",
+                    "description": "야외 풍경을 바라보며 즐기는 바베큐 시간\r\n따뜻한 난로가 함께해 사계절 편안합니다.",
                     "isSelected": true
                   },
                   {
@@ -1252,7 +1252,16 @@
               "about": [
                 {
                   "title": "고성 1박2일 펜션",
-                  "images": [],
+                  "images": [
+                    {
+                      "id": "e15df4ac-0c43-4da3-8ee4-ae86c971690b",
+                      "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/main_about/1770020084253-xufmcrb75l.jpg",
+                      "sortOrder": 0,
+                      "description": "",
+                      "isSelected": true,
+                      "blockId": "9e9d5ac6-6eb0-4670-85da-ef64b09dfc45"
+                    }
+                  ],
                   "blockId": "9e9d5ac6-6eb0-4670-85da-ef64b09dfc45",
                   "description": "일상의 소음에서 잠시 벗어나고 싶을 때\n멀리 가지 않아도 충분한 쉼이 기다립니다.\n문을 나서면 바로 펼쳐지는 봉포해변의 풍경\n바다를 따라 산책하고, 시원한 물놀이를 즐기는 하루\n자연이 가까워질수록 마음은 가벼워집니다.\n각자의 시간을 존중하는 편안한 공간\n머무는 동안 서두를 필요 없는 느린 리듬\n짧은 일정에도 여유가 남는 1박 2일\n아무 준비 없이 떠나도 만족스러운 휴식\n고성 1박2일 펜션에서 오늘의 쉼을 시작해보세요."
                 }
@@ -1520,7 +1529,15 @@
               },
               "about": {
                 "title": " ",
-                "images": [],
+                "images": [
+                  {
+                    "id": "02c894a5-f353-4ccf-a7e3-7afef08d1b46",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/reservation_about/1770020084253-ix26kua5cde.jpg",
+                    "sortOrder": 1,
+                    "description": "",
+                    "isSelected": true
+                  }
+                ],
                 "description": " "
               }
             }
@@ -3462,6 +3479,7 @@
           ]
         }
       ]
-    }
+    },
+    "id": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
   }
 }
