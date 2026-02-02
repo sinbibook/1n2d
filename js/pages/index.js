@@ -150,6 +150,14 @@ class GallerySlider {
     }
 
     setupGallery() {
+        // 모바일에서는 CSS만으로 스크롤하도록 JavaScript 슬라이더 비활성화
+        if (window.innerWidth <= 768) {
+            // 모바일에서는 단순히 터치 스크롤만 활성화
+            this.enableMobileTouchScroll();
+            return;
+        }
+
+        // 데스크톱에서만 자동 슬라이더 실행
         // mapper가 생성한 슬라이드 읽기
         const originalSlides = Array.from(this.slider.querySelectorAll('.gallery-item'));
         this.slideCount = originalSlides.length;
@@ -171,6 +179,54 @@ class GallerySlider {
 
         // 슬라이드 시작
         this.startSlider();
+    }
+
+    enableMobileTouchScroll() {
+        // 모바일에서 부드러운 터치 스크롤 보장
+        this.slider.style.overflowX = 'auto';
+        this.slider.style.webkitOverflowScrolling = 'touch';
+        this.slider.style.scrollSnapType = 'x mandatory';
+
+        // JavaScript 제어 비활성화
+        this.slider.style.transform = 'none';
+        this.slider.style.transition = 'none';
+
+        // 모바일 자동 스크롤 시작 (5초 간격)
+        this.startMobileAutoScroll();
+    }
+
+    startMobileAutoScroll() {
+        const items = this.slider.querySelectorAll('.gallery-item');
+        if (items.length === 0) return;
+
+        let currentIndex = 0;
+
+        // 사용자가 터치하면 자동 스크롤 일시정지
+        let isPaused = false;
+        let touchTimeout;
+
+        this.slider.addEventListener('touchstart', () => {
+            isPaused = true;
+            clearTimeout(touchTimeout);
+            touchTimeout = setTimeout(() => {
+                isPaused = false;
+            }, 3000); // 3초 후 자동 스크롤 재개
+        });
+
+        this.intervalId = setInterval(() => {
+            if (!isPaused) {
+                currentIndex = (currentIndex + 1) % items.length;
+                const targetItem = items[currentIndex];
+
+                if (targetItem) {
+                    targetItem.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest',
+                        inline: 'center'
+                    });
+                }
+            }
+        }, 4000); // 4초마다 자동 스크롤
     }
 
     addFadeOverlays() {

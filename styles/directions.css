@@ -10,21 +10,6 @@
     position: relative;
 }
 
-.location-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width:70%;
-    height: 50%;
-    background-image: url('../images/shadow3.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 0.5;
-    pointer-events: none;
-    z-index: 1;
-}
 
 .location-content {
     position: relative;
@@ -63,10 +48,23 @@
 }
 
 .location-address-wrapper {
+    padding: 30px;
+    background-color: rgba(49, 66, 61, 0.1);
+    border-radius: 8px;
+}
+
+.location-address-section {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
+}
+
+.location-divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(49, 66, 61, 0.2);
+    margin: 20px 0;
 }
 
 .location-icon {
@@ -83,10 +81,8 @@
 }
 
 .location-note {
-    margin-top: 30px;
-    padding: 30px;
-    background: rgba(49, 66, 61, 0.05);
-    border-radius: 8px;
+    margin: 0;
+    padding: 0;
 }
 
 .location-note p {
@@ -195,8 +191,8 @@
 }
 
 /* Large Desktop */
-@media (min-width: 1600px) {
+@media (min-width: 1800px) {
     .location-content {
-        max-width: 1400px;
+        max-width: 1600px;
     }
 }

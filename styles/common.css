@@ -58,7 +58,6 @@ img {
 /* Container */
 .container {
     width: 100%;
-    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -141,6 +140,7 @@ img {
 }
 
 .hero-description {
+    font-family: var(--font-ko-sub);
     font-size: 1.2rem;
     font-weight: 300;
     line-height: 1.6;
@@ -168,7 +168,7 @@ img {
 /* Hero Property Title - Page name above progress bar (for pages with center layout) */
 .hero-property-title {
     position: absolute;
-    bottom: 90px;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%);
     font-family: var(--font-en-main), serif;
@@ -339,7 +339,6 @@ img {
 }
 
 .footer-container {
-    max-width: 1400px;
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -512,7 +511,7 @@ img {
 .gallery-section {
     position: relative;
     min-height: 100vh;
-    background: linear-gradient(to bottom, var(--color-secondary) 50%, var(--color-primary) 50%);
+    background: rgba(49, 66, 61, 0.1);
 }
 
 .gallery-section .section-overlay {
@@ -542,110 +541,101 @@ img {
 .gallery-header {
     padding: 40px 60px 60px 60px;
     text-align: center;
-    max-width: 1200px;
     margin: 0 auto;
     width: 100%;
     flex-shrink: 0;
 }
 
 .gallery-title {
-    font-size: 1.75rem;
+    font-size: 2.2rem;
     font-weight: 600;
     margin-bottom: 12px;
-    color: #fff;
+    color: var(--color-secondary);
     letter-spacing: -0.02em;
 }
 
 .gallery-description {
+    font-family: var(--font-ko-sub);
     font-size: 0.95rem;
-    color: var(--color-primary);
+    color: #333;
     line-height: 1.6;
     max-width: 600px;
     margin: 0 auto;
 }
 
-/* Gallery Slider */
+/* Gallery Masonry Grid */
 .gallery-slider-wrapper {
     width: 100%;
-    height: 450px;
-    overflow: hidden;
+    min-height: 550px; /* 450px에서 550px로 증가 */
+    padding: 0;
     position: relative;
     z-index: 10;
-    display: flex;
-    align-items: center;
     flex-shrink: 0;
+    margin: 0 auto; /* 중앙 정렬 */
 }
 
 .gallery-slider {
-    display: flex;
-    height: 100%;
-    align-items: flex-start;
-    padding: 0 60px;
-    gap: 30px;
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    min-width: max-content;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+    height: 400px !important;
+    width: 1200px !important;
+    margin: 0 auto !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    justify-content: center !important;
+    align-items: stretch !important;
 }
 
-.gallery-item {
+/* Index Gallery Accordion Items - working style from facility */
+.gallery-section .gallery-item {
     position: relative;
-    flex: 0 0 auto;
-    width: 350px;
-    height: 400px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #f5f5f5;
+    flex: 0 0 60px !important; /* 접힌 상태는 더 좁게 */
+    border-radius: 0 !important;
+    height: 500px !important; /* 높이를 500px로 증가 */
+    min-height: 500px !important;
+    min-width: 60px !important;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1) !important; /* 부드러운 easing */
     display: block !important;
     visibility: visible !important;
+    opacity: 1;
+}
+
+/* Active gallery item (expanded) - 더 큰 비율로 확장 */
+.gallery-section .gallery-item.gallery-item-active {
+    flex: 1 !important; /* 확장된 아이템이 나머지 공간을 모두 차지 */
+    min-width: 500px !important; /* 최소 크기 더 크게 */
+    max-width: none !important; /* 최대 크기 제한 해제 */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25) !important;
+    transform: translateY(-2px) !important; /* 살짝 들어올리기 */
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1) !important; /* 일관된 easing */
+    z-index: 10 !important;
+}
+
+/* Index Gallery Images - Accordion Style */
+.gallery-section .gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 10 !important;
+    transition: all 0.6s ease !important;
     opacity: 1 !important;
-    margin-top: 40px;
-}
-
-/* Alternating layout: vertical (portrait) - 사이즈 조정 */
-.gallery-item:nth-child(odd) {
-    width: 300px;
-    height: 400px;
-}
-
-/* Alternating layout: horizontal (landscape) - 사이즈 조정 */
-.gallery-item:nth-child(even) {
-    width: 400px;
-    height: 300px;
-}
-
-.gallery-item-image {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 0;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
+    visibility: visible !important;
 }
 
 
-/* Description outside image */
-.gallery-item-description {
-    position: absolute;
-    top: -30px;
-    left: 0;
-    width: 100%;
-    padding: 0;
-    text-align: left;
-    background: transparent;
-}
 
-.gallery-item-description span {
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: #fff;
-    letter-spacing: 0.02em;
-}
-
-.gallery-item-description span::before {
+.gallery-section .gallery-item-description span::before {
     content: '# ';
-    color: #fff;
+    color: var(--color-secondary);
+    font-weight: 600;
 }
 
 .gallery-item-title {
@@ -661,36 +651,9 @@ img {
     color: #fff;
 }
 
-/* Gallery Media Queries */
-@media (max-width: 768px) {
-    .gallery-header {
-        padding: 40px 20px 30px 20px;
-    }
+/* Gallery Mobile - Removed to allow horizontal slider from index.css */
 
-    .gallery-slider {
-        padding: 0 20px;
-    }
-
-    .gallery-item:nth-child(odd) {
-        width: 40vh;
-        height: 55vh;
-    }
-
-    .gallery-item:nth-child(even) {
-        width: 55vh;
-        height: 40vh;
-    }
-
-    .gallery-item-description {
-        top: -25px;
-        left: 0;
-        padding: 0;
-    }
-
-    .gallery-item-description span {
-        font-size: 0.75rem;
-    }
-}
+/* Small mobile styles removed to allow horizontal slider from index.css */
 
 /* ================================
    Floating Booking Buttons
@@ -825,7 +788,7 @@ body.footer-visible .floating-btn:hover {
 .scroll-to-top {
     position: fixed !important;
     bottom: 30px;
-    left: 30px;
+    right: 30px;
     width: 50px;
     height: 50px;
     display: flex;
@@ -919,67 +882,6 @@ body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
     border-color: var(--color-primary);
 }
 
-/* ================================
-   Marquee Section
-   ================================ */
-.marquee-section {
-    width: 100%;
-    overflow: hidden;
-    background: var(--color-primary);
-    padding: 200px 0 0 0;
-}
-
-.marquee-container {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.marquee-text {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 60s linear infinite;
-    font-family: var(--font-en-main), serif;
-    font-size: 4rem;
-    font-weight: 700;
-    font-style: italic;
-    color: var(--color-secondary);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
-.marquee-text span {
-    padding-right: 100px;
-    display: inline-block;
-}
-
-@keyframes marquee {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(-100%, 0);
-    }
-}
-
-.marquee-animated {
-    animation-play-state: running;
-}
-
-/* Mobile Responsive for Marquee */
-@media (max-width: 768px) {
-    .marquee-section {
-        padding: 100px 0 60px 0;
-    }
-
-    .marquee-text {
-        font-size: 2.5rem;
-    }
-
-    .marquee-text span {
-        padding-right: 60px;
-    }
-}
 
 /* Mobile Responsive for Floating Buttons */
 @media (max-width: 768px) {
@@ -1029,7 +931,7 @@ body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
 
     .scroll-to-top {
         bottom: 20px;
-        left: 20px;
+        right: 20px;
         width: 45px;
         height: 45px;
         font-size: 0.7rem;
@@ -1050,121 +952,69 @@ body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
 .full-banner {
     position: relative;
     width: 100%;
-    height: 400px;
-    background-color: var(--color-secondary);
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 10%;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .full-banner-title {
-    position: absolute;
-    left: 10%;
     color: #ffffff;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     font-family: var(--font-en-main), serif;
     letter-spacing: 0.05em;
     font-style: italic;
     z-index: 2;
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: all 1.2s ease;
+    word-break: break-word;
+    text-align: center;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.full-banner-title.animate {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-@keyframes slideFromLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.full-banner-circle {
-    position: relative;
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    border: 5px solid var(--color-secondary);
-    padding: 12px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-origin: padding-box;
-    background-clip: padding-box;
-    transform: scale(0.8);
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-
-.full-banner-circle.animate {
-    transform: scale(1);
-    opacity: 1;
-}
 
 @media (max-width: 768px) {
     .full-banner {
-        height: 400px;
+        height: 500px;
         padding: 0 5%;
     }
 
     .full-banner-title {
-        font-size: 2rem;
-        left: 5%;
-    }
-
-    .full-banner-circle {
-        width: 450px;
-        height: 450px;
+        font-size: 1.8rem;
     }
 }
 
 @media (max-width: 480px) {
     .full-banner {
-        height: 150px;
+        height: 400px;
     }
 
     .full-banner-title {
         font-size: 1.5rem;
-        margin-bottom: 20px;
-    }
-
-    .full-banner-circle {
-        width: 250px;
-        height: 250px;
     }
 }
 
-/* Facility Gallery Section - moved from facility.css */
+/* ================================
+   Facility Gallery - Accordion Hover Cards (2x2 Grid)
+   ================================ */
 .facility-gallery-section {
-    background: var(--color-secondary);
-    min-height: 600px;
-    padding-top: 200px;
-    padding-bottom: 15px;
+    background: rgba(29, 58, 95, 0.2);
+    min-height: 700px; /* 600px에서 700px로 변경 */
+    padding: 120px 60px 80px 60px; /* 하단 패딩도 증가 */
     position: relative;
 }
 
-/* Facility Gallery Label */
 .facility-gallery-label {
-    position: absolute;
-    top: 60px;
-    left: 60px;
+    margin-bottom: 60px;
     opacity: 0;
     transform: translateX(-100px);
     transition: all 1s ease;
-    z-index: 3;
 }
 
 .facility-gallery-label.animate {
@@ -1174,43 +1024,214 @@ body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
 
 .facility-gallery-label span {
     font-family: var(--font-en-main), serif;
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-style: italic;
-    color: #fff;
+    color: var(--color-secondary);
     font-weight: 400;
     letter-spacing: 0.02em;
-    position: relative;
     display: inline-block;
 }
 
 .facility-gallery-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 1600px;  /* room과 동일하게 컨테이너 너비 증가 */
-    padding: 0 20px;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+    height: 500px !important; /* 400px에서 500px로 변경 */
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    justify-content: center !important;
+    align-items: stretch !important;
 }
 
-/* Facility Gallery Item Override - room과 동일한 스타일 */
-.facility-gallery-container .gallery-item {
-    width: 450px;  /* room과 동일한 크기 */
-    height: 450px;  /* 정사각형 */
-    max-width: none;
-    flex: 0 0 auto;
-}
 
 .facility-gallery-container .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: all 0.6s ease !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
 }
 
-.gallery-item {
+.facility-gallery-container .gallery-item .gallery-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+/* 기본 상태에서는 제목만 표시 */
+.facility-gallery-container .gallery-item .gallery-item-title-default {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%) rotate(-90deg);
+    transform-origin: center;
+    color: #fff;
+    font-family: var(--font-en-main), serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 2;
+    transition: all 0.6s ease;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    white-space: nowrap;
+}
+
+/* 확장된 상태에서는 가로 표시 */
+.facility-gallery-container .gallery-item:hover .gallery-item-title-default,
+.facility-gallery-container .gallery-item:first-child .gallery-item-title-default {
+    transform: translateX(-50%) rotate(0deg);
+    bottom: 20px;
+    left: 20px;
+    transform: none;
+}
+
+/* 기존 스타일 정리됨 - 위의 활성화 상태 스타일로 대체 */
+
+/* Click-based Accordion Effects */
+.facility-gallery-container .gallery-item.gallery-item-active {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.facility-gallery-container .gallery-item.gallery-item-active img {
+    transform: scale(1.02);
+}
+
+/* 기본적으로 모든 카드에 오버레이 표시 */
+.facility-gallery-container .gallery-item .gallery-item-overlay {
+    opacity: 1;
+}
+
+/* 활성화된 상태에서는 오버레이 숨김 */
+.facility-gallery-container .gallery-item.gallery-item-active .gallery-item-overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Facility Gallery Description - 흰색 글씨 text-shadow */
+.facility-gallery-container .gallery-item .gallery-item-description {
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+    font-family: var(--font-ko-main), sans-serif;
+    font-size: 1.1rem;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 20;
+}
+
+/* 활성화된 상태에서만 표시 */
+.facility-gallery-container .gallery-item.gallery-item-active .gallery-item-description {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+
+/* 호버 효과는 가볍게만 (클릭하라는 힌트) */
+@media (min-width: 769px) {
+    .facility-gallery-container .gallery-item:not(.gallery-item-active):hover {
+        transform: scale(1.02);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+}
+
+/* Facility Gallery Mobile - 세로 스택 스타일 */
+@media (max-width: 768px) {
+    .facility-gallery-section {
+        padding: 80px 20px 40px 20px;
+        min-height: auto;
+    }
+
+    .facility-gallery-label {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .facility-gallery-label span {
+        font-size: 2.5rem;
+    }
+
+    .facility-gallery-container {
+        display: block !important;
+        height: auto !important;
+        gap: 0 !important;
+        flex-direction: column !important;
+    }
+
+    .facility-gallery-container .gallery-item {
+        width: 100% !important;
+        height: 250px !important;
+        margin-bottom: 15px !important;
+        border-radius: 8px !important;
+        min-width: auto !important;
+        max-width: none !important;
+        flex: none !important;
+        position: relative !important;
+        overflow: hidden !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .facility-gallery-container .gallery-item:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    .facility-gallery-container .gallery-item img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* 오버레이 제거 */
+    .facility-gallery-container .gallery-item .gallery-item-overlay {
+        display: none !important;
+    }
+
+    /* 제목 숨김 */
+    .facility-gallery-container .gallery-item .gallery-item-title-default {
+        display: none !important;
+    }
+
+    /* 설명을 항상 표시 - 배경 없이 흰색 글씨 */
+    .facility-gallery-container .gallery-item .gallery-item-description {
+        position: absolute !important;
+        bottom: 15px !important;
+        right: 30px !important;
+        left: auto !important;
+        background: none !important;
+        color: white !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        font-family: var(--font-ko-main), sans-serif !important;
+        font-size: 1.1rem !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        backdrop-filter: none !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 0 0 8px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    /* 호버/클릭 효과 제거 */
+    .facility-gallery-container .gallery-item:active,
+    .facility-gallery-container .gallery-item:hover {
+        transform: none !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    }
+}
+
+/* Default Gallery Items - NOT for facility gallery */
+.gallery-section .gallery-item {
     flex: 1;
     max-width: 320px;
     position: relative;
@@ -1219,28 +1240,48 @@ body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
     transition: all 1s ease;
 }
 
-.gallery-item:nth-child(1) {
+/* Override all other gallery item styles for facility gallery specifically */
+.facility-gallery-section .facility-gallery-container .gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background: #f5f5f5;
+    flex: 0 0 60px !important;
+    border-radius: 0 !important;
+    height: 500px !important; /* 400px에서 500px로 변경 */
+    min-height: 500px !important;
+    min-width: 60px !important;
+}
+
+/* 활성화된 카드는 확장 */
+.facility-gallery-section .facility-gallery-container .gallery-item.gallery-item-active {
+    flex: 1 !important;
+    min-width: 200px !important;
+}
+
+.gallery-section .gallery-item:nth-child(1) {
     transition-delay: 0.1s;
 }
 
-.gallery-item:nth-child(2) {
+.gallery-section .gallery-item:nth-child(2) {
     transition-delay: 0.2s;
 }
 
-.gallery-item:nth-child(3) {
+.gallery-section .gallery-item:nth-child(3) {
     transition-delay: 0.3s;
 }
 
-.gallery-item:nth-child(4) {
+.gallery-section .gallery-item:nth-child(4) {
     transition-delay: 0.4s;
 }
 
-.gallery-item.animate {
+.gallery-section .gallery-item.animate {
     opacity: 1;
     transform: translateY(0);
 }
 
-.gallery-item img {
+.gallery-section .gallery-item img {
     width: 100%;
     height: 400px;
     object-fit: cover;
@@ -1248,8 +1289,7 @@ body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
     transition: none;
 }
 
-
-.gallery-item-title {
+.gallery-item-title:not(.facility-gallery-container .gallery-item-title) {
     color: var(--color-primary);
     font-size: 0.9rem;
     font-weight: 500;
@@ -1288,6 +1328,12 @@ body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
         width: calc(50% - 10px);
     }
 
+    /* Index gallery should show one image per page on mobile */
+    .gallery-section .gallery-item {
+        max-width: 100%;
+        width: 100%;
+    }
+
     .gallery-item img {
         height: 180px;
         width: 100%;
@@ -1296,18 +1342,176 @@ body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
 }
 
 @media (max-width: 480px) {
-    .facility-gallery-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
+    .facility-gallery-container .gallery-item {
+        height: 220px !important;
     }
 
-    .gallery-item {
-        max-width: 100%;
-        width: 100%;
-    }
-
-    .gallery-item img {
-        height: 200px;
+    .facility-gallery-container .gallery-item .gallery-item-description {
+        font-size: 1.1rem !important;
+        padding: 0 !important;
     }
 }
+
+
+
+/* ================================
+   갤러리 아코디언 성능 개선 및 Description 스타일링
+   ================================ */
+
+/* 버벅임 해결을 위한 GPU 가속화 및 최적화된 트랜지션 */
+.gallery-section .gallery-item {
+    will-change: flex !important;
+    transform: translateZ(0) !important;
+    transition: flex 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.gallery-section .gallery-item.gallery-item-active {
+    will-change: flex !important;
+    transform: translateZ(0) !important;
+    transition: flex 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* ================================
+   Index Gallery Section - Same styling as room/facility
+   ================================ */
+.gallery-section {
+    background: rgba(29, 58, 95, 0.2);
+    min-height: 700px;
+    padding: 120px 60px 80px 60px;
+    position: relative;
+}
+
+/* Gallery container height to match room/facility pages - Desktop only */
+@media (min-width: 769px) {
+    .gallery-section .gallery-slider {
+        height: 500px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 8px !important;
+        margin: 0 auto !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        justify-content: center !important;
+        align-items: stretch !important;
+    }
+
+    .gallery-section .gallery-item {
+        height: 500px !important;
+        min-height: 500px !important;
+        /* flex는 위에서 정의된 기본값 사용 (0 0 60px) */
+        cursor: pointer !important;
+        position: relative !important;
+    }
+}
+
+/* Add subtle gradient overlay for better text readability - only text area */
+.gallery-section .gallery-item::after,
+.facility-gallery-container .gallery-item::after,
+.room-gallery-container .gallery-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Index Gallery Description */
+.gallery-section .gallery-item .gallery-item-description {
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+    font-family: var(--font-ko-main), sans-serif;
+    font-size: 1.1rem;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 20;
+    transition: all 0.5s ease;
+}
+
+/* Show description on active item */
+.gallery-section .gallery-item.gallery-item-active .gallery-item-description {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+
+/* Index Gallery Overlay - facility와 동일한 스타일 */
+.gallery-section .gallery-item .gallery-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    opacity: 1; /* 기본적으로 오버레이 표시 */
+    transition: all 0.6s ease;
+}
+
+/* 기본적으로 모든 카드에 오버레이 표시 (facility와 동일) */
+.gallery-section .gallery-item .gallery-item-overlay {
+    opacity: 1 !important;
+}
+
+/* 활성화된 상태에서는 오버레이 숨김 */
+.gallery-section .gallery-item.gallery-item-active .gallery-item-overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* 모바일에서는 오버레이 숨김 */
+@media (max-width: 768px) {
+    .gallery-section .gallery-item .gallery-item-overlay {
+        display: none !important;
+    }
+}
+
+/* Empty Image Placeholder Styles */
+.empty-image-placeholder,
+.empty-background-placeholder {
+    opacity: 0.8 !important;
+    filter: grayscale(0.2);
+}
+
+.empty-background-placeholder {
+    background-color: #f5f5f5;
+}
+
+/* ================================
+   Large Desktop - Container Width Limits
+   ================================ */
+@media (min-width: 1920px) {
+    .container,
+    .footer-container,
+    .section-container,
+    .gallery-section .section-wrapper {
+        max-width: 1600px;
+    }
+
+    .facility-gallery-container,
+    .gallery-section .gallery-slider {
+        max-width: 1600px !important;
+        height: 600px !important; /* 큰 화면에서 더 큰 높이 */
+    }
+
+    .gallery-section .gallery-item {
+        height: 600px !important;
+        min-height: 600px !important;
+    }
+    .signature-container, .gallery-container {
+        max-width: 1600px !important;
+    }
+    .gallery-slider {
+        width: 1600px !important;
+    }
+}
+
+

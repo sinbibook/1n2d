@@ -222,7 +222,11 @@ class PreviewHandler {
         // 전체 페이지 다시 렌더링 (완료 대기)
         await this.renderTemplate(this.currentData);
 
-        // 팝업은 POPUP_UPDATE 메시지에서만 업데이트 (다른 영역 수정 시 팝업이 다시 열리는 문제 방지)
+        // 팝업 데이터가 있으면 팝업도 업데이트
+        const popupData = data?.homepage?.customFields?.popup;
+        if (popupData && window.popupManager) {
+            window.popupManager.updateFromTemplateData(data);
+        }
 
         // 부모 창에 업데이트 완료 신호
         this.notifyRenderComplete('UPDATE_COMPLETE');
@@ -233,9 +237,9 @@ class PreviewHandler {
      */
     getDefaultFonts() {
         return {
-            koMain: "'Aritaburi', sans-serif",
-            koSub: "'Aritaburi', sans-serif",
-            enMain: "'Amandine', serif"
+            koMain: "'ReperepointSpecialItalic', sans-serif",
+            koSub: "'Pretendard', sans-serif",
+            enMain: "'Chonburi', sans-serif"
         };
     }
 
@@ -244,8 +248,8 @@ class PreviewHandler {
      */
     getDefaultColors() {
         return {
-            primary: '#fdfcf4',
-            secondary: '#31423d'
+            primary: '#f5f5f5',
+            secondary: '#1D3A5F'
         };
     }
 
@@ -715,7 +719,6 @@ class PreviewHandler {
                         break;
                     case 'about':
                         mapper.mapAboutSection();
-                        mapper.mapMarqueeSection();
                         mapper.mapIntroductionSection();
                         break;
                 }

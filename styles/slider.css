@@ -95,7 +95,7 @@
 }
 
 .fullscreen-slider-description {
-    font-family: var(--font-ko-main), serif;
+    font-family: var(--font-ko-sub), serif;
     font-size: 1.2rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.9);
