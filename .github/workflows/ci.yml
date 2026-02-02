@@ -16,47 +16,21 @@ jobs:
 
     - name: Check JavaScript syntax
       run: |
-        echo "🔍 Checking JavaScript files..."
-        if find . -path ./node_modules -prune -o -name "*.js" -type f -print | grep -q .; then
-          find . -path ./node_modules -prune -o -name "*.js" -type f -print -exec node -c {} \;
-          echo "✅ JavaScript syntax OK"
+        # JS 파일이 있으면 구문 검사
+        if find . -name "*.js" -type f | grep -q .; then
+          echo "Checking JavaScript files..."
+          find . -name "*.js" -type f -exec node -c {} \;
+          echo "✓ JavaScript syntax OK"
         else
-          echo "⚠️ No JavaScript files found"
+          echo "No JavaScript files found"
         fi
 
     - name: Validate HTML structure
       run: |
-        echo "🔍 Checking HTML files..."
+        # index.html 존재 확인
         if [ -f "index.html" ]; then
-          echo "✅ index.html found"
+          echo "✓ index.html found"
         else
-          echo "❌ index.html not found"
-          exit 1
+          echo "⚠️ No index.html found"
+          ls -la *.html 2>/dev/null || echo "No HTML files found"
         fi
-
-        # HTML 파일 목록 출력
-        echo "📄 HTML files in project:"
-        find . -name "*.html" -type f | while read file; do
-          echo "  - $file"
-        done
-
-    - name: Check CSS files
-      run: |
-        echo "🔍 Checking CSS files..."
-        if find . -name "*.css" -type f | grep -q .; then
-          echo "📄 CSS files found:"
-          find . -name "*.css" -type f | while read file; do
-            echo "  - $file"
-          done
-          echo "✅ CSS files present"
-        else
-          echo "⚠️ No CSS files found"
-        fi
-
-    - name: Project structure check
-      run: |
-        echo "📦 Project structure:"
-        echo "├── HTML files: $(find . -name '*.html' -type f | wc -l)"
-        echo "├── JavaScript files: $(find . -name '*.js' -type f | wc -l)"
-        echo "├── CSS files: $(find . -name '*.css' -type f | wc -l)"
-        echo "└── Image files: $(find ./images -type f 2>/dev/null | wc -l || echo 0)"

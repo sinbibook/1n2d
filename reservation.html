@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-homepage-seo-title></title>
-    <meta name="description" content="" data-homepage-seo-description>
-    <meta name="keywords" content="" data-homepage-seo-keywords>
-    <link rel="icon" type="image/png" href="" data-homepage-favicon>
+    <meta name="description" content="숙소 설명">
+    <meta name="keywords" content="SEO 키워드">
+    <title>예약안내 - 숙소명</title>
 
-    <script src="js/config.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="styles/theme.css"/>
-    <link rel="stylesheet" href="styles/common.css"/>
-    <link rel="stylesheet" href="styles/facility.css"/>
-    <link rel="stylesheet" href="styles/reservation.css"/>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles/common.css" as="style">
+    <link rel="preload" href="styles/reservation.css" as="style">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/reservation.css">
+
   <!-- Open Graph Meta Tags for Social Media -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="고성 1박2일펜션 - 예약안내" />
@@ -29,177 +29,101 @@
   
 </head>
 <body>
-
-    <!-- Fullscreen Menu Container -->
-    <div id="fullscreen-menu-container"></div>
-
-    <div class="main-container" data-name="예약페이지">
-
-        <!-- Section 1: Hero with Background Image and Facility Name -->
-        <section id="section1" class="relative w-full overflow-hidden" style="height: 100vh; height: 100dvh; min-height: 100vh; min-height: 100dvh;">
-            <!-- Hero Background Image -->
-            <div id="hero-image-container" class="absolute inset-0 w-full h-full">
-                <img src=""
-                     alt="시설 이미지"
-                     class="absolute inset-0 w-full h-full object-cover empty-image-placeholder"
-                     style="width: 100%; height: 100vh; min-height: 100vh; object-fit: cover; display: block; position: absolute; inset: 0px;"
-                     data-homepage-customfields-pages-reservation-sections-0-hero-images-0-url>
+    <main class="main-content">
+        <!-- CUSTOM FIELD : 메인 소개 섹션 -->
+        <section class="hero-section hero-center-bottom">
+            <div class="hero-slider" data-hero-slider>
+                <!-- 메인 소개 섹션 업로드 이미지 동적 매핑 -->
             </div>
-
-            <!-- 오버레이 그라데이션 -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-
-            <!-- Specials 텍스트 -->
-            <div class="absolute bottom-8 left-8 md:bottom-12 md:left-8 lg:bottom-16 lg:left-12 xl:left-24 slide-in-left">
-                <h1 class="responsive-title text-white font-bold drop-shadow-lg en-title text-center">
-                    Reservations
-                </h1>
-                <div class="w-[300px] md:w-[400px] lg:w-[600px] h-px bg-white mt-4"></div>
+            <!-- 페이지명 하드코딩 -->
+            <div class="hero-property-title">RESERVATION</div>
+            <div class="hero-bottom-info">
+                <div class="hero-progress-container">
+                    <button class="hero-nav-prev" aria-label="Previous slide">&lt;</button>
+                    <span class="current-slide hero-indicators" data-current-slide>01</span>
+                    <div class="hero-progress-bar">
+                        <div class="hero-progress-fill" data-hero-progress></div>
+                    </div>
+                    <span class="total-slides hero-indicators" data-total-slides>01</span>
+                    <button class="hero-nav-next" aria-label="Next slide">&gt;</button>
+                </div>
             </div>
         </section>
 
+    </main>
 
-        <!-- Reservation Sections Container -->
-         <section class="about-section relative w-full py-32 px-6 md:px-0 flex items-center justify-center">
-            <div class="main-image-container relative">
-                <div class="main-image-wrapper fade-in-scale">
-                    <img src=""
-                         alt="reservation-img"
-                         class="w-[500px] md:w-[700px] lg:w-[900px] h-80 md:h-96 lg:h-[400px] object-cover empty-image-placeholder"
-                         data-homepage-customfields-pages-reservation-sections-0-about-images-0-url>
+        <section class="reservation-main-section">
+            <div class="reservation-main-content">
+                  <h2 class="about-title animate-element" data-directions-title>
+                    <span data-property-name></span> 예약안내
+                </h2>
+                <div class="reservation-full-image animate-element" data-reservation-about-image>
+                    <img src="" alt="Reservation Image">
                 </div>
-            </div>
-        </section>
-        <!-- Accordion Container -->
-        <section class="relative w-full pb-16 lg:pb-24">
-            <div class="max-w-4xl mx-auto px-6">
 
-                <!-- 이용안내 Accordion -->
-                <div class="border-b mb-4 fade-in-up" style="border-color: var(--color-secondary);">
-                    <button class="accordion-btn w-full py-6 flex items-center justify-between text-left focus:outline-none group" onclick="toggleAccordion(this)">
-                        <h3 class="text-lg md:text-2xl ko-title" style="color: var(--color-secondary);">이용안내</h3>
-                        <svg class="w-6 h-6 transition-transform duration-200 accordion-icon" style="color: var(--color-secondary);"
-                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                        </svg>
-                    </button>
-                    <div class="accordion-content mb-2 overflow-hidden transition-all duration-300 max-h-0">
-                        <div class="bg-stone-50 rounded-lg p-6 border mb-4" style="border-color: var(--color-secondary);">
-                            <div class="usageRules ko-title space-y-2" data-property-usageGuide>
+                <!-- 탭 메뉴 -->
+                <div class="reservation-tabs animate-element">
+                    <button class="tab-button active" data-tab="reservation">예약안내</button>
+                    <button class="tab-button" data-tab="usage">이용안내</button>
+                    <button class="tab-button" data-tab="checkin">입/퇴실 안내</button>
+                    <button class="tab-button" data-tab="refund">환불/취소 규정 안내</button>
+                </div>
 
-                            </div>
+                <!-- 탭 컨텐츠 -->
+                <div class="reservation-tab-content animate-element">
+                    <!-- 예약안내 탭 -->
+                    <div class="tab-panel active" data-panel="reservation">
+                        <div class="reservation-text-content" data-reservation-guide>
+                            <!-- 예약안내 내용 동적 매핑 -->
                         </div>
                     </div>
-                </div>
 
-                <!-- 예약안내 Accordion -->
-                <div class="border-b mb-4 fade-in-up" style="border-color: var(--color-secondary);">
-                    <button class="accordion-btn w-full py-6 flex items-center justify-between text-left focus:outline-none group" onclick="toggleAccordion(this)">
-                        <h3 class="text-lg md:text-2xl ko-title" style="color: var(--color-secondary);">예약안내</h3>
-                        <svg class="w-6 h-6 transition-transform duration-200 accordion-icon" style="color: var(--color-secondary);"
-                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                        </svg>
-                    </button>
-                    <div class="accordion-content mb-2 overflow-hidden transition-all duration-300 max-h-0">
-                        <div class="bg-stone-50 rounded-lg p-6 border mb-4" style="border-color: var(--color-secondary);">
-                            <div class="reservationGuide ko-title space-y-2" data-property-reservationGuide>
-
-                            </div>
+                    <!-- 이용안내 탭 -->
+                    <div class="tab-panel" data-panel="usage">
+                        <div class="reservation-text-content" data-usage-guide>
+                            <!-- 이용안내 내용 동적 매핑 -->
                         </div>
                     </div>
-                </div>
 
-                <!-- 입/퇴실 안내 Accordion -->
-                <div class="border-b mb-4 fade-in-up" style="border-color: var(--color-secondary);">
-                    <button class="accordion-btn w-full py-6 flex items-center justify-between text-left focus:outline-none group" onclick="toggleAccordion(this)">
-                        <h3 class="text-lg md:text-2xl ko-title" style="color: var(--color-secondary);">입/퇴실 안내</h3>
-                        <svg class="w-6 h-6 transition-transform duration-200 accordion-icon" style="color: var(--color-secondary);"
-                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                        </svg>
-                    </button>
-                    <div class="accordion-content mb-2 overflow-hidden transition-all duration-300 max-h-0">
-                        <div class="bg-stone-50 rounded-lg p-6 border mb-4" style="border-color: var(--color-secondary);">
-                            <div class="checkinCheckoutRules ko-body space-y-2" data-property-checkInOutInfo>
-                                
+                    <!-- 입퇴실 탭 -->
+                    <div class="tab-panel" data-panel="checkin">
+                        <div class="checkin-checkout-times">
+                            <div class="detail-item">
+                                <span class="detail-label">체크인</span>
+                                <span class="detail-value" data-checkin-time></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">체크아웃</span>
+                                <span class="detail-value" data-checkout-time></span>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- 취소 수수료 안내 Accordion -->
-                <div class="border-b mb-4 fade-in-up" style="border-color: var(--color-secondary);">
-                    <button class="accordion-btn w-full py-6 flex items-center justify-between text-left focus:outline-none group" onclick="toggleAccordion(this)">
-                        <h3 class="text-lg md:text-2xl ko-title" style="color: var(--color-secondary);">취소 수수료 안내</h3>
-                        <svg class="w-6 h-6 transition-transform duration-200 accordion-icon" style="color: var(--color-secondary);"
-                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                        </svg>
-                    </button>
-                    <div class="accordion-content mb-2 overflow-hidden transition-all duration-300 max-h-0">
-                        <div class="bg-stone-50 rounded-lg p-6 border mb-4" style="border-color: var(--color-secondary);">
-                            <div class="ko-body space-y-2" data-property-refundSettings-customerRefundNotice>
-
-                            </div>
+                        <div class="reservation-text-content" data-operation-info>
+                            <!-- 운영정보 내용 동적 매핑 -->
                         </div>
                     </div>
-                </div>
 
-                <!-- 환불규정 Accordion -->
-                <div class="border-b mb-4 fade-in-up" style="border-color: var(--color-secondary);">
-                    <button class="accordion-btn w-full py-6 flex items-center justify-between text-left focus:outline-none group" onclick="toggleAccordion(this)">
-                        <h3 class="text-lg md:text-2xl ko-title" style="color: var(--color-secondary);">환불규정</h3>
-                        <svg class="w-6 h-6 transition-transform duration-200 accordion-icon" style="color: var(--color-secondary);"
-                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                        </svg>
-                    </button>
-                    <div class="accordion-content mb-2 overflow-hidden transition-all duration-300 max-h-0">
-                        <div class="bg-stone-50 rounded-lg p-6 border mb-4" style="border-color: var(--color-secondary);">
-                            <div class="refundRules ko-body space-y-2" >
-                                
+                    <!-- 환불 탭 -->
+                    <div class="tab-panel" data-panel="refund">
+                        <div class="refund-table-section">
+                            <h4 class="refund-section-title">환불 규정표</h4>
+                            <div class="refund-table-wrapper">
+                                <table class="refund-table">
+                                    <thead>
+                                        <tr>
+                                            <th>취소 시점</th>
+                                            <th>환불율</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="refund-table-body">
+                                        <!-- 동적으로 행이 생성됩니다 -->
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-       <!-- Wave Background Section -->
-        <section class="wave-bg-section relative overflow-hidden">
-            <div class="wave-bg relative w-full">
-                <!-- SVG Clipping Path -->
-                <svg width="0" height="0" style="position: absolute;">
-                    <defs>
-                        <clipPath id="wave-clip" clipPathUnits="objectBoundingBox">
-                            <path d="M0,0.08 Q0.25,0.02 0.5,0.08 T1,0.08 L1,1 L0,1 Z"/>
-                        </clipPath>
-                        <clipPath id="wave-clip-mobile" clipPathUnits="objectBoundingBox">
-                            <path d="M0,0.12 Q0.25,0.06 0.5,0.12 T1,0.12 L1,1 L0,1 Z"/>
-                        </clipPath>
-                    </defs>
-                </svg>
-
-                <!-- Background Image -->
-                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed empty-image-placeholder"
-                     style="background-image: url(''); background-attachment: fixed; clip-path: url(#wave-clip);"
-                     data-reservation-wave-background>
-
-                    <!-- Overlay -->
-                    <div class="absolute inset-0"></div>
-
-                    <!-- Content with Animation -->
-                    <div class="absolute inset-0 z-10 flex items-center justify-center px-6">
-                        <div class="banner-content text-center text-white max-w-3xl md:pt-20">
-                            <h2 class="text-2xl md:text-3xl font-bold en-title mb-6 fade-in-up">
-                                Reservation
-                            </h2>
-                            <div class="inline-flex flex-col sm:flex-row gap-4 fade-in-up">
-                                <button id="realtime-reservation-btn">
-                                    실시간 예약 바로가기
-                                </button>
+                        <div class="refund-text-section">
+                            <h4 class="refund-section-title">취소 및 환불 안내</h4>
+                            <div class="refund-notes reservation-text-content" data-refund-notes>
+                                <!-- 환불 정책 안내문 텍스트 동적 매핑 -->
                             </div>
                         </div>
                     </div>
@@ -207,19 +131,43 @@
             </div>
         </section>
 
-    </div>
+        <!-- 예약하기 버튼 링크 추가 -->
+        <div class="reservation-book-now">
+            <a href="#" class="reservation-book-btn" data-property-realtime-booking-id target="_blank">BOOK NOW</a>
+        </div>
+
+    <!-- 숙소 외경이미지 2번째 매핑 -->
+    <section class="full-banner" data-main-banner>
+      <h2 class="full-banner-title" data-property-name-en></h2>
+    </section>
 
 
-    <!-- Page Specific Scripts -->
+    <!-- Include ImageWithFallback script (standard-template-data.json에서만 필요) -->
+    <!-- <script src="js/image-with-fallback.js"></script> -->
+
+    <!-- Image Helpers -->
     <script src="js/image-helpers.js"></script>
-    <script src="js/header-footer-loader.js"></script>
+
+    <!-- Base Data Mapper -->
     <script src="js/data-mapper/core/base-mapper.js"></script>
+
+    <!-- Reservation Page Mapper -->
     <script src="js/data-mapper/pages/reservation-mapper.js"></script>
-    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+
+    <!-- Preview Handler for Admin Integration -->
     <script src="js/preview-handler.js"></script>
-    <script src="js/common/scroll-animation.js"></script>
+
+    <!-- Header Footer Mapper -->
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+
+    <!-- Header and Footer Loader -->
+    <script src="js/header-footer-loader.js"></script>
+
+    <!-- Page-specific script -->
     <script src="js/pages/reservation.js"></script>
 
+    <!-- Scroll Animations -->
+    <script src="js/scroll-animations.js"></script>
 
 </body>
 </html>

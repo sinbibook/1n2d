@@ -1,202 +1,307 @@
-/* Main Page Styles */
+/* ================================
+   Main Page Styles
+   ================================ */
 
-/* Full Page Scroll Container */
-.scroll-container {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
+/* Main page specific overrides - using common hero styles */
 
-/* Individual scroll sections */
-.scroll-section {
-    width: 100%;
-    height: 100vh;
+/* Main About Section - Below marquee */
+.main-about-section {
+    padding: 80px 20px 0;
+    min-height: 700px;
+    background: var(--color-primary);
+    text-align: center;
     position: relative;
 }
 
-/* Hero section base styles */
-.hero-section {
-    background: linear-gradient(135deg, #a8d5d8 0%, #d4e6f1 50%, #f9f9f9 100%);
-}
 
-/* Hero 섹션에서 공통 header 활성화 */
-#main-header {
-    display: block;
-}
-
-/* Main Hero Section */
-.main-hero-swiper {
-    width: 100%;
-    height: 100vh;
-}
-
-.main-hero-swiper .swiper-slide {
-    width: 100%;
-    height: 100vh;
+.main-about-content {
     position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Navigation Dots */
-.section-dot {
-    cursor: pointer;
-    transition: all 0.3s ease;
+.main-about-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 30px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    transform: translateY(30px);
+    transition: all 1s ease;
 }
 
-.section-dot:hover {
-    transform: scale(1.2);
+.main-about-title.animate {
+    transform: translateY(0);
 }
 
-.section-dot.active {
-    background-color: white !important;
-    transform: scale(1.3);
+.main-about-description {
+    font-family: var(--font-ko-sub);
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    transform: translateY(30px);
+    transition: all 1s ease;
+    transition-delay: 0.2s;
 }
 
-/* Scroll Down Indicator */
-@keyframes scrollIndicator {
-    0%, 20% {
-        transform: translateY(0);
-        opacity: 0;
+.main-about-description.animate {
+    transform: translateY(0);
+}
+
+/* Animation - Slide up from bottom */
+@keyframes slideUp {
+    from {
+            transform: translateY(30px);
+    }
+    to {
+            transform: translateY(0);
+    }
+}
+
+/* Intro Section - Dynamic blocks */
+.intro-section {
+    background: var(--color-primary);
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 50px auto;
+}
+
+/* Reverse layout for even blocks (2nd, 4th, etc) */
+.intro-block:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.intro-block:nth-child(even) .intro-block-content {
+    text-align: left;
+}
+
+/* Last block gets extra padding bottom */
+.intro-block:last-child {
+    padding-bottom: 100px;
+}
+
+.intro-block-image {
+    position: relative;
+    width: 55%;
+    height: 500px;
+    flex-shrink: 0;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.intro-block-image.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Even blocks - image slides from right */
+.intro-block:nth-child(even) .intro-block-image {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+.intro-block:nth-child(even) .intro-block-image.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animation - Slide from left */
+@keyframes slideInLeft {
+    from {
+            transform: translateX(-50px);
+    }
+    to {
+            transform: translateX(0);
+    }
+}
+
+/* Animation - Slide from right */
+@keyframes slideInRight {
+    from {
+            transform: translateX(50px);
+    }
+    to {
+            transform: translateX(0);
+    }
+}
+
+/* 테두리 제거됨 */
+
+.intro-block-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: blobMorph 6s linear infinite;
+    z-index: 1;
+}
+
+/* Morphing animation for blob shapes */
+@keyframes blobMorph {
+    0% {
+        border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
+    }
+    16.67% {
+        border-radius: 45% 55% 50% 50% / 50% 45% 55% 50%;
+    }
+    33.33% {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
     }
     50% {
-        opacity: 1;
+        border-radius: 60% 40% 40% 60% / 60% 60% 40% 40%;
     }
-    80%, 100% {
-        transform: translateY(10px);
-        opacity: 0;
+    66.67% {
+        border-radius: 55% 45% 55% 45% / 45% 55% 45% 55%;
+    }
+    83.33% {
+        border-radius: 45% 55% 45% 55% / 55% 45% 55% 45%;
+    }
+    100% {
+        border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
     }
 }
 
-.scroll-indicator-dot {
-    animation: scrollIndicator 2s infinite;
-}
-
-/* Section content animations */
-.section-content {
+.intro-block-content {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    padding-left: 20px;
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
+    transform: translateX(100px);
+    transition: opacity 1s ease, transform 1s ease;
     transition-delay: 0.3s;
 }
 
-.section-active .section-content {
+.intro-block-content.animate {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
-/* Button improvements for main page */
-.service-button {
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.service-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-}
-
-.service-button:hover::before {
-    left: 100%;
-}
-
-/* Heading and body font classes */
-.heading-font {
-    font-family: var(--font-ko-main);
-    font-weight: 400;
-    letter-spacing: -0.5px;
-}
-
-.body-font {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
-    letter-spacing: 0.3px;
-}
-
-/* Responsive typography */
-@media (max-width: 768px) {
-    .scroll-section {
-        padding: 0 1rem;
-    }
-
-    .heading-font {
-        font-size: 1.8rem !important;
-        line-height: 1.3;
-    }
-
-    .body-font {
-        font-size: 1rem !important;
-        line-height: 1.5;
-    }
-
-    /* Mobile button adjustments */
-    .service-button {
-        min-width: 140px !important;
-        padding: 1rem 2rem !important;
-        font-size: 1rem !important;
-    }
-
-    /* Mobile navigation dots */
-    .section-dot {
-        width: 12px !important;
-        height: 12px !important;
-    }
-
-    /* Hide scroll indicator on mobile */
-    .scroll-indicator {
-        display: none;
-    }
-}
-
-/* Floating button styles */
-.fixed.bottom-8.right-8 button {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.fixed.bottom-8.right-8 button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-/* Smooth scroll behavior */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Allow normal scrolling */
-body {
-    overflow-x: hidden;
-    overflow-y: auto;
-    margin: 0;
-    padding: 0;
-}
-
-
-/* Content fade-in animations */
-.fade-in-up {
+/* Even blocks - content slides from left */
+.intro-block:nth-child(even) .intro-block-content {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
+    transform: translateX(-100px);
 }
 
-.fade-in-up.active {
+.intro-block:nth-child(even) .intro-block-content.animate {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
-/* About section styles moved back to index.css since main page no longer uses it */
+.intro-block-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-secondary);
+}
 
-/* Banner Section Empty Placeholder - 배너 영역 placeholder 스타일 */
-.wave-bg-section .empty-image-placeholder::after {
-    width: 96px !important;
-    height: 96px !important;
-    z-index: 20 !important;
+.intro-block-description {
+    font-family: var(--font-ko-sub);
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    max-width: 800px;
+    margin-top: 10px;
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero-property-title {
+        font-size: 2.5rem;
+        bottom: 80px;
+    }
+
+    .main-about-section {
+        padding: 60px 20px;
+    }
+
+    .main-about-section::before {
+        width: 90%;
+    }
+
+    .main-about-title {
+        font-size: 1.7rem;
+    }
+
+    .main-about-description {
+        font-size: 1rem;
+    }
+
+    /* Intro Section Mobile */
+    .marquee-section {
+        margin-top: 100px;
+    }
+
+    .intro-section {
+       padding: 0px 20px 60px 20px;
+    }
+
+    .intro-block {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 50px;
+    }
+
+    /* 모바일에서는 row-reverse 제거 */
+    .intro-block:nth-child(even) {
+        flex-direction: column;
+    }
+
+    /* 모바일에서 짝수 번째 블록의 콘텐츠도 중앙 정렬 */
+    .intro-block:nth-child(even) .intro-block-content {
+        text-align: center;
+    }
+
+    /* 모바일에서 마지막 블록 패딩 제거 */
+    .intro-block:last-child {
+        padding-bottom: 0;
+    }
+
+    .intro-block-image {
+        width: 100%;
+        height: 350px;
+    }
+
+    .intro-block-content {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .intro-block-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .intro-block-description {
+        font-size: 1rem;
+    }
 }

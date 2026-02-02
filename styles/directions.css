@@ -1,96 +1,198 @@
-/* Directions Page Specific Styles */
+/* ================================
+   Directions Page Styles
+   ================================ */
 
-/* 애니메이션 클래스들은 common.css로 이동됨 */
-
-/* Directions page specific styles */
-.directions-circular-image {
+/* Location Section */
+.location-section {
+    padding: 80px 20px 150px 20px;
+    background: var(--color-primary);
+    text-align: center;
     position: relative;
+}
+
+
+.location-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 30px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.about-title.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 숙소명 span 스타일 - 동일한 스타일 유지 */
+.about-title span[data-property-name] {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+.location-details {
+    margin: 70px 0 30px;
+}
+
+.location-address-wrapper {
+    padding: 30px;
+    background-color: rgba(49, 66, 61, 0.1);
+    border-radius: 8px;
+}
+
+.location-address-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.location-divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(49, 66, 61, 0.2);
+    margin: 20px 0;
+}
+
+.location-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--color-secondary);
+}
+
+.location-address {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--color-secondary);
+    margin: 0;
+}
+
+.location-note {
+    margin: 0;
+    padding: 0;
+}
+
+.location-note p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.8;
+    margin: 10px 0;
+}
+
+.location-note p:first-child {
+    margin-top: 0;
+}
+
+.location-note p:last-child {
+    margin-bottom: 0;
+}
+
+/* Map Section */
+.map-wrapper {
+    margin-top: 60px;
+    padding: 40px 0;
+}
+
+.map-container {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.directions-circular-image:hover {
-    transform: scale(1.05);
-}
-
-/* Directions page placeholder override for circular images */
-img.empty-image-placeholder.rounded-full {
-    border-radius: 50% !important;
-    border: 3px dashed #9ca3af !important;
-}
-
-img.empty-image-placeholder.rounded-full::before {
-    border-radius: 50% !important;
-}
-
-img.empty-image-placeholder.rounded-full::after {
-    /* 아이콘 표시용이므로 border-radius 불필요 */
-}
-
-/* Info cards hover effects */
-.info-card {
-    transition: all 0.3s ease;
-}
-
-.info-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* 이미지 영역 애니메이션 효과 */
-.floating-circle {
-    animation: floatingCircle 4s ease-in-out infinite;
-}
-
-@keyframes floatingCircle {
-    0%, 100% {
-        transform: translateY(0px) scale(1);
-    }
-    50% {
-        transform: translateY(-15px) scale(1.05);
-    }
-}
-
-.hover-scale {
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.hover-scale:hover {
-    transform: scale(1.05) rotate(2deg);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
-}
-
-/* 페이지 로드 시 이미지 영역 전체 애니메이션 */
-.fade-in-scale.animate .floating-circle {
-    animation-delay: 0.5s;
-}
-
-/* 안내사항 섹션 스타일 */
-.directions-notice-section {
-    border-color: var(--brand-color-primary);
-}
-
-.directions-notice-icon {
-    color: var(--brand-color-primary);
-}
-
-.directions-notice-title {
-    color: var(--brand-color-primary);
-}
-
-.directions-notice-description {
-    color: var(--brand-color-primary);
-}
-
-/* 모바일에서 empty-image-placeholder min-height 제거 */
-@media (max-width: 768px) {
-    img.empty-image-placeholder {
-        min-height: auto !important;
-    }
-}
-
-/* 카카오맵 컨테이너 스타일 */
 #kakao-map {
     width: 100%;
     height: 100%;
+    background: #f5f5f5;
+}
+
+/* Animation Classes */
+.location-details,
+.location-note,
+.map-wrapper {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.location-details.animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+.location-note.animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
+
+.map-wrapper.animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .location-section {
+        padding: 60px 20px;
+    }
+
+    .location-section::before {
+        width: 100%;
+        height: 28%;
+    }
+
+    .about-title {
+        font-size: 1.7rem;
+        margin-bottom: 30px;
+    }
+
+    .location-address-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .location-address {
+        font-size: 1rem;
+    }
+
+    .location-note {
+        padding: 20px;
+    }
+
+    .location-note p {
+        font-size: 0.9rem;
+    }
+
+    .map-wrapper {
+        margin-top: 40px;
+        padding: 20px 0;
+    }
+
+    .map-container {
+        height: 350px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1800px) {
+    .location-content {
+        max-width: 1600px;
+    }
 }

@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-homepage-seo-title></title>
-    <meta name="description" content="" data-homepage-seo-description>
-    <meta name="keywords" content="" data-homepage-seo-keywords>
-    <link rel="icon" type="image/png" href="" data-homepage-favicon>
+    <meta name="description" content="숙소 설명">
+    <meta name="keywords" content="SEO 키워드">
+    <title id="page-title">객실 안내 - 숙소명</title>
 
-    <script src="js/config.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles/theme.css"/>
-    <link rel="stylesheet" href="styles/common.css"/>
-    <link rel="stylesheet" href="styles/room.css"/>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles/common.css" as="style">
+    <link rel="preload" href="styles/room.css" as="style">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/room.css">
+
   <!-- Open Graph Meta Tags for Social Media -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="고성 1박2일펜션 - 객실안내" />
@@ -27,262 +29,151 @@
   
 </head>
 <body>
-
-    <!-- Fullscreen Menu Container -->
-    <div id="fullscreen-menu-container"></div>
-
-    <div class="main-container" data-name="객실페이지">
-
-        <!-- Section 1: Hero with Background Image and Room Name -->
-        <section id="section1" class="relative w-full overflow-hidden" style="height: 100vh; height: 100dvh; min-height: 100vh; min-height: 100dvh;">
-            <!-- Hero Background Image -->
-            <div id="hero-image-container" class="absolute inset-0 w-full h-full">
-                <img src=""
-                     alt="객실 이미지"
-                     class="absolute inset-0 w-full h-full object-cover empty-image-placeholder"
-                     style="width: 100%; height: 100vh; min-height: 100vh; object-fit: cover; display: block; position: absolute; inset: 0px;"
-                     data-room-hero-image>
+    <main class="main-content">
+        <!-- rooms[index].images[0].interior 매핑 -->
+        <section class="hero-section hero-center-bottom">
+            <div class="hero-slider" data-hero-slider>
+                <!-- 동적으로 hero-slide가 생성됩니다 -->
             </div>
-
-            <!-- 오버레이 그라데이션 -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-
-            <!-- Room Name 텍스트 -->
-            <div class="absolute bottom-8 left-8 md:bottom-12 md:left-8 lg:bottom-16 lg:left-12 xl:left-24 slide-in-left">
-                <div class="text-center">
-                    <h1 class="responsive-title text-white font-bold drop-shadow-lg en-title">
-                        Spaces
-                    </h1>
-                    <div class="w-[280px] md:w-[350px] lg:w-[400px] h-px bg-white mt-4 mx-auto"></div>
+            <!-- 페이지명 하드코딩 -->
+            <div class="hero-property-title">ROOM</div>
+            <div class="hero-bottom-info">
+                <div class="hero-progress-container">
+                    <button class="hero-nav-prev" aria-label="Previous slide">&lt;</button>
+                    <span class="current-slide hero-indicators" data-current-slide>01</span>
+                    <div class="hero-progress-bar">
+                        <div class="hero-progress-fill" data-hero-progress></div>
+                    </div>
+                    <span class="total-slides hero-indicators" data-total-slides>03</span>
+                    <button class="hero-nav-next" aria-label="Next slide">&gt;</button>
                 </div>
             </div>
         </section>
 
-        <!-- Section 2: Room Point Cards -->
-        <section class="relative w-full pt-16 lg:pt-24">
-            <div class="max-w-7xl mx-auto px-6">
-                <!-- Section Title -->
-                <div class="text-left">
-                    <h3 class="text-2xl md:text-3xl font-bold ko-title fade-in-up" style="color: var(--color-secondary);" data-room-name></h3>
-                    <div class="w-full h-px mt-6 fade-in-up" style="background-color: var(--color-secondary);"></div>
-                    <p class="text-lg text-gray-600 ko-body mt-6 fade-in-up" data-room-description></p>
-                </div>
-            </div>
-            <!-- Room Slider and Information Section -->
-            <div class="max-w-7xl mx-auto px-6 mt-4">
-                <div class="flex flex-col gap-8 md:gap-12">
-
-                    <!-- Image Slider (Full Width) -->
-                    <div class="w-full fade-in-up flex items-center">
-                        <div class="w-full">
-                            <!-- Slider Container -->
-                            <div class="relative">
-                                <!-- Navigation Buttons -->
-                                <button id="room-slider-prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-gray-800 p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 backdrop-filter backdrop-blur-sm border border-white/20">
-                                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                                    </svg>
-                                </button>
-                                <button id="room-slider-next" class="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-gray-800 p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 backdrop-filter backdrop-blur-sm border border-white/20">
-                                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                    </svg>
-                                </button>
-                                <!-- Main Image Display -->
-                                <div class="w-full px-8">
-                                    <div class="border-2 border-dashed p-2 w-full" style="border-color: var(--color-secondary); border-radius: 260px 260px 10px 10px;">
-                                        <div class="w-full h-[450px] md:h-[600px] lg:h-[750px] overflow-hidden bg-gray-200 shadow-lg" style="border-radius: 250px 250px 10px 10px;">
-                                        <div class="relative w-full h-full">
-                                            <img id="main-slider-image"
-                                                 src=""
-                                                 alt="객실 이미지"
-                                                 class="w-full h-full object-cover cursor-pointer hover:opacity-90 transition-opacity empty-image-placeholder"
-                                                 data-room-slider-main>
-
-                                            <!-- Click to view icon -->
-                                            <div class="absolute top-4 right-4 bg-black bg-opacity-50 text-white p-2 rounded-full opacity-80 hover:opacity-100 transition-opacity pointer-events-none">
-                                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
-                                                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-                                                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
-                                                </svg>
-                                            </div>
-
-                                            <!-- Click to enlarge hint -->
-                                            <div class="absolute bottom-4 left-4 right-4 bg-black bg-opacity-50 text-white text-center py-2 px-3 rounded opacity-70 hover:opacity-90 transition-opacity pointer-events-none flex items-center justify-center">
-                                                <span class="text-sm ko-body">클릭하여 전체 이미지 보기</span>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        <section class="room-info-section room-about-section">
+            <div class="room-intro-section">
+                <div class="room-intro-content">
+                    <!-- rooms[index].images[0].thumbnail 매핑 -->
+                    <div class="room-thumbnail animate-element">
+                        <div class="room-thumbnail-house">
+                            <img data-room-thumbnail alt="Room Thumbnail">
                         </div>
                     </div>
+                    <!-- rooms[index].name 매핑 -->
+                    <div class="room-label">
+                        <span class="room-number animate-element" data-room-name></span>
+                    </div>
+                    <!-- homepage.customFields.pages.room[index].sections[0].hero.title 매핑 -->
+                    <p class="room-description animate-element" data-room-description></p>
+                </div>
+            </div>
 
-                    <!-- Room Information (50:50 Layout with Amenities) -->
-                    <div class="w-full fade-in-up mt-4 px-8">
-                        <div class="bg-stone-50 rounded-lg p-6 border fade-in-up" style="border-color: var(--color-secondary);">
-                            <h3 class="text-xl font-semibold en-title" style="color: var(--color-secondary);">Room Information</h3>
-                            <div class="w-full h-px mt-2 mb-6" style="background-color: var(--color-secondary);"></div>
-
-                            <!-- Room Info Split Layout -->
-                            <div class="flex flex-col lg:flex-row gap-6 lg:gap-8 mb-8 relative rounded-xl px-6 py-4 shadow-sm" style="background-color: var(--color-primary);">
-                                <!-- Left Side: 객실정보 (3개) -->
-                                <div class="w-full lg:w-1/2 space-y-4">
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100">
-                                        <span class="text-sm md:text-base text-gray-600 ko-body">객실 크기</span>
-                                        <span class="text-sm md:text-base font-medium ko-body"><span data-room-size></span>㎡</span>
-                                    </div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100">
-                                        <span class="text-sm md:text-base text-gray-600 ko-body">침대 타입</span>
-                                        <span class="text-sm md:text-base font-medium ko-body" data-room-bed-type></span>
-                                    </div>
-                                    <div class="flex justify-between items-center py-3">
-                                        <span class="text-sm md:text-base text-gray-600 ko-body">객실 구성</span>
-                                        <span class="text-sm md:text-base font-medium ko-body" data-room-structure></span>
-                                    </div>
-                                </div>
-
-                                <!-- Vertical Divider (hidden on mobile) -->
-                                <div class="hidden lg:block absolute left-1/2 top-4 bottom-4 w-px bg-gray-200 transform -translate-x-1/2"></div>
-
-                                <!-- Right Side: 인원 및 시간정보 (3개) -->
-                                <div class="w-full lg:w-1/2 space-y-4">
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100">
-                                        <span class="text-sm md:text-base text-gray-600 ko-body">인원</span>
-                                        <span class="text-sm md:text-base font-medium ko-body">
-                                            <span class="ko-body" data-room-base-occupancy></span>/<span class="ko-body" data-room-max-occupancy></span>
-                                        </span>
-                                    </div>
-                                    <div class="flex justify-between items-center py-3 border-b border-gray-100">
-                                        <span class="text-sm md:text-base text-gray-600 ko-body">체크인</span>
-                                        <span class="text-sm md:text-base font-medium ko-body" data-property-checkin></span>
-                                    </div>
-                                    <div class="flex justify-between items-center py-3">
-                                        <span class="text-sm md:text-base text-gray-600 ko-body">체크아웃</span>
-                                        <span class="text-sm md:text-base font-medium ko-body" data-property-checkout></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Amenities Section -->
-                            <div>
-                                <h4 class="text-xl font-semibold en-title mb-4" style="color: var(--color-secondary);">Amenities</h4>
-                                <div class="w-full h-px mb-4" style="background-color: var(--color-secondary);"></div>
-                                <div class="rounded-xl px-6 py-4 shadow-sm" style="background-color: var(--color-primary);">
-                                    <div class="space-y-3" data-room-amenities></div>
-                                </div>
-                            </div>
+            <!-- 이미지 슬라이더와 썸네일 - 중앙 정렬 -->
+            <div class="room-media-container animate-element">
+                <div class="room-media-center">
+                    <!-- rooms[index].images[0].interior (index 2~5) 매핑 -->
+                    <div class="room-slider" data-room-slider>
+                        <div class="room-slider-wrapper" data-room-slider-wrapper>
+                            <!-- 동적으로 room-slide가 생성됩니다 -->
+                        </div>
+                        <div class="room-slider-indicators" data-room-slider-indicators>
+                            <!-- 동적으로 indicator가 생성됩니다 -->
                         </div>
                     </div>
-
-                </div>
-            </div>
-
-        </section>
-
-        <!-- Section 4: Room Images -->
-        <section class="relative w-full py-8 lg:py-12">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="flex flex-col" id="room-gallery-container">
-                    <!-- Dynamic room gallery images will be generated here -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 5: Usage Guide and Check-in Info -->
-        <section class="relative w-full pb-8 lg:pb-12">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="flex flex-col gap-6">
-
-                    <!-- Usage Guide Section -->
-                    <div class="bg-stone-50 rounded-lg p-6 border fade-in-up" style="border-color: var(--color-secondary);">
-                        <h4 class="text-xl font-semibold en-title" style="color: var(--color-secondary);">Usage Guide</h4>
-                        <div class="w-full h-px mt-2 mb-4 bg-gray-200"></div>
-                        <p class="text-gray-700 ko-body leading-relaxed" data-room-info></p>
+                    <div class="room-thumbnails" data-room-thumbnails>
+                        <!-- 동적으로 thumb-img가 생성됩니다 -->
                     </div>
+                </div>
+            </div>
 
-                    <!-- Check-in/Check-out Info Section -->
-                    <div class="bg-stone-50 rounded-lg p-6 border fade-in-up" style="border-color: var(--color-secondary);">
-                        <h4 class="text-xl font-semibold en-title" style="color: var(--color-secondary);">Check-in & Check-out Information</h4>
-                        <div class="w-full h-px mt-2 mb-4 bg-gray-200"></div>
-                        <p class="text-gray-700 ko-body leading-relaxed" data-property-checkin-checkout-info></p>
+            <!-- Room Details 섹션 - 이미지 아래로 이동, Amenities와 동일한 스타일 -->
+            <div class="room-details-section animate-element">
+                <h3 class="room-section-title">Room Details</h3>
+                <!-- rooms[index] 시스템 데이터 매핑 -->
+                <div class="room-details-grid" data-room-details>
+                        <div class="room-detail-item">
+                            <span class="detail-label">객실 크기</span>
+                            <span class="detail-value" data-room-size></span>
+                        </div>
+                        <div class="room-detail-item">
+                            <span class="detail-label">침대 타입</span>
+                            <span class="detail-value" data-room-bed-types></span>
+                        </div>
+                        <div class="room-detail-item">
+                            <span class="detail-label">객실 구성</span>
+                            <span class="detail-value" data-room-composition></span>
+                        </div>
+                        <div class="room-detail-item">
+                            <span class="detail-label">인원</span>
+                            <span class="detail-value" data-room-capacity></span>
+                        </div>
+                        <div class="room-detail-item">
+                            <span class="detail-label">체크인</span>
+                            <span class="detail-value" data-room-checkin></span>
+                        </div>
+                        <div class="room-detail-item">
+                            <span class="detail-label">체크아웃</span>
+                            <span class="detail-value" data-room-checkout></span>
+                        </div>
                     </div>
+            </div>
 
+            <!-- rooms[index].amenities 매핑 -->
+            <div class="room-amenities-section animate-element" data-room-amenities>
+                <h3 class="room-section-title">Amenities</h3>
+                <div class="amenities-grid" data-room-amenities-grid>
+                    <!-- 동적으로 amenity-item이 생성됩니다 -->
                 </div>
             </div>
+
+            <!-- rooms[index].roomInfo 매핑 -->
+            <div class="room-usage-guide-section animate-element" data-room-usage-guide>
+                <h3 class="room-section-title">Room Information</h3>
+                <div class="usage-guide-content" data-room-guide>
+                    <!-- 동적으로 내용이 매핑됩니다 -->
+                </div>
+            </div>
+
         </section>
 
-        <!-- Wave Background Section -->
-        <section class="wave-bg-section relative overflow-hidden">
-            <div class="wave-bg relative w-full">
-                <!-- SVG Clipping Path -->
-                <svg width="0" height="0" style="position: absolute;">
-                    <defs>
-                        <clipPath id="wave-clip" clipPathUnits="objectBoundingBox">
-                            <path d="M0,0.08 Q0.25,0.02 0.5,0.08 T1,0.08 L1,1 L0,1 Z"/>
-                        </clipPath>
-                        <clipPath id="wave-clip-mobile" clipPathUnits="objectBoundingBox">
-                            <path d="M0,0.12 Q0.25,0.06 0.5,0.12 T1,0.12 L1,1 L0,1 Z"/>
-                        </clipPath>
-                    </defs>
-                </svg>
-
-                <!-- Background Image -->
-                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
-                     style="background-image: url(''); background-attachment: fixed; clip-path: url(#wave-clip);"
-                     data-room-wave-background>
-
-                    <!-- Overlay -->
-                    <div class="absolute inset-0"></div>
-                </div>
+        <section class="room-gallery-section">
+            <div class="room-gallery-label animate-element">
+                <span>Room Gallery</span>
+            </div>
+            <!-- rooms[index].images[0].exterior 매핑 -->
+            <div class="room-gallery-container" data-room-gallery>
+                <!-- 동적으로 gallery-item이 생성됩니다 -->
             </div>
         </section>
+    </main>
 
-    </div>
 
-    <!-- Image Modal -->
-    <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center" style="z-index: 10001;">
-        <div class="relative max-w-4xl lg:max-w-6xl xl:max-w-7xl max-h-[90vh] w-full mx-4 flex flex-col">
-            <!-- Previous Button -->
-            <button id="modal-prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 backdrop-filter backdrop-blur-sm border border-white/20">
-                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                </svg>
-            </button>
+    <!-- Include ImageWithFallback script (standard-template-data.json에서만 필요) -->
+    <!-- <script src="js/image-with-fallback.js"></script> -->
 
-            <!-- Next Button -->
-            <button id="modal-next" class="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 backdrop-filter backdrop-blur-sm border border-white/20">
-                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-            </button>
-
-            <!-- Modal Image Container -->
-            <div class="flex-1 flex items-center justify-center mb-4">
-                <img id="modal-image" src="" alt="" class="max-w-full max-h-[75vh] object-contain rounded-lg">
-            </div>
-
-            <!-- Thumbnail Navigation -->
-            <div class="flex justify-center space-x-2 p-4">
-                <div id="modal-thumbnails" class="flex space-x-2 overflow-x-auto max-w-full">
-                    <!-- Thumbnails will be dynamically generated here -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Page Specific Scripts -->
+    <!-- Image Helpers -->
     <script src="js/image-helpers.js"></script>
-    <script src="js/header-footer-loader.js"></script>
-    <script src="js/room-slider.js"></script>
-    <script src="js/modal-gallery.js"></script>
+
+    <!-- Base Data Mapper -->
     <script src="js/data-mapper/core/base-mapper.js"></script>
+
+    <!-- Room Page Mapper -->
     <script src="js/data-mapper/pages/room-mapper.js"></script>
-    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+
+    <!-- Preview Handler for Admin Integration -->
     <script src="js/preview-handler.js"></script>
-    <script src="js/common/scroll-animation.js"></script>
+
+    <!-- Header Footer Mapper -->
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+
+    <!-- Header and Footer Loader -->
+    <script src="js/header-footer-loader.js"></script>
+
+    <!-- Page-specific script -->
     <script src="js/pages/room.js"></script>
+
+    <!-- Scroll Animations -->
+    <script src="js/scroll-animations.js"></script>
 
 </body>
 </html>

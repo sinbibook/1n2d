@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-homepage-seo-title></title>
-    <meta name="description" content="" data-homepage-seo-description>
-    <meta name="keywords" content="" data-homepage-seo-keywords>
-    <link rel="icon" type="image/png" href="" data-homepage-favicon>
+    <meta name="description" content="숙소 설명">
+    <meta name="keywords" content="SEO 키워드">
+    <title>숙소명 - 템플릿</title>
 
-    <script src="js/config.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="styles/theme.css"/>
-    <link rel="stylesheet" href="styles/common.css"/>
-    <link rel="stylesheet" href="styles/index.css"/>
-    <link rel="stylesheet" href="styles/popup.css"/>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles/common.css" as="style">
+    <link rel="preload" href="styles/index.css" as="style">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/popup.css">
+
   <!-- Open Graph Meta Tags for Social Media -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="고성 1박2일펜션 - 홈" />
@@ -29,87 +31,88 @@
   
 </head>
 <body>
+    <!-- 풀페이지 네비게이션 -->
+    <nav class="fp-nav">
+        <ul>
+            <li><a href="#hero" class="active"><span></span></a></li>
+            <li><a href="#essence"><span></span></a></li>
+            <li><a href="#signature"><span></span></a></li>
+            <li><a href="#gallery"><span></span></a></li>
+            <li><a href="#closing"><span></span></a></li>
+        </ul>
+    </nav>
 
-    <div id="fullscreen-menu-container"></div>
-
-    <div class="w-full min-h-screen overflow-x-hidden" data-name="랜딩페이지">
-        <!-- Hero Section -->
-        <section id="section1" class="relative w-full overflow-hidden" style="height: 100vh; height: 100dvh; min-height: 100vh; min-height: 100dvh;">
-            <!-- Hero Swiper Container -->
-            <div id="hero-swiper" class="swiper hero-swiper absolute inset-0 w-full h-full">
-                <div class="swiper-wrapper" data-homepage-customFields-pages-index-sections-0-hero-images>
-                </div>
-
-                <!-- Swiper 컨트롤들 -->
-                <div class="swiper-pagination"></div>
-                <div class="swiper-scrollbar"></div>
+    <div id="fullpage">
+        <!-- CUSTOM FIELD : 메인 소개 섹션 -->
+        <section class="section fp-section hero-section">
+            <div class="hero-slider" data-hero-slider>
+                <!-- 메인 소개섹션 사용자가 업로드한 이미지 갯수만큼 동적 매핑 -->
             </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <!-- 메인 소개섹션 타이틀 매핑 -->
+                  <div class="hero-property-name" data-hero-property-name-en></div>
+                <h2 class="hero-title fade-in-up" data-hero-title style="animation-delay: 0.2s;"></h2>
+                <!-- 메인 소개섹션 설명 매핑 -->
+                <p class="hero-description fade-in-up" data-hero-description style="animation-delay: 1.2s;"></p>
+            </div>
+            <div class="hero-bottom-info">
+                <div class="hero-progress-container">
+                    <span class="current-slide hero-indicators" data-current-slide></span>
+                    <div class="hero-progress-bar">
+                        <div class="hero-progress-fill" data-hero-progress></div>
+                    </div>
+                    <span class="total-slides hero-indicators" data-total-slides></span>
+                </div>
+                <!-- 오른쪽 빈 공간 (균형을 위해) -->
+                <div style="flex: 0 0 auto; width: 100px;"></div>
+            </div>
+        </section>
 
-            <!-- 오버레이 -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-
-            <div class="absolute inset-0 flex flex-col justify-center items-start text-left z-20 pt-16 pl-6 md:pt-20 md:pl-16 lg:pl-20">
-                <div class="relative z-30 max-w-4xl px-4 md:px-6 hero-text">
-                    <h1 class="text-3xl md:text-4xl lg:text-5xl text-white mb-4 md:mb-6 ko-title hero-title-animation text-left">
-                        <p class="block hero-title ko-title hero-title-1" data-property-name></p>
-                    </h1>
-                    <p class="text-sm md:text-md text-white/90 mb-4 md:mb-6 hero-description ko-body font-light leading-relaxed hero-description-animation text-left" data-homepage-customFields-pages-index-sections-0-hero-description>
-                    </p>
-
-                    <div class="hero-controls hero-controls-animation">
-                        <div class="swiper-button-prev"></div>
-                        <div class="hero-progress-bar">
-                            <div class="hero-progress"></div>
-                        </div>
-                        <div class="swiper-button-next"></div>
+        <!-- CUSTOM FIELD : 핵심 메시지 섹션 -->
+        <section class="section fp-section essence-section">
+            <div class="essence-container">
+                <div class="essence-left">
+                    <!-- 핵심 메시지 업로드된 이미지 1장 매핑 -->
+                    <img class="essence-image" data-essence-img src="" alt="">
+                </div>
+                <div class="essence-right">
+                    <div class="essence-content">
+                        <!-- 핵심 메시지 타이틀 매핑 -->
+                        <h4 class="essence-title animate-element" data-essence-title></h4>
+                        <div class="essence-divider animate-element"></div>
+                        <!-- 핵심 메시지 설명 매핑 -->
+                        <p class="essence-description animate-element" data-essence-description></p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="flex items-center justify-center pt-16">
-            <div class="text-center mb-16">
-                <h3 class="text-3xl md:text-3xl font-bold ko-title en-title fade-in-up" style="color: var(--color-secondary);" data-homepage-customFields-pages-index-sections-0-essence-title>
-                </h3>
-                <div class="w-full h-px mt-6 fade-in-up" style="background-color: var(--color-secondary);"></div>
-                <p class="text-lg text-gray-600 ko-body mt-6 fade-in-up" data-homepage-customFields-pages-index-sections-0-essence-description>
-                </p>
-            </div>
-        </section>
-
-        <!-- Signature Section -->
-        <section class="about-section">
-            <div data-homepage-customFields-pages-index-sections-signature-items>
-            </div>
-        </section>
-
-        <!-- Closing Section -->
-        <section class="wave-bg-section relative overflow-hidden">
-            <div class="wave-bg relative w-full">
-                <svg width="0" height="0" style="position: absolute;">
-                    <defs>
-                        <clipPath id="wave-clip" clipPathUnits="objectBoundingBox">
-                            <path d="M0,0.08 Q0.25,0.02 0.5,0.08 T1,0.08 L1,1 L0,1 Z"/>
-                        </clipPath>
-                        <clipPath id="wave-clip-mobile" clipPathUnits="objectBoundingBox">
-                            <path d="M0,0.12 Q0.25,0.06 0.5,0.12 T1,0.12 L1,1 L0,1 Z"/>
-                        </clipPath>
-                    </defs>
-                </svg>
-
-                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed empty-image-placeholder"
-                     style="background-image: url(''); background-attachment: fixed; clip-path: url(#wave-clip);"
-                     data-index-wave-background>
-
-                    <div class="absolute inset-0"></div>
-
-                    <div class="absolute inset-0 z-10 flex items-center justify-center px-6">
-                        <div class="banner-content text-center text-white max-w-3xl md:pt-20">
-                            <div class="animated-text">
-                                <h1 class="banner-title font-bold mb-8 fade-in-up ko-title en-title" data-homepage-customFields-pages-index-sections-0-closing-title>
-                                </h1>
-                                <p class="banner-description font-light leading-relaxed fade-in-up ko-body" data-homepage-customFields-pages-index-sections-0-closing-description>
-                                </p>
+        <!-- CUSTOM FIELD : 특색 섹션 -->
+        <section class="section fp-section signature-section">
+            <div class="signature-container">
+                <div class="signature-left">
+                    <div class="signature-content">
+                        <!-- 특색 섹션 타이틀 매핑 -->
+                        <h2 class="signature-title animate-element" data-signature-title></h2>
+                        <div class="essence-divider animate-element"></div>
+                        <!-- 특색 섹션 설명 매핑 -->
+                        <p class="signature-description animate-element" data-signature-description></p>
+                        <!-- 이미지 갤러리 영역 -->
+                        <div class="signature-right">
+                            <!-- 메인 이미지 -->
+                            <img class="signature-image" data-signature-main-img src="" alt="">
+                            <!-- 썸네일 갤러리 매핑 (최대 3장) -->
+                            <div class="signature-thumbnails animate-element">
+                                <div class="signature-thumb animate-element" data-thumb-index="0">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="signature-thumb animate-element" data-thumb-index="1">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="signature-thumb animate-element" data-thumb-index="2">
+                                    <img src="" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -117,20 +120,73 @@
             </div>
         </section>
 
+         <!-- CUSTOM FIELD :갤러리 섹션 -->
+        <section class="section fp-section gallery-section" data-anchor="gallery">
+            <div class="section-wrapper">
+                <div class="gallery-container">
+                    <div class="gallery-header">
+                        <!-- 갤러리 타이틀 매핑 -->
+                        <h2 class="gallery-title animate-element" data-gallery-title></h2>
+                        <!-- 갤러리 설명 매핑 -->
+                        <p class="gallery-description animate-element" data-gallery-description></p>
+                    </div>
+                    <div class="gallery-slider-wrapper">
+                        <div class="gallery-slider" data-gallery-slider>
+                            <!-- 갤러리 이미지 사용자가 업로드한 이미지 갯수만큼 동적 매핑 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CUSTOM FIELD : 마무리 섹션  -->
+        <section class="section fp-section closing-section" data-anchor="closing">
+            <div class="section-wrapper">
+                <!-- 마무리 섹션 이미지 -->
+                <div class="closing-background">
+                    <img data-closing-bg-img src="" alt="">
+                </div>
+
+                <!-- 중앙 콘텐츠 그룹 -->
+                <div class="closing-center-content">
+                    <!-- property.nameEn 매핑 -->
+                    <div class="closing-property-name animate-element" data-closing-property-name></div>
+                    <!-- 타이틀 -->
+                    <div class="closing-title animate-element" data-closing-title></div>
+                    <!-- 설명 -->
+                    <div class="closing-description animate-element" data-closing-description></div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <!-- Popup System -->
     <div id="popup-container"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Include ImageWithFallback script (standard-template-data.json에서만 필요) -->
+    <!-- <script src="js/image-with-fallback.js"></script> -->
+
+    <!-- Image Helpers (standard-template-data.json에서만 필요) -->
     <script src="js/image-helpers.js"></script>
-    <script src="js/header-footer-loader.js"></script>
+
+    <!-- Base Data Mapper (must load before preview-handler) -->
     <script src="js/data-mapper/core/base-mapper.js"></script>
-    <script src="js/data-mapper/pages/index-mapper.js"></script>
-    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+
+    <!-- Preview Handler for Admin Integration -->
     <script src="js/preview-handler.js"></script>
-    <script src="js/common/scroll-animation.js"></script>
+
+    <!-- Index Page Mapper -->
+    <script src="js/data-mapper/pages/index-mapper.js"></script>
+
+    <!-- Header Footer Mapper -->
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+
+    <!-- Header and Footer Loader -->
+    <script src="js/header-footer-loader.js"></script>
+
+    <!-- Page-specific script -->
     <script src="js/pages/index.js"></script>
     <script src="js/popup.js"></script>
+
 </body>
 </html>
