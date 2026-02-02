@@ -1,0 +1,1 @@
+- 매핑할때는 항상 demo-filled.json / standard-template-data.json 이두가지 (구조같음) 연결 바껐을때도 동일하게 작동하게 해야함

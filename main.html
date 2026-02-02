@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-homepage-seo-title></title>
-    <meta name="description" content="" data-homepage-seo-description>
-    <meta name="keywords" content="" data-homepage-seo-keywords>
-    <link rel="icon" type="image/png" href="" data-homepage-favicon>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="숙소 설명">
+  <meta name="keywords" content="SEO 키워드">
+  <title>숙소명 - 소개</title>
 
-    <script src="js/config.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="styles/theme.css"/>
-    <link rel="stylesheet" href="styles/common.css"/>
-    <link rel="stylesheet" href="styles/main.css"/>
+  <link rel="stylesheet" href="styles/theme.css">
+  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/main.css">
+
   <!-- Open Graph Meta Tags for Social Media -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="고성 1박2일펜션 - 숙소소개" />
@@ -28,79 +25,79 @@
   
 </head>
 <body>
+  <main class="main-content">
+      <!-- CUSTOM FIELD : 메인 소개 섹션 -->
+      <!-- homepage.customFields.pages.main.sections[0].hero.images 매핑 -->
+      <section class="hero-section hero-center-bottom">
+          <div class="hero-slider" data-hero-slider>
+              <!-- 동적으로 hero-slide가 생성됩니다 -->
+          </div>
+          <!-- 페이지명 하드코딩 -->
+          <div class="hero-property-title">PROLOGUE</div>
+          <div class="hero-bottom-info">
+              <div class="hero-progress-container">
+                  <button class="hero-nav-prev" aria-label="Previous slide">&lt;</button>
+                  <span class="current-slide hero-indicators" data-current-slide>01</span>
+                  <div class="hero-progress-bar">
+                      <div class="hero-progress-fill" data-hero-progress></div>
+                  </div>
+                  <span class="total-slides hero-indicators" data-total-slides>02</span>
+                  <button class="hero-nav-next" aria-label="Next slide">&gt;</button>
+              </div>
+          </div>
+      </section>
+      <div class="main-about-section">
+          <div class="main-about-content">
+              <!-- homepage.customFields.pages.main.sections[0].hero.title 매핑 -->
+              <h2 class="main-about-title" data-main-about-title></h2>
+              <!-- homepage.customFields.pages.main.sections[0].hero.description 매핑 -->
+              <p class="main-about-description" data-main-about-description></p>
+          </div>
 
-    <!-- Fullscreen Menu Container -->
-    <div id="fullscreen-menu-container"></div>
-
-    <!-- Main Container with Normal Scroll -->
-    <div class="main-container" data-name="메인페이지">
-
-        <!-- Section 1: Hero with Background Image and Property Description -->
-        <section id="section1" class="relative w-full overflow-hidden" style="height: 100vh; height: 100dvh; min-height: 100vh; min-height: 100dvh;">
-            <!-- Hero Background Image -->
-            <div id="hero-image-container" class="absolute inset-0 w-full h-full">
-                <img src=""
-                     alt="히어로 이미지"
-                     class="absolute inset-0 w-full h-full object-cover empty-image-placeholder"
-                     style="width: 100%; height: 100vh; min-height: 100vh; object-fit: cover; display: block; position: absolute; inset: 0px;"
-                     data-homepage-customFields-pages-main-sections-0-hero-images-0-url>
-            </div>
-
-            <!-- 오버레이 그라데이션 -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-
-            <!-- About 텍스트 -->
-            <div class="absolute bottom-8 left-8 md:bottom-12 md:left-8 lg:bottom-16 lg:left-12 xl:left-24 slide-in-left">
-                <h1 class="responsive-title text-white font-bold drop-shadow-lg en-title text-center">
-                    About us
-                </h1>
-                <div class="w-[300px] md:w-[400px] lg:w-[500px] h-px bg-white mt-4"></div>
-            </div>
-        </section>
-
-        <!-- About Sections - 동적 생성 -->
-        <div data-homepage-customFields-pages-main-sections-about-items>
+          <!-- CUSTOM FIELD : 소개 섹션 / 동적 블록 생성 영역 / 최소 블럭 1개 -->
+          <!-- homepage.customFields.pages.main.sections[0].about[] 매핑 -->
+          <section class="intro-section">
+            <!-- 동적으로 intro-block이 생성됩니다 -->
+          </section>
         </div>
 
-       <!-- Wave Background Section -->
-        <section class="wave-bg-section relative overflow-hidden">
-            <div class="wave-bg relative w-full">
-                <!-- SVG Clipping Path -->
-                <svg width="0" height="0" style="position: absolute;">
-                    <defs>
-                        <clipPath id="wave-clip" clipPathUnits="objectBoundingBox">
-                            <path d="M0,0.08 Q0.25,0.02 0.5,0.08 T1,0.08 L1,1 L0,1 Z"/>
-                        </clipPath>
-                        <clipPath id="wave-clip-mobile" clipPathUnits="objectBoundingBox">
-                            <path d="M0,0.12 Q0.25,0.06 0.5,0.12 T1,0.12 L1,1 L0,1 Z"/>
-                        </clipPath>
-                    </defs>
-                </svg>
+      <!-- property.images[0].exterior[] 첫번째 이미지 매핑 -->
+      <section class="full-banner" data-main-banner>
+        <!-- property.nameEn 매핑 -->
+        <h2 class="full-banner-title" data-main-banner-title></h2>
+      </section>
 
-                <!-- Background Image -->
-                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed empty-image-placeholder"
-                     style="background-image: url(''); background-attachment: fixed; clip-path: url(#wave-clip);"
-                     data-property-exterior-images-0-url>
+  </main>
 
-                    <!-- Overlay -->
-                    <div class="absolute inset-0"></div>
-                </div>
-            </div>
-        </section>
+  <!-- Include ImageWithFallback script (standard-template-data.json에서만 필요) -->
+  <!-- <script src="js/image-with-fallback.js"></script> -->
 
+  <!-- Image Helpers -->
+  <script src="js/image-helpers.js"></script>
 
-    </div>
+  <!-- Base Data Mapper (must load before preview-handler) -->
+  <script src="js/data-mapper/core/base-mapper.js"></script>
 
-    <!-- Page Specific Scripts -->
-    <script src="js/image-helpers.js"></script>
-    <script src="js/header-footer-loader.js"></script>
-    <script src="js/data-mapper/core/base-mapper.js"></script>
-    <script src="js/data-mapper/pages/main-mapper.js"></script>
-    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
-    <script src="js/preview-handler.js"></script>
-    <script src="js/common/scroll-animation.js"></script>
-    <script src="js/pages/main.js"></script>
+  <!-- Preview Handler for Admin Integration -->
+  <script src="js/preview-handler.js"></script>
 
+  <!-- Main Page Mapper -->
+  <script src="js/data-mapper/pages/main-mapper.js"></script>
+
+  <!-- Header Footer Mapper -->
+  <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+
+  <!-- Header and Footer Loader -->
+  <script src="js/header-footer-loader.js"></script>
+
+  <!-- Fullscreen Slider Component -->
+  <script src="js/components/fullscreen-slider.js"></script>
+
+  <!-- Page-specific script -->
+  <script type="module" src="js/pages/main.js"></script>
+
+  <!-- Scroll Animations -->
+  <script src="js/scroll-animations.js"></script>
 
 </body>
 </html>

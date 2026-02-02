@@ -1,1 +1,1 @@
-# template-full-banner-slider
+# template-full-banner-accordion Template

@@ -1,678 +1,1518 @@
-/* Template Dog Friendly Lodge - Common Styles */
+/* ================================
+   Common Styles
+   ================================ */
 
-/* CDN Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+/* Font Face 정의는 각 HTML 페이지의 head에 CDN으로 정의됨 */
 
-/* 기본 폰트 설정 - @font-face는 theme.css에서 로드 */
-
-:root {
-    --brand-color-primary: var(--color-secondary);
-}
-
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-    max-width: 100%;
-    background-color: var(--color-primary);
-}
-
+/* Reset & Base Styles */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* 기본 폰트 설정 - @font-face는 theme.css에서 로드 */
-* {
-    font-family: 'Lato', sans-serif;
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
 
-/* data-property-name 요소 폰트 통일 */
-/* 주석 처리 - 개별 스타일 허용
-[data-property-name] {
-    font-family: inherit !important;
-    font-weight: inherit !important;
-    font-style: inherit !important;
-}
-*/
-
-/* 반응형 컨테이너 */
-.responsive-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-@media (min-width: 768px) {
-    .responsive-container {
-        padding: 0 2rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .responsive-container {
-        padding: 0 3rem;
-    }
-}
-
-/* 브랜드 로고 스타일 */
-.brand-logo {
-    font-family: 'Playfair Display', 'Noto Sans KR', serif;
-    font-weight: 600;
-    letter-spacing: -0.5px;
-}
-
-.brand-logo .hero-logo-text {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.brand-logo .hero-logo-subtitle {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-}
-
-/* 히어로 텍스트 */
-.hero-text {
-    font-family: 'Poppins', 'Noto Sans KR', sans-serif;
-    font-weight: 400;
-    letter-spacing: -0.3px;
-}
-
-.en-title {
-    font-family: var(--font-en-main);
-    font-weight: 400;
-}
-
-.ko-title {
-    font-family: var(--font-ko-main);
-    font-weight: 400;
-    letter-spacing: -0.5px;
-}
-
-/* 영문 본문 폰트 (작은글씨) */
-.en-body {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
+body {
+    font-family: var(--font-ko-main), 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+                 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
+                 'Malgun Gothic', sans-serif;
+    font-weight: 500;
     line-height: 1.6;
-    letter-spacing: 0.3px;
+    color: #333;
+    background-color: var(--color-primary);
+    overflow-x: hidden;
 }
 
-.ko-body {
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.75rem; }
+h5 { font-size: 1.5rem; }
+h6 { font-size: 1.25rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ================================
+   Hero Section - Full Banner Slider
+   ================================ */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Hero Slider Container */
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 3s ease-out;
+}
+
+/* Hero Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.2));
+    z-index: 2;
+}
+
+/* Hero Content */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 3;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 40px; /* 좌우 동일한 패딩으로 중앙 정렬 */
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    letter-spacing: 0.02em;
+}
+
+.hero-description {
     font-family: var(--font-ko-sub);
+    font-size: 1.2rem;
     font-weight: 300;
     line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    opacity: 0.9;
 }
 
-/* UI 요소 폰트 (헤더, 푸터, 버튼) */
-.ui-font {
-    font-family: var(--font-ko-sub);
-    font-weight: 400;
+/* Hero Bottom Info - Base styles */
+.hero-bottom-info {
+    position: absolute;
+    bottom: 40px;
+    z-index: 100;
 }
 
-/* 공통 애니메이션 */
-.floating-animation {
-    animation: float 3s ease-in-out infinite;
+.hero-property-name {
+    color: #fff;
+    font-size: 0.875rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.9;
+    font-weight: 500;
+    flex: 0 0 auto;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+/* Hero Property Title - Page name above progress bar (for pages with center layout) */
+.hero-property-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-en-main), serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.08em;
+    text-align: center;
+    z-index: 10;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
-.animate-fade-in-up {
-    animation: fadeInUp 1s ease-out;
+/* Progress Bar */
+.hero-progress-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Navigation arrows for hero slider */
+.hero-nav-prev,
+.hero-nav-next {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 300;
+    cursor: pointer;
+    padding: 5px 10px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.hero-nav-prev:hover,
+.hero-nav-next:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Center aligned hero bottom for pages with page title */
+.hero-center-bottom .hero-bottom-info {
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    justify-content: center;
+}
+
+.hero-center-bottom .hero-property-name {
+    display: none;
+}
+
+.hero-progress-bar {
+    width: 300px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.hero-progress-fill {
+    height: 100%;
+    background: #fff; /* 완전 흰색 */
+    width: 0;
+    /* transition은 JavaScript에서 동적으로 설정됨 */
+    transform-origin: left;
+}
+
+/* Slide Indicators */
+.hero-indicators {
+    color: #fff;
+    font-size: 0.875rem;
+    opacity: 0.9;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.current-slide,
+.total-slides {
+    font-weight: 500;
+}
+
+/* ================================
+   Buttons
+   ================================ */
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #333;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #555;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #333;
+    border: 2px solid #333;
+}
+
+.btn-secondary:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* ================================
+   Animations
+   ================================ */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.fade-in-scale {
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fadeInScale 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.fade-in-delay-1 { animation-delay: 0.1s; }
-.fade-in-delay-2 { animation-delay: 0.2s; }
-.fade-in-delay-3 { animation-delay: 0.3s; }
-.fade-in-delay-4 { animation-delay: 0.4s; }
-
-/* 스크롤 애니메이션 */
-.scroll-animate {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease;
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-.scroll-animate.active {
-    opacity: 1;
-    transform: translateY(0);
+/* ================================
+   Footer
+   ================================ */
+.footer {
+    position: relative;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 60px 0 30px;
+    margin-top: 0;
+    z-index: 100;
 }
 
-/* 반응형 제목 크기 */
-.responsive-title {
-    font-size: clamp(2.5rem, 8vw, 5rem);
-    line-height: 1.1;
+.footer-container {
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
-.responsive-subtitle {
+.footer-content {
+    text-align: center;
+}
+
+.footer-info {
+    margin-bottom: 40px;
+}
+
+.footer-title {
     font-size: 2rem;
-    line-height: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
 }
 
-@media (min-width: 768px) {
-    .responsive-subtitle {
+.footer-contact {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-business {
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.business-info {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.business-info span {
+    margin: 0 10px;
+}
+
+.business-info span:not(:last-child)::after {
+    content: '|';
+    margin-left: 20px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-bottom {
+    padding-top: 20px;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ================================
+   Responsive
+   ================================ */
+@media (max-width: 1024px) {
+    .hero-content {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .hero-left,
+    .hero-right {
+        max-width: 100%;
+    }
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.75rem; }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    /* 모바일에서 fp-nav 보정 제거 */
+    .hero-content {
+        margin-left: 0;
+    }
+
+    .hero-title-property-name {
+        font-size: 2rem;
+    }
+
+    .hero-slider-container {
+        aspect-ratio: 4/3;
+    }
+
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    /* Hero Property Title - Mobile adjustments */
+    .hero-property-title {
+        bottom: 80px;
         font-size: 2.5rem;
-        line-height: 3rem;
+    }
+
+    /* Hero Bottom Info - Mobile adjustments for facility/room pages */
+    .hero-center-bottom .hero-bottom-info {
+        bottom: 30px;
+    }
+
+    .hero-progress-container {
+        gap: 10px;
+    }
+
+    .hero-progress-bar {
+        width: 200px;
+    }
+
+    .hero-nav-prev,
+    .hero-nav-next {
+        font-size: 1rem;
+        padding: 3px 8px;
     }
 }
 
-@media (min-width: 1024px) {
-    .responsive-subtitle {
-        font-size: 3rem;
-        line-height: 3.5rem;
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 30px 15px;
+    }
+
+    .hero-title-property-name {
+        font-size: 1.75rem;
+    }
+
+    .hero-title {
+        font-size: 1.7rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    /* Hero Property Title - Small mobile */
+    .hero-property-title {
+        bottom: 70px;
+        font-size: 2rem;
+    }
+
+    /* Hero Bottom Info - Small mobile */
+    .hero-center-bottom .hero-bottom-info {
+        bottom: 20px;
+    }
+
+    .hero-progress-bar {
+        width: 150px;
+    }
+
+    .hero-indicators {
+        font-size: 0.75rem;
     }
 }
 
-/* Empty Image Placeholder Styles - 모든 페이지 공통 */
+/* ================================
+   Gallery Section (Common)
+   ================================ */
+.gallery-section {
+    position: relative;
+    min-height: 100vh;
+    background: rgba(49, 66, 61, 0.1);
+}
 
-/* img 태그에 적용되는 empty placeholder */
-img.empty-image-placeholder {
-    border: 2px dashed #9ca3af;
-    border-radius: 0.75rem;
-    /* background 제거 - SVG 이미지가 보이도록 */
-    min-height: 20rem;
-    display: block;
+.gallery-section .section-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    object-fit: cover;
-    opacity: 0.8;
+    height: 100%;
+    z-index: 1;
+}
+
+.gallery-section .section-wrapper {
     position: relative;
-}
-
-/* img 태그용 아이콘 */
-img.empty-image-placeholder::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 96px;
-    height: 96px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect x='0' y='0' width='96' height='96' rx='8' ry='8' fill='none' stroke='%23374151' stroke-width='3'/%3E%3Ccircle cx='28' cy='28' r='6' fill='%23374151'/%3E%3Cpolyline points='96,84 68,56 0,84' fill='none' stroke='%23374151' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 3 !important; /* SVG 아이콘을 가장 위에 표시 */
-}
-
-/* 깨진 이미지 아이콘 숨기기 - 모든 페이지 공통 */
-img.empty-image-placeholder {
-    color: transparent !important;
-    font-size: 0 !important;
-    text-indent: -9999px !important;
-    overflow: hidden !important;
-    position: relative !important;
-    /* 깨진 이미지 아이콘 완전히 숨기기 */
-    font-family: monospace !important;
-    line-height: 0 !important;
-    text-shadow: none !important;
-    background-color: transparent !important;
-}
-
-/* 깨진 이미지 아이콘을 완전히 덮는 배경 추가 - 모든 페이지 공통 */
-img.empty-image-placeholder::before {
-    content: '' !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    /* 깨진 이미지 완전히 덮기 */
-    background: #d1d5db !important;
-    border: 2px dashed #9ca3af !important;
-    z-index: 1 !important; /* 깨진 이미지 위에 표시 */
-}
-
-/* 브라우저별 깨진 이미지 아이콘 숨기기 */
-img.empty-image-placeholder {
-    -webkit-user-select: none !important;
-    -moz-user-select: none !important;
-    -ms-user-select: none !important;
-    user-select: none !important;
-    pointer-events: none !important;
-}
-
-img.empty-image-placeholder::-moz-broken {
-    -moz-force-broken-image-icon: 0 !important;
-}
-
-/* background-image가 있는 div 요소들에 적용되는 empty placeholder */
-.empty-image-placeholder {
-    border: 2px dashed #9ca3af !important;
-    border-radius: 0.75rem !important;
-    background: #d1d5db !important;
-    background-color: #d1d5db !important;
-    opacity: 0.8 !important;
-    position: relative;
-    min-height: 200px;
-}
-
-/* background-image 요소들에 아이콘 추가 */
-.empty-image-placeholder::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 48px;
-    height: 48px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect x='0' y='0' width='96' height='96' rx='8' ry='8' fill='none' stroke='%23374151' stroke-width='3'/%3E%3Ccircle cx='28' cy='28' r='6' fill='%23374151'/%3E%3Cpolyline points='96,84 68,56 0,84' fill='none' stroke='%23374151' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    height: 100vh;
     z-index: 2;
 }
 
-/* 빈 이미지 깜빡임 방지 - src가 비어있거나 없는 이미지 완전히 숨김 */
-img[src=""],
-img:not([src]) {
-    display: none !important;
+.gallery-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-/* Wave Banner Section Styles - 공통 스타일 */
-.wave-bg-section {
+.gallery-header {
+    padding: 40px 60px 60px 60px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.gallery-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--color-secondary);
+    letter-spacing: -0.02em;
+}
+
+.gallery-description {
+    font-family: var(--font-ko-sub);
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Gallery Masonry Grid */
+.gallery-slider-wrapper {
+    width: 100%;
+    min-height: 550px; /* 450px에서 550px로 증가 */
+    padding: 0;
+    position: relative;
+    z-index: 10;
+    flex-shrink: 0;
+    margin: 0 auto; /* 중앙 정렬 */
+}
+
+.gallery-slider {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+    height: 400px !important;
+    width: 1200px !important;
+    margin: 0 auto !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+}
+
+/* Index Gallery Accordion Items - working style from facility */
+.gallery-section .gallery-item {
     position: relative;
     overflow: hidden;
-    margin-bottom: 0; /* Remove bottom margin */
+    cursor: pointer;
+    background: #f5f5f5;
+    flex: 0 0 60px !important; /* 접힌 상태는 더 좁게 */
+    border-radius: 0 !important;
+    height: 500px !important; /* 높이를 500px로 증가 */
+    min-height: 500px !important;
+    min-width: 60px !important;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1) !important; /* 부드러운 easing */
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1;
 }
 
-.wave-bg {
+/* Active gallery item (expanded) - 더 큰 비율로 확장 */
+.gallery-section .gallery-item.gallery-item-active {
+    flex: 1 !important; /* 확장된 아이템이 나머지 공간을 모두 차지 */
+    min-width: 500px !important; /* 최소 크기 더 크게 */
+    max-width: none !important; /* 최대 크기 제한 해제 */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25) !important;
+    transform: translateY(-2px) !important; /* 살짝 들어올리기 */
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1) !important; /* 일관된 easing */
+    z-index: 10 !important;
+}
+
+/* Index Gallery Images - Accordion Style */
+.gallery-section .gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 10 !important;
+    transition: all 0.6s ease !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+
+.gallery-section .gallery-item-description span::before {
+    content: '# ';
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+.gallery-item-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.gallery-item-title::before {
+    content: '# ';
+    color: #fff;
+}
+
+/* Gallery Mobile - Removed to allow horizontal slider from index.css */
+
+/* Small mobile styles removed to allow horizontal slider from index.css */
+
+/* ================================
+   Floating Booking Buttons
+   ================================ */
+.floating-buttons {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    gap: 10px;
+    z-index: 999;
+}
+
+.floating-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 32px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    border-radius: 0;
+    color: #fff;
+    font-family: var(--font-ko-main), sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* When page is scrolled */
+body.scrolled .floating-btn {
+    background: var(--color-secondary);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.floating-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+/* Before background color changes when scrolled */
+body.scrolled .floating-btn::before {
+    background: var(--color-primary);
+}
+
+.floating-btn:hover::before {
+    width: 100%;
+}
+
+.floating-btn:hover {
+    color: #000;
+    border-color: #fff;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Hover effect when scrolled */
+body.scrolled .floating-btn:hover {
+    color: var(--color-secondary);
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 30px rgba(99, 89, 85, 0.2);
+}
+
+/* Dark sections (Gallery & Closing) - Light button styles */
+body.dark-section-active:not(.scrolled) .floating-btn {
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary) !important;
+}
+
+body.dark-section-active:not(.scrolled) .floating-btn::before {
+    background: var(--color-primary) !important;
+}
+
+body.dark-section-active:not(.scrolled) .floating-btn:hover {
+    color: var(--color-secondary) !important;
+    border-color: var(--color-primary) !important;
+}
+
+/* Dark sections with scroll - maintain light color (but not in footer) */
+body.dark-section-active.scrolled:not(.footer-visible) .floating-btn {
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary) !important;
+}
+
+body.dark-section-active.scrolled:not(.footer-visible) .floating-btn::before {
+    background: var(--color-primary) !important;
+}
+
+body.dark-section-active.scrolled:not(.footer-visible) .floating-btn:hover {
+    color: var(--color-secondary) !important;
+    border-color: var(--color-primary) !important;
+}
+
+/* Footer area - primary color buttons */
+body.footer-visible .floating-btn {
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary) !important;
+}
+
+body.footer-visible .floating-btn::before {
+    background: var(--color-primary) !important;
+}
+
+body.footer-visible .floating-btn:hover {
+    color: var(--color-secondary) !important;
+    border-color: var(--color-primary) !important;
+}
+
+.floating-btn .booking-icon {
+    display: none;
+}
+
+.floating-btn .booking-calendar-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* ================================
+   Scroll to Top Button
+   ================================ */
+.scroll-to-top {
+    position: fixed !important;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    color: #fff;
+    font-family: var(--font-ko-main), sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.scroll-to-top:hover::before {
+    width: 100%;
+}
+
+.scroll-to-top:hover {
+    color: #000;
+    border-color: #fff;
+}
+
+/* When page is scrolled */
+body.scrolled .scroll-to-top {
+    background: var(--color-secondary);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+body.scrolled .scroll-to-top::before {
+    background: var(--color-primary);
+}
+
+body.scrolled .scroll-to-top:hover {
+    color: var(--color-secondary);
+    border-color: var(--color-primary);
+}
+
+/* Dark sections - Light scroll button */
+body.dark-section-active:not(.scrolled) .scroll-to-top {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+body.dark-section-active:not(.scrolled) .scroll-to-top::before {
+    background: var(--color-primary);
+}
+
+body.dark-section-active:not(.scrolled) .scroll-to-top:hover {
+    color: var(--color-secondary);
+    border-color: var(--color-primary);
+}
+
+/* Dark sections with scroll */
+body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top::before {
+    background: var(--color-primary);
+}
+
+body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
+    color: var(--color-secondary);
+    border-color: var(--color-primary);
+}
+
+
+/* Mobile Responsive for Floating Buttons */
+@media (max-width: 768px) {
+    .floating-buttons {
+        bottom: 20px;
+        right: 20px;
+        left: auto;
+        justify-content: flex-end;
+    }
+
+    .floating-btn {
+        width: 45px;
+        height: 45px;
+        padding: 0;
+        border-radius: 0;
+        font-size: 0.7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* 예약하기 버튼 - 달력 아이콘만 표시 */
+    .booking-btn span {
+        display: none;
+    }
+
+    .booking-btn .booking-calendar-icon {
+        display: block !important;
+        width: 20px;
+        height: 20px;
+    }
+
+    /* YBS 버튼 - Y만 표시 */
+    .ybs-btn span {
+        display: none;
+    }
+
+    .ybs-btn .booking-icon {
+        display: none;
+    }
+
+    .ybs-btn::after {
+        content: 'Y';
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 0.7rem;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    body.scrolled .scroll-to-top {
+        background: var(--color-secondary) !important;
+        border-color: var(--color-primary) !important;
+        color: var(--color-primary) !important;
+    }
+}
+
+/* ================================
+   Full Banner Section
+   ================================ */
+.full-banner {
     position: relative;
     width: 100%;
-    height: 800px; /* Increased from 650px */
+    height: 600px;
+    background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+    overflow: hidden;
 }
 
+.full-banner-title {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--font-en-main), serif;
+    letter-spacing: 0.05em;
+    font-style: italic;
+    z-index: 2;
+    word-break: break-word;
+    text-align: center;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
 @media (max-width: 768px) {
-    .wave-bg {
-        height: 550px; /* Increased from 450px */
+    .full-banner {
+        height: 500px;
+        padding: 0 5%;
     }
 
-    .wave-bg-section {
-        margin-bottom: 0; /* Remove bottom margin on mobile */
+    .full-banner-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .full-banner {
+        height: 400px;
     }
 
-    .wave-bg-section .absolute {
-        clip-path: url(#wave-clip-mobile);
-        background-attachment: scroll;
-        background-size: cover;
-        background-position: center;
+    .full-banner-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* ================================
+   Facility Gallery - Accordion Hover Cards (2x2 Grid)
+   ================================ */
+.facility-gallery-section {
+    background: rgba(29, 58, 95, 0.2);
+    min-height: 700px; /* 600px에서 700px로 변경 */
+    padding: 120px 60px 80px 60px; /* 하단 패딩도 증가 */
+    position: relative;
+}
+
+.facility-gallery-label {
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease;
+}
+
+.facility-gallery-label.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.facility-gallery-label span {
+    font-family: var(--font-en-main), serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: var(--color-secondary);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    display: inline-block;
+}
+
+.facility-gallery-container {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+    height: 500px !important; /* 400px에서 500px로 변경 */
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+}
+
+
+.facility-gallery-container .gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: all 0.6s ease !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.facility-gallery-container .gallery-item .gallery-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+/* 기본 상태에서는 제목만 표시 */
+.facility-gallery-container .gallery-item .gallery-item-title-default {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%) rotate(-90deg);
+    transform-origin: center;
+    color: #fff;
+    font-family: var(--font-en-main), serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 2;
+    transition: all 0.6s ease;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    white-space: nowrap;
+}
+
+/* 확장된 상태에서는 가로 표시 */
+.facility-gallery-container .gallery-item:hover .gallery-item-title-default,
+.facility-gallery-container .gallery-item:first-child .gallery-item-title-default {
+    transform: translateX(-50%) rotate(0deg);
+    bottom: 20px;
+    left: 20px;
+    transform: none;
+}
+
+/* 기존 스타일 정리됨 - 위의 활성화 상태 스타일로 대체 */
+
+/* Click-based Accordion Effects */
+.facility-gallery-container .gallery-item.gallery-item-active {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.facility-gallery-container .gallery-item.gallery-item-active img {
+    transform: scale(1.02);
+}
+
+/* 기본적으로 모든 카드에 오버레이 표시 */
+.facility-gallery-container .gallery-item .gallery-item-overlay {
+    opacity: 1;
+}
+
+/* 활성화된 상태에서는 오버레이 숨김 */
+.facility-gallery-container .gallery-item.gallery-item-active .gallery-item-overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Facility Gallery Description - 흰색 글씨 text-shadow */
+.facility-gallery-container .gallery-item .gallery-item-description {
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+    font-family: var(--font-ko-main), sans-serif;
+    font-size: 1.1rem;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 20;
+}
+
+/* 활성화된 상태에서만 표시 */
+.facility-gallery-container .gallery-item.gallery-item-active .gallery-item-description {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+
+/* 호버 효과는 가볍게만 (클릭하라는 힌트) */
+@media (min-width: 769px) {
+    .facility-gallery-container .gallery-item:not(.gallery-item-active):hover {
+        transform: scale(1.02);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+}
+
+/* Facility Gallery Mobile - 세로 스택 스타일 */
+@media (max-width: 768px) {
+    .facility-gallery-section {
+        padding: 80px 20px 40px 20px;
+        min-height: auto;
     }
 
-    .banner-title {
-        font-size: 2rem !important;
-        margin-bottom: 1.5rem !important;
-    }
-
-    .banner-description {
-        font-size: 1rem !important;
-        padding: 0 1rem;
-    }
-
-    /* 모바일에서 히어로 섹션 제목 중앙 정렬 */
-    #section1 .absolute.bottom-8 {
-        left: 50% !important;
-        transform: translateX(-50%);
+    .facility-gallery-label {
+        margin-bottom: 40px;
         text-align: center;
     }
 
-    #section1 .absolute.bottom-8 h1 {
-        text-align: center !important;
+    .facility-gallery-label span {
+        font-size: 2.5rem;
     }
 
-    #section1 .absolute.bottom-8 div[class*="w-["] {
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-}
-
-/* Wave Banner Animations */
-.animate-fade-in-up {
-    animation: fadeInUp 1s ease-out 0.5s forwards;
-}
-
-.animate-fade-in-up-delay-1 {
-    animation: fadeInUp 1s ease-out 1s forwards;
-}
-
-.animate-fade-in-up-delay-2 {
-    animation: fadeInUp 1s ease-out 1.5s forwards;
-}
-
-.banner-content {
-    position: relative;
-}
-
-.banner-content h2 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.banner-content h1 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* ============================================================================ */
-/* 공통 애니메이션 클래스 */
-/* ============================================================================ */
-
-/* Slide-in animations */
-.slide-in-left {
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: all 1s ease-out;
-}
-
-.slide-in-left.animate {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.slide-in-right {
-    opacity: 0;
-    transform: translateX(100px);
-    transition: all 1s ease-out;
-}
-
-.slide-in-right.animate {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.slide-in-line {
-    opacity: 0;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: all 1.2s ease-out;
-}
-
-.slide-in-line.animate {
-    opacity: 1;
-    transform: scaleX(1);
-}
-
-/* Fade animations */
-.fade-in-up {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
-}
-
-.fade-in-up.animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.fade-up {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
-}
-
-.fade-up.animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.fade-in-scale {
-    opacity: 0;
-    transform: scale(0.9) translateY(30px);
-    transition: all 0.8s ease-out;
-}
-
-.fade-in-scale.animate {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-}
-
-.fade-in-line {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
-}
-
-.fade-in-line.animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* About Section Styles - Moved from main.css for reuse in multiple pages */
-.main-image-container {
-    position: relative;
-}
-
-.main-image-wrapper {
-    position: relative;
-    overflow: visible;
-}
-
-.main-image-wrapper img {
-    border-radius: 0 0 0 0;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 1;
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 1.5s ease-out;
-}
-
-.main-image-wrapper.fade-in-scale.animate img {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.main-image-wrapper img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-}
-.about2-section .main-image-wrapper.fade-in-scale.animate img {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Main page specific placeholder override - 크기와 고정 border-radius */
-.main-image-wrapper img.empty-image-placeholder {
-    /* 모바일 기본 크기 */
-    width: 300px !important;
-    height: 240px !important;
-    min-height: auto !important;
-    /* 고정된 대각선 둥근 모서리 */
-    border-radius: 60px 0 60px 0 !important;
-}
-
-/* 반응형 크기 유지 */
-@media (min-width: 768px) {
-    .main-image-wrapper img.empty-image-placeholder {
-        width: 500px !important;
-        height: 20rem !important; /* h-80 = 20rem */
-        border-radius: 80px 0 80px 0 !important;
-    }
-}
-
-@media (min-width: 1024px) {
-    .main-image-wrapper img.empty-image-placeholder {
-        width: 700px !important;
-        height: 24rem !important; /* h-96 = 24rem */
-        border-radius: 120px 0 120px 0 !important;
-    }
-}
-
-@media (min-width: 1280px) {
-    .main-image-wrapper img.empty-image-placeholder {
-        width: 900px !important;
-        height: 400px !important; /* h-[400px] */
-        border-radius: 120px 0 120px 0 !important;
-    }
-}
-
-/* About2 Section Empty Placeholder - about2 섹션 placeholder 스타일 */
-.about2-section .main-image-wrapper img.empty-image-placeholder {
-    border-radius: 0 60px 0 60px !important;
-}
-
-@media (min-width: 768px) {
-    .about2-section .main-image-wrapper img.empty-image-placeholder {
-        border-radius: 0 80px 0 80px !important;
-    }
-}
-
-@media (min-width: 1024px) {
-    .about2-section .main-image-wrapper img.empty-image-placeholder {
-        border-radius: 0 120px 0 120px !important;
-    }
-}
-
-/* Border-radius animations for main.html and reservation.html about-sections */
-/* Main.html용 about 섹션 - 대각선 둥근 모서리 애니메이션 */
-.about-section .main-image-wrapper img {
-    animation: alternatingCorners 8s ease-in-out infinite;
-}
-
-/* About2 섹션 - 반대 대각선 애니메이션 */
-.about2-section .main-image-wrapper img {
-    animation: alternatingCornersReverse 8s ease-in-out infinite;
-}
-
-/* 대각선 둥근 모서리 애니메이션 키프레임 */
-@keyframes alternatingCorners {
-    0%, 100% {
-        border-radius: 60px 0 60px 0;
-    }
-    25% {
-        border-radius: 0 60px 0 60px;
-    }
-    50% {
-        border-radius: 60px 0 60px 0;
-    }
-    75% {
-        border-radius: 0 60px 0 60px;
-    }
-}
-
-/* 반대 대각선 애니메이션 */
-@keyframes alternatingCornersReverse {
-    0%, 100% {
-        border-radius: 0 60px 0 60px;
-    }
-    25% {
-        border-radius: 60px 0 60px 0;
-    }
-    50% {
-        border-radius: 0 60px 0 60px;
-    }
-    75% {
-        border-radius: 60px 0 60px 0;
-    }
-}
-
-/* 반응형 애니메이션 - 768px 이상 */
-@media (min-width: 768px) {
-    @keyframes alternatingCorners {
-        0%, 100% {
-            border-radius: 80px 0 80px 0;
-        }
-        25% {
-            border-radius: 0 80px 0 80px;
-        }
-        50% {
-            border-radius: 80px 0 80px 0;
-        }
-        75% {
-            border-radius: 0 80px 0 80px;
-        }
+    .facility-gallery-container {
+        display: block !important;
+        height: auto !important;
+        gap: 0 !important;
+        flex-direction: column !important;
     }
 
-    @keyframes alternatingCornersReverse {
-        0%, 100% {
-            border-radius: 0 80px 0 80px;
-        }
-        25% {
-            border-radius: 80px 0 80px 0;
-        }
-        50% {
-            border-radius: 0 80px 0 80px;
-        }
-        75% {
-            border-radius: 80px 0 80px 0;
-        }
-    }
-}
-
-/* 반응형 애니메이션 - 1024px 이상 */
-@media (min-width: 1024px) {
-    @keyframes alternatingCorners {
-        0%, 100% {
-            border-radius: 120px 0 120px 0;
-        }
-        25% {
-            border-radius: 0 120px 0 120px;
-        }
-        50% {
-            border-radius: 120px 0 120px 0;
-        }
-        75% {
-            border-radius: 0 120px 0 120px;
-        }
-    }
-
-    @keyframes alternatingCornersReverse {
-        0%, 100% {
-            border-radius: 0 120px 0 120px;
-        }
-        25% {
-            border-radius: 120px 0 120px 0;
-        }
-        50% {
-            border-radius: 0 120px 0 120px;
-        }
-        75% {
-            border-radius: 120px 0 120px 0;
-        }
-    }
-}
-
-/* Hero Section 모바일 대응 - 이미지 비율 유지 (모든 페이지 공통) */
-@media (max-width: 768px) {
-    #section1 {
-        height: 60vh !important;
-        min-height: 60vh !important;
-    }
-
-    #hero-image-container {
-        position: relative !important;
-        height: 60vh !important;
-        min-height: 60vh !important;
-    }
-
-    #hero-image-container img {
-        position: relative !important;
+    .facility-gallery-container .gallery-item {
         width: 100% !important;
-        height: 60vh !important;
-        min-height: 60vh !important;
+        height: 250px !important;
+        margin-bottom: 15px !important;
+        border-radius: 8px !important;
+        min-width: auto !important;
+        max-width: none !important;
+        flex: none !important;
+        position: relative !important;
+        overflow: hidden !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .facility-gallery-container .gallery-item:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    .facility-gallery-container .gallery-item img {
+        width: 100% !important;
+        height: 100% !important;
         object-fit: cover !important;
-        object-position: center !important;
     }
 
-    /* 텍스트 오버레이 중앙 정렬 */
-    #section1 .absolute.bottom-8 {
-        position: absolute !important;
-        bottom: 2rem !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        text-align: center !important;
+    /* 오버레이 제거 */
+    .facility-gallery-container .gallery-item .gallery-item-overlay {
+        display: none !important;
     }
 
-    /* 그라데이션 오버레이도 조정 */
-    #section1 .bg-gradient-to-t {
+    /* 제목 숨김 */
+    .facility-gallery-container .gallery-item .gallery-item-title-default {
+        display: none !important;
+    }
+
+    /* 설명을 항상 표시 - 배경 없이 흰색 글씨 */
+    .facility-gallery-container .gallery-item .gallery-item-description {
         position: absolute !important;
-        inset: 0 !important;
+        bottom: 15px !important;
+        right: 30px !important;
+        left: auto !important;
+        background: none !important;
+        color: white !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        font-family: var(--font-ko-main), sans-serif !important;
+        font-size: 1.1rem !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        backdrop-filter: none !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 0 0 8px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    /* 호버/클릭 효과 제거 */
+    .facility-gallery-container .gallery-item:active,
+    .facility-gallery-container .gallery-item:hover {
+        transform: none !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
     }
 }
+
+/* Default Gallery Items - NOT for facility gallery */
+.gallery-section .gallery-item {
+    flex: 1;
+    max-width: 320px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+/* Override all other gallery item styles for facility gallery specifically */
+.facility-gallery-section .facility-gallery-container .gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background: #f5f5f5;
+    flex: 0 0 60px !important;
+    border-radius: 0 !important;
+    height: 500px !important; /* 400px에서 500px로 변경 */
+    min-height: 500px !important;
+    min-width: 60px !important;
+}
+
+/* 활성화된 카드는 확장 */
+.facility-gallery-section .facility-gallery-container .gallery-item.gallery-item-active {
+    flex: 1 !important;
+    min-width: 200px !important;
+}
+
+.gallery-section .gallery-item:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.gallery-section .gallery-item:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.gallery-section .gallery-item:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.gallery-section .gallery-item:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.gallery-section .gallery-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-section .gallery-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: none;
+}
+
+.gallery-item-title:not(.facility-gallery-container .gallery-item-title) {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Gallery Mobile Responsive */
+@media (max-width: 768px) {
+    .facility-gallery-label {
+        left: 20px;
+        top: 40px;
+    }
+
+    .facility-gallery-label span {
+        font-size: 2.5rem;
+    }
+
+    .facility-gallery-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        bottom: auto;
+        position: relative;
+        transform: none;
+        left: auto;
+        width: 100%;
+        max-width: 100%;
+        justify-content: space-between;
+    }
+
+    .gallery-item {
+        max-width: calc(50% - 10px);
+        width: calc(50% - 10px);
+    }
+
+    /* Index gallery should show one image per page on mobile */
+    .gallery-section .gallery-item {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .gallery-item img {
+        height: 180px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 480px) {
+    .facility-gallery-container .gallery-item {
+        height: 220px !important;
+    }
+
+    .facility-gallery-container .gallery-item .gallery-item-description {
+        font-size: 1.1rem !important;
+        padding: 0 !important;
+    }
+}
+
+
+
+/* ================================
+   갤러리 아코디언 성능 개선 및 Description 스타일링
+   ================================ */
+
+/* 버벅임 해결을 위한 GPU 가속화 및 최적화된 트랜지션 */
+.gallery-section .gallery-item {
+    will-change: flex !important;
+    transform: translateZ(0) !important;
+    transition: flex 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.gallery-section .gallery-item.gallery-item-active {
+    will-change: flex !important;
+    transform: translateZ(0) !important;
+    transition: flex 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* ================================
+   Index Gallery Section - Same styling as room/facility
+   ================================ */
+.gallery-section {
+    background: rgba(29, 58, 95, 0.2);
+    min-height: 700px;
+    padding: 120px 60px 80px 60px;
+    position: relative;
+}
+
+/* Gallery container height to match room/facility pages - Desktop only */
+@media (min-width: 769px) {
+    .gallery-section .gallery-slider {
+        height: 500px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 8px !important;
+        margin: 0 auto !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        justify-content: center !important;
+        align-items: stretch !important;
+    }
+
+    .gallery-section .gallery-item {
+        height: 500px !important;
+        min-height: 500px !important;
+        /* flex는 위에서 정의된 기본값 사용 (0 0 60px) */
+        cursor: pointer !important;
+        position: relative !important;
+    }
+}
+
+/* Add subtle gradient overlay for better text readability - only text area */
+.gallery-section .gallery-item::after,
+.facility-gallery-container .gallery-item::after,
+.room-gallery-container .gallery-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Index Gallery Description */
+.gallery-section .gallery-item .gallery-item-description {
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+    font-family: var(--font-ko-main), sans-serif;
+    font-size: 1.1rem;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 20;
+    transition: all 0.5s ease;
+}
+
+/* Show description on active item */
+.gallery-section .gallery-item.gallery-item-active .gallery-item-description {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+
+/* Index Gallery Overlay - facility와 동일한 스타일 */
+.gallery-section .gallery-item .gallery-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    opacity: 1; /* 기본적으로 오버레이 표시 */
+    transition: all 0.6s ease;
+}
+
+/* 기본적으로 모든 카드에 오버레이 표시 (facility와 동일) */
+.gallery-section .gallery-item .gallery-item-overlay {
+    opacity: 1 !important;
+}
+
+/* 활성화된 상태에서는 오버레이 숨김 */
+.gallery-section .gallery-item.gallery-item-active .gallery-item-overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* 모바일에서는 오버레이 숨김 */
+@media (max-width: 768px) {
+    .gallery-section .gallery-item .gallery-item-overlay {
+        display: none !important;
+    }
+}
+
+/* Empty Image Placeholder Styles */
+.empty-image-placeholder,
+.empty-background-placeholder {
+    opacity: 0.8 !important;
+    filter: grayscale(0.2);
+}
+
+.empty-background-placeholder {
+    background-color: #f5f5f5;
+}
+
+/* ================================
+   Large Desktop - Container Width Limits
+   ================================ */
+@media (min-width: 1920px) {
+    .container,
+    .footer-container,
+    .section-container,
+    .gallery-section .section-wrapper {
+        max-width: 1600px;
+    }
+
+    .facility-gallery-container,
+    .gallery-section .gallery-slider {
+        max-width: 1600px !important;
+        height: 600px !important; /* 큰 화면에서 더 큰 높이 */
+    }
+
+    .gallery-section .gallery-item {
+        height: 600px !important;
+        min-height: 600px !important;
+    }
+    .signature-container, .gallery-container {
+        max-width: 1600px !important;
+    }
+    .gallery-slider {
+        width: 1600px !important;
+    }
+}
+
+

@@ -15,11 +15,86 @@ class BaseDataMapper {
     // ============================================================================
 
     /**
-     * 데이터 설정
+     * URL 생성 헬퍼 (preview 쿼리스트링 자동 유지)
+     * @param {string} page - 페이지 파일명 (예: 'room.html')
+     * @param {Object} params - 추가 쿼리 파라미터 (예: { id: 'room-001' })
+     * @returns {string} 완성된 URL
      */
-    setData(data) {
-        this.data = data;
-        this.isDataLoaded = !!data;
+    buildUrl(page, params = {}) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const isPreview = urlParams.get('preview') === 'true';
+
+        const queryParams = new URLSearchParams(params);
+        if (isPreview) {
+            queryParams.set('preview', 'true');
+        }
+
+        const queryString = queryParams.toString();
+        return queryString ? `${page}?${queryString}` : page;
+    }
+
+    /**
+     * 스네이크 케이스를 카멜 케이스로 변환
+     * API 데이터(snake_case) → JavaScript 표준(camelCase)
+     */
+    convertToCamelCase(obj) {
+        if (Array.isArray(obj)) {
+            return obj.map(item => this.convertToCamelCase(item));
+        } else if (obj !== null && typeof obj === 'object') {
+            return Object.keys(obj).reduce((result, key) => {
+                // 스네이크 케이스를 카멜 케이스로 변환
+                const camelKey = key.replace(/_([a-z])/g, (_, letter) => letter.toUpperCase());
+                result[camelKey] = this.convertToCamelCase(obj[key]);
+                return result;
+            }, {});
+        }
+        return obj;
+    }
+
+    /**
+     * JSON 데이터 로드
+     * URL에 ?preview=true가 있으면 preview-data.json, 없으면 standard-template-data.json 로드
+     * 잘못된 쿼리스트링은 자동으로 제거
+     */
+    async loadData() {
+        try {
+            // URL 파라미터 확인
+            const urlParams = new URLSearchParams(window.location.search);
+            const previewValue = urlParams.get('preview');
+            const isPreview = previewValue === 'true';
+
+            // 잘못된 쿼리스트링 감지 시 index로 리다이렉트
+            // 허용된 파라미터: preview (값이 true일 때만), id
+            const allowedParams = ['preview', 'id'];
+            const allParamsValid = Array.from(urlParams.keys()).every(key => {
+                if (key === 'preview') return urlParams.get('preview') === 'true';
+                if (key === 'id') return true;
+                return false;
+            });
+
+            if (window.location.search && !allParamsValid) {
+                // 루트로 리다이렉트
+                window.location.href = window.location.origin + window.location.pathname.replace(/[^/]*$/, '');
+                return;
+            }
+
+            // 데이터 파일 선택
+            const dataFile = isPreview ? 'preview-data.json' : 'standard-template-data.json';
+
+            // 캐시 방지를 위한 타임스탬프 추가
+            const timestamp = new Date().getTime();
+            const response = await fetch(`./${dataFile}?t=${timestamp}`);
+            const rawData = await response.json();
+
+            // 스네이크 케이스를 카멜 케이스로 자동 변환
+            this.data = this.convertToCamelCase(rawData);
+            this.isDataLoaded = true;
+            return this.data;
+        } catch (error) {
+            console.error('Failed to load property data:', error);
+            this.isDataLoaded = false;
+            throw error;
+        }
     }
 
     /**
@@ -44,27 +119,13 @@ class BaseDataMapper {
     }
 
     /**
-     * 빈 값 체크 헬퍼 (private)
-     */
-    _isEmptyValue(value) {
-        return value === undefined || value === null || (typeof value === 'string' && value.trim() === '');
-    }
-
-    /**
-     * 텍스트 정제 헬퍼 (customFields 우선, fallback 지원)
-     */
-    sanitizeText(text, fallback = '') {
-        if (this._isEmptyValue(text)) return fallback;
-        return text.trim();
-    }
-
-    /**
      * DOM 요소 안전 선택
      */
     safeSelect(selector) {
         try {
             return document.querySelector(selector);
         } catch (error) {
+            console.warn(`Invalid selector: ${selector}`);
             return null;
         }
     }
@@ -76,23 +137,63 @@ class BaseDataMapper {
         try {
             return document.querySelectorAll(selector);
         } catch (error) {
+            console.warn(`Invalid selector: ${selector}`);
             return [];
         }
     }
 
+    // ============================================================================
+    // 📝 TEXT UTILITIES
+    // ============================================================================
+
     /**
-     * Favicon 업데이트 공통 메서드
+     * 값이 비어있는지 확인하는 헬퍼 메서드
+     * @private
+     * @param {any} value - 확인할 값
+     * @returns {boolean} 비어있으면 true
      */
-    updateFavicon() {
-        if (this.data && this.data.homepage && this.data.homepage.images && this.data.homepage.images[0] && this.data.homepage.images[0].logo) {
-            const selectedLogo = this.data.homepage.images[0].logo.find(logo => logo.isSelected === true);
-            if (selectedLogo && selectedLogo.url) {
-                const faviconElement = document.querySelector('[data-homepage-favicon]');
-                if (faviconElement) {
-                    faviconElement.href = selectedLogo.url;
-                }
-            }
-        }
+    _isEmptyValue(value) {
+        return value === null || value === undefined || value === '';
+    }
+
+    /**
+     * HTML 특수 문자를 이스케이프 처리하는 헬퍼 메서드 (XSS 방지)
+     * @private
+     * @param {string} text - 이스케이프할 텍스트
+     * @returns {string} 이스케이프 처리된 텍스트
+     */
+    _escapeHTML(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    /**
+     * 텍스트를 정제하는 헬퍼 메서드
+     * 빈 값이면 fallback 반환, 아니면 trim된 값 반환
+     * @param {string} text - 정제할 텍스트
+     * @param {string} fallback - 빈 값일 때 반환할 기본값
+     * @returns {string} 정제된 텍스트 또는 fallback
+     */
+    sanitizeText(text, fallback = '') {
+        if (this._isEmptyValue(text)) return fallback;
+        return text.trim();
+    }
+
+    /**
+     * 텍스트의 줄바꿈을 HTML <br> 태그로 변환하는 헬퍼 메서드 (XSS 안전)
+     * @private
+     * @param {string} text - 변환할 텍스트
+     * @param {string} fallback - 빈 값일 때 반환할 기본값
+     * @returns {string} 줄바꿈이 <br>로 변환된 HTML 문자열
+     */
+    _formatTextWithLineBreaks(text, fallback = '') {
+        if (this._isEmptyValue(text)) return fallback;
+        // 앞뒤 공백 제거
+        const trimmedText = text.trim();
+        // 먼저 HTML 특수 문자를 이스케이프 처리한 후 줄바꿈 변환
+        const escapedText = this._escapeHTML(trimmedText);
+        return escapedText.replace(/\n/g, '<br>');
     }
 
     // ============================================================================
@@ -125,122 +226,6 @@ class BaseDataMapper {
             'SPA': '힐링과 휴식을 위한 스파 시설'
         };
         return descriptions[code] || '';
-    }
-
-    /**
-     * 선택된 이미지만 필터링하고 정렬하는 공통 헬퍼 메서드
-     * @param {Array} images - 이미지 배열
-     * @param {string} [category] - 필터링할 카테고리 (선택적)
-     * @returns {Array} 선택되고 정렬된 이미지 배열
-     * @private
-     */
-    _getSelectedAndSortedImages(images, category = null) {
-        if (!Array.isArray(images)) return [];
-        return images
-            .filter(img => img.isSelected && (category === null || img.category === category))
-            .sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
-    }
-
-    /**
-     * HTML 특수 문자를 이스케이프 처리하는 헬퍼 메서드 (XSS 방지)
-     * @private
-     */
-    _escapeHTML(text) {
-        if (!text) return '';
-        const map = {
-            '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            '"': '&quot;',
-            "'": '&#x27;',
-            '/': '&#x2F;'
-        };
-        return text.replace(/[&<>"'\/]/g, (char) => map[char]);
-    }
-
-    /**
-     * 텍스트의 줄바꿈을 HTML <br> 태그로 변환하는 헬퍼 메서드 (XSS 안전)
-     * @private
-     */
-    _formatTextWithLineBreaks(text) {
-        if (this._isEmptyValue(text)) return '';
-        const trimmedText = text.trim();
-        const escapedText = this._escapeHTML(trimmedText);
-        return escapedText.replace(/\n/g, '<br>');
-    }
-
-    // ============================================================================
-    // 🏠 CUSTOMFIELDS HELPERS (Property & Room)
-    // ============================================================================
-
-    /**
-     * 숙소 이름 가져오기 (customFields 우선, 없으면 기본값)
-     * @returns {string} 숙소 이름
-     */
-    getPropertyName() {
-        const customName = this.safeGet(this.data, 'homepage.customFields.property.name');
-        return this.sanitizeText(customName, this.safeGet(this.data, 'property.name') || '숙소명');
-    }
-
-    /**
-     * 숙소 영문명 가져오기 (customFields 우선, 없으면 기본값)
-     * @returns {string} 숙소 영문명
-     */
-    getPropertyNameEn() {
-        const customNameEn = this.safeGet(this.data, 'homepage.customFields.property.nameEn');
-        return this.sanitizeText(customNameEn, this.safeGet(this.data, 'property.nameEn') || 'PROPERTY NAME');
-    }
-
-    /**
-     * 숙소 이미지 가져오기 (customFields의 카테고리별 이미지)
-     * @param {string} imageCategory - 이미지 카테고리 (property_exterior, property_interior, property_thumbnail 등)
-     * @returns {Array} 정렬된 이미지 배열
-     */
-    getPropertyImages(imageCategory) {
-        const customImages = this.safeGet(this.data, 'homepage.customFields.property.images') || [];
-        return this._getSelectedAndSortedImages(customImages, imageCategory);
-    }
-
-    /**
-     * 객실 customFields 가져오기
-     * @param {string} roomId - 객실 ID
-     * @returns {Object|null} 객실 customFields 데이터
-     */
-    getRoomTypeCustomFields(roomId) {
-        const roomtypes = this.safeGet(this.data, 'homepage.customFields.roomtypes') || [];
-        return roomtypes.find(rt => rt.id === roomId) || null;
-    }
-
-    /**
-     * 객실 이름 가져오기 (customFields 우선, 없으면 기본값)
-     * @param {Object} room - 객실 데이터
-     * @returns {string} 객실 이름
-     */
-    getRoomName(room) {
-        const customFields = this.getRoomTypeCustomFields(room.id);
-        return this.sanitizeText(customFields?.name, room.name || '객실명');
-    }
-
-    /**
-     * 객실 영문명 가져오기 (customFields 우선, 없으면 기본값)
-     * @param {Object} room - 객실 데이터
-     * @returns {string} 객실 영문명
-     */
-    getRoomNameEn(room) {
-        const customFields = this.getRoomTypeCustomFields(room.id);
-        return this.sanitizeText(customFields?.nameEn, room.nameEn || 'ROOM NAME');
-    }
-
-    /**
-     * 객실 이미지 가져오기 (customFields의 카테고리별 이미지)
-     * @param {Object} room - 객실 데이터
-     * @param {string} imageCategory - 이미지 카테고리 (roomtype_interior, roomtype_exterior, roomtype_thumbnail)
-     * @returns {Array} 정렬된 이미지 배열
-     */
-    getRoomImages(room, imageCategory) {
-        const customFields = this.getRoomTypeCustomFields(room.id);
-        const customImages = customFields?.images || [];
-        return this._getSelectedAndSortedImages(customImages, imageCategory);
     }
 
     // ============================================================================
@@ -321,37 +306,16 @@ class BaseDataMapper {
     // ============================================================================
 
     /**
-     * 메타 태그 업데이트
+     * 메타 태그 업데이트 (homepage.seo + 페이지별 SEO 병합)
+     * @param {Object} pageSEO - 페이지별 SEO 데이터 (선택사항, 전역 SEO보다 우선 적용)
      */
-    updateMetaTags(property) {
-        if (!property) return;
-
-        // customFields 헬퍼를 통해 숙소명 가져오기
-        const builderPropertyName = this.getPropertyName();
-
-        // 타이틀 업데이트
-        const title = this.safeSelect('title');
-        if (title && property.subtitle) {
-            title.textContent = `${builderPropertyName} - ${property.subtitle}`;
-        }
-
-        // 메타 description 업데이트
-        const metaDescription = this.safeSelect('meta[name="description"]');
-        if (metaDescription && property.description) {
-            metaDescription.setAttribute('content', property.description);
-        }
-
-        // 메타 keywords 업데이트
-        const metaKeywords = this.safeSelect('meta[name="keywords"]');
-        if (metaKeywords && property.city && property.province) {
-            const keywords = [
-                property.city.name + '펜션',
-                property.province.name + '숙박',
-                builderPropertyName,
-                '감성펜션',
-                '자연휴양지'
-            ].join(', ');
-            metaKeywords.setAttribute('content', keywords);
+    updateMetaTags(pageSEO = null) {
+        // homepage.seo 글로벌 SEO 데이터 적용
+        const globalSEO = this.safeGet(this.data, 'homepage.seo') || {};
+        // 전역 SEO와 페이지별 SEO를 병합합니다. 페이지별 설정이 우선됩니다.
+        const finalSEO = { ...globalSEO, ...(pageSEO || {}) };
+        if (Object.keys(finalSEO).length > 0) {
+            this.updateSEOInfo(finalSEO);
         }
     }
 
@@ -364,17 +328,43 @@ class BaseDataMapper {
         if (seo.title) {
             const title = this.safeSelect('title');
             if (title) title.textContent = seo.title;
+
+            // OG Title도 같이 업데이트
+            const ogTitle = this.safeSelect('meta[property="og:title"]');
+            if (ogTitle) ogTitle.setAttribute('content', seo.title);
         }
 
         if (seo.description) {
             const metaDescription = this.safeSelect('meta[name="description"]');
             if (metaDescription) metaDescription.setAttribute('content', seo.description);
+
+            // OG Description도 같이 업데이트
+            const ogDescription = this.safeSelect('meta[property="og:description"]');
+            if (ogDescription) ogDescription.setAttribute('content', seo.description);
         }
 
         if (seo.keywords) {
             const metaKeywords = this.safeSelect('meta[name="keywords"]');
             if (metaKeywords) metaKeywords.setAttribute('content', seo.keywords);
         }
+
+        // OG URL은 현재 페이지 URL로 설정
+        const ogUrl = this.safeSelect('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute('content', window.location.href);
+    }
+
+    /**
+     * 기본 OG 이미지 가져오기 (로고 이미지 사용)
+     */
+    getDefaultOGImage() {
+        if (!this.isDataLoaded) return null;
+
+        const logoImages = this.safeGet(this.data, 'homepage.images.0.logo');
+        if (logoImages && logoImages.length > 0 && logoImages[0]?.url) {
+            return logoImages[0].url;
+        }
+
+        return null;
     }
 
     // ============================================================================
@@ -390,12 +380,13 @@ class BaseDataMapper {
 
     /**
      * 페이지별 초기화 (서브클래스에서 오버라이드)
-     * 데이터는 생성자에서 전달받으므로 별도 로딩 불필요
      */
     async initialize() {
         try {
+            await this.loadData();
             await this.mapPage();
         } catch (error) {
+            console.error('Failed to initialize mapper:', error);
         }
     }
 

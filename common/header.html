@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header Component</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="../styles/header.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="styles/header.css">
   <!-- Open Graph Meta Tags for Social Media -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="고성 1박2일펜션" />
@@ -22,30 +19,96 @@
   
 </head>
 <body>
-    <header id="main-header" class="fixed top-0 left-0 right-0 w-full bg-transparent border-0 z-40 transition-all duration-300">
-        <div class="flex items-center justify-between p-6 md:p-8">
-            <!-- Brand Logo -->
-            <div class="brand-logo">
-                <button id="pension-logo" class="hover:opacity-80 transition-opacity flex items-center gap-3">
-                    <div>
-                        <div class="logo-text hero-logo-text text-white text-xl md:text-2xl lg:text-3xl ko-title" data-property-name></div>
-                    </div>
-                </button>
+    <!-- Transparent Header -->
+    <header class="transparent-header">
+        <div class="header-container">
+            <!-- Left: Logo -->
+            <div class="header-logo" onclick="navigateTo('home')">
+                <img class="logo-img" data-logo src="" alt="" />
             </div>
 
-            <!-- Menu Button -->
-            <button id="hamburger-menu" 
-                    class="p-2 hover:bg-white/20 rounded-lg transition-colors duration-200"
-                    aria-label="메뉴">
-                <div class="w-6 h-6 flex flex-col justify-center items-center space-y-1">
-                    <div id="line1" class="w-5 h-0.5 bg-white drop-shadow-lg transition-all duration-300"></div>
-                    <div id="line2" class="w-5 h-0.5 bg-white drop-shadow-lg transition-all duration-300"></div>
-                    <div id="line3" class="w-5 h-0.5 bg-white drop-shadow-lg transition-all duration-300"></div>
-                </div>
-            </button>
+            <!-- Center: Empty space -->
+            <div></div>
+
+            <!-- Right: Reservation Button and Menu Button -->
+            <div class="header-right">
+                <button class="header-booking-btn" data-property-realtime-booking-id aria-label="예약하기">
+                    <span>BOOK NOW</span>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="메뉴">
+                    <span class="menu-text">MENU</span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <div id="fullscreen-menu-container"></div>
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menu-overlay">
+        <div class="menu-overlay-content">
+
+            <!-- Split Layout Container -->
+            <div class="menu-split-container">
+                <!-- Left: Menu Items in 2x2 Grid -->
+                <div class="menu-left-section">
+                    <div class="menu-grid-2x2">
+                        <!-- Prologue Section -->
+                        <div class="menu-item" data-menu-type="prologue">
+                            <h3 class="menu-item-title">프롤로그</h3>
+                            <ul class="menu-item-list">
+                                <li><a onclick="navigateTo('main')">프롤로그</a></li>
+                                <li><a onclick="navigateTo('directions')">오시는길</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Rooms Section -->
+                        <div class="menu-item" data-menu-type="rooms">
+                            <h3 class="menu-item-title">공간소개</h3>
+                            <ul class="menu-item-list" data-rooms-list>
+                                <li><a onclick="navigateTo('room')">객실명</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Facilities Section -->
+                        <div class="menu-item" data-menu-type="facilities">
+                            <h3 class="menu-item-title">시설소개</h3>
+                            <ul class="menu-item-list" data-facilities-list>
+                                <li><a onclick="navigateTo('facility')">시설명</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Reservation Section -->
+                        <div class="menu-item" data-menu-type="reservation">
+                            <h3 class="menu-item-title">예약안내</h3>
+                            <ul class="menu-item-list">
+                                <li><a onclick="navigateTo('reservation')">예약안내</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Dynamic Image : property.images[0].exterior[] 매핑 -->
+                <div class="menu-right-section">
+                    <div class="menu-image-container">
+                        <img id="menu-dynamic-image" src="" alt="" data-menu-banner-img />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Overlay Background -->
+    <div class="menu-overlay-bg" id="menu-overlay-bg"></div>
+
+    <!-- Preview Handler for Admin Integration -->
+    <script src="js/preview-handler.js"></script>
+
+    <!-- Header Footer Mapper -->
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+
+    <!-- Header and Footer Loader -->
+    <script src="js/header-footer-loader.js"></script>
+
+    <!-- Header script -->
+    <script src="js/common/header.js"></script>
 </body>
 </html>

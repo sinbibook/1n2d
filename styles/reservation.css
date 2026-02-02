@@ -1,182 +1,588 @@
 /* Reservation Page Styles */
 
-/* Section Container Styles */
-.reservation-sections-container {
-    max-width: 1280px;
+/* Main Section */
+.reservation-main-section {
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.reservation-main-section .about-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 60px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.reservation-main-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0rem 2rem;
 }
 
-/* Two Column Grid */
-.reservation-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    align-items: stretch;
+/* 이미지 섹션 - facility 스타일 기반 */
+.reservation-full-image {
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    margin: 0 auto 40px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
 }
 
-/* Section Box Styles */
-.con3 {
-    background: rgba(255, 248, 240, 0.5);
-    border: 2px solid var(--brand-color-primary);
-    border-radius: 1rem;
-    padding: 2rem;
-    transition: all 0.3s ease;
+.reservation-full-image.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reservation-full-image img {
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* 탭 메뉴 */
+.reservation-tabs {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
+    gap: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+    transition-delay: 0.2s;
 }
 
-.con3:hover {
-    box-shadow: 0 8px 20px rgba(96, 83, 71, 0.1);
-    transform: translateY(-2px);
+.reservation-tabs.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* Section Header */
-.sectionHeader {
-    margin-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(96, 83, 71, 0.3);
-    padding-bottom: 1rem;
+.tab-button {
+    background: transparent;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    border-bottom: 3px solid transparent;
 }
 
-.sectionTitle {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--brand-color-primary);
-    font-family: 'Noto Sans KR', sans-serif;
+.tab-button:hover {
+    color: var(--color-secondary);
 }
 
-/* Content Styles */
-.usageContent,
-.checkinCheckoutContent,
-.refundContent {
-    font-family: 'Noto Sans KR', sans-serif;
+.tab-button.active {
+    color: var(--color-secondary);
+    font-weight: 700;
+    border-bottom-color: var(--color-secondary);
 }
 
-.usageRules,
-.checkinCheckoutRules,
-.refundRules {
-    color: #4a4a4a;
+/* 탭 컨텐츠 */
+.reservation-tab-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+    transition-delay: 0.4s;
+}
+
+.reservation-tab-content.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tab-panel {
+    display: none;
+    background: #fafafa;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: left;
+    margin-top: 0;
     line-height: 1.8;
 }
 
-.usageRules p,
-.checkinCheckoutRules p,
-.refundRules p {
-    margin: 0.5rem 0;
-    font-size: 0.95rem;
+.tab-panel.active {
+    display: block;
 }
 
-/* Cancellation Fee Section - No box, just table */
-.cancellation-fee-section {
-    height: 100%;
+.reservation-description.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 기존 스타일 유지 */
+.reservation-text-content {
+    font-family: var(--font-ko-sub);
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+.reservation-text-content p {
+    margin-bottom: 15px;
+}
+
+.reservation-text-content p:last-child {
+    margin-bottom: 0;
+}
+
+.checkin-checkout-times {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.detail-item {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding: 0;
-}
-
-.textCenter {
+    gap: 8px;
     text-align: center;
 }
 
-.tableWrapper {
+.detail-label {
+    font-size: 0.9rem;
+    color: #999;
+    font-weight: 500;
+}
+
+.detail-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+
+/* 환불 관련 스타일 */
+.refund-section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+}
+
+.refund-table-section {
+    margin-bottom: 30px;
+}
+
+.refund-table-wrapper {
     overflow-x: auto;
-    height: 100%;
 }
 
-.refundTable {
+.refund-table {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    border-radius: 1rem;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.refund-table th,
+.refund-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.refund-table th {
+    background: rgba(49, 66, 61, 0.1);
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .reservation-main-section {
+        padding: 60px 20px;
+    }
+
+    .reservation-full-image {
+        height: 350px;
+        margin-bottom: 40px;
+    }
+
+    .reservation-tabs {
+        gap: 15px;
+        margin-bottom: 0;
+        padding: 0 20px;
+        overflow-x: auto;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .reservation-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tab-button {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+        min-width: fit-content;
+        border-bottom-width: 2px;
+    }
+
+    .tab-panel {
+        padding: 40px 20px;
+    }
+
+    .checkin-checkout-times {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .refund-table-wrapper {
+        margin: 0 -20px;
+        padding: 0 20px;
+    }
+}
+
+/* Removed reservation-section-label styles */
+
+/* Book Now Button - 플로팅 버튼 스타일 */
+.reservation-book-now {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 100px;
+}
+
+.reservation-book-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 32px;
+    background: transparent;
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
     overflow: hidden;
-    border: 2px solid var(--brand-color-primary);
-    background: rgba(255, 248, 240, 0.5);
+    z-index: 1;
+    border-radius: 0;
 }
 
-.refundTable thead {
-    background-color: var(--brand-color-primary);
-    color: white;
-    border-bottom: 2px solid var(--brand-color-primary);
+.reservation-book-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--color-secondary);
+    transition: width 0.3s ease;
+    z-index: -1;
 }
 
-.refundTable th {
-    padding: 1rem;
+.reservation-book-btn:hover::before {
+    width: 100%;
+}
+
+.reservation-book-btn:hover {
+    color: #fff;
+    border-color: var(--color-secondary);
+    box-shadow: 0 10px 30px rgba(49, 66, 61, 0.2);
+}
+
+/* Content Layout */
+.reservation-content-layout {
+    display: flex;
+    gap: 60px;
+    margin: 100px 0;
+    position: relative;
+    min-height: 100vh;
+}
+
+.reservation-info-content {
+    width: 70%;
+    padding-right: 0;
+}
+
+/* 우측 고정 이미지 영역 */
+.reservation-image-section {
+    width: 30%;
+    height: 600px;
+    position: sticky;
+    top: 100px;
+    overflow: hidden;
+}
+
+.reservation-image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    transition: transform 0.6s ease-out;
+    will-change: transform;
+}
+
+.reservation-details-section {
+    display: grid;
+    gap: 0;
+}
+
+/* Reservation Box - 투명한 흰색 배경 박스 스타일 */
+.reservation-box {
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari 지원 */
+    border-radius: 0;
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* backdrop-filter를 지원하지 않는 브라우저를 위한 fallback */
+@supports not (backdrop-filter: blur(10px)) {
+    .reservation-box {
+        background: rgba(255, 255, 255, 0.85); /* 더 불투명한 배경 */
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+}
+
+.reservation-box:last-child {
+    border-bottom: none;
+}
+
+.reservation-box.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Box Title */
+.reservation-box-title {
+    font-size: 1.6rem;
     font-weight: 600;
-    text-align: center;
-    font-family: 'Noto Sans KR', sans-serif;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    letter-spacing: -0.02em;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.refundTable tbody tr {
-    border-bottom: 1px solid rgba(96, 83, 71, 0.2);
-    transition: background-color 0.3s ease;
+/* Box Content */
+.reservation-text-content {
+    font-family: var(--font-ko-sub);
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    white-space: pre-line;
 }
 
-.refundTable tbody tr:hover {
-    background-color: rgba(96, 83, 71, 0.05);
+/* Check In/Out Times */
+.checkin-checkout-times {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.refundTable td {
-    padding: 1rem;
-    text-align: center;
-    font-family: 'Noto Sans KR', sans-serif;
-    color: #4a4a4a;
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.noRefund {
-    color: #dc2626;
+.detail-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.detail-value {
+    font-size: 1.4rem;
     font-weight: 600;
+    color: var(--primary-green);
+}
+
+/* Refund Box Specific Styles */
+.refund-box {
+    padding-top: 80px;
+}
+
+.refund-content {
+    display: grid;
+    gap: 50px;
+}
+
+/* Refund Table Section */
+.refund-table-section {
+    width: 100%;
+}
+
+.refund-section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 20px 0
+}
+
+.refund-table-wrapper {
+    overflow: hidden;
+}
+
+.refund-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.refund-table thead {
+    background: rgba(29, 58, 95, 0.1);
+    color: #333;
+}
+
+.refund-table th {
+    padding: 20px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    color: var(--color-secondary);
+}
+
+.refund-table tbody td {
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.refund-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+.refund-table .no-refund {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+/* Refund Text Section */
+.refund-text-section {
+    padding: 30px 0;
+}
+
+.refund-notes {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    white-space: pre-line;
+}
+
+/* Full Banner Section - common.css에서 처리 */
+/* Marquee Section - common.css에서 처리 */
+
+/* Animation Classes */
+.animate-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.animate-element.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .reservation-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    .reservation-about-section {
+        padding: 60px 30px;
     }
 
-    .con3 {
-        padding: 1.5rem;
+    .reservation-intro-content {
+        padding-top: 50px;
     }
 
-    .sectionTitle {
-        font-size: 1.25rem;
+    .reservation-box {
+        padding: 30px;
     }
 
-    .refundTable {
-        font-size: 0.9rem;
+    .reservation-info-content {
+        width: 100%;
+        padding-right: 0;
     }
 
-    .refundTable th,
-    .refundTable td {
-        padding: 0.75rem 0.5rem;
+    .reservation-image-section {
+        display: none;
     }
 
-    .reservation-sections-container {
-        padding: 2rem 1rem;
+    .reservation-content-layout {
+        flex-direction: column;
+        margin: 60px 0;
     }
+
+    .checkin-checkout-times {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .detail-value {
+        font-size: 1.2rem;
+    }
+
+    .reservation-box-title {
+        font-size: 1.5rem;
+    }
+
+    .refund-table th,
+    .refund-table td {
+        padding: 12px 10px;
+        font-size: 0.85rem;
+    }
+
+    .reservation-text-content {
+        font-size: 0.85rem;
+        line-height: 1.7;
+    }
+
+    .reservation-book-now {
+        margin: 0 0 50px 0;
+    }
+
 }
 
-/* Override floating shape for reservation page */
-.main-image-wrapper::before {
-    display: none !important;
-}
-
-/* Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+@media (max-width: 480px) {
+    .reservation-box {
+        padding: 25px;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-.con3,
-.cancellation-fee-section {
-    animation: fadeIn 0.6s ease-out;
+    .reservation-label {
+        font-size: 1.8rem;
+    }
+
+    .reservation-book-btn {
+        padding: 12px 30px;
+        font-size: 0.85rem;
+    }
+
 }
