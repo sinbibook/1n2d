@@ -298,7 +298,7 @@ body.dark-section-active .ybs-booking-btn {
     justify-content: center;
     padding: 120px 40px 40px 40px; /* 상단 패딩 더 추가 (헤더 높이 고려) */
     height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden; /* 전체 섹션 스크롤 완전 제거 */
     -webkit-overflow-scrolling: touch; /* iOS 부드러운 스크롤 지원 */
 }
 
@@ -329,7 +329,8 @@ body.dark-section-active .ybs-booking-btn {
     cursor: pointer;
     transition: all 0.3s ease;
     height: 45vh; /* 높이 45vh로 설정 */
-    overflow-y: auto; /* 세로 스크롤 활성화 */
+    display: flex;
+    flex-direction: column;
 }
 
 /* 아코디언 닫힌 상태 */
@@ -347,6 +348,7 @@ body.dark-section-active .ybs-booking-btn {
     letter-spacing: 0.05em;
     position: relative;
     padding-bottom: 8px;
+    flex-shrink: 0; /* 타이틀 고정 */
 }
 
 .menu-item-title::after {
@@ -381,11 +383,12 @@ body.dark-section-active .ybs-booking-btn {
     list-style: none;
     padding: 0;
     margin: 0;
-    max-height: 500px; /* 아코디언 열렸을 때 최대 높이 */
-    overflow-y: auto; /* 세로 스크롤 활성화 */
-    overflow-x: hidden; /* 가로 스크롤은 숨김 */
     transition: max-height 0.3s ease, opacity 0.3s ease;
     opacity: 1;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 10px; /* 스크롤바 영역 확보 */
 }
 
 .menu-item-list li {
@@ -437,22 +440,22 @@ body.dark-section-active .ybs-booking-btn {
     transform: scale(1.05);
 }
 
-/* Custom scrollbar for menu-left-section */
-.menu-left-section::-webkit-scrollbar {
-    width: 6px;
+/* Custom scrollbar for menu-item-list */
+.menu-item-list::-webkit-scrollbar {
+    width: 4px;
 }
 
-.menu-left-section::-webkit-scrollbar-track {
+.menu-item-list::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.05);
-    border-radius: 3px;
+    border-radius: 2px;
 }
 
-.menu-left-section::-webkit-scrollbar-thumb {
+.menu-item-list::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
+    border-radius: 2px;
 }
 
-.menu-left-section::-webkit-scrollbar-thumb:hover {
+.menu-item-list::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.3);
 }
 
@@ -578,11 +581,15 @@ body.dark-section-active .ybs-booking-btn {
     }
 
     .menu-item {
-        max-height: 100%;
+        height: auto; /* 자연스러운 높이로 변경 */
+        max-height: none; /* 최대 높이 제한 제거 */
     }
 
     .menu-item-list {
-        max-height: 100%;
+        max-height: none; /* 최대 높이 제한 제거 */
+        overflow-y: visible; /* 개별 스크롤 제거 */
+        overflow-x: visible;
+        flex: none; /* flex 속성 제거하여 자연스러운 높이 */
     }
 
     .menu-item-title {
