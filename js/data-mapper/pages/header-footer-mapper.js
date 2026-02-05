@@ -63,7 +63,6 @@ class HeaderFooterMapper extends BaseDataMapper {
 
             if (logoUrl) {
                 logoImage.onerror = () => {
-                    console.warn('⚠️ 헤더 로고 이미지 로드 실패');
                     // 로드 실패 시 placeholder 적용
                     if (typeof ImageHelpers !== 'undefined') {
                         ImageHelpers.applyPlaceholder(logoImage);
@@ -110,15 +109,15 @@ class HeaderFooterMapper extends BaseDataMapper {
         // realtimeBookingId 찾기 (전체 URL)
         const realtimeBookingId = this.data.property.realtimeBookingId;
 
-        if (realtimeBookingId && realtimeBookingId.startsWith('http')) {
+        if (realtimeBookingId) {
             const allBookingButtons = document.querySelectorAll('[data-booking-engine], [data-property-realtime-booking-id]');
-            const openBookingUrl = () => window.open(realtimeBookingId, '_blank');
-
             allBookingButtons.forEach(button => {
                 if (button.matches('[data-booking-engine]')) {
                     button.setAttribute('data-realtime-booking-id', realtimeBookingId);
                 }
-                button.onclick = openBookingUrl;
+                button.onclick = () => {
+                    window.open(realtimeBookingId, '_blank');
+                };
             });
         }
 
@@ -390,7 +389,6 @@ class HeaderFooterMapper extends BaseDataMapper {
 
             if (logoUrl) {
                 footerLogoImage.onerror = () => {
-                    console.warn('⚠️ 푸터 로고 이미지 로드 실패');
                     // 로드 실패 시 placeholder 적용
                     if (typeof ImageHelpers !== 'undefined') {
                         ImageHelpers.applyPlaceholder(footerLogoImage);
@@ -538,7 +536,6 @@ class HeaderFooterMapper extends BaseDataMapper {
      */
     async mapHeader() {
         if (!this.isDataLoaded) {
-            console.error('Cannot map header: data not loaded');
             return;
         }
 
@@ -609,7 +606,6 @@ class HeaderFooterMapper extends BaseDataMapper {
      */
     async mapFooter() {
         if (!this.isDataLoaded) {
-            console.error('Cannot map footer: data not loaded');
             return;
         }
 
