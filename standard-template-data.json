@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.42.0",
-    "generatedAt": "2026-02-05T00:57:47.381Z",
+    "version": "1.43.0",
+    "generatedAt": "2026-02-05T00:59:08.977Z",
     "templateType": "full_banner_accordion",
     "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
     "homepageId": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
@@ -1035,8 +1035,8 @@
       }
     ],
     "seo": {
-      "title": "",
-      "description": "",
+      "title": "고성 1박2일 펜션",
+      "description": "봉포해변이 눈 앞에 펼쳐집니다.",
       "keywords": ""
     },
     "socialLinks": {},
