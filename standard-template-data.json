@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.44.0",
-    "generatedAt": "2026-02-05T01:08:29.109Z",
+    "version": "1.45.0",
+    "generatedAt": "2026-02-05T01:12:16.842Z",
     "templateType": "full_banner_accordion",
     "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
     "homepageId": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
@@ -1844,7 +1844,8 @@
             "isSelected": true,
             "category": "property_exterior"
           }
-        ]
+        ],
+        "name": "고성 1박2일펜션"
       },
       "roomtypes": [
         {
@@ -3620,6 +3621,7 @@
           ]
         }
       ]
-    }
+    },
+    "id": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
   }
 }
