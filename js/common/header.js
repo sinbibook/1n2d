@@ -193,8 +193,7 @@
         if (ybsBookingBtn) {
             ybsBookingBtn.addEventListener('click', function(e) {
                 e.preventDefault();
-                // Add YBS booking functionality here
-                console.log('YBS Booking clicked');
+                // YBS booking functionality handled by header-footer-mapper
             });
         }
 
@@ -203,8 +202,7 @@
         mobileBookingBtns.forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
-                // Add mobile booking functionality here
-                console.log('Mobile booking clicked:', this.textContent);
+                // Mobile booking functionality handled by header-footer-mapper
             });
         });
     }

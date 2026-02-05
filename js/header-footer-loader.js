@@ -53,6 +53,7 @@
             const transparentHeader = temp.querySelector('.transparent-header');
             const menuOverlay = temp.querySelector('.menu-overlay');
             const menuOverlayBg = temp.querySelector('.menu-overlay-bg');
+            const mobileFixedButtons = temp.querySelector('.mobile-fixed-buttons');
 
             // Insert overlay background first
             if (menuOverlayBg) {
@@ -67,6 +68,11 @@
             // Insert transparent header
             if (transparentHeader) {
                 document.body.insertBefore(transparentHeader, document.body.firstChild);
+            }
+
+            // Insert mobile fixed buttons
+            if (mobileFixedButtons) {
+                document.body.appendChild(mobileFixedButtons);
             }
 
             // Load header JavaScript

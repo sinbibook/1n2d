@@ -67,6 +67,45 @@
 
 
 /* ================================
+   Header YBS Button
+   ================================ */
+.header-ybs-btn {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    border-radius: 0;
+    cursor: pointer;
+    display: none; /* 기본적으로 숨김, YBS ID가 있을 때만 표시 */
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10001;
+}
+
+.header-ybs-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.header-ybs-btn span {
+    color: #fff;
+    font-family: var(--font-en-main), serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.transparent-header.scrolled .header-ybs-btn {
+    background: var(--color-secondary);
+    border-color: var(--color-primary);
+}
+
+.transparent-header.scrolled .header-ybs-btn span {
+    color: var(--color-primary);
+}
+
+
+/* ================================
    Menu Button (Right)
    ================================ */
 .menu-toggle {
@@ -640,4 +679,141 @@ body.dark-section-active .ybs-booking-btn {
     .menu-content-bottom {
         display: none;
     }
+}
+
+
+/* ================================
+   Mobile Fixed Buttons (TOP 버튼 위에 배치)
+   ================================ */
+.mobile-fixed-buttons {
+    position: fixed;
+    bottom: 75px; /* TOP 버튼(20px + 45px + 10px) 위에 배치 */
+    right: 20px;
+    display: none; /* 기본적으로 숨김 */
+    flex-direction: column; /* 세로로 쌓기 */
+    gap: 10px;
+    z-index: 998; /* TOP 버튼(999)보다 낮게 */
+}
+
+@media (max-width: 768px) {
+    .mobile-fixed-buttons {
+        display: flex;
+    }
+
+    /* 모바일에서 헤더의 YBS 버튼만 숨김, BOOK 버튼은 메뉴 옆에 표시 */
+    .header-ybs-btn {
+        display: none !important;
+    }
+
+    .header-booking-btn {
+        display: flex !important;
+    }
+}
+
+/* Mobile Fixed Booking Button (책 아이콘) */
+.mobile-fixed-booking-btn {
+    width: 45px;
+    height: 45px;
+    display: flex; /* 임시로 항상 표시 - 테스트용 */
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+    z-index: 998;
+    overflow: hidden;
+    position: relative;
+}
+
+.mobile-fixed-booking-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.mobile-fixed-booking-btn:hover::before {
+    width: 100%;
+}
+
+.mobile-fixed-booking-btn:hover {
+    color: #000;
+    border-color: #fff;
+}
+
+.mobile-fixed-booking-btn svg {
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobile Fixed YBS Button */
+.mobile-fixed-ybs-btn {
+    width: 45px;
+    height: 45px;
+    display: flex; /* 임시로 항상 표시 - 테스트용 */
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    color: #fff;
+    font-family: var(--font-en-main), serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+    z-index: 998;
+    overflow: hidden;
+    position: relative;
+}
+
+.mobile-fixed-ybs-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.mobile-fixed-ybs-btn:hover::before {
+    width: 100%;
+}
+
+.mobile-fixed-ybs-btn:hover {
+    color: #000;
+    border-color: #fff;
+}
+
+/* When page is scrolled */
+body.scrolled .mobile-fixed-booking-btn,
+body.scrolled .mobile-fixed-ybs-btn {
+    background: var(--color-secondary);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+body.scrolled .mobile-fixed-booking-btn::before,
+body.scrolled .mobile-fixed-ybs-btn::before {
+    background: var(--color-primary);
+}
+
+body.scrolled .mobile-fixed-booking-btn:hover,
+body.scrolled .mobile-fixed-ybs-btn:hover {
+    color: var(--color-secondary);
+    border-color: var(--color-primary);
 }

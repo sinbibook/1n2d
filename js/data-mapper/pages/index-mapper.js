@@ -490,8 +490,6 @@ class IndexMapper extends BaseDataMapper {
         const galleryItems = Array.from(galleryContainer.querySelectorAll('.gallery-item'));
         if (galleryItems.length === 0) return;
 
-        console.log('Index Gallery Items:', galleryItems.length); // 디버깅
-
         // 첫 번째 아이템 항상 활성화 (facility와 동일)
         if (galleryItems[0]) {
             galleryItems[0].classList.add('gallery-item-active');

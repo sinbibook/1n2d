@@ -30,11 +30,19 @@
             <!-- Center: Empty space -->
             <div></div>
 
-            <!-- Right: Reservation Button and Menu Button -->
+            <!-- Right: YBS Button, Reservation Button and Menu Button -->
             <div class="header-right">
+                <!-- YBS Button -->
+                <button class="header-ybs-btn" data-ybs-booking aria-label="YBS 예약">
+                    <span>YBS</span>
+                </button>
+
+                <!-- Reservation Button -->
                 <button class="header-booking-btn" data-property-realtime-booking-id aria-label="예약하기">
                     <span>BOOK NOW</span>
                 </button>
+
+                <!-- Menu Button -->
                 <button class="menu-toggle" id="menu-toggle" aria-label="메뉴">
                     <span class="menu-text">MENU</span>
                 </button>
@@ -98,6 +106,14 @@
 
     <!-- Menu Overlay Background -->
     <div class="menu-overlay-bg" id="menu-overlay-bg"></div>
+
+    <!-- Mobile Fixed Buttons Container (위치: TOP 버튼 위) -->
+    <div class="mobile-fixed-buttons">
+        <!-- Mobile YBS Button (TOP 위) -->
+        <button class="mobile-fixed-ybs-btn" data-ybs-booking aria-label="YBS 예약">
+            YBS
+        </button>
+    </div>
 
     <!-- Preview Handler for Admin Integration -->
     <script src="js/preview-handler.js"></script>
