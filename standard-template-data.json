@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.63.0",
-    "generatedAt": "2026-02-09T03:36:45.062Z",
+    "version": "1.64.0",
+    "generatedAt": "2026-02-09T09:20:17.945Z",
     "templateType": "full_banner_accordion",
     "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
     "homepageId": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
@@ -1548,7 +1548,108 @@
             ]
           }
         ],
-        "facility": [],
+        "facility": [
+          {
+            "id": "e3273f22-68e0-44bf-937d-84af0db386e7",
+            "sections": [
+              {
+                "hero": {
+                  "title": " ",
+                  "images": []
+                },
+                "about": {
+                  "title": "",
+                  "images": []
+                },
+                "experience": {
+                  "features": [],
+                  "additionalInfos": [],
+                  "benefits": []
+                }
+              }
+            ]
+          },
+          {
+            "id": "7af14405-32d5-4f57-9df5-7eab0e32b02e",
+            "sections": [
+              {
+                "hero": {
+                  "title": " ",
+                  "images": []
+                },
+                "about": {
+                  "title": "",
+                  "images": []
+                },
+                "experience": {
+                  "features": [],
+                  "additionalInfos": [],
+                  "benefits": []
+                }
+              }
+            ]
+          },
+          {
+            "id": "233891e9-1775-4c67-8947-23371f287f5c",
+            "sections": [
+              {
+                "hero": {
+                  "title": " ",
+                  "images": []
+                },
+                "about": {
+                  "title": "",
+                  "images": []
+                },
+                "experience": {
+                  "features": [],
+                  "additionalInfos": [],
+                  "benefits": []
+                }
+              }
+            ]
+          },
+          {
+            "id": "540f0231-2c9e-4eab-89eb-871c7902af87",
+            "sections": [
+              {
+                "hero": {
+                  "title": " ",
+                  "images": []
+                },
+                "about": {
+                  "title": "",
+                  "images": []
+                },
+                "experience": {
+                  "features": [],
+                  "additionalInfos": [],
+                  "benefits": []
+                }
+              }
+            ]
+          },
+          {
+            "id": "c48bc77a-b965-407a-bdb7-e94be6a9c675",
+            "sections": [
+              {
+                "hero": {
+                  "title": " ",
+                  "images": []
+                },
+                "about": {
+                  "title": "",
+                  "images": []
+                },
+                "experience": {
+                  "features": [],
+                  "additionalInfos": [],
+                  "benefits": []
+                }
+              }
+            ]
+          }
+        ],
         "reservation": {
           "sections": [
             {
@@ -2155,7 +2256,7 @@
               "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_thumbnail/1770365386286-hm8w4f753z9.jpg",
               "sortOrder": 2,
               "description": "",
-              "isSelected": false,
+              "isSelected": true,
               "blockId": "c76aae2f-ca9b-4c9c-a059-5f1ec6adc54a",
               "category": "roomtype_thumbnail"
             },
@@ -3217,7 +3318,7 @@
               "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_thumbnail/1770602823620-0kbnzuzqaf3h.jpg",
               "sortOrder": 12,
               "description": "",
-              "isSelected": true,
+              "isSelected": false,
               "blockId": "625a58bc-a99b-4f1f-a6d7-507afb3c251a",
               "category": "roomtype_thumbnail"
             },
