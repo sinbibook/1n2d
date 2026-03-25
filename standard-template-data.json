@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.86.0",
-    "generatedAt": "2026-03-03T06:08:21.872Z",
+    "version": "1.87.0",
+    "generatedAt": "2026-03-25T08:02:57.464Z",
     "templateType": "full_banner_accordion",
     "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
     "homepageId": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
@@ -383,8 +383,80 @@
     },
     "images": [
       {
-        "thumbnail": [],
-        "exterior": [],
+        "thumbnail": [
+          {
+            "id": "b50488c4-337d-4605-8596-5dd760bd61c8",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/thumbnail/1773121840481-30c4aw4md44.jpg",
+            "sortOrder": 0,
+            "description": "",
+            "isSelected": true
+          }
+        ],
+        "exterior": [
+          {
+            "id": "72afd52c-241b-4b62-a442-f912f41bc660",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840481-7gy2duu9ep.jpg",
+            "sortOrder": 1,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "216e1be0-91f9-499b-971e-efb7f2046dd5",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-v83tsz7gtre.jpg",
+            "sortOrder": 5,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "e6566160-fb49-424d-a2f0-2300a1d7cb4d",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-vrnvpi702k.jpg",
+            "sortOrder": 6,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "f01d2ac9-05e2-4392-95d6-afd4dd32c2d5",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-dcozzr5jplp.jpg",
+            "sortOrder": 3,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "6ee84c8e-2f7a-4722-bb08-804d92fce962",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840483-o0nqg414uw9.jpg",
+            "sortOrder": 8,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "f3d733fb-964a-4581-a5ae-4e7f460570ab",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-jmagjnfueg.jpg",
+            "sortOrder": 7,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "e0756556-f522-4c8b-8d1f-02ef5ace2be1",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-u0pggcri26.jpg",
+            "sortOrder": 4,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "2ecb6bfc-ccbf-45b4-a00e-c770cc87c5c9",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-b1zjx081hg7.jpg",
+            "sortOrder": 2,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "23d0da78-ebcc-4773-ae5c-84c57afafbb7",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-oiwpvtnf18s.jpg",
+            "sortOrder": 1,
+            "description": "",
+            "isSelected": true
+          }
+        ],
         "surrounding": [],
         "commonArea": []
       }
@@ -399,7 +471,7 @@
       "id": "ad91d762-0e23-4d20-95b4-2edb8931605f",
       "name": "바다A201",
       "description": "",
-      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
+      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "바다A201(애견O,취사X)",
       "size": 39,
@@ -447,7 +519,7 @@
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
-      "group": "바다A202(애견O,취사X)",
+      "group": "바다A202(애견O)",
       "size": 39,
       "baseOccupancy": 2,
       "maxOccupancy": 5,
@@ -491,9 +563,9 @@
       "id": "c76aae2f-ca9b-4c9c-a059-5f1ec6adc54a",
       "name": "바다A203",
       "description": "",
-      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 객실 내 취사불가, 공용취사장 이용\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
+      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 취사 가능\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
-      "group": "바다A203(취사X)",
+      "group": "바다A203",
       "size": 39,
       "baseOccupancy": 2,
       "maxOccupancy": 5,
@@ -537,7 +609,7 @@
       "id": "47a53275-d079-46bd-a72e-d8ef2e34c78e",
       "name": "바다B301",
       "description": "",
-      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 객실 내 취사불가, 공용취사장 이용\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 개별바베큐 가능(자이글 이용)\n자이글 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
+      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 취사 가능\n※ 개별바베큐 가능(자이글 이용)\n자이글 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "바다B301(개별BBQ,취사X)",
       "size": 39,
@@ -583,7 +655,7 @@
       "id": "38906a4c-3d77-4def-b615-347c5c2661f7",
       "name": "바다B302",
       "description": "",
-      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 객실 내 취사불가, 공용취사장 이용\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 개별바베큐 가능(자이글 이용)\n자이글 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
+      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 취사 가능\n※ 개별바베큐 가능(자이글 이용)\n자이글 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "바다B302(개별BBQ,취사X)",
       "size": 39,
@@ -629,7 +701,7 @@
       "id": "cef28d41-923c-413c-972a-be492f9f33ff",
       "name": "바다B303",
       "description": "",
-      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 개별바베큐 가능(자이글 이용)\n자이글 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
+      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 취사 가능\n※ 개별바베큐 가능(자이글 이용)\n자이글 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "바다B303(개별BBQ,애견O,취사X)",
       "size": 39,
@@ -771,7 +843,7 @@
       "id": "265a284e-dc17-41ff-90a6-a10206321117",
       "name": "설악A103",
       "description": "",
-      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
+      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "설악A103(애견O,취사X)",
       "size": 39,
@@ -815,7 +887,7 @@
       "id": "e5bb89ee-174f-4542-be48-7a4cfa080adb",
       "name": "설악A106",
       "description": "",
-      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
+      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "설악A106(애견O,취사X)",
       "size": 39,
