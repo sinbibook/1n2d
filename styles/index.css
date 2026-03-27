@@ -148,7 +148,7 @@ body {
     }
 
     .hero-property-name {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     #fullpage {
@@ -1082,8 +1082,8 @@ body {
    ================================ */
 @media (max-width: 768px) {
     .hero-section {
-        height: 100vh !important;
-        min-height: 100vh !important;
+        height: 60vh !important;
+        min-height: 60vh !important;
         padding: 0 !important;
     }
 }

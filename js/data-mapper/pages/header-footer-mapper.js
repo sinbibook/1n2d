@@ -424,12 +424,6 @@ class HeaderFooterMapper extends BaseDataMapper {
             footerPhone.textContent = `${property.contactPhone}`;
         }
 
-        // 이메일 매핑
-        const emailElement = this.safeSelect('[data-footer-email]');
-        if (emailElement && property.contactEmail) {
-            emailElement.textContent = property.contactEmail;
-        }
-
         // 주소 매핑 (property.address 사용)
         const addressElement = this.safeSelect('[data-footer-address]');
         if (addressElement && property.address) {

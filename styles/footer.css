@@ -203,12 +203,6 @@
     letter-spacing: 0.02em;
 }
 
-.footer-email {
-    font-size: 14px;
-    color: #333;
-    text-align: left;
-}
-
 /* Utility class for hiding elements */
 .is-hidden {
     display: none !important;
@@ -358,11 +352,6 @@
         font-weight: 500;
     }
 
-    .footer-left-section .footer-email {
-        text-align: center;
-        font-size: 13px;
-        color: #333;
-    }
 
     .footer-left-section .footer-business-info {
         order: 3;
