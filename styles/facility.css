@@ -546,6 +546,12 @@
     .gallery-item img {
         height: 100%;
     }
+
+    .facility-gallery-container .gallery-item,
+    .facility-gallery-section .facility-gallery-container .gallery-item {
+        height: 30vh !important;
+        min-height: 30vh !important;
+    }
 }
 
 /* Large Desktop */

@@ -59,10 +59,10 @@
 
 .header-booking-btn span {
     color: #fff;
-    font-family: var(--font-en-main), serif;
+    font-family: var(--font-ko-main), sans-serif;
     font-size: 0.875rem;
     font-weight: 600;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
 }
 
 
@@ -557,12 +557,12 @@ body.dark-section-active .ybs-booking-btn {
     }
 
     .header-booking-btn span::before {
-        content: 'BOOK';
+        content: '예약';
         font-size: 0.75rem;
         color: #fff;
-        font-family: var(--font-en-main), serif;
+        font-family: var(--font-ko-main), sans-serif;
         font-weight: 600;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.05em;
     }
 
     .transparent-header.scrolled .header-booking-btn span::before {

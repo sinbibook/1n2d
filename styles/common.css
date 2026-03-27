@@ -448,6 +448,12 @@ img {
         font-size: 2.5rem;
     }
 
+    /* hero-center-bottom 모바일 높이 조정 */
+    .hero-section.hero-center-bottom {
+        height: 60vh !important;
+        min-height: 60vh !important;
+    }
+
     /* Hero Bottom Info - Mobile adjustments for facility/room pages */
     .hero-center-bottom .hero-bottom-info {
         bottom: 30px;
@@ -1173,7 +1179,8 @@ body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
 
     .facility-gallery-container .gallery-item {
         width: 100% !important;
-        height: 250px !important;
+        height: 30vh !important;
+        min-height: 30vh !important;
         margin-bottom: 15px !important;
         border-radius: 8px !important;
         min-width: auto !important;
@@ -1343,7 +1350,8 @@ body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
 
 @media (max-width: 480px) {
     .facility-gallery-container .gallery-item {
-        height: 220px !important;
+        height: 30vh !important;
+        min-height: 30vh !important;
     }
 
     .facility-gallery-container .gallery-item .gallery-item-description {
