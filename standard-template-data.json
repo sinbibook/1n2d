@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.89.0",
-    "generatedAt": "2026-03-27T05:35:03.468Z",
+    "version": "1.90.0",
+    "generatedAt": "2026-04-14T03:30:15.572Z",
     "templateType": "full_banner_accordion",
     "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
     "homepageId": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
@@ -468,343 +468,36 @@
   },
   "rooms": [
     {
-      "id": "ad91d762-0e23-4d20-95b4-2edb8931605f",
-      "name": "바다A201",
-      "description": "",
-      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
-      "usageGuide": "",
-      "group": "바다A201(애견O,취사X)",
-      "size": 39,
-      "baseOccupancy": 2,
-      "maxOccupancy": 5,
-      "totalRoomCount": {
-        "bedroom": 1,
-        "bathroom": 1,
-        "livingRoom": 0
-      },
-      "bedTypes": [
-        "퀸 베드"
-      ],
-      "amenities": [
-        "무료 WiFi",
-        "스마트 TV",
-        "에어컨",
-        "냉장고",
-        "전자레인지",
-        "헤어드라이어",
-        "샴푸",
-        "린스",
-        "바디워시",
-        "OTT"
-      ],
-      "roomViews": [
-        "오션뷰"
-      ],
-      "roomStructures": [
-        "원룸형"
-      ],
-      "status": "active",
-      "images": [
-        {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
-        }
-      ],
-      "displayOrder": 1
-    },
-    {
-      "id": "c5a53ad0-002e-4136-bed6-32fe7a35a57f",
-      "name": "바다A202",
-      "description": "",
-      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
-      "usageGuide": "",
-      "group": "바다A202(애견O)",
-      "size": 39,
-      "baseOccupancy": 2,
-      "maxOccupancy": 5,
-      "totalRoomCount": {
-        "bedroom": 1,
-        "bathroom": 1,
-        "livingRoom": 0
-      },
-      "bedTypes": [
-        "퀸 베드"
-      ],
-      "amenities": [
-        "무료 WiFi",
-        "스마트 TV",
-        "에어컨",
-        "냉장고",
-        "전자레인지",
-        "헤어드라이어",
-        "샴푸",
-        "린스",
-        "바디워시",
-        "OTT"
-      ],
-      "roomViews": [
-        "오션뷰"
-      ],
-      "roomStructures": [
-        "원룸형"
-      ],
-      "status": "active",
-      "images": [
-        {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
-        }
-      ],
-      "displayOrder": 2
-    },
-    {
-      "id": "c76aae2f-ca9b-4c9c-a059-5f1ec6adc54a",
-      "name": "바다A203",
-      "description": "",
-      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 취사 가능\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
-      "usageGuide": "",
-      "group": "바다A203",
-      "size": 39,
-      "baseOccupancy": 2,
-      "maxOccupancy": 5,
-      "totalRoomCount": {
-        "bedroom": 1,
-        "bathroom": 1,
-        "livingRoom": 0
-      },
-      "bedTypes": [
-        "퀸 베드"
-      ],
-      "amenities": [
-        "무료 WiFi",
-        "스마트 TV",
-        "에어컨",
-        "냉장고",
-        "전자레인지",
-        "헤어드라이어",
-        "샴푸",
-        "린스",
-        "바디워시",
-        "OTT"
-      ],
-      "roomViews": [
-        "오션뷰"
-      ],
-      "roomStructures": [
-        "원룸형"
-      ],
-      "status": "active",
-      "images": [
-        {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
-        }
-      ],
-      "displayOrder": 3
-    },
-    {
-      "id": "47a53275-d079-46bd-a72e-d8ef2e34c78e",
-      "name": "바다B301",
-      "description": "",
-      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 취사 가능\n※ 개별바베큐 가능(자이글 이용)\n자이글 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
-      "usageGuide": "",
-      "group": "바다B301(개별BBQ,취사X)",
-      "size": 39,
-      "baseOccupancy": 2,
-      "maxOccupancy": 4,
-      "totalRoomCount": {
-        "bedroom": 1,
-        "bathroom": 1,
-        "livingRoom": 0
-      },
-      "bedTypes": [
-        "퀸 베드"
-      ],
-      "amenities": [
-        "무료 WiFi",
-        "스마트 TV",
-        "에어컨",
-        "냉장고",
-        "전자레인지",
-        "헤어드라이어",
-        "샴푸",
-        "린스",
-        "바디워시",
-        "OTT"
-      ],
-      "roomViews": [
-        "오션뷰"
-      ],
-      "roomStructures": [
-        "원룸형"
-      ],
-      "status": "active",
-      "images": [
-        {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
-        }
-      ],
-      "displayOrder": 4
-    },
-    {
-      "id": "38906a4c-3d77-4def-b615-347c5c2661f7",
-      "name": "바다B302",
-      "description": "",
-      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 취사 가능\n※ 개별바베큐 가능(자이글 이용)\n자이글 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
-      "usageGuide": "",
-      "group": "바다B302(개별BBQ,취사X)",
-      "size": 39,
-      "baseOccupancy": 2,
-      "maxOccupancy": 4,
-      "totalRoomCount": {
-        "bedroom": 1,
-        "bathroom": 1,
-        "livingRoom": 0
-      },
-      "bedTypes": [
-        "퀸 베드"
-      ],
-      "amenities": [
-        "무료 WiFi",
-        "스마트 TV",
-        "에어컨",
-        "냉장고",
-        "전자레인지",
-        "헤어드라이어",
-        "샴푸",
-        "린스",
-        "바디워시",
-        "OTT"
-      ],
-      "roomViews": [
-        "오션뷰"
-      ],
-      "roomStructures": [
-        "원룸형"
-      ],
-      "status": "active",
-      "images": [
-        {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
-        }
-      ],
-      "displayOrder": 5
-    },
-    {
-      "id": "cef28d41-923c-413c-972a-be492f9f33ff",
-      "name": "바다B303",
-      "description": "",
-      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 취사 가능\n※ 개별바베큐 가능(자이글 이용)\n자이글 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
-      "usageGuide": "",
-      "group": "바다B303(개별BBQ,애견O,취사X)",
-      "size": 39,
-      "baseOccupancy": 2,
-      "maxOccupancy": 4,
-      "totalRoomCount": {
-        "bedroom": 1,
-        "bathroom": 1,
-        "livingRoom": 0
-      },
-      "bedTypes": [
-        "퀸 베드"
-      ],
-      "amenities": [
-        "무료 WiFi",
-        "스마트 TV",
-        "에어컨",
-        "냉장고",
-        "전자레인지",
-        "헤어드라이어",
-        "샴푸",
-        "린스",
-        "바디워시",
-        "OTT"
-      ],
-      "roomViews": [
-        "오션뷰"
-      ],
-      "roomStructures": [
-        "원룸형"
-      ],
-      "status": "active",
-      "images": [
-        {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
-        }
-      ],
-      "displayOrder": 6
-    },
-    {
-      "id": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-      "name": "바다C401",
-      "description": "",
-      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 개별바베큐 가능(석쇠+숯)\n숯불+석쇠 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
-      "usageGuide": "",
-      "group": "바다C401(개별BBQ,취사O)",
-      "size": 33,
-      "baseOccupancy": 2,
-      "maxOccupancy": 4,
-      "totalRoomCount": {
-        "bedroom": 1,
-        "bathroom": 1,
-        "livingRoom": 0
-      },
-      "bedTypes": [
-        "퀸 베드"
-      ],
-      "amenities": [
-        "무료 WiFi",
-        "스마트 TV",
-        "에어컨",
-        "냉장고",
-        "전자레인지",
-        "헤어드라이어",
-        "가스레인지",
-        "전기밥솥",
-        "조리도구",
-        "샴푸",
-        "린스",
-        "바디워시"
-      ],
-      "roomViews": [
-        "오션뷰"
-      ],
-      "roomStructures": [
-        "원룸형"
-      ],
-      "status": "active",
-      "images": [
-        {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
-        }
-      ],
-      "displayOrder": 7
-    },
-    {
       "id": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
+      "propertyName": "고성 1박2일펜션",
       "name": "바다S403",
+      "nameEn": "Bada S403",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 개별바베큐 가능(석쇠+숯)\n숯불+석쇠 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "바다S403(개별BBQ,취사O)",
       "size": 66,
+      "sizePyeong": 20,
       "baseOccupancy": 2,
       "maxOccupancy": 6,
       "totalRoomCount": {
         "bedroom": 1,
         "bathroom": 1,
-        "livingRoom": 0
+        "livingRoom": 0,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "Y",
+        "barbecueState": "Y",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
       },
       "bedTypes": [
         "퀸 베드"
@@ -830,6 +523,7 @@
         "원룸형"
       ],
       "status": "active",
+      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
       "images": [
         {
           "thumbnail": [],
@@ -837,22 +531,521 @@
           "exterior": []
         }
       ],
-      "displayOrder": 8
+      "displayOrder": 0,
+      "createdAt": "2026-01-05T08:09:16.655Z",
+      "updatedAt": "2026-03-31T05:27:57.201Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+    },
+    {
+      "id": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
+      "propertyName": "고성 1박2일펜션",
+      "name": "바다C401",
+      "nameEn": "Bada C401",
+      "description": "",
+      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 개별바베큐 가능(석쇠+숯)\n숯불+석쇠 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
+      "usageGuide": "",
+      "group": "바다C401(개별BBQ,취사O)",
+      "size": 33,
+      "sizePyeong": 10,
+      "baseOccupancy": 2,
+      "maxOccupancy": 4,
+      "totalRoomCount": {
+        "bedroom": 1,
+        "bathroom": 1,
+        "livingRoom": 0,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "Y",
+        "barbecueState": "Y",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "bedTypes": [
+        "퀸 베드"
+      ],
+      "amenities": [
+        "무료 WiFi",
+        "스마트 TV",
+        "에어컨",
+        "냉장고",
+        "전자레인지",
+        "헤어드라이어",
+        "가스레인지",
+        "전기밥솥",
+        "조리도구",
+        "샴푸",
+        "린스",
+        "바디워시"
+      ],
+      "roomViews": [
+        "오션뷰"
+      ],
+      "roomStructures": [
+        "원룸형"
+      ],
+      "status": "active",
+      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "images": [
+        {
+          "thumbnail": [],
+          "interior": [],
+          "exterior": []
+        }
+      ],
+      "displayOrder": 1,
+      "createdAt": "2026-01-05T08:09:16.867Z",
+      "updatedAt": "2026-03-31T05:27:57.201Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+    },
+    {
+      "id": "ad91d762-0e23-4d20-95b4-2edb8931605f",
+      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
+      "propertyName": "고성 1박2일펜션",
+      "name": "바다A201",
+      "nameEn": "Bada A201",
+      "description": "",
+      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
+      "usageGuide": "",
+      "group": "바다A201(애견O,취사X)",
+      "size": 39,
+      "sizePyeong": 11.8,
+      "baseOccupancy": 2,
+      "maxOccupancy": 5,
+      "totalRoomCount": {
+        "bedroom": 1,
+        "bathroom": 1,
+        "livingRoom": 0,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "Y",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "bedTypes": [
+        "퀸 베드"
+      ],
+      "amenities": [
+        "무료 WiFi",
+        "스마트 TV",
+        "에어컨",
+        "냉장고",
+        "전자레인지",
+        "헤어드라이어",
+        "샴푸",
+        "린스",
+        "바디워시",
+        "OTT"
+      ],
+      "roomViews": [
+        "오션뷰"
+      ],
+      "roomStructures": [
+        "원룸형"
+      ],
+      "status": "active",
+      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "images": [
+        {
+          "thumbnail": [],
+          "interior": [],
+          "exterior": []
+        }
+      ],
+      "displayOrder": 2,
+      "createdAt": "2026-01-05T08:09:16.871Z",
+      "updatedAt": "2026-03-31T05:27:57.201Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+    },
+    {
+      "id": "c5a53ad0-002e-4136-bed6-32fe7a35a57f",
+      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
+      "propertyName": "고성 1박2일펜션",
+      "name": "바다A202",
+      "nameEn": "Bada A202",
+      "description": "",
+      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
+      "usageGuide": "",
+      "group": "바다A202(애견O)",
+      "size": 39,
+      "sizePyeong": 11.8,
+      "baseOccupancy": 2,
+      "maxOccupancy": 5,
+      "totalRoomCount": {
+        "bedroom": 1,
+        "bathroom": 1,
+        "livingRoom": 0,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "Y",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "bedTypes": [
+        "퀸 베드"
+      ],
+      "amenities": [
+        "무료 WiFi",
+        "스마트 TV",
+        "에어컨",
+        "냉장고",
+        "전자레인지",
+        "헤어드라이어",
+        "샴푸",
+        "린스",
+        "바디워시",
+        "OTT"
+      ],
+      "roomViews": [
+        "오션뷰"
+      ],
+      "roomStructures": [
+        "원룸형"
+      ],
+      "status": "active",
+      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "images": [
+        {
+          "thumbnail": [],
+          "interior": [],
+          "exterior": []
+        }
+      ],
+      "displayOrder": 3,
+      "createdAt": "2026-01-05T08:09:16.609Z",
+      "updatedAt": "2026-04-14T03:26:49.640Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+    },
+    {
+      "id": "c76aae2f-ca9b-4c9c-a059-5f1ec6adc54a",
+      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
+      "propertyName": "고성 1박2일펜션",
+      "name": "바다A203",
+      "nameEn": "Bada A203",
+      "description": "",
+      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 취사 가능\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
+      "usageGuide": "",
+      "group": "바다A203",
+      "size": 39,
+      "sizePyeong": 11.8,
+      "baseOccupancy": 2,
+      "maxOccupancy": 5,
+      "totalRoomCount": {
+        "bedroom": 1,
+        "bathroom": 1,
+        "livingRoom": 0,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "N",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "bedTypes": [
+        "퀸 베드"
+      ],
+      "amenities": [
+        "무료 WiFi",
+        "스마트 TV",
+        "에어컨",
+        "냉장고",
+        "전자레인지",
+        "헤어드라이어",
+        "샴푸",
+        "린스",
+        "바디워시",
+        "OTT"
+      ],
+      "roomViews": [
+        "오션뷰"
+      ],
+      "roomStructures": [
+        "원룸형"
+      ],
+      "status": "active",
+      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "images": [
+        {
+          "thumbnail": [],
+          "interior": [],
+          "exterior": []
+        }
+      ],
+      "displayOrder": 4,
+      "createdAt": "2026-01-05T08:09:16.842Z",
+      "updatedAt": "2026-03-31T05:27:57.201Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+    },
+    {
+      "id": "47a53275-d079-46bd-a72e-d8ef2e34c78e",
+      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
+      "propertyName": "고성 1박2일펜션",
+      "name": "바다B301",
+      "nameEn": "Bada B301",
+      "description": "",
+      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 취사 가능\n※ 개별바베큐 가능(자이글 이용)\n자이글 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
+      "usageGuide": "",
+      "group": "바다B301(개별BBQ,취사X)",
+      "size": 39,
+      "sizePyeong": 11.8,
+      "baseOccupancy": 2,
+      "maxOccupancy": 4,
+      "totalRoomCount": {
+        "bedroom": 1,
+        "bathroom": 1,
+        "livingRoom": 0,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "N",
+        "barbecueState": "Y",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "bedTypes": [
+        "퀸 베드"
+      ],
+      "amenities": [
+        "무료 WiFi",
+        "스마트 TV",
+        "에어컨",
+        "냉장고",
+        "전자레인지",
+        "헤어드라이어",
+        "샴푸",
+        "린스",
+        "바디워시",
+        "OTT"
+      ],
+      "roomViews": [
+        "오션뷰"
+      ],
+      "roomStructures": [
+        "원룸형"
+      ],
+      "status": "active",
+      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "images": [
+        {
+          "thumbnail": [],
+          "interior": [],
+          "exterior": []
+        }
+      ],
+      "displayOrder": 5,
+      "createdAt": "2026-01-05T08:09:16.919Z",
+      "updatedAt": "2026-03-31T05:27:57.201Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+    },
+    {
+      "id": "38906a4c-3d77-4def-b615-347c5c2661f7",
+      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
+      "propertyName": "고성 1박2일펜션",
+      "name": "바다B302",
+      "nameEn": "Bada B302",
+      "description": "",
+      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 취사 가능\n※ 개별바베큐 가능(자이글 이용)\n자이글 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
+      "usageGuide": "",
+      "group": "바다B302(개별BBQ,취사X)",
+      "size": 39,
+      "sizePyeong": 11.8,
+      "baseOccupancy": 2,
+      "maxOccupancy": 4,
+      "totalRoomCount": {
+        "bedroom": 1,
+        "bathroom": 1,
+        "livingRoom": 0,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "N",
+        "barbecueState": "Y",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "bedTypes": [
+        "퀸 베드"
+      ],
+      "amenities": [
+        "무료 WiFi",
+        "스마트 TV",
+        "에어컨",
+        "냉장고",
+        "전자레인지",
+        "헤어드라이어",
+        "샴푸",
+        "린스",
+        "바디워시",
+        "OTT"
+      ],
+      "roomViews": [
+        "오션뷰"
+      ],
+      "roomStructures": [
+        "원룸형"
+      ],
+      "status": "active",
+      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "images": [
+        {
+          "thumbnail": [],
+          "interior": [],
+          "exterior": []
+        }
+      ],
+      "displayOrder": 6,
+      "createdAt": "2026-01-05T08:09:16.692Z",
+      "updatedAt": "2026-03-31T05:27:57.201Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+    },
+    {
+      "id": "cef28d41-923c-413c-972a-be492f9f33ff",
+      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
+      "propertyName": "고성 1박2일펜션",
+      "name": "바다B303",
+      "nameEn": "Bada B303",
+      "description": "",
+      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 취사 가능\n※ 개별바베큐 가능(자이글 이용)\n자이글 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
+      "usageGuide": "",
+      "group": "바다B303(개별BBQ,애견O,취사X)",
+      "size": 39,
+      "sizePyeong": 11.8,
+      "baseOccupancy": 2,
+      "maxOccupancy": 4,
+      "totalRoomCount": {
+        "bedroom": 1,
+        "bathroom": 1,
+        "livingRoom": 0,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "Y",
+        "barbecueState": "Y",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "bedTypes": [
+        "퀸 베드"
+      ],
+      "amenities": [
+        "무료 WiFi",
+        "스마트 TV",
+        "에어컨",
+        "냉장고",
+        "전자레인지",
+        "헤어드라이어",
+        "샴푸",
+        "린스",
+        "바디워시",
+        "OTT"
+      ],
+      "roomViews": [
+        "오션뷰"
+      ],
+      "roomStructures": [
+        "원룸형"
+      ],
+      "status": "active",
+      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "images": [
+        {
+          "thumbnail": [],
+          "interior": [],
+          "exterior": []
+        }
+      ],
+      "displayOrder": 7,
+      "createdAt": "2026-01-05T08:09:16.824Z",
+      "updatedAt": "2026-03-31T05:27:57.201Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
     },
     {
       "id": "265a284e-dc17-41ff-90a6-a10206321117",
+      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
+      "propertyName": "고성 1박2일펜션",
       "name": "설악A103",
+      "nameEn": "Seorak A103",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "설악A103(애견O,취사X)",
       "size": 39,
+      "sizePyeong": 11.8,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
         "bedroom": 1,
         "bathroom": 1,
-        "livingRoom": 0
+        "livingRoom": 0,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "Y",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
       },
       "bedTypes": [
         "퀸 베드"
@@ -874,6 +1067,7 @@
         "원룸형"
       ],
       "status": "active",
+      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
       "images": [
         {
           "thumbnail": [],
@@ -881,22 +1075,43 @@
           "exterior": []
         }
       ],
-      "displayOrder": 9
+      "displayOrder": 8,
+      "createdAt": "2026-01-05T08:09:16.769Z",
+      "updatedAt": "2026-03-31T05:27:57.201Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
     },
     {
       "id": "e5bb89ee-174f-4542-be48-7a4cfa080adb",
+      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
+      "propertyName": "고성 1박2일펜션",
       "name": "설악A106",
+      "nameEn": "Seorak A106",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "설악A106(애견O,취사X)",
       "size": 39,
+      "sizePyeong": 11.8,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
         "bedroom": 1,
         "bathroom": 1,
-        "livingRoom": 0
+        "livingRoom": 0,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "Y",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
       },
       "bedTypes": [
         "퀸 베드"
@@ -918,6 +1133,7 @@
         "원룸형"
       ],
       "status": "active",
+      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
       "images": [
         {
           "thumbnail": [],
@@ -925,22 +1141,43 @@
           "exterior": []
         }
       ],
-      "displayOrder": 10
+      "displayOrder": 9,
+      "createdAt": "2026-01-05T08:09:16.930Z",
+      "updatedAt": "2026-03-31T05:27:57.201Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
     },
     {
       "id": "55f678cc-3745-46f7-ad03-93cbcc244273",
+      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
+      "propertyName": "고성 1박2일펜션",
       "name": "설악B206",
+      "nameEn": "Seorak B206",
       "description": "",
-      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 객실 내 취사불가, 공용취사장 이용\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
+      "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 취사 가능\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "설악B206(취사X)",
       "size": 39,
+      "sizePyeong": 11.8,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
         "bedroom": 1,
         "bathroom": 1,
-        "livingRoom": 0
+        "livingRoom": 0,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "N",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
       },
       "bedTypes": [
         "퀸 베드"
@@ -962,6 +1199,7 @@
         "원룸형"
       ],
       "status": "active",
+      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
       "images": [
         {
           "thumbnail": [],
@@ -969,22 +1207,43 @@
           "exterior": []
         }
       ],
-      "displayOrder": 11
+      "displayOrder": 10,
+      "createdAt": "2026-01-05T08:09:16.881Z",
+      "updatedAt": "2026-04-14T03:29:56.394Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
     },
     {
       "id": "625a58bc-a99b-4f1f-a6d7-507afb3c251a",
+      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
+      "propertyName": "고성 1박2일펜션",
       "name": "설악B304",
+      "nameEn": "Seorak B304",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "설악B304(애견O,취사X)",
       "size": 39,
+      "sizePyeong": 11.8,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
         "bedroom": 1,
         "bathroom": 1,
-        "livingRoom": 0
+        "livingRoom": 0,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "Y",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
       },
       "bedTypes": [
         "퀸 베드"
@@ -1006,6 +1265,7 @@
         "원룸형"
       ],
       "status": "active",
+      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
       "images": [
         {
           "thumbnail": [],
@@ -1013,22 +1273,43 @@
           "exterior": []
         }
       ],
-      "displayOrder": 12
+      "displayOrder": 11,
+      "createdAt": "2026-01-05T08:09:16.863Z",
+      "updatedAt": "2026-03-31T05:27:57.201Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
     },
     {
       "id": "e6179387-4ea4-4fea-a796-9737d0ede2ae",
+      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
+      "propertyName": "고성 1박2일펜션",
       "name": "설악B305",
+      "nameEn": "Seorak B305",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 불가\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "설악B305(취사X)",
       "size": 39,
+      "sizePyeong": 11.8,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
         "bedroom": 1,
         "bathroom": 1,
-        "livingRoom": 0
+        "livingRoom": 0,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "N",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
       },
       "bedTypes": [
         "퀸 베드"
@@ -1050,6 +1331,7 @@
         "원룸형"
       ],
       "status": "active",
+      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
       "images": [
         {
           "thumbnail": [],
@@ -1057,22 +1339,43 @@
           "exterior": []
         }
       ],
-      "displayOrder": 13
+      "displayOrder": 12,
+      "createdAt": "2026-01-05T08:09:16.888Z",
+      "updatedAt": "2026-03-31T05:27:57.201Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
     },
     {
       "id": "b94e1d71-922a-4ad8-be0e-2ed9e602f233",
+      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
+      "propertyName": "고성 1박2일펜션",
       "name": "설악B306",
+      "nameEn": "Seorak B306",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 불가\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "설악B306(취사X)",
       "size": 39,
+      "sizePyeong": 11.8,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
         "bedroom": 1,
         "bathroom": 1,
-        "livingRoom": 0
+        "livingRoom": 0,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "N",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
       },
       "bedTypes": [
         "퀸 베드"
@@ -1094,6 +1397,7 @@
         "원룸형"
       ],
       "status": "active",
+      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
       "images": [
         {
           "thumbnail": [],
@@ -1101,22 +1405,43 @@
           "exterior": []
         }
       ],
-      "displayOrder": 14
+      "displayOrder": 13,
+      "createdAt": "2026-01-05T08:09:16.828Z",
+      "updatedAt": "2026-03-31T05:27:57.201Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
     },
     {
       "id": "7aa56223-6e22-4040-b38d-e90d81aa5f03",
+      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
+      "propertyName": "고성 1박2일펜션",
       "name": "패밀리A102",
+      "nameEn": "Family A102",
       "description": "",
       "roomInfo": "침실분리형 : 거실 겸 주방+침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "패밀리A102(애견O,취사X)",
       "size": 66,
+      "sizePyeong": 20,
       "baseOccupancy": 4,
       "maxOccupancy": 8,
       "totalRoomCount": {
         "bedroom": 1,
         "bathroom": 1,
-        "livingRoom": 0
+        "livingRoom": 1,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "Y",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
       },
       "bedTypes": [
         "퀸 베드"
@@ -1138,6 +1463,7 @@
         "침실분리형"
       ],
       "status": "active",
+      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
       "images": [
         {
           "thumbnail": [],
@@ -1145,22 +1471,43 @@
           "exterior": []
         }
       ],
-      "displayOrder": 15
+      "displayOrder": 14,
+      "createdAt": "2026-01-05T08:09:16.714Z",
+      "updatedAt": "2026-03-31T05:27:57.201Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
     },
     {
       "id": "94863de8-b79b-430e-80f2-f778cf399b81",
+      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
+      "propertyName": "고성 1박2일펜션",
       "name": "패밀리B205",
+      "nameEn": "Family B205",
       "description": "",
       "roomInfo": "침실분리형 : 거실 겸 주방+침대룸A(퀸1)+화장실1\n※ 애견동반 불가\n※ 취사 가능 \n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "패밀리B205(취사X)",
       "size": 66,
+      "sizePyeong": 20,
       "baseOccupancy": 4,
       "maxOccupancy": 8,
       "totalRoomCount": {
         "bedroom": 1,
         "bathroom": 1,
-        "livingRoom": 0
+        "livingRoom": 1,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "N",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
       },
       "bedTypes": [
         "퀸 베드"
@@ -1182,6 +1529,7 @@
         "침실분리형"
       ],
       "status": "active",
+      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
       "images": [
         {
           "thumbnail": [],
@@ -1189,7 +1537,11 @@
           "exterior": []
         }
       ],
-      "displayOrder": 16
+      "displayOrder": 15,
+      "createdAt": "2026-01-05T08:09:16.911Z",
+      "updatedAt": "2026-03-31T05:27:57.201Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
     }
   ],
   "homepage": {
@@ -1293,7 +1645,9 @@
                     "isSelected": true
                   }
                 ],
-                "description": "고성의 풍경과 함께하는 하루"
+                "description": "고성의 풍경과 함께하는 하루",
+                "mediaType": "image",
+                "videos": []
               },
               "closing": {
                 "title": " ",
@@ -1306,7 +1660,9 @@
                     "isSelected": true
                   }
                 ],
-                "description": " "
+                "description": " ",
+                "mediaType": "image",
+                "videos": []
               },
               "essence": {
                 "title": "Prologue",
@@ -1319,7 +1675,9 @@
                     "isSelected": true
                   }
                 ],
-                "description": "하루를 머물러도 기억에 남는 쉼\n봉포해변 앞에서 보내는 여유로운 1박 2일\n바다와 함께 쉬어가는 고성 1박2일 펜션"
+                "description": "하루를 머물러도 기억에 남는 쉼\n봉포해변 앞에서 보내는 여유로운 1박 2일\n바다와 함께 쉬어가는 고성 1박2일 펜션",
+                "mediaType": "image",
+                "videos": []
               },
               "gallery": {
                 "title": "OceanView ",
@@ -1353,7 +1711,9 @@
                     "isSelected": true
                   }
                 ],
-                "description": "봉포해변의 오션뷰를 즐길 수 있어\n머무는 공간마다 바다의 풍경이 다르게 펼쳐집니다."
+                "description": "봉포해변의 오션뷰를 즐길 수 있어\n머무는 공간마다 바다의 풍경이 다르게 펼쳐집니다.",
+                "mediaType": "image",
+                "videos": []
               },
               "signature": {
                 "title": "Specials",
@@ -1387,7 +1747,9 @@
                     "isSelected": true
                   }
                 ],
-                "description": "봉포해변을 가까이에서 즐길 수 있고,\n바베큐장이 준비되어 있어 머무는 시간에 여유를 더합니다."
+                "description": "봉포해변을 가까이에서 즐길 수 있고,\n바베큐장이 준비되어 있어 머무는 시간에 여유를 더합니다.",
+                "mediaType": "image",
+                "videos": []
               }
             }
           ]
@@ -2116,6 +2478,340 @@
         ]
       },
       "roomtypes": [
+        {
+          "id": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+          "images": [
+            {
+              "id": "c9b4f15f-d0e3-4245-8221-98988b382af4",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_thumbnail/1770537997439-aqvioxp03bn.jpg",
+              "sortOrder": 7,
+              "description": "",
+              "isSelected": true,
+              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+              "category": "roomtype_thumbnail"
+            },
+            {
+              "id": "d9e737f9-5073-48f4-92d6-1e605c8d1739",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770702365218-t5sf5xz1a6i.jpg",
+              "sortOrder": 68,
+              "description": "",
+              "isSelected": true,
+              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "0660403c-d40f-43b1-8ac5-a77b991d2f6e",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1769568432823-do5axsf7q2j.jpg",
+              "sortOrder": 69,
+              "description": "",
+              "isSelected": true,
+              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "d7e9fb6a-4d53-490b-913b-58dd372d0910",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1769568432823-sfl0xc9xvr.jpg",
+              "sortOrder": 70,
+              "description": "",
+              "isSelected": true,
+              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "08267728-6b59-4416-ae83-82af3e79c7fb",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1772089882595-a2awfvjszi8.jpg",
+              "sortOrder": 71,
+              "description": "",
+              "isSelected": true,
+              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "608beeec-ca47-47fc-bd2d-080b6bbee774",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1772089882596-exhnlgpd7q5.jpg",
+              "sortOrder": 72,
+              "description": "",
+              "isSelected": true,
+              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "46d1e9e0-3bf4-4d3b-9396-9b2e3c35410d",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1769568432823-032sol72a6u.jpg",
+              "sortOrder": 73,
+              "description": "",
+              "isSelected": true,
+              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "3df0b546-2aef-4590-8a61-e26c1dddc6bd",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1769568432823-53tt8eegpon.jpg",
+              "sortOrder": 74,
+              "description": "",
+              "isSelected": true,
+              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "636e4cf1-759d-4814-a904-096f47c07ff6",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1769568432823-wztnq8lgkxm.jpg",
+              "sortOrder": 75,
+              "description": "",
+              "isSelected": true,
+              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "6d2a1564-8435-476b-a00b-b2fef123883a",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1769568432823-myqak3j71cr.jpg",
+              "sortOrder": 76,
+              "description": "",
+              "isSelected": true,
+              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "fa2010df-012a-4e9d-a121-b5ebe986671a",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1769568432823-lpmeonqojec.jpg",
+              "sortOrder": 77,
+              "description": "",
+              "isSelected": true,
+              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "d26f00c5-bd83-44ed-b5b9-3e1f1e3d0da3",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1769568432823-a0xnhjmf8kk.jpg",
+              "sortOrder": 78,
+              "description": "",
+              "isSelected": true,
+              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "3c060335-a880-4374-99ba-ec42c5942c61",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1769568432823-z92lvblwlas.jpg",
+              "sortOrder": 79,
+              "description": "",
+              "isSelected": true,
+              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "66244b82-e6a5-4093-975e-f854b5c2b2a8",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1770630540651-71v4pdblhhm.jpg",
+              "sortOrder": 31,
+              "description": "",
+              "isSelected": true,
+              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+              "category": "roomtype_exterior"
+            },
+            {
+              "id": "da57a433-7575-42a9-8ec2-821a3f23e850",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1770630540652-v7r2nxwtmu.jpg",
+              "sortOrder": 32,
+              "description": "",
+              "isSelected": true,
+              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+              "category": "roomtype_exterior"
+            },
+            {
+              "id": "5ab047a7-99b4-4719-9da0-9e19ca25eccf",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1769568432823-2ac2vwfrwxp.jpg",
+              "sortOrder": 33,
+              "description": " ",
+              "isSelected": true,
+              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+              "category": "roomtype_exterior"
+            },
+            {
+              "id": "3098b976-1dfb-479a-bc96-8ed6db091d06",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1772089882596-yh74v3kdvhs.jpg",
+              "sortOrder": 34,
+              "description": "",
+              "isSelected": true,
+              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
+              "category": "roomtype_exterior"
+            }
+          ]
+        },
+        {
+          "id": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+          "images": [
+            {
+              "id": "8b2d7329-12a9-425c-8dc7-44b05fe07d21",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_thumbnail/1772089135050-vmxfgqv0i5.jpg",
+              "sortOrder": 6,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_thumbnail"
+            },
+            {
+              "id": "622647da-5180-4635-a0ab-57746246e334",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1772089135051-cjjjh9y9rfl.jpg",
+              "sortOrder": 56,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "89a091bd-d33a-4257-b86d-40b73fc21522",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-acdlsfzzrjq.jpg",
+              "sortOrder": 57,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "5f2cb44a-2f6b-453b-bfe7-84d576c6db8f",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-cabzy2jspfi.jpg",
+              "sortOrder": 58,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "06410bbe-9ddb-4564-b893-5f4b83ad7214",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1772089135051-phj1sdygq2.jpg",
+              "sortOrder": 59,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "1f6a7e6c-985c-4aba-ac17-c7acb816c585",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-qqr4wofn61l.jpg",
+              "sortOrder": 60,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "a185d0f6-9248-4d27-9eb8-c5af7ad15d9e",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-2xpg34vxqbd.jpg",
+              "sortOrder": 61,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "0b5278f6-7ee9-4804-b631-21134eff10f0",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-akyr31fglxh.jpg",
+              "sortOrder": 62,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "15da84a4-7b4b-4cda-9695-0eb4a99bb7ce",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-y0pepk67pp.jpg",
+              "sortOrder": 63,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "0e6d6b80-4e8c-485a-b2a3-6819275ab5a2",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-wlhzqn8ana.jpg",
+              "sortOrder": 64,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "1fcf7a1d-31cd-44e7-a320-cddb031ff71d",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-wwzzsuhcvc.jpg",
+              "sortOrder": 65,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "e99f0ba7-f1c6-48fb-9455-e44294fc8be0",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-1ad5n9sjfry.jpg",
+              "sortOrder": 66,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "530823c5-db46-410c-ba42-9251a77049bc",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-omtl8dq2clp.jpg",
+              "sortOrder": 67,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_interior"
+            },
+            {
+              "id": "ffe4572e-f645-4a75-82c3-6aefb3cab358",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1770630455212-9vy3qootppp.jpg",
+              "sortOrder": 25,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_exterior"
+            },
+            {
+              "id": "0b326772-5f63-495c-a69a-4e86e723bdc3",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1770366295501-gvqw7t0j6yn.jpg",
+              "sortOrder": 26,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_exterior"
+            },
+            {
+              "id": "faca478c-0e7b-45fb-b091-05f5265c806d",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1772089135051-x8dmkwo2ci.jpg",
+              "sortOrder": 27,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_exterior"
+            },
+            {
+              "id": "a3025b02-ebd6-4acf-a55f-0bf4f11a4194",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1770366295501-kaxnbgx77nn.jpg",
+              "sortOrder": 28,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_exterior"
+            },
+            {
+              "id": "096a83ad-1724-4d35-ba4a-c7a74a93cd6d",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1772089135051-5c87vs8yzgh.jpg",
+              "sortOrder": 29,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_exterior"
+            },
+            {
+              "id": "e6aeb278-5434-4311-8199-d87039cc60cb",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1770630455213-78cjokph9n7.jpg",
+              "sortOrder": 30,
+              "description": "",
+              "isSelected": true,
+              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
+              "category": "roomtype_exterior"
+            }
+          ]
+        },
         {
           "id": "ad91d762-0e23-4d20-95b4-2edb8931605f",
           "images": [
@@ -2925,340 +3621,6 @@
               "description": "",
               "isSelected": true,
               "blockId": "cef28d41-923c-413c-972a-be492f9f33ff",
-              "category": "roomtype_exterior"
-            }
-          ]
-        },
-        {
-          "id": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-          "images": [
-            {
-              "id": "8b2d7329-12a9-425c-8dc7-44b05fe07d21",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_thumbnail/1772089135050-vmxfgqv0i5.jpg",
-              "sortOrder": 6,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_thumbnail"
-            },
-            {
-              "id": "622647da-5180-4635-a0ab-57746246e334",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1772089135051-cjjjh9y9rfl.jpg",
-              "sortOrder": 56,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "89a091bd-d33a-4257-b86d-40b73fc21522",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-acdlsfzzrjq.jpg",
-              "sortOrder": 57,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "5f2cb44a-2f6b-453b-bfe7-84d576c6db8f",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-cabzy2jspfi.jpg",
-              "sortOrder": 58,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "06410bbe-9ddb-4564-b893-5f4b83ad7214",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1772089135051-phj1sdygq2.jpg",
-              "sortOrder": 59,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "1f6a7e6c-985c-4aba-ac17-c7acb816c585",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-qqr4wofn61l.jpg",
-              "sortOrder": 60,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "a185d0f6-9248-4d27-9eb8-c5af7ad15d9e",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-2xpg34vxqbd.jpg",
-              "sortOrder": 61,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "0b5278f6-7ee9-4804-b631-21134eff10f0",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-akyr31fglxh.jpg",
-              "sortOrder": 62,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "15da84a4-7b4b-4cda-9695-0eb4a99bb7ce",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-y0pepk67pp.jpg",
-              "sortOrder": 63,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "0e6d6b80-4e8c-485a-b2a3-6819275ab5a2",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-wlhzqn8ana.jpg",
-              "sortOrder": 64,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "1fcf7a1d-31cd-44e7-a320-cddb031ff71d",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-wwzzsuhcvc.jpg",
-              "sortOrder": 65,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "e99f0ba7-f1c6-48fb-9455-e44294fc8be0",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-1ad5n9sjfry.jpg",
-              "sortOrder": 66,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "530823c5-db46-410c-ba42-9251a77049bc",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770366295501-omtl8dq2clp.jpg",
-              "sortOrder": 67,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "ffe4572e-f645-4a75-82c3-6aefb3cab358",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1770630455212-9vy3qootppp.jpg",
-              "sortOrder": 25,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_exterior"
-            },
-            {
-              "id": "0b326772-5f63-495c-a69a-4e86e723bdc3",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1770366295501-gvqw7t0j6yn.jpg",
-              "sortOrder": 26,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_exterior"
-            },
-            {
-              "id": "faca478c-0e7b-45fb-b091-05f5265c806d",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1772089135051-x8dmkwo2ci.jpg",
-              "sortOrder": 27,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_exterior"
-            },
-            {
-              "id": "a3025b02-ebd6-4acf-a55f-0bf4f11a4194",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1770366295501-kaxnbgx77nn.jpg",
-              "sortOrder": 28,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_exterior"
-            },
-            {
-              "id": "096a83ad-1724-4d35-ba4a-c7a74a93cd6d",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1772089135051-5c87vs8yzgh.jpg",
-              "sortOrder": 29,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_exterior"
-            },
-            {
-              "id": "e6aeb278-5434-4311-8199-d87039cc60cb",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1770630455213-78cjokph9n7.jpg",
-              "sortOrder": 30,
-              "description": "",
-              "isSelected": true,
-              "blockId": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-              "category": "roomtype_exterior"
-            }
-          ]
-        },
-        {
-          "id": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-          "images": [
-            {
-              "id": "c9b4f15f-d0e3-4245-8221-98988b382af4",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_thumbnail/1770537997439-aqvioxp03bn.jpg",
-              "sortOrder": 7,
-              "description": "",
-              "isSelected": true,
-              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-              "category": "roomtype_thumbnail"
-            },
-            {
-              "id": "d9e737f9-5073-48f4-92d6-1e605c8d1739",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1770702365218-t5sf5xz1a6i.jpg",
-              "sortOrder": 68,
-              "description": "",
-              "isSelected": true,
-              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "0660403c-d40f-43b1-8ac5-a77b991d2f6e",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1769568432823-do5axsf7q2j.jpg",
-              "sortOrder": 69,
-              "description": "",
-              "isSelected": true,
-              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "d7e9fb6a-4d53-490b-913b-58dd372d0910",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1769568432823-sfl0xc9xvr.jpg",
-              "sortOrder": 70,
-              "description": "",
-              "isSelected": true,
-              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "08267728-6b59-4416-ae83-82af3e79c7fb",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1772089882595-a2awfvjszi8.jpg",
-              "sortOrder": 71,
-              "description": "",
-              "isSelected": true,
-              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "608beeec-ca47-47fc-bd2d-080b6bbee774",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1772089882596-exhnlgpd7q5.jpg",
-              "sortOrder": 72,
-              "description": "",
-              "isSelected": true,
-              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "46d1e9e0-3bf4-4d3b-9396-9b2e3c35410d",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1769568432823-032sol72a6u.jpg",
-              "sortOrder": 73,
-              "description": "",
-              "isSelected": true,
-              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "3df0b546-2aef-4590-8a61-e26c1dddc6bd",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1769568432823-53tt8eegpon.jpg",
-              "sortOrder": 74,
-              "description": "",
-              "isSelected": true,
-              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "636e4cf1-759d-4814-a904-096f47c07ff6",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1769568432823-wztnq8lgkxm.jpg",
-              "sortOrder": 75,
-              "description": "",
-              "isSelected": true,
-              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "6d2a1564-8435-476b-a00b-b2fef123883a",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1769568432823-myqak3j71cr.jpg",
-              "sortOrder": 76,
-              "description": "",
-              "isSelected": true,
-              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "fa2010df-012a-4e9d-a121-b5ebe986671a",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1769568432823-lpmeonqojec.jpg",
-              "sortOrder": 77,
-              "description": "",
-              "isSelected": true,
-              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "d26f00c5-bd83-44ed-b5b9-3e1f1e3d0da3",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1769568432823-a0xnhjmf8kk.jpg",
-              "sortOrder": 78,
-              "description": "",
-              "isSelected": true,
-              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "3c060335-a880-4374-99ba-ec42c5942c61",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_interior/1769568432823-z92lvblwlas.jpg",
-              "sortOrder": 79,
-              "description": "",
-              "isSelected": true,
-              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-              "category": "roomtype_interior"
-            },
-            {
-              "id": "66244b82-e6a5-4093-975e-f854b5c2b2a8",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1770630540651-71v4pdblhhm.jpg",
-              "sortOrder": 31,
-              "description": "",
-              "isSelected": true,
-              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-              "category": "roomtype_exterior"
-            },
-            {
-              "id": "da57a433-7575-42a9-8ec2-821a3f23e850",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1770630540652-v7r2nxwtmu.jpg",
-              "sortOrder": 32,
-              "description": "",
-              "isSelected": true,
-              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-              "category": "roomtype_exterior"
-            },
-            {
-              "id": "5ab047a7-99b4-4719-9da0-9e19ca25eccf",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1769568432823-2ac2vwfrwxp.jpg",
-              "sortOrder": 33,
-              "description": " ",
-              "isSelected": true,
-              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-              "category": "roomtype_exterior"
-            },
-            {
-              "id": "3098b976-1dfb-479a-bc96-8ed6db091d06",
-              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/roomtype_exterior/1772089882596-yh74v3kdvhs.jpg",
-              "sortOrder": 34,
-              "description": "",
-              "isSelected": true,
-              "blockId": "793ab875-246a-4f8e-8888-feb4c8c936ce",
               "category": "roomtype_exterior"
             }
           ]
@@ -4375,6 +4737,7 @@
           ]
         }
       ]
-    }
+    },
+    "id": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
   }
 }
