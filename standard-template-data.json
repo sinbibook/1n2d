@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.90.0",
-    "generatedAt": "2026-04-14T03:30:15.572Z",
+    "version": "1.91.0",
+    "generatedAt": "2026-05-18T05:17:56.629582628Z",
     "templateType": "full_banner_accordion",
     "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
     "homepageId": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
@@ -32,7 +32,7 @@
       "해변",
       "맛집"
     ],
-    "services": [],
+    "services": [ ],
     "propertyThemes": [
       "오션뷰",
       "산뷰",
@@ -53,7 +53,8 @@
       "businessEmail": "quick8515@naver.com",
       "businessType": "individual",
       "businessCategory": "숙박업",
-      "eCommerceRegistrationNumber": ""
+      "eCommerceRegistrationNumber": "",
+      "ecommerceRegistrationNumber": ""
     },
     "contractInfo": {
       "contractStartDate": "2025-09-10T00:00:00.000Z",
@@ -79,46 +80,52 @@
         "displayOrder": 0,
         "images": [
           {
-            "id": "5e59eed3-0acb-4410-b7d5-12cfaa20f50f",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/e3273f22-68e0-44bf-937d-84af0db386e7/main/1769569480755-usgc7qg2d7.jpg",
-            "sortOrder": 3,
+            "id": "485cde77-028a-4fb7-9873-ba78ec28277d",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/e3273f22-68e0-44bf-937d-84af0db386e7/main/1769665743513-dfnztj3z5nh.jpg",
+            "sortOrder": 0,
             "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
           },
           {
             "id": "34de3c87-f46a-4886-a4df-7ca407d60a85",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/e3273f22-68e0-44bf-937d-84af0db386e7/main/1770631784077-khh6hz2pta9.jpg",
             "sortOrder": 0,
             "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "b8fe5397-403e-4c7e-9021-37ef56e22b42",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/e3273f22-68e0-44bf-937d-84af0db386e7/main/1769569480755-2bnyybzi3x5.jpg",
-            "sortOrder": 2,
-            "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
           },
           {
             "id": "771a3f6d-8e88-4ab9-8691-e8b94d3afbe8",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/e3273f22-68e0-44bf-937d-84af0db386e7/main/1769569480755-0bpyi08moryt.jpg",
             "sortOrder": 1,
             "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "b8fe5397-403e-4c7e-9021-37ef56e22b42",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/e3273f22-68e0-44bf-937d-84af0db386e7/main/1769569480755-2bnyybzi3x5.jpg",
+            "sortOrder": 2,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "5e59eed3-0acb-4410-b7d5-12cfaa20f50f",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/e3273f22-68e0-44bf-937d-84af0db386e7/main/1769569480755-usgc7qg2d7.jpg",
+            "sortOrder": 3,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
           },
           {
             "id": "4505797b-79fc-4f4a-918e-538832998f57",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/e3273f22-68e0-44bf-937d-84af0db386e7/main/1769569480756-w0cmrqtj49e.jpg",
             "sortOrder": 4,
             "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "485cde77-028a-4fb7-9873-ba78ec28277d",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/e3273f22-68e0-44bf-937d-84af0db386e7/main/1769665743513-dfnztj3z5nh.jpg",
-            "sortOrder": 0,
-            "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
           }
         ]
       },
@@ -130,53 +137,60 @@
         "displayOrder": 1,
         "images": [
           {
-            "id": "53c6de92-f53f-4187-82c3-2cf6e1a4c830",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7af14405-32d5-4f57-9df5-7eab0e32b02e/main/1769569482433-dzc3megpmtv.jpg",
-            "sortOrder": 3,
-            "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "350887be-9739-41b1-84aa-1ef8d021ab1e",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7af14405-32d5-4f57-9df5-7eab0e32b02e/main/1769569482433-soobs6tsmpa.jpg",
-            "sortOrder": 5,
-            "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "9b0beac8-7415-4ec3-ab72-f334ed6ff465",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7af14405-32d5-4f57-9df5-7eab0e32b02e/main/1769569482433-cr7m7rn28r.jpg",
-            "sortOrder": 6,
-            "description": "",
-            "isSelected": true
-          },
-          {
             "id": "3811eb74-860d-4055-bf04-92d9363aa06a",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7af14405-32d5-4f57-9df5-7eab0e32b02e/main/1769569482433-k55852uu67d.jpg",
             "sortOrder": 0,
             "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "2d1c5c17-d296-4da5-82c7-5425646cc35c",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7af14405-32d5-4f57-9df5-7eab0e32b02e/main/1769569482433-w4qeu4jgmh.jpg",
-            "sortOrder": 4,
-            "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
           },
           {
             "id": "87c5fef5-f67d-4210-a8b4-de3889b70017",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7af14405-32d5-4f57-9df5-7eab0e32b02e/main/1769569787451-r40gcezwyz.jpg",
             "sortOrder": 1,
             "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
           },
           {
             "id": "b9966ff5-d2ae-415f-91da-b3fd6e80daa3",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7af14405-32d5-4f57-9df5-7eab0e32b02e/main/1769569787451-c43am5dnhnq.jpg",
             "sortOrder": 2,
             "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "53c6de92-f53f-4187-82c3-2cf6e1a4c830",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7af14405-32d5-4f57-9df5-7eab0e32b02e/main/1769569482433-dzc3megpmtv.jpg",
+            "sortOrder": 3,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "2d1c5c17-d296-4da5-82c7-5425646cc35c",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7af14405-32d5-4f57-9df5-7eab0e32b02e/main/1769569482433-w4qeu4jgmh.jpg",
+            "sortOrder": 4,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "350887be-9739-41b1-84aa-1ef8d021ab1e",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7af14405-32d5-4f57-9df5-7eab0e32b02e/main/1769569482433-soobs6tsmpa.jpg",
+            "sortOrder": 5,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "9b0beac8-7415-4ec3-ab72-f334ed6ff465",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/7af14405-32d5-4f57-9df5-7eab0e32b02e/main/1769569482433-cr7m7rn28r.jpg",
+            "sortOrder": 6,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
           }
         ]
       },
@@ -192,42 +206,48 @@
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/233891e9-1775-4c67-8947-23371f287f5c/main/1770629034695-5t2rz6s6nk9.jpg",
             "sortOrder": 0,
             "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "e701ee43-593d-49b0-94b4-e569b9c281e0",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/233891e9-1775-4c67-8947-23371f287f5c/main/1770629034695-q0usa4b0ol.jpg",
-            "sortOrder": 3,
-            "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "cc374e7a-555b-44d1-8e22-3ba0e0f2b32c",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/233891e9-1775-4c67-8947-23371f287f5c/main/1769570790064-p2ilyk8vaql.jpg",
-            "sortOrder": 2,
-            "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "8236350a-edbb-4ab1-a8bb-19e4b9901f36",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/233891e9-1775-4c67-8947-23371f287f5c/main/1769570790064-g2gm9faokii.jpg",
-            "sortOrder": 4,
-            "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "1cd448e8-c637-465a-bf0f-b492278d575f",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/233891e9-1775-4c67-8947-23371f287f5c/main/1769570790064-efcxoxdgwrb.jpg",
-            "sortOrder": 5,
-            "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
           },
           {
             "id": "2cb35f80-de83-4f48-9c2b-81057569cfc1",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/233891e9-1775-4c67-8947-23371f287f5c/main/1769570790064-afw6v4ocvv6.jpg",
             "sortOrder": 1,
             "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "cc374e7a-555b-44d1-8e22-3ba0e0f2b32c",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/233891e9-1775-4c67-8947-23371f287f5c/main/1769570790064-p2ilyk8vaql.jpg",
+            "sortOrder": 2,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "e701ee43-593d-49b0-94b4-e569b9c281e0",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/233891e9-1775-4c67-8947-23371f287f5c/main/1770629034695-q0usa4b0ol.jpg",
+            "sortOrder": 3,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "8236350a-edbb-4ab1-a8bb-19e4b9901f36",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/233891e9-1775-4c67-8947-23371f287f5c/main/1769570790064-g2gm9faokii.jpg",
+            "sortOrder": 4,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "1cd448e8-c637-465a-bf0f-b492278d575f",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/233891e9-1775-4c67-8947-23371f287f5c/main/1769570790064-efcxoxdgwrb.jpg",
+            "sortOrder": 5,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
           }
         ]
       },
@@ -239,46 +259,52 @@
         "displayOrder": 3,
         "images": [
           {
-            "id": "647f441c-33e8-481e-a90e-229c7cd6da54",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/540f0231-2c9e-4eab-89eb-871c7902af87/main/1770629092502-2bwovxjjbv1.jpg",
-            "sortOrder": 2,
+            "id": "ade1d7ae-8d9f-4ffa-9ddd-9007159d32d0",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/540f0231-2c9e-4eab-89eb-871c7902af87/main/1770629092502-3v7xu35pum7.jpg",
+            "sortOrder": 0,
             "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
           },
           {
             "id": "1e03b06b-7d31-4bf5-8967-8326ccc0b298",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/540f0231-2c9e-4eab-89eb-871c7902af87/main/1769569483705-l083r71e5de.jpg",
             "sortOrder": 1,
             "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
           },
           {
-            "id": "ade1d7ae-8d9f-4ffa-9ddd-9007159d32d0",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/540f0231-2c9e-4eab-89eb-871c7902af87/main/1770629092502-3v7xu35pum7.jpg",
-            "sortOrder": 0,
+            "id": "647f441c-33e8-481e-a90e-229c7cd6da54",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/540f0231-2c9e-4eab-89eb-871c7902af87/main/1770629092502-2bwovxjjbv1.jpg",
+            "sortOrder": 2,
             "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "409feea4-bdb4-471f-aa1f-17e7d415b026",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/540f0231-2c9e-4eab-89eb-871c7902af87/main/1769569483705-oavusz0twf8.jpg",
-            "sortOrder": 4,
-            "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "c3c766f6-dfee-438f-9237-9a267339309a",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/540f0231-2c9e-4eab-89eb-871c7902af87/main/1769569483705-38bfntlzzgj.jpg",
-            "sortOrder": 5,
-            "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
           },
           {
             "id": "10f9e4d9-8905-41ae-9f20-c7fc33ed6a8b",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/540f0231-2c9e-4eab-89eb-871c7902af87/main/1769569483705-ykn8sg90xxq.jpg",
             "sortOrder": 3,
             "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "409feea4-bdb4-471f-aa1f-17e7d415b026",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/540f0231-2c9e-4eab-89eb-871c7902af87/main/1769569483705-oavusz0twf8.jpg",
+            "sortOrder": 4,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "c3c766f6-dfee-438f-9237-9a267339309a",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/540f0231-2c9e-4eab-89eb-871c7902af87/main/1769569483705-38bfntlzzgj.jpg",
+            "sortOrder": 5,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
           }
         ]
       },
@@ -294,42 +320,48 @@
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/c48bc77a-b965-407a-bdb7-e94be6a9c675/main/1770629146591-pm25jumckcn.jpg",
             "sortOrder": 0,
             "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "c69dda9e-ac1d-43ac-96a3-53d564e19028",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/c48bc77a-b965-407a-bdb7-e94be6a9c675/main/1769569485014-39we3gwledi.jpg",
-            "sortOrder": 4,
-            "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "6a1d9fdf-cf35-43da-8c08-a03d9f0fa9b1",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/c48bc77a-b965-407a-bdb7-e94be6a9c675/main/1770629146592-35uxrq3vucq.jpg",
-            "sortOrder": 3,
-            "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "0fc03c33-85ab-43e4-9197-3f3b2c159f2a",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/c48bc77a-b965-407a-bdb7-e94be6a9c675/main/1769569485015-qkd23dadff.jpg",
-            "sortOrder": 5,
-            "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "877178d7-b0a3-4e7f-ba96-cdc140c0544e",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/c48bc77a-b965-407a-bdb7-e94be6a9c675/main/1769569485014-f1eskl8aoe.jpg",
-            "sortOrder": 2,
-            "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
           },
           {
             "id": "fe5e416e-6469-4d5c-92a1-cdfae9371117",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/c48bc77a-b965-407a-bdb7-e94be6a9c675/main/1769569485014-ppd2gedhzk.jpg",
             "sortOrder": 1,
             "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "877178d7-b0a3-4e7f-ba96-cdc140c0544e",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/c48bc77a-b965-407a-bdb7-e94be6a9c675/main/1769569485014-f1eskl8aoe.jpg",
+            "sortOrder": 2,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "6a1d9fdf-cf35-43da-8c08-a03d9f0fa9b1",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/c48bc77a-b965-407a-bdb7-e94be6a9c675/main/1770629146592-35uxrq3vucq.jpg",
+            "sortOrder": 3,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "c69dda9e-ac1d-43ac-96a3-53d564e19028",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/c48bc77a-b965-407a-bdb7-e94be6a9c675/main/1769569485014-39we3gwledi.jpg",
+            "sortOrder": 4,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "0fc03c33-85ab-43e4-9197-3f3b2c159f2a",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/c48bc77a-b965-407a-bdb7-e94be6a9c675/main/1769569485015-qkd23dadff.jpg",
+            "sortOrder": 5,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
           }
         ]
       }
@@ -389,96 +421,102 @@
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/thumbnail/1773121840481-30c4aw4md44.jpg",
             "sortOrder": 0,
             "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
           }
         ],
         "exterior": [
           {
             "id": "72afd52c-241b-4b62-a442-f912f41bc660",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840481-7gy2duu9ep.jpg",
-            "sortOrder": 1,
+            "sortOrder": 0,
             "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "216e1be0-91f9-499b-971e-efb7f2046dd5",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-v83tsz7gtre.jpg",
-            "sortOrder": 5,
-            "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "e6566160-fb49-424d-a2f0-2300a1d7cb4d",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-vrnvpi702k.jpg",
-            "sortOrder": 6,
-            "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "f01d2ac9-05e2-4392-95d6-afd4dd32c2d5",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-dcozzr5jplp.jpg",
-            "sortOrder": 3,
-            "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "6ee84c8e-2f7a-4722-bb08-804d92fce962",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840483-o0nqg414uw9.jpg",
-            "sortOrder": 8,
-            "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "f3d733fb-964a-4581-a5ae-4e7f460570ab",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-jmagjnfueg.jpg",
-            "sortOrder": 7,
-            "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "e0756556-f522-4c8b-8d1f-02ef5ace2be1",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-u0pggcri26.jpg",
-            "sortOrder": 4,
-            "description": "",
-            "isSelected": true
-          },
-          {
-            "id": "2ecb6bfc-ccbf-45b4-a00e-c770cc87c5c9",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-b1zjx081hg7.jpg",
-            "sortOrder": 2,
-            "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
           },
           {
             "id": "23d0da78-ebcc-4773-ae5c-84c57afafbb7",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-oiwpvtnf18s.jpg",
             "sortOrder": 1,
             "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "2ecb6bfc-ccbf-45b4-a00e-c770cc87c5c9",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-b1zjx081hg7.jpg",
+            "sortOrder": 2,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "f01d2ac9-05e2-4392-95d6-afd4dd32c2d5",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-dcozzr5jplp.jpg",
+            "sortOrder": 3,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "e0756556-f522-4c8b-8d1f-02ef5ace2be1",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-u0pggcri26.jpg",
+            "sortOrder": 4,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "216e1be0-91f9-499b-971e-efb7f2046dd5",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-v83tsz7gtre.jpg",
+            "sortOrder": 5,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "e6566160-fb49-424d-a2f0-2300a1d7cb4d",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-vrnvpi702k.jpg",
+            "sortOrder": 6,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "f3d733fb-964a-4581-a5ae-4e7f460570ab",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840482-jmagjnfueg.jpg",
+            "sortOrder": 7,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "6ee84c8e-2f7a-4722-bb08-804d92fce962",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/849d159f-fa84-412d-ab12-19ffb2ae06d9/exterior/1773121840483-o0nqg414uw9.jpg",
+            "sortOrder": 8,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
           }
         ],
-        "surrounding": [],
-        "commonArea": []
+        "surrounding": [ ],
+        "commonArea": [ ]
       }
     ],
     "nameEn": "Goseong 1 Night 2 Days Pension",
     "domain": "1n2d.kr",
-    "realtimeBookingId": "https://www.bookingplay.co.kr/booking/1/10586",
+    "realtimeBookingId": "https://map.naver.com/p/entry/place/21909881",
     "ybsId": "22917"
   },
   "rooms": [
     {
       "id": "793ab875-246a-4f8e-8888-feb4c8c936ce",
-      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
-      "propertyName": "고성 1박2일펜션",
       "name": "바다S403",
-      "nameEn": "Bada S403",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 개별바베큐 가능(석쇠+숯)\n숯불+석쇠 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "바다S403(개별BBQ,취사O)",
       "size": 66,
-      "sizePyeong": 20,
       "baseOccupancy": 2,
       "maxOccupancy": 6,
       "totalRoomCount": {
@@ -488,20 +526,10 @@
         "ondol": 0,
         "kitchen": 0
       },
-      "roomOptions": {
-        "petState": "Y",
-        "barbecueState": "Y",
-        "poolState": "N"
-      },
-      "timeSettings": {
-        "timeSettingType": "property",
-        "checkin": "15:00",
-        "checkout": "11:00",
-        "checkinDeadline": "22:00"
-      },
       "bedTypes": [
         "퀸 베드"
       ],
+      "bedConfigs": null,
       "amenities": [
         "무료 WiFi",
         "스마트 TV",
@@ -523,32 +551,34 @@
         "원룸형"
       ],
       "status": "active",
-      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "roomOptions": {
+        "petState": "Y",
+        "poolState": "N",
+        "barbecueState": "Y"
+      },
       "images": [
         {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
+          "thumbnail": [ ],
+          "interior": [ ],
+          "exterior": [ ]
         }
       ],
-      "displayOrder": 0,
-      "createdAt": "2026-01-05T08:09:16.655Z",
-      "updatedAt": "2026-03-31T05:27:57.201Z",
-      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
-      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+      "displayOrder": 0
     },
     {
       "id": "f16964a8-bce6-4917-8336-e6f86bef7c93",
-      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
-      "propertyName": "고성 1박2일펜션",
       "name": "바다C401",
-      "nameEn": "Bada C401",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 개별바베큐 가능(석쇠+숯)\n숯불+석쇠 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "바다C401(개별BBQ,취사O)",
       "size": 33,
-      "sizePyeong": 10,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
@@ -558,20 +588,10 @@
         "ondol": 0,
         "kitchen": 0
       },
-      "roomOptions": {
-        "petState": "Y",
-        "barbecueState": "Y",
-        "poolState": "N"
-      },
-      "timeSettings": {
-        "timeSettingType": "property",
-        "checkin": "15:00",
-        "checkout": "11:00",
-        "checkinDeadline": "22:00"
-      },
       "bedTypes": [
         "퀸 베드"
       ],
+      "bedConfigs": null,
       "amenities": [
         "무료 WiFi",
         "스마트 TV",
@@ -593,32 +613,34 @@
         "원룸형"
       ],
       "status": "active",
-      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "roomOptions": {
+        "petState": "Y",
+        "poolState": "N",
+        "barbecueState": "Y"
+      },
       "images": [
         {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
+          "thumbnail": [ ],
+          "interior": [ ],
+          "exterior": [ ]
         }
       ],
-      "displayOrder": 1,
-      "createdAt": "2026-01-05T08:09:16.867Z",
-      "updatedAt": "2026-03-31T05:27:57.201Z",
-      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
-      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+      "displayOrder": 1
     },
     {
       "id": "ad91d762-0e23-4d20-95b4-2edb8931605f",
-      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
-      "propertyName": "고성 1박2일펜션",
       "name": "바다A201",
-      "nameEn": "Bada A201",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "바다A201(애견O,취사X)",
       "size": 39,
-      "sizePyeong": 11.8,
       "baseOccupancy": 2,
       "maxOccupancy": 5,
       "totalRoomCount": {
@@ -628,20 +650,10 @@
         "ondol": 0,
         "kitchen": 0
       },
-      "roomOptions": {
-        "petState": "Y",
-        "barbecueState": "N",
-        "poolState": "N"
-      },
-      "timeSettings": {
-        "timeSettingType": "property",
-        "checkin": "15:00",
-        "checkout": "11:00",
-        "checkinDeadline": "22:00"
-      },
       "bedTypes": [
         "퀸 베드"
       ],
+      "bedConfigs": null,
       "amenities": [
         "무료 WiFi",
         "스마트 TV",
@@ -661,32 +673,34 @@
         "원룸형"
       ],
       "status": "active",
-      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "roomOptions": {
+        "petState": "Y",
+        "poolState": "N",
+        "barbecueState": "N"
+      },
       "images": [
         {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
+          "thumbnail": [ ],
+          "interior": [ ],
+          "exterior": [ ]
         }
       ],
-      "displayOrder": 2,
-      "createdAt": "2026-01-05T08:09:16.871Z",
-      "updatedAt": "2026-03-31T05:27:57.201Z",
-      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
-      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+      "displayOrder": 2
     },
     {
       "id": "c5a53ad0-002e-4136-bed6-32fe7a35a57f",
-      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
-      "propertyName": "고성 1박2일펜션",
       "name": "바다A202",
-      "nameEn": "Bada A202",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "바다A202(애견O)",
       "size": 39,
-      "sizePyeong": 11.8,
       "baseOccupancy": 2,
       "maxOccupancy": 5,
       "totalRoomCount": {
@@ -696,20 +710,10 @@
         "ondol": 0,
         "kitchen": 0
       },
-      "roomOptions": {
-        "petState": "Y",
-        "barbecueState": "N",
-        "poolState": "N"
-      },
-      "timeSettings": {
-        "timeSettingType": "property",
-        "checkin": "15:00",
-        "checkout": "11:00",
-        "checkinDeadline": "22:00"
-      },
       "bedTypes": [
         "퀸 베드"
       ],
+      "bedConfigs": null,
       "amenities": [
         "무료 WiFi",
         "스마트 TV",
@@ -729,32 +733,34 @@
         "원룸형"
       ],
       "status": "active",
-      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "roomOptions": {
+        "petState": "Y",
+        "poolState": "N",
+        "barbecueState": "N"
+      },
       "images": [
         {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
+          "thumbnail": [ ],
+          "interior": [ ],
+          "exterior": [ ]
         }
       ],
-      "displayOrder": 3,
-      "createdAt": "2026-01-05T08:09:16.609Z",
-      "updatedAt": "2026-04-14T03:26:49.640Z",
-      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
-      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+      "displayOrder": 3
     },
     {
       "id": "c76aae2f-ca9b-4c9c-a059-5f1ec6adc54a",
-      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
-      "propertyName": "고성 1박2일펜션",
       "name": "바다A203",
-      "nameEn": "Bada A203",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 취사 가능\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "바다A203",
       "size": 39,
-      "sizePyeong": 11.8,
       "baseOccupancy": 2,
       "maxOccupancy": 5,
       "totalRoomCount": {
@@ -764,20 +770,10 @@
         "ondol": 0,
         "kitchen": 0
       },
-      "roomOptions": {
-        "petState": "N",
-        "barbecueState": "N",
-        "poolState": "N"
-      },
-      "timeSettings": {
-        "timeSettingType": "property",
-        "checkin": "15:00",
-        "checkout": "11:00",
-        "checkinDeadline": "22:00"
-      },
       "bedTypes": [
         "퀸 베드"
       ],
+      "bedConfigs": null,
       "amenities": [
         "무료 WiFi",
         "스마트 TV",
@@ -797,32 +793,34 @@
         "원룸형"
       ],
       "status": "active",
-      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "roomOptions": {
+        "petState": "N",
+        "poolState": "N",
+        "barbecueState": "N"
+      },
       "images": [
         {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
+          "thumbnail": [ ],
+          "interior": [ ],
+          "exterior": [ ]
         }
       ],
-      "displayOrder": 4,
-      "createdAt": "2026-01-05T08:09:16.842Z",
-      "updatedAt": "2026-03-31T05:27:57.201Z",
-      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
-      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+      "displayOrder": 4
     },
     {
       "id": "47a53275-d079-46bd-a72e-d8ef2e34c78e",
-      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
-      "propertyName": "고성 1박2일펜션",
       "name": "바다B301",
-      "nameEn": "Bada B301",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 취사 가능\n※ 개별바베큐 가능(자이글 이용)\n자이글 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "바다B301(개별BBQ,취사X)",
       "size": 39,
-      "sizePyeong": 11.8,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
@@ -832,20 +830,10 @@
         "ondol": 0,
         "kitchen": 0
       },
-      "roomOptions": {
-        "petState": "N",
-        "barbecueState": "Y",
-        "poolState": "N"
-      },
-      "timeSettings": {
-        "timeSettingType": "property",
-        "checkin": "15:00",
-        "checkout": "11:00",
-        "checkinDeadline": "22:00"
-      },
       "bedTypes": [
         "퀸 베드"
       ],
+      "bedConfigs": null,
       "amenities": [
         "무료 WiFi",
         "스마트 TV",
@@ -865,32 +853,34 @@
         "원룸형"
       ],
       "status": "active",
-      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "roomOptions": {
+        "petState": "N",
+        "poolState": "N",
+        "barbecueState": "Y"
+      },
       "images": [
         {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
+          "thumbnail": [ ],
+          "interior": [ ],
+          "exterior": [ ]
         }
       ],
-      "displayOrder": 5,
-      "createdAt": "2026-01-05T08:09:16.919Z",
-      "updatedAt": "2026-03-31T05:27:57.201Z",
-      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
-      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+      "displayOrder": 5
     },
     {
       "id": "38906a4c-3d77-4def-b615-347c5c2661f7",
-      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
-      "propertyName": "고성 1박2일펜션",
       "name": "바다B302",
-      "nameEn": "Bada B302",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 취사 가능\n※ 개별바베큐 가능(자이글 이용)\n자이글 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "바다B302(개별BBQ,취사X)",
       "size": 39,
-      "sizePyeong": 11.8,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
@@ -900,20 +890,10 @@
         "ondol": 0,
         "kitchen": 0
       },
-      "roomOptions": {
-        "petState": "N",
-        "barbecueState": "Y",
-        "poolState": "N"
-      },
-      "timeSettings": {
-        "timeSettingType": "property",
-        "checkin": "15:00",
-        "checkout": "11:00",
-        "checkinDeadline": "22:00"
-      },
       "bedTypes": [
         "퀸 베드"
       ],
+      "bedConfigs": null,
       "amenities": [
         "무료 WiFi",
         "스마트 TV",
@@ -933,32 +913,34 @@
         "원룸형"
       ],
       "status": "active",
-      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "roomOptions": {
+        "petState": "N",
+        "poolState": "N",
+        "barbecueState": "Y"
+      },
       "images": [
         {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
+          "thumbnail": [ ],
+          "interior": [ ],
+          "exterior": [ ]
         }
       ],
-      "displayOrder": 6,
-      "createdAt": "2026-01-05T08:09:16.692Z",
-      "updatedAt": "2026-03-31T05:27:57.201Z",
-      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
-      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+      "displayOrder": 6
     },
     {
       "id": "cef28d41-923c-413c-972a-be492f9f33ff",
-      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
-      "propertyName": "고성 1박2일펜션",
       "name": "바다B303",
-      "nameEn": "Bada B303",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n※ 취사 가능\n※ 개별바베큐 가능(자이글 이용)\n자이글 이용 비용 : 2인 기준 20,000원\n1인당 추가시 5,000원 추가비용 발생\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "바다B303(개별BBQ,애견O,취사X)",
       "size": 39,
-      "sizePyeong": 11.8,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
@@ -968,20 +950,10 @@
         "ondol": 0,
         "kitchen": 0
       },
-      "roomOptions": {
-        "petState": "Y",
-        "barbecueState": "Y",
-        "poolState": "N"
-      },
-      "timeSettings": {
-        "timeSettingType": "property",
-        "checkin": "15:00",
-        "checkout": "11:00",
-        "checkinDeadline": "22:00"
-      },
       "bedTypes": [
         "퀸 베드"
       ],
+      "bedConfigs": null,
       "amenities": [
         "무료 WiFi",
         "스마트 TV",
@@ -1001,32 +973,34 @@
         "원룸형"
       ],
       "status": "active",
-      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "roomOptions": {
+        "petState": "Y",
+        "poolState": "N",
+        "barbecueState": "Y"
+      },
       "images": [
         {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
+          "thumbnail": [ ],
+          "interior": [ ],
+          "exterior": [ ]
         }
       ],
-      "displayOrder": 7,
-      "createdAt": "2026-01-05T08:09:16.824Z",
-      "updatedAt": "2026-03-31T05:27:57.201Z",
-      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
-      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+      "displayOrder": 7
     },
     {
       "id": "265a284e-dc17-41ff-90a6-a10206321117",
-      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
-      "propertyName": "고성 1박2일펜션",
       "name": "설악A103",
-      "nameEn": "Seorak A103",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "설악A103(애견O,취사X)",
       "size": 39,
-      "sizePyeong": 11.8,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
@@ -1036,20 +1010,10 @@
         "ondol": 0,
         "kitchen": 0
       },
-      "roomOptions": {
-        "petState": "Y",
-        "barbecueState": "N",
-        "poolState": "N"
-      },
-      "timeSettings": {
-        "timeSettingType": "property",
-        "checkin": "15:00",
-        "checkout": "11:00",
-        "checkinDeadline": "22:00"
-      },
       "bedTypes": [
         "퀸 베드"
       ],
+      "bedConfigs": null,
       "amenities": [
         "무료 WiFi",
         "스마트 TV",
@@ -1062,37 +1026,39 @@
         "바디워시",
         "OTT"
       ],
-      "roomViews": [],
+      "roomViews": [ ],
       "roomStructures": [
         "원룸형"
       ],
       "status": "active",
-      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "roomOptions": {
+        "petState": "Y",
+        "poolState": "N",
+        "barbecueState": "N"
+      },
       "images": [
         {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
+          "thumbnail": [ ],
+          "interior": [ ],
+          "exterior": [ ]
         }
       ],
-      "displayOrder": 8,
-      "createdAt": "2026-01-05T08:09:16.769Z",
-      "updatedAt": "2026-03-31T05:27:57.201Z",
-      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
-      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+      "displayOrder": 8
     },
     {
       "id": "e5bb89ee-174f-4542-be48-7a4cfa080adb",
-      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
-      "propertyName": "고성 1박2일펜션",
       "name": "설악A106",
-      "nameEn": "Seorak A106",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "설악A106(애견O,취사X)",
       "size": 39,
-      "sizePyeong": 11.8,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
@@ -1102,20 +1068,10 @@
         "ondol": 0,
         "kitchen": 0
       },
-      "roomOptions": {
-        "petState": "Y",
-        "barbecueState": "N",
-        "poolState": "N"
-      },
-      "timeSettings": {
-        "timeSettingType": "property",
-        "checkin": "15:00",
-        "checkout": "11:00",
-        "checkinDeadline": "22:00"
-      },
       "bedTypes": [
         "퀸 베드"
       ],
+      "bedConfigs": null,
       "amenities": [
         "무료 WiFi",
         "스마트 TV",
@@ -1128,37 +1084,39 @@
         "바디워시",
         "OTT"
       ],
-      "roomViews": [],
+      "roomViews": [ ],
       "roomStructures": [
         "원룸형"
       ],
       "status": "active",
-      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "roomOptions": {
+        "petState": "Y",
+        "poolState": "N",
+        "barbecueState": "N"
+      },
       "images": [
         {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
+          "thumbnail": [ ],
+          "interior": [ ],
+          "exterior": [ ]
         }
       ],
-      "displayOrder": 9,
-      "createdAt": "2026-01-05T08:09:16.930Z",
-      "updatedAt": "2026-03-31T05:27:57.201Z",
-      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
-      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+      "displayOrder": 9
     },
     {
       "id": "55f678cc-3745-46f7-ad03-93cbcc244273",
-      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
-      "propertyName": "고성 1박2일펜션",
       "name": "설악B206",
-      "nameEn": "Seorak B206",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 취사 가능\n※ 애견동반 불가\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "설악B206(취사X)",
       "size": 39,
-      "sizePyeong": 11.8,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
@@ -1168,20 +1126,10 @@
         "ondol": 0,
         "kitchen": 0
       },
-      "roomOptions": {
-        "petState": "N",
-        "barbecueState": "N",
-        "poolState": "N"
-      },
-      "timeSettings": {
-        "timeSettingType": "property",
-        "checkin": "15:00",
-        "checkout": "11:00",
-        "checkinDeadline": "22:00"
-      },
       "bedTypes": [
         "퀸 베드"
       ],
+      "bedConfigs": null,
       "amenities": [
         "무료 WiFi",
         "스마트 TV",
@@ -1194,37 +1142,39 @@
         "바디워시",
         "OTT"
       ],
-      "roomViews": [],
+      "roomViews": [ ],
       "roomStructures": [
         "원룸형"
       ],
       "status": "active",
-      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "roomOptions": {
+        "petState": "N",
+        "poolState": "N",
+        "barbecueState": "N"
+      },
       "images": [
         {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
+          "thumbnail": [ ],
+          "interior": [ ],
+          "exterior": [ ]
         }
       ],
-      "displayOrder": 10,
-      "createdAt": "2026-01-05T08:09:16.881Z",
-      "updatedAt": "2026-04-14T03:29:56.394Z",
-      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
-      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+      "displayOrder": 10
     },
     {
       "id": "625a58bc-a99b-4f1f-a6d7-507afb3c251a",
-      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
-      "propertyName": "고성 1박2일펜션",
       "name": "설악B304",
-      "nameEn": "Seorak B304",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "설악B304(애견O,취사X)",
       "size": 39,
-      "sizePyeong": 11.8,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
@@ -1234,20 +1184,10 @@
         "ondol": 0,
         "kitchen": 0
       },
-      "roomOptions": {
-        "petState": "Y",
-        "barbecueState": "N",
-        "poolState": "N"
-      },
-      "timeSettings": {
-        "timeSettingType": "property",
-        "checkin": "15:00",
-        "checkout": "11:00",
-        "checkinDeadline": "22:00"
-      },
       "bedTypes": [
         "퀸 베드"
       ],
+      "bedConfigs": null,
       "amenities": [
         "무료 WiFi",
         "스마트 TV",
@@ -1260,37 +1200,39 @@
         "바디워시",
         "OTT"
       ],
-      "roomViews": [],
+      "roomViews": [ ],
       "roomStructures": [
         "원룸형"
       ],
       "status": "active",
-      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "roomOptions": {
+        "petState": "Y",
+        "poolState": "N",
+        "barbecueState": "N"
+      },
       "images": [
         {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
+          "thumbnail": [ ],
+          "interior": [ ],
+          "exterior": [ ]
         }
       ],
-      "displayOrder": 11,
-      "createdAt": "2026-01-05T08:09:16.863Z",
-      "updatedAt": "2026-03-31T05:27:57.201Z",
-      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
-      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+      "displayOrder": 11
     },
     {
       "id": "e6179387-4ea4-4fea-a796-9737d0ede2ae",
-      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
-      "propertyName": "고성 1박2일펜션",
       "name": "설악B305",
-      "nameEn": "Seorak B305",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 불가\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "설악B305(취사X)",
       "size": 39,
-      "sizePyeong": 11.8,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
@@ -1300,20 +1242,10 @@
         "ondol": 0,
         "kitchen": 0
       },
-      "roomOptions": {
-        "petState": "N",
-        "barbecueState": "N",
-        "poolState": "N"
-      },
-      "timeSettings": {
-        "timeSettingType": "property",
-        "checkin": "15:00",
-        "checkout": "11:00",
-        "checkinDeadline": "22:00"
-      },
       "bedTypes": [
         "퀸 베드"
       ],
+      "bedConfigs": null,
       "amenities": [
         "무료 WiFi",
         "스마트 TV",
@@ -1326,37 +1258,39 @@
         "바디워시",
         "OTT"
       ],
-      "roomViews": [],
+      "roomViews": [ ],
       "roomStructures": [
         "원룸형"
       ],
       "status": "active",
-      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "roomOptions": {
+        "petState": "N",
+        "poolState": "N",
+        "barbecueState": "N"
+      },
       "images": [
         {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
+          "thumbnail": [ ],
+          "interior": [ ],
+          "exterior": [ ]
         }
       ],
-      "displayOrder": 12,
-      "createdAt": "2026-01-05T08:09:16.888Z",
-      "updatedAt": "2026-03-31T05:27:57.201Z",
-      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
-      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+      "displayOrder": 12
     },
     {
       "id": "b94e1d71-922a-4ad8-be0e-2ed9e602f233",
-      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
-      "propertyName": "고성 1박2일펜션",
       "name": "설악B306",
-      "nameEn": "Seorak B306",
       "description": "",
       "roomInfo": "원룸형 : 침대룸A(퀸1)+화장실1\n※ 애견동반 불가\n※ 객실 내 취사불가, 공용취사장 이용\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "설악B306(취사X)",
       "size": 39,
-      "sizePyeong": 11.8,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
@@ -1366,20 +1300,10 @@
         "ondol": 0,
         "kitchen": 0
       },
-      "roomOptions": {
-        "petState": "N",
-        "barbecueState": "N",
-        "poolState": "N"
-      },
-      "timeSettings": {
-        "timeSettingType": "property",
-        "checkin": "15:00",
-        "checkout": "11:00",
-        "checkinDeadline": "22:00"
-      },
       "bedTypes": [
         "퀸 베드"
       ],
+      "bedConfigs": null,
       "amenities": [
         "무료 WiFi",
         "스마트 TV",
@@ -1392,37 +1316,39 @@
         "바디워시",
         "OTT"
       ],
-      "roomViews": [],
+      "roomViews": [ ],
       "roomStructures": [
         "원룸형"
       ],
       "status": "active",
-      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "roomOptions": {
+        "petState": "N",
+        "poolState": "N",
+        "barbecueState": "N"
+      },
       "images": [
         {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
+          "thumbnail": [ ],
+          "interior": [ ],
+          "exterior": [ ]
         }
       ],
-      "displayOrder": 13,
-      "createdAt": "2026-01-05T08:09:16.828Z",
-      "updatedAt": "2026-03-31T05:27:57.201Z",
-      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
-      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+      "displayOrder": 13
     },
     {
       "id": "7aa56223-6e22-4040-b38d-e90d81aa5f03",
-      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
-      "propertyName": "고성 1박2일펜션",
       "name": "패밀리A102",
-      "nameEn": "Family A102",
       "description": "",
       "roomInfo": "침실분리형 : 거실 겸 주방+침대룸A(퀸1)+화장실1\n※ 애견동반 가능\n※ 취사 가능\n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "패밀리A102(애견O,취사X)",
       "size": 66,
-      "sizePyeong": 20,
       "baseOccupancy": 4,
       "maxOccupancy": 8,
       "totalRoomCount": {
@@ -1432,20 +1358,10 @@
         "ondol": 0,
         "kitchen": 0
       },
-      "roomOptions": {
-        "petState": "Y",
-        "barbecueState": "N",
-        "poolState": "N"
-      },
-      "timeSettings": {
-        "timeSettingType": "property",
-        "checkin": "15:00",
-        "checkout": "11:00",
-        "checkinDeadline": "22:00"
-      },
       "bedTypes": [
         "퀸 베드"
       ],
+      "bedConfigs": null,
       "amenities": [
         "무료 WiFi",
         "스마트 TV",
@@ -1458,37 +1374,39 @@
         "바디워시",
         "OTT"
       ],
-      "roomViews": [],
+      "roomViews": [ ],
       "roomStructures": [
         "침실분리형"
       ],
       "status": "active",
-      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "roomOptions": {
+        "petState": "Y",
+        "poolState": "N",
+        "barbecueState": "N"
+      },
       "images": [
         {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
+          "thumbnail": [ ],
+          "interior": [ ],
+          "exterior": [ ]
         }
       ],
-      "displayOrder": 14,
-      "createdAt": "2026-01-05T08:09:16.714Z",
-      "updatedAt": "2026-03-31T05:27:57.201Z",
-      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
-      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+      "displayOrder": 14
     },
     {
       "id": "94863de8-b79b-430e-80f2-f778cf399b81",
-      "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
-      "propertyName": "고성 1박2일펜션",
       "name": "패밀리B205",
-      "nameEn": "Family B205",
       "description": "",
       "roomInfo": "침실분리형 : 거실 겸 주방+침대룸A(퀸1)+화장실1\n※ 애견동반 불가\n※ 취사 가능 \n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "",
       "group": "패밀리B205(취사X)",
       "size": 66,
-      "sizePyeong": 20,
       "baseOccupancy": 4,
       "maxOccupancy": 8,
       "totalRoomCount": {
@@ -1498,20 +1416,10 @@
         "ondol": 0,
         "kitchen": 0
       },
-      "roomOptions": {
-        "petState": "N",
-        "barbecueState": "N",
-        "poolState": "N"
-      },
-      "timeSettings": {
-        "timeSettingType": "property",
-        "checkin": "15:00",
-        "checkout": "11:00",
-        "checkinDeadline": "22:00"
-      },
       "bedTypes": [
         "퀸 베드"
       ],
+      "bedConfigs": null,
       "amenities": [
         "무료 WiFi",
         "스마트 TV",
@@ -1524,24 +1432,30 @@
         "바디워시",
         "OTT"
       ],
-      "roomViews": [],
+      "roomViews": [ ],
       "roomStructures": [
         "침실분리형"
       ],
       "status": "active",
-      "bankAccountId": "03e669fc-3bea-4b7f-a4e1-f0e67c61ed60",
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
+      },
+      "roomOptions": {
+        "petState": "N",
+        "poolState": "N",
+        "barbecueState": "N"
+      },
       "images": [
         {
-          "thumbnail": [],
-          "interior": [],
-          "exterior": []
+          "thumbnail": [ ],
+          "interior": [ ],
+          "exterior": [ ]
         }
       ],
-      "displayOrder": 15,
-      "createdAt": "2026-01-05T08:09:16.911Z",
-      "updatedAt": "2026-03-31T05:27:57.201Z",
-      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
-      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
+      "displayOrder": 15
     }
   ],
   "homepage": {
@@ -1555,7 +1469,8 @@
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/logo/1770017252646-9r93kx8svd.png",
             "sortOrder": 0,
             "description": "",
-            "isSelected": true
+            "isSelected": true,
+            "blockId": null
           }
         ]
       }
@@ -1565,7 +1480,12 @@
       "description": "봉포해변이 눈 앞에 펼쳐집니다.",
       "keywords": ""
     },
-    "socialLinks": {},
+    "socialLinks": {
+      "facebook": null,
+      "instagram": null,
+      "blog": null,
+      "youtube": null
+    },
     "customFields": {
       "pages": {
         "index": {
@@ -1579,75 +1499,85 @@
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769664872962-x6c6ex5v9gj.jpg",
                     "sortOrder": 0,
                     "description": "",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   },
                   {
                     "id": "1fe5b225-912e-4649-bf4d-0d82162b195a",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1771918692833-4xhfpcvdepj.jpg",
                     "sortOrder": 1,
                     "description": "",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   },
                   {
                     "id": "523e4b52-6d60-4539-a317-e42353d98d8d",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1771918692833-nm854lgl3g.jpg",
                     "sortOrder": 2,
                     "description": "",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   },
                   {
                     "id": "8f80879b-a737-47d3-bd74-d420d436e519",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769570683112-unfyaqi6pv.jpg",
                     "sortOrder": 3,
                     "description": "",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   },
                   {
                     "id": "e7a1cb31-1d6f-4850-b4b0-16a760f9eec2",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769647913396-ekktaf6sklu.jpg",
                     "sortOrder": 4,
                     "description": "",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   },
                   {
                     "id": "954c31fa-52ff-42b6-9b34-7183eadda19a",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1770284444179-nsc5gsudw5.jpg",
                     "sortOrder": 5,
                     "description": "",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   },
                   {
                     "id": "29851bba-6053-4df6-a783-8fe7657cf58b",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1770284444179-rc3mgwkk9ms.jpg",
                     "sortOrder": 6,
                     "description": "",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   },
                   {
                     "id": "1ce7b29c-1f6e-4eb1-887a-5ce4b573bd9e",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769665819013-i0d8c950svl.jpg",
                     "sortOrder": 7,
                     "description": "",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   },
                   {
                     "id": "d9e58f53-3fbf-4e21-a962-c598ef3d12f7",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769570683113-lqllba92hjj.jpg",
                     "sortOrder": 8,
                     "description": "",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   },
                   {
                     "id": "e31c8cac-b8f0-4da8-971c-dae3094191bd",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_hero/1769570683111-oqrioe68nu.jpg",
                     "sortOrder": 9,
                     "description": "",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   }
                 ],
-                "description": "고성의 풍경과 함께하는 하루",
+                "videos": [ ],
                 "mediaType": "image",
-                "videos": []
+                "description": "고성의 풍경과 함께하는 하루"
               },
               "closing": {
                 "title": " ",
@@ -1657,12 +1587,13 @@
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_closing/1769570683113-k7bxz85uf4.jpg",
                     "sortOrder": 0,
                     "description": "",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   }
                 ],
-                "description": " ",
+                "videos": [ ],
                 "mediaType": "image",
-                "videos": []
+                "description": " "
               },
               "essence": {
                 "title": "Prologue",
@@ -1672,12 +1603,13 @@
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_essence/1770017252647-4403c0pk0ho.jpg",
                     "sortOrder": 0,
                     "description": "",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   }
                 ],
-                "description": "하루를 머물러도 기억에 남는 쉼\n봉포해변 앞에서 보내는 여유로운 1박 2일\n바다와 함께 쉬어가는 고성 1박2일 펜션",
+                "videos": [ ],
                 "mediaType": "image",
-                "videos": []
+                "description": "하루를 머물러도 기억에 남는 쉼\n봉포해변 앞에서 보내는 여유로운 1박 2일\n바다와 함께 쉬어가는 고성 1박2일 펜션"
               },
               "gallery": {
                 "title": "OceanView ",
@@ -1687,33 +1619,37 @@
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_gallery/1770018843172-cyruhaj6l6e.jpg",
                     "sortOrder": 0,
                     "description": " ",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   },
                   {
                     "id": "0c20e13a-f470-4888-9e3d-509a1f14828e",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_gallery/1770284444179-ar8fntzh22q.jpg",
                     "sortOrder": 1,
                     "description": "",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   },
                   {
                     "id": "c52b6d2e-a858-4090-a8b9-ca2b381828fc",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_gallery/1770018843172-g29twuckyiq.jpg",
                     "sortOrder": 2,
                     "description": " ",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   },
                   {
                     "id": "f563cc2a-97b8-46dd-8068-dac8aa5fd3cf",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_gallery/1770018843172-0n2g0bk64md.jpg",
                     "sortOrder": 3,
                     "description": " ",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   }
                 ],
-                "description": "봉포해변의 오션뷰를 즐길 수 있어\n머무는 공간마다 바다의 풍경이 다르게 펼쳐집니다.",
+                "videos": [ ],
                 "mediaType": "image",
-                "videos": []
+                "description": "봉포해변의 오션뷰를 즐길 수 있어\n머무는 공간마다 바다의 풍경이 다르게 펼쳐집니다."
               },
               "signature": {
                 "title": "Specials",
@@ -1723,33 +1659,37 @@
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_signature/1769570683113-x6o5vasdno.jpg",
                     "sortOrder": 0,
                     "description": "문을 나서면 바로 만나는 봉포해변\n바다를 가장 가까이에서 즐길 수 있는 펜션입니다.",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   },
                   {
                     "id": "13657c22-fe24-44a8-abc5-f2f470ef344a",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_signature/1770019630745-xxd9mvben6.jpg",
                     "sortOrder": 1,
                     "description": "야외 풍경을 바라보며 즐기는 바베큐 시간\r\n따뜻한 난로가 함께해 사계절 편안합니다.",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   },
                   {
                     "id": "3edbfe67-d1a0-44ea-977c-b9fc5e806b64",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_signature/1769570683113-3a6vravc5v6.jpg",
                     "sortOrder": 2,
                     "description": "봉포해변을 따라 여유롭게 산책하고\n시원한 바다에서 물놀이까지 즐길 수 있습니다.",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   },
                   {
                     "id": "6ad7f49e-a0f8-461b-9e09-8b778c9e2d3a",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/index_signature/1769570683113-juum1hsgiga.jpg",
                     "sortOrder": 3,
                     "description": "일부 객실은 자이글을 이용한 \n개별 바베큐 파티가 가능합니다. ",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   }
                 ],
-                "description": "봉포해변을 가까이에서 즐길 수 있고,\n바베큐장이 준비되어 있어 머무는 시간에 여유를 더합니다.",
+                "videos": [ ],
                 "mediaType": "image",
-                "videos": []
+                "description": "봉포해변을 가까이에서 즐길 수 있고,\n바베큐장이 준비되어 있어 머무는 시간에 여유를 더합니다."
               }
             }
           ]
@@ -1765,7 +1705,8 @@
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/directions_hero/1769650231188-vsuszvyrmid.jpg",
                     "sortOrder": 0,
                     "description": "",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   }
                 ]
               },
@@ -1787,7 +1728,8 @@
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/main_hero/1770020471367-e3m1362r8un.jpg",
                     "sortOrder": 0,
                     "description": " ",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   }
                 ],
                 "description": " "
@@ -1819,11 +1761,11 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "gallery": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 }
               }
             ]
@@ -1834,11 +1776,11 @@
               {
                 "hero": {
                   "title": "  ",
-                  "images": []
+                  "images": [ ]
                 },
                 "gallery": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 }
               }
             ]
@@ -1849,11 +1791,11 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "gallery": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 }
               }
             ]
@@ -1864,11 +1806,11 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "gallery": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 }
               }
             ]
@@ -1879,11 +1821,11 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "gallery": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 }
               }
             ]
@@ -1894,11 +1836,11 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "gallery": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 }
               }
             ]
@@ -1909,11 +1851,11 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "gallery": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 }
               }
             ]
@@ -1924,11 +1866,11 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "gallery": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 }
               }
             ]
@@ -1939,11 +1881,11 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "gallery": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 }
               }
             ]
@@ -1954,11 +1896,11 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "gallery": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 }
               }
             ]
@@ -1969,11 +1911,11 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "gallery": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 }
               }
             ]
@@ -1984,11 +1926,11 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "gallery": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 }
               }
             ]
@@ -1999,11 +1941,11 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "gallery": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 }
               }
             ]
@@ -2014,11 +1956,11 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "gallery": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 }
               }
             ]
@@ -2029,11 +1971,11 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "gallery": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 }
               }
             ]
@@ -2044,11 +1986,11 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "gallery": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 }
               }
             ]
@@ -2061,16 +2003,16 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "about": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 },
                 "experience": {
-                  "benefits": [],
-                  "features": [],
-                  "additionalInfos": []
+                  "benefits": [ ],
+                  "features": [ ],
+                  "additionalInfos": [ ]
                 }
               }
             ]
@@ -2081,16 +2023,16 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "about": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 },
                 "experience": {
-                  "benefits": [],
-                  "features": [],
-                  "additionalInfos": []
+                  "benefits": [ ],
+                  "features": [ ],
+                  "additionalInfos": [ ]
                 }
               }
             ]
@@ -2101,16 +2043,16 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "about": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 },
                 "experience": {
-                  "benefits": [],
-                  "features": [],
-                  "additionalInfos": []
+                  "benefits": [ ],
+                  "features": [ ],
+                  "additionalInfos": [ ]
                 }
               }
             ]
@@ -2121,16 +2063,16 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "about": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 },
                 "experience": {
-                  "benefits": [],
-                  "features": [],
-                  "additionalInfos": []
+                  "benefits": [ ],
+                  "features": [ ],
+                  "additionalInfos": [ ]
                 }
               }
             ]
@@ -2141,16 +2083,16 @@
               {
                 "hero": {
                   "title": " ",
-                  "images": []
+                  "images": [ ]
                 },
                 "about": {
                   "title": "",
-                  "images": []
+                  "images": [ ]
                 },
                 "experience": {
-                  "benefits": [],
-                  "features": [],
-                  "additionalInfos": []
+                  "benefits": [ ],
+                  "features": [ ],
+                  "additionalInfos": [ ]
                 }
               }
             ]
@@ -2167,14 +2109,16 @@
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/reservation_hero/1769649656124-2xqso9uupxq.jpg",
                     "sortOrder": 0,
                     "description": "",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   },
                   {
                     "id": "ba02c592-9ffc-41e0-8add-e69d9146b019",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/reservation_hero/1770020471367-41hsku50kaa.jpg",
                     "sortOrder": 1,
                     "description": "",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   }
                 ]
               },
@@ -2186,7 +2130,8 @@
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/69d6ee66-68e7-4519-a8d5-8834bbabed7b/reservation_about/1770629226360-hst3lkz9dt7.jpg",
                     "sortOrder": 0,
                     "description": "",
-                    "isSelected": true
+                    "isSelected": true,
+                    "blockId": null
                   }
                 ],
                 "description": " "
@@ -2222,7 +2167,7 @@
         }
       },
       "popup": {
-        "popups": []
+        "popups": [ ]
       },
       "property": {
         "name": "고성 1박2일펜션",
@@ -2233,6 +2178,7 @@
             "sortOrder": 0,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_thumbnail"
           },
           {
@@ -2241,6 +2187,7 @@
             "sortOrder": 0,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2249,6 +2196,7 @@
             "sortOrder": 1,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2257,6 +2205,7 @@
             "sortOrder": 2,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2265,6 +2214,7 @@
             "sortOrder": 3,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2273,6 +2223,7 @@
             "sortOrder": 4,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2281,6 +2232,7 @@
             "sortOrder": 5,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2289,6 +2241,7 @@
             "sortOrder": 6,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2297,6 +2250,7 @@
             "sortOrder": 7,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2305,6 +2259,7 @@
             "sortOrder": 8,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2313,6 +2268,7 @@
             "sortOrder": 9,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2321,6 +2277,7 @@
             "sortOrder": 10,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2329,6 +2286,7 @@
             "sortOrder": 11,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2337,6 +2295,7 @@
             "sortOrder": 12,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2345,6 +2304,7 @@
             "sortOrder": 13,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2353,6 +2313,7 @@
             "sortOrder": 14,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2361,6 +2322,7 @@
             "sortOrder": 15,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2369,6 +2331,7 @@
             "sortOrder": 16,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2377,6 +2340,7 @@
             "sortOrder": 17,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2385,6 +2349,7 @@
             "sortOrder": 18,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2393,6 +2358,7 @@
             "sortOrder": 19,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2401,6 +2367,7 @@
             "sortOrder": 20,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2409,6 +2376,7 @@
             "sortOrder": 21,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2417,6 +2385,7 @@
             "sortOrder": 22,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2425,6 +2394,7 @@
             "sortOrder": 23,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2433,6 +2403,7 @@
             "sortOrder": 24,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2441,6 +2412,7 @@
             "sortOrder": 25,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2449,6 +2421,7 @@
             "sortOrder": 26,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2457,6 +2430,7 @@
             "sortOrder": 27,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2465,6 +2439,7 @@
             "sortOrder": 28,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           },
           {
@@ -2473,9 +2448,11 @@
             "sortOrder": 29,
             "description": "",
             "isSelected": true,
+            "blockId": null,
             "category": "property_exterior"
           }
-        ]
+        ],
+        "nameEn": "Goseong 1 Night 2 Days Pension"
       },
       "roomtypes": [
         {
