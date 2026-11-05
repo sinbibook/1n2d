@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.104.0",
-    "generatedAt": "2026-11-05T07:54:03.475214147Z",
+    "version": "1.105.0",
+    "generatedAt": "2026-11-05T07:54:28.005806813Z",
     "templateType": "full_banner_accordion",
     "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
     "homepageId": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
@@ -9,6 +9,7 @@
   "property": {
     "id": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
     "name": "고성(속초) 1박2일펜션",
+    "nameEn": "Goseong 1 Night 2 Days Pension",
     "description": "동해바다와 함께 하는 1박2일 펜션",
     "subtitle": "동해바다와 함께 하는 1박2일 펜션",
     "address": "강원특별자치도 고성군 토성면 토성로 53 1박2일펜션",
@@ -25,6 +26,12 @@
     "reservationGuide": "[펜션 이용 안내 사항]\n- 보호자를 동반하지 않은 미성년자는 어떠한 경우에도 입실하실 수 없습니다.\n- 취사 불가 객실: 설악B206, 304, 305, 306호\n- 일부 객실 애완동물 동반입실 가능합니다. (103,106,102호)\n- 취사 불가, 개별바베큐 불가 및 반려견 동반 불가 객실 오예약으로 인한 취소 및 환불은 불가합니다. \n- 객실 내에서는 금연입니다.\n- 화재 및 냄새로 인한 타 손님 배려 차원에서 객실 내 돼지고기, 생선, 청국장의 조리를 금하오니 지정된 바비큐장을 이용하시길 부탁드립니다.\n- 오후 10시 이후의 바비큐장 이용 및 고성방가는 타 객실손님을 위하여 금하오니 양해 바랍니다.\n- 퇴실 시 음식물을 비롯한 모든 쓰레기는 분리수거해 주시고, 사용하신 주방기구는 세척해 주시기 바랍니다.\n- 객실 정리가 끝나시면 펜션지기에게 연락하시어 퇴실점검을 받으시기 바랍니",
     "province": "강원특별자치도",
     "city": "고성군",
+    "domain": "1n2d.kr",
+    "realtimeBookingId": "https://map.naver.com/p/entry/place/21909881",
+    "ybsId": "22917",
+    "tripPropertyId": "10586",
+    "partnerType": "distributor_b",
+    "tripProviderName": "(주)신비서",
     "amenities": [
       "주차장",
       "흡연구역(지정장소)"
@@ -48,8 +55,7 @@
       "businessEmail": "",
       "businessType": "corporate",
       "businessCategory": "숙박업",
-      "eCommerceRegistrationNumber": "",
-      "ecommerceRegistrationNumber": ""
+      "eCommerceRegistrationNumber": ""
     },
     "contractInfo": {
       "contractStartDate": "2025-09-10T00:00:00.000Z",
@@ -519,14 +525,7 @@
         "surrounding": [ ],
         "commonArea": [ ]
       }
-    ],
-    "nameEn": "Goseong 1 Night 2 Days Pension",
-    "domain": "1n2d.kr",
-    "realtimeBookingId": "https://map.naver.com/p/entry/place/21909881",
-    "ybsId": "22917",
-    "tripPropertyId": "10586",
-    "partnerType": "distributor_b",
-    "tripProviderName": "(주)신비서"
+    ]
   },
   "rooms": [
     {
@@ -2864,6 +2863,7 @@
     }
   ],
   "homepage": {
+    "id": "69d6ee66-68e7-4519-a8d5-8834bbabed7b",
     "domain": "1n2d.kr",
     "templateType": "full_banner_accordion",
     "images": [
@@ -3546,40 +3546,14 @@
             }
           ]
         },
-        "layoutMap": {
+        "nearbyAttractions": {
           "sections": [ ]
         },
-        "nearbyAttractions": {
+        "layoutMap": {
           "sections": [ ]
         },
         "landing": {
           "sections": [ ]
-        }
-      },
-      "theme": {
-        "font": {
-          "koSub": {
-            "cdn": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css",
-            "key": "pretendard",
-            "woff2": null,
-            "family": "Pretendard"
-          },
-          "enMain": {
-            "cdn": "https://fonts.cdnfonts.com/css/gloock-2",
-            "key": "gloock",
-            "woff2": null,
-            "family": "Gloock"
-          },
-          "koMain": {
-            "cdn": "https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css",
-            "key": "maruburi",
-            "woff2": null,
-            "family": "MaruBuri"
-          }
-        },
-        "color": {
-          "primary": "#F5F5F5",
-          "secondary": "#706964"
         }
       },
       "popup": {
@@ -3607,6 +3581,32 @@
             "description": ""
           }
         ]
+      },
+      "theme": {
+        "font": {
+          "koMain": {
+            "cdn": "https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css",
+            "key": "maruburi",
+            "woff2": null,
+            "family": "MaruBuri"
+          },
+          "koSub": {
+            "cdn": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css",
+            "key": "pretendard",
+            "woff2": null,
+            "family": "Pretendard"
+          },
+          "enMain": {
+            "cdn": "https://fonts.cdnfonts.com/css/gloock-2",
+            "key": "gloock",
+            "woff2": null,
+            "family": "Gloock"
+          }
+        },
+        "color": {
+          "primary": "#F5F5F5",
+          "secondary": "#706964"
+        }
       },
       "property": {
         "name": "고성 1박2일펜션",
@@ -6156,7 +6156,6 @@
       "footer": {
         "ruralStayMark": null
       }
-    },
-    "id": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
+    }
   }
 }

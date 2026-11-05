@@ -33,7 +33,6 @@ class PreviewHandler {
     convertData(data) {
         // BaseDataMapper가 없으면 원본 그대로 반환 (fallback)
         if (!this.baseMapper) {
-            console.warn('BaseDataMapper not loaded, returning original data');
             return data;
         }
         return this.baseMapper.convertToCamelCase(data);
@@ -81,6 +80,9 @@ class PreviewHandler {
             'localhost',              // 로컬 개발 환경
             'admin.sinbibook.com',    // 운영 환경
             'admin.sinbibook.xyz',    // 개발 환경
+            'backoffice.sinbibook.com', // 백오피스 운영 환경
+            'backoffice.sinbibook.xyz',  // 백오피스 개발 환경
+            'backoffice.sinbibook.dev',   // 백오피스 dev 환경
             'sinbibook.github.io',    // GitHub Pages
             'file://',                // 로컬 파일 시스템
             'null'                    // iframe null origin
@@ -401,7 +403,9 @@ class PreviewHandler {
             'room': 'room.html',
             'facility': 'facility.html',
             'reservation': 'reservation.html',
-            'directions': 'directions.html'
+            'directions': 'directions.html',
+            'nearbyAttractions': 'nearby-attractions.html',
+            'layoutMap': 'layout-map.html'
         };
 
         const targetPage = pageMap[messageData.page];
@@ -468,6 +472,12 @@ class PreviewHandler {
      */
     async renderTemplate(data) {
         const currentPage = this.getCurrentPageType();
+
+        // 404 페이지는 렌더링하지 않음
+        if (currentPage === '404') {
+            return;
+        }
+
         let mapper = null;
 
         // 현재 페이지에 맞는 매퍼 선택
@@ -500,6 +510,16 @@ class PreviewHandler {
             case 'directions':
                 if (window.DirectionsMapper) {
                     mapper = new DirectionsMapper();
+                }
+                break;
+            case 'nearbyAttractions':
+                if (window.NearbyAttractionsMapper) {
+                    mapper = new NearbyAttractionsMapper();
+                }
+                break;
+            case 'layoutMap':
+                if (window.LayoutMapMapper) {
+                    mapper = new LayoutMapMapper();
                 }
                 break;
             default:
@@ -752,8 +772,53 @@ class PreviewHandler {
 
                 switch (section) {
                     case 'hero':
-                        mapper.mapSliderSection();
+                        mapper.mapHeroSection();
                         mapper.mapLocationInfo();
+                        break;
+                    default:
+                        mapper.mapPage();
+                        break;
+                }
+            }
+        } else if (page === 'nearbyAttractions') {
+            if (window.NearbyAttractionsMapper) {
+                const mapper = this.createMapper(NearbyAttractionsMapper);
+
+                const data = this.safeGet(this.currentData, 'homepage.customFields.pages.nearbyAttractions.sections.0');
+                if (data && data.enabled === false) {
+                    this.show404Page();
+                    return;
+                }
+
+                switch (section) {
+                    case 'hero':
+                        mapper.mapHeroSlider();
+                        mapper.mapHeroText();
+                        break;
+                    case 'about':
+                        mapper.mapAttractionsContent();
+                        break;
+                    default:
+                        mapper.mapPage();
+                        break;
+                }
+            }
+        } else if (page === 'layoutMap') {
+            if (window.LayoutMapMapper) {
+                const mapper = this.createMapper(LayoutMapMapper);
+
+                const data = this.safeGet(this.currentData, 'homepage.customFields.pages.layoutMap.sections.0');
+                if (data && data.enabled === false) {
+                    this.show404Page();
+                    return;
+                }
+
+                switch (section) {
+                    case 'hero':
+                        mapper.mapHeroSection();
+                        break;
+                    case 'about':
+                        mapper.mapLayoutMapContent();
                         break;
                     default:
                         mapper.mapPage();
@@ -786,12 +851,15 @@ class PreviewHandler {
     getCurrentPageType() {
         const path = window.location.pathname;
 
+        if (path.includes('404.html')) return '404';
         if (path.includes('index.html') || path.endsWith('/') || path === '') return 'index';
         if (path.includes('main.html')) return 'main';
         if (path.includes('room.html')) return 'room';
         if (path.includes('facility.html')) return 'facility';
         if (path.includes('reservation.html')) return 'reservation';
         if (path.includes('directions.html')) return 'directions';
+        if (path.includes('nearby-attractions.html')) return 'nearbyAttractions';
+        if (path.includes('layout-map.html')) return 'layoutMap';
 
         // 루트 경로 또는 기본값으로 index 처리
         return 'index';
@@ -833,6 +901,20 @@ class PreviewHandler {
 
 
     /**
+     * 안전한 객체 접근 (경로 문자열 사용)
+     */
+    safeGet(obj, path, defaultValue = null) {
+        try {
+            const result = path.split('.').reduce((current, prop) => {
+                return current?.[prop] ?? null;
+            }, obj);
+            return result ?? defaultValue;
+        } catch (error) {
+            return defaultValue;
+        }
+    }
+
+    /**
      * 렌더링 완료 신호 전송
      */
     notifyRenderComplete(type) {
@@ -868,7 +950,9 @@ class PreviewHandler {
             'room': 'RoomMapper',
             'facility': 'FacilityMapper',
             'reservation': 'ReservationMapper',
-            'directions': 'DirectionsMapper'
+            'directions': 'DirectionsMapper',
+            'nearbyAttractions': 'NearbyAttractionsMapper',
+            'layoutMap': 'LayoutMapMapper'
         };
 
         const mapperClass = mapperConfig[currentPage];
@@ -885,6 +969,13 @@ class PreviewHandler {
             // 매핑 완료 후 헤더 표시 (FOUC 방지)
             if (window.showHeaders) window.showHeaders();
         }
+    }
+
+    /**
+     * 404 페이지 표시
+     */
+    show404Page() {
+        window.location.href = '404.html';
     }
 }
 

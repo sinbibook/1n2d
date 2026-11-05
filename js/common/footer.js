@@ -37,7 +37,7 @@
                         }
                     }
                 } catch (error) {
-                    console.log(`Error loading ${file}:`, error);
+                    console.error(`Error loading ${file}:`, error);
                 }
             }
         } catch (error) {

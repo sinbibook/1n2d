@@ -517,7 +517,7 @@ img {
 .gallery-section {
     position: relative;
     min-height: 100vh;
-    background: rgba(49, 66, 61, 0.1);
+    background: var(--color-primary);
 }
 
 .gallery-section .section-overlay {
@@ -985,6 +985,13 @@ body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
 }
 
 
+/* 모바일/터치 기기: background-attachment fixed 미지원(iOS) → 이미지 과확대 방지 */
+@media (max-width: 1024px), (hover: none) {
+    .full-banner {
+        background-attachment: scroll;
+    }
+}
+
 @media (max-width: 768px) {
     .full-banner {
         height: 500px;
@@ -1267,6 +1274,19 @@ body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
     min-width: 200px !important;
 }
 
+/* 이미지 1장일 때: 아코디언 없이 풀 이미지로 표시 */
+.facility-gallery-container.gallery-single .gallery-item,
+.facility-gallery-section .facility-gallery-container.gallery-single .gallery-item {
+    flex: 1 1 100% !important;
+    min-width: 0 !important;
+    cursor: default;
+}
+
+.facility-gallery-container.gallery-single .gallery-item .gallery-item-overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
 .gallery-section .gallery-item:nth-child(1) {
     transition-delay: 0.1s;
 }
@@ -1383,7 +1403,7 @@ body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
    Index Gallery Section - Same styling as room/facility
    ================================ */
 .gallery-section {
-    background: rgba(29, 58, 95, 0.2);
+    background: var(--color-primary);
     min-height: 700px;
     padding: 120px 60px 80px 60px;
     position: relative;

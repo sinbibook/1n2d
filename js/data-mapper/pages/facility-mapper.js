@@ -183,12 +183,19 @@ class FacilityMapper extends BaseDataMapper {
             facilityTitle.textContent = facility.name || '시설명';
         }
 
-        // 시설 설명 매핑 (CUSTOM FIELD: hero.title)
+        // 시설 소개 문구 매핑 (template-A와 동일한 폴백 체인)
+        // CUSTOM FIELD hero.title (1순위) → facilities[current].usageGuide (이용안내)
+        // description 은 하단 '시설 상세 안내' 섹션에서 노출하므로 여기서는 제외 (중복 방지)
+        // 둘 다 비면 미노출
         const facilityDescription = this.safeSelect('[data-facility-description]');
         if (facilityDescription) {
             const facilityPageData = this.getCurrentFacilityPageData();
-            const heroTitle = facilityPageData?.sections?.[0]?.hero?.title;
-            facilityDescription.innerHTML = this._formatTextWithLineBreaks(heroTitle, '메인 소개 타이틀');
+            const heroTitle = this.sanitizeText(facilityPageData?.sections?.[0]?.hero?.title);
+            const usageGuide = this.sanitizeText(facility.usageGuide);
+            const text = heroTitle || usageGuide;
+
+            facilityDescription.innerHTML = text ? this._formatTextWithLineBreaks(text) : '';
+            facilityDescription.style.display = text ? '' : 'none';
         }
 
         // 시설 번호 매핑 제거됨 - 동적 생성 비활성화
@@ -209,11 +216,15 @@ class FacilityMapper extends BaseDataMapper {
         const heroDescription = facilityPageData?.sections?.[0]?.hero?.description;
         const description = heroDescription || facility.description;
 
-        if (description) {
-            descriptionContainer.innerHTML = this._formatTextWithLineBreaks(description);
-        } else {
-            descriptionContainer.innerHTML = `<p>${facility.name} 상세 설명이 준비 중입니다.</p>`;
+        // 시설설명 없으면 상세 안내 섹션 미노출
+        const detailsWrapper = descriptionContainer.closest('.facility-details-wrapper');
+        const hasDescription = !this._isEmptyValue(description) && description.trim() !== '';
+
+        if (detailsWrapper) {
+            detailsWrapper.style.display = hasDescription ? '' : 'none';
         }
+
+        descriptionContainer.innerHTML = hasDescription ? this._formatTextWithLineBreaks(description) : '';
     }
 
     /**
@@ -335,7 +346,10 @@ class FacilityMapper extends BaseDataMapper {
      */
 
     /**
-     * 갤러리 매핑 (facility.images 4장 동적 생성)
+     * 갤러리 매핑 (facility.images 개수에 따라 동적 생성)
+     * - 0장: 섹션 숨김
+     * - 1장: 이미지 1장 풀(full)
+     * - 2~4장: 아코디언 방식
      */
     mapGallery() {
         const facility = this.getCurrentFacility();
@@ -346,31 +360,39 @@ class FacilityMapper extends BaseDataMapper {
 
         // 갤러리 상수 정의
         const HERO_IMAGES_COUNT = 2; // Hero/Thumbnail에서 사용하는 이미지 수
-        const GALLERY_IMAGES_COUNT = 6; // 갤러리에 표시할 이미지 수
+        const GALLERY_MAX_COUNT = 4; // 갤러리에 표시할 최대 이미지 수
 
-        // ImageHelpers로 선택된 이미지 가져오기
+        // ImageHelpers로 선택된 이미지 가져오기 (실제 이미지만 반환)
         const selectedImages = ImageHelpers.getSelectedImages(facility.images);
+
+        // 갤러리용 이미지 (Hero/Thumbnail 이후 이미지들, 최대 4장)
+        const galleryImages = selectedImages.slice(HERO_IMAGES_COUNT, HERO_IMAGES_COUNT + GALLERY_MAX_COUNT);
 
         // 갤러리 컨테이너 초기화
         galleryContainer.innerHTML = '';
 
-        // 갤러리용 이미지 (Hero/Thumbnail 이후 이미지들)
-        const galleryImages = selectedImages.slice(HERO_IMAGES_COUNT, HERO_IMAGES_COUNT + GALLERY_IMAGES_COUNT);
+        // 이미지가 없으면 섹션 자체를 숨김
+        const gallerySection = galleryContainer.closest('.facility-gallery-section');
+        if (galleryImages.length === 0) {
+            if (gallerySection) gallerySection.style.display = 'none';
+            return;
+        }
+        if (gallerySection) gallerySection.style.display = '';
 
-        // 4개 고정 갤러리 아이템 생성
-        for (let i = 0; i < 4; i++) {
-            const imgData = galleryImages[i] || null; // 이미지가 없으면 null
+        // 1장이면 풀 이미지, 2장 이상이면 아코디언
+        galleryContainer.classList.toggle('gallery-single', galleryImages.length === 1);
+
+        // 실제 이미지 개수만큼 갤러리 아이템 생성 (1~4개)
+        galleryImages.forEach(imgData => {
             const item = this._createGalleryItem(imgData, facility.name);
             galleryContainer.appendChild(item);
-        }
+        });
 
         // DOM에 추가된 후 첫 번째 아이템을 활성화
         setTimeout(() => {
             const firstItem = galleryContainer.querySelector('.gallery-item');
             if (firstItem) {
                 firstItem.classList.add('gallery-item-active');
-                console.log('첫 번째 갤러리 아이템 활성화됨:', firstItem);
-                console.log('클래스 목록:', firstItem.classList);
             } else {
                 console.error('첫 번째 갤러리 아이템을 찾을 수 없음');
             }

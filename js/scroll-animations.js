@@ -3,13 +3,14 @@
  * IntersectionObserver를 사용한 스크롤 애니메이션
  */
 
-document.addEventListener('DOMContentLoaded', function() {
+window.initScrollAnimations = function() {
     // 애니메이션을 적용할 요소들 선택
     const animateElements = [
         '.main-about-title',
         '.main-about-description',
         '.intro-block-image',
         '.intro-block-content',
+        '.layout-map-item',
         '.full-banner-title',
         '.full-banner-circle',
         '.about-title',  // directions 페이지 타이틀
@@ -84,4 +85,9 @@ document.addEventListener('DOMContentLoaded', function() {
             content.style.transitionDelay = `${index * 0.1 + 0.2}s`;
         }
     });
+};
+
+// DOMContentLoaded 이벤트에서 초기화
+document.addEventListener('DOMContentLoaded', function() {
+    window.initScrollAnimations();
 });

@@ -60,12 +60,9 @@ class BaseDataMapper {
         try {
             // URL 파라미터 확인
             const urlParams = new URLSearchParams(window.location.search);
-            const previewValue = urlParams.get('preview');
-            const isPreview = previewValue === 'true';
 
             // 잘못된 쿼리스트링 감지 시 index로 리다이렉트
             // 허용된 파라미터: preview (값이 true일 때만), id
-            const allowedParams = ['preview', 'id'];
             const allParamsValid = Array.from(urlParams.keys()).every(key => {
                 if (key === 'preview') return urlParams.get('preview') === 'true';
                 if (key === 'id') return true;
@@ -78,8 +75,8 @@ class BaseDataMapper {
                 return;
             }
 
-            // 데이터 파일 선택
-            const dataFile = isPreview ? 'preview-data.json' : 'standard-template-data.json';
+            // 항상 standard-template-data.json 로드 (preview-handler가 override함)
+            const dataFile = 'standard-template-data.json';
 
             // 캐시 방지를 위한 타임스탬프 추가
             const timestamp = new Date().getTime();
@@ -226,6 +223,35 @@ class BaseDataMapper {
             'SPA': '힐링과 휴식을 위한 스파 시설'
         };
         return descriptions[code] || '';
+    }
+
+    /**
+     * Hero 단일 이미지 매핑 (슬라이더 없이 첫번째 선택 이미지 1장만 노출)
+     * @param {Array} images - hero.images 배열
+     * @param {string} altFallback - description 없을 때 alt 텍스트
+     */
+    mapHeroImage(images, altFallback = '') {
+        const container = this.safeSelect('[data-hero-image]');
+        if (!container) return;
+
+        container.innerHTML = '';
+
+        const slide = document.createElement('div');
+        slide.className = 'hero-slide active';
+
+        const img = document.createElement('img');
+        const firstImage = ImageHelpers.getFirstSelectedImage(images);
+
+        if (firstImage) {
+            img.src = firstImage.url;
+            img.alt = this.sanitizeText(firstImage.description, altFallback);
+            img.loading = 'eager';
+        } else {
+            ImageHelpers.applyPlaceholder(img);
+        }
+
+        slide.appendChild(img);
+        container.appendChild(slide);
     }
 
     // ============================================================================
@@ -391,6 +417,17 @@ class BaseDataMapper {
      * 메타 태그 업데이트 (homepage.seo + 페이지별 SEO 병합)
      * @param {Object} pageSEO - 페이지별 SEO 데이터 (선택사항, 전역 SEO보다 우선 적용)
      */
+    upsertMetaByName(name, content) {
+        if (!content) return;
+        let meta = document.head.querySelector(`meta[name="${name}"]`);
+        if (!meta) {
+            meta = document.createElement('meta');
+            meta.setAttribute('name', name);
+            document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', content);
+    }
+
     updateMetaTags(pageSEO = null) {
         // homepage.seo 글로벌 SEO 데이터 적용
         const globalSEO = this.safeGet(this.data, 'homepage.seo') || {};
@@ -433,6 +470,10 @@ class BaseDataMapper {
         // OG URL은 현재 페이지 URL로 설정
         const ogUrl = this.safeSelect('meta[property="og:url"]');
         if (ogUrl) ogUrl.setAttribute('content', window.location.href);
+
+        // 네이버/구글 사이트 인증 meta 태그 주입 (값 있으면 생성/갱신)
+        this.upsertMetaByName('naver-site-verification', seo.naverSiteVerification);
+        this.upsertMetaByName('google-site-verification', seo.googleSiteVerification);
     }
 
     /**

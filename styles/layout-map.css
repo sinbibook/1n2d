@@ -1,0 +1,190 @@
+/* ================================
+   Layout Map Page Styles
+   ================================ */
+
+/* Main About Section - Below marquee */
+.main-about-section {
+    padding: 80px 20px 0;
+    min-height: 700px;
+    background: var(--color-primary);
+    text-align: center;
+    position: relative;
+}
+
+.main-about-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-about-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 30px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.main-about-title.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.main-about-description {
+    font-family: var(--font-ko-sub);
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition-delay: 0.2s;
+}
+
+.main-about-description.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Intro Section - Dynamic blocks */
+.intro-section {
+    background: var(--color-primary);
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout-map-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 50px auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.layout-map-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Layout map image container */
+.layout-map-image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+/* 설명 박스 없을 때 하단 여백 제거 */
+.layout-map-image-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+.layout-map-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Layout map description */
+.layout-map-description-wrapper {
+    width: 100%;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+}
+
+.layout-map-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-secondary);
+    text-align: center;
+}
+
+.layout-map-description {
+    font-family: var(--font-ko-sub);
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Last item gets extra padding bottom */
+.layout-map-item:last-child {
+    padding-bottom: 100px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero-property-title {
+        font-size: 2.5rem;
+        bottom: 80px;
+    }
+
+    .main-about-section {
+        padding: 60px 20px;
+    }
+
+    .main-about-title {
+        font-size: 1.7rem;
+    }
+
+    .main-about-description {
+        font-size: 1rem;
+    }
+
+    .intro-section {
+       padding: 0px 20px 60px 20px;
+    }
+
+    .layout-map-item {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    /* 모바일에서 마지막 아이템 패딩 제거 */
+    .layout-map-item:last-child {
+        padding-bottom: 0;
+    }
+
+    .layout-map-image-wrapper {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .layout-map-description-wrapper {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .layout-map-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .layout-map-description {
+        font-size: 1rem;
+    }
+}

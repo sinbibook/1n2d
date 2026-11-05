@@ -21,6 +21,7 @@ class PopupManager {
         this.autoPlayInterval = 5000; // 자동 슬라이드 간격 (5초)
         this._slides = null; // 슬라이드 DOM 캐시
         this._dots = null; // 도트 DOM 캐시
+        this._previewDismissed = false; // 미리보기에서 사용자가 팝업을 닫은 경우
     }
 
     /**
@@ -105,9 +106,8 @@ class PopupManager {
                 // 미리보기 모드가 아닌 경우에만 오늘 숨김 체크
                 if (!this.isPreviewMode && this.isHiddenToday(p.id)) return false;
 
-                // 이미지가 있는 팝업만 (images 배열에서 isSelected: true인 것)
-                const selectedImage = this.getSelectedImage(p);
-                if (!selectedImage) return false;
+                // 보여줄 이미지·영상이 있는 팝업만
+                if (this.getPopupMedia(p).length === 0) return false;
 
                 return true;
             })
@@ -116,6 +116,10 @@ class PopupManager {
         // 팝업이 있으면 첫 번째 팝업 표시
         this.currentIndex = 0;
         if (this.popups.length > 0) {
+            // 미리보기에서 이미 닫은 경우 다시 표시하지 않음
+            if (this.isPreviewMode && this._previewDismissed) {
+                return;
+            }
             this.show();
         } else {
             this.hide();
@@ -123,25 +127,34 @@ class PopupManager {
     }
 
     /**
-     * 팝업에서 선택된 이미지 가져오기
+     * 팝업의 노출 영상 URL (isSelected 우선, 없으면 첫 영상, 영상이 없으면 null)
      */
-    getSelectedImage(popup) {
-        if (!popup.images || !Array.isArray(popup.images)) {
-            return null;
-        }
+    getSelectedVideo(popup) {
+        if (!popup || !Array.isArray(popup.videos)) return null;
+        const videos = popup.videos
+            .filter(video => video && video.url)
+            .sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
+        const selected = videos.find(video => video.isSelected === true);
+        if (selected) return selected.url;
+        return videos.length ? videos[0].url : null;
+    }
 
-        // isSelected: true인 이미지 찾기
-        const selected = popup.images.find(img => img.isSelected === true);
-        if (selected && selected.url) {
-            return selected.url;
-        }
+    /**
+     * 팝업의 노출 미디어 목록 [{ kind: 'image' | 'video', url }]
+     * - 선택 이미지들(없으면 첫 이미지) 뒤에 노출 영상 1개를 붙인다
+     * - 슬라이더는 이 목록을 한 장씩 넘긴다 (이미지 1장 + 영상이어도 2장)
+     */
+    getPopupMedia(popup) {
+        const images = Array.isArray(popup.images) ? popup.images : [];
+        const selectedImages = images.filter(img => img && img.url && img.isSelected === true);
+        const imageUrls = selectedImages.length
+            ? selectedImages.map(img => img.url)
+            : (images[0] && images[0].url ? [images[0].url] : []);
 
-        // 선택된 이미지가 없으면 첫 번째 이미지 사용
-        if (popup.images.length > 0 && popup.images[0].url) {
-            return popup.images[0].url;
-        }
-
-        return null;
+        const media = imageUrls.map(url => ({ kind: 'image', url }));
+        const videoUrl = this.getSelectedVideo(popup);
+        if (videoUrl) media.push({ kind: 'video', url: videoUrl });
+        return media;
     }
 
     /**
@@ -204,6 +217,7 @@ class PopupManager {
         this.sliderIndex = 0;
 
         this.container.innerHTML = this.render(popup);
+        this.bindFitBox();
 
         // body 스크롤 막기
         document.body.classList.add('popup-open');
@@ -251,16 +265,17 @@ class PopupManager {
         const hasTitle = popup.title && popup.title.trim() !== '';
         const hasDescription = popup.description && popup.description.trim() !== '';
 
-        // 슬라이더 모드 vs 단일 이미지 모드
-        const selectedImages = popup.images ? popup.images.filter(img => img.url && img.isSelected === true) : [];
-        const isSlider = popup.slider === true && selectedImages.length > 1;
+        // 슬라이더 모드 vs 단일 미디어 모드 (슬라이더를 끄면 첫 미디어만 — 이미지가 있으면 이미지)
+        const media = this.getPopupMedia(popup);
+        const isSlider = popup.slider === true && media.length > 1;
         const imageSection = isSlider
-            ? this.renderSlider(popup, hasLink, hasTitle, hasDescription, selectedImages)
-            : this.renderSingleImage(popup, hasLink, hasTitle, hasDescription);
+            ? this.renderSlider(popup, hasLink, hasTitle, hasDescription, media)
+            : this.renderSingleImage(popup, hasLink, hasTitle, hasDescription, media[0]);
+        const boxWidth = this.getBoxWidth(popup);
 
         return `
             <div class="popup-overlay" role="dialog" aria-modal="true"${hasTitle ? ` aria-labelledby="popup-title-${popup.id}"` : ''}>
-                <div class="popup-content${isSlider ? ' popup-content--slider' : ''}">
+                <div class="popup-content${isSlider ? ' popup-content--slider' : ''}" data-box-width="${boxWidth}" style="width: ${boxWidth}px; max-width: min(90vw, ${boxWidth}px)">
                     <button class="popup-close" data-action="close" aria-label="팝업 닫기">&times;</button>
                     ${imageSection}
                     <div class="popup-footer">
@@ -273,13 +288,23 @@ class PopupManager {
     }
 
     /**
-     * 단일 이미지 렌더링
+     * 미디어 1개 렌더링 — 이미지는 <img>, 영상은 음소거 자동재생·반복 <video> + 재생/정지 버튼
      */
-    renderSingleImage(popup, hasLink, hasTitle, hasDescription) {
-        const imageUrl = this.getSelectedImage(popup);
+    renderMedia(popup, item) {
+        if (item.kind === 'video') {
+            return `<video class="popup-image popup-video" src="${this.escapeHtml(item.url)}" muted autoplay loop playsinline preload="metadata"></video>
+                <button type="button" class="popup-video-toggle" data-action="toggle-video" aria-label="영상 정지">❚❚</button>`;
+        }
+        return `<img class="popup-image" src="${this.escapeHtml(item.url)}" alt="${this.escapeHtml(popup.title || '팝업 이미지')}">`;
+    }
 
+    /**
+     * 단일 미디어 렌더링
+     */
+    renderSingleImage(popup, hasLink, hasTitle, hasDescription, item) {
         const imageContent = `
-            <div class="popup-image" style="background-image: url('${this.escapeHtml(imageUrl)}')">
+            <div class="popup-image-wrap">
+                ${this.renderMedia(popup, item)}
                 ${hasTitle || hasDescription ? `
                     <div class="popup-text-content">
                         ${hasTitle ? `<h3 id="popup-title-${popup.id}" class="popup-title">${this.escapeHtml(popup.title)}</h3>` : ''}
@@ -299,10 +324,11 @@ class PopupManager {
      */
     renderSlider(popup, hasLink, hasTitle, hasDescription, images) {
 
-        // 슬라이드 아이템들
-        const slides = images.map((img, index) => `
+        // 슬라이드 아이템들 (이미지·영상)
+        const slides = images.map((item, index) => `
             <div class="popup-slide${index === 0 ? ' active' : ''}" data-slide-index="${index}">
-                <div class="popup-image" style="background-image: url('${this.escapeHtml(img.url)}')">
+                <div class="popup-image-wrap">
+                    ${this.renderMedia(popup, item)}
                     ${hasTitle || hasDescription ? `
                         <div class="popup-text-content">
                             ${hasTitle ? `<h3${index === 0 ? ` id="popup-title-${popup.id}"` : ''} class="popup-title">${this.escapeHtml(popup.title)}</h3>` : ''}
@@ -336,6 +362,61 @@ class PopupManager {
         return hasLink
             ? `<a href="${this.escapeHtml(popup.link)}" target="_blank" rel="noopener noreferrer" class="popup-image-link">${sliderContent}</a>`
             : sliderContent;
+    }
+
+    /**
+     * 팝업 폭 (백오피스에서 고른 popup.width, 없으면 기본 폭)
+     */
+    getBoxWidth(popup) {
+        const width = Number(popup && popup.width);
+        return width > 0 ? width : PopupManager.DEFAULT_BOX_WIDTH;
+    }
+
+    /**
+     * 팝업 박스 폭 맞추기
+     * - 고른 폭으로 고정하고 이미지는 폭 100% 로 채운다
+     * - 세로가 화면을 넘는 이미지만 비율을 유지한 채 폭을 줄인다 (닫기 버튼이 화면 안에 남도록)
+     * - 슬라이더는 첫 미디어 비율로 높이를 고정한다 (넘길 때 팝업 높이가 바뀌지 않도록)
+     */
+    fitBox() {
+        if (!this.container) return;
+        const box = this.container.querySelector('.popup-content');
+        const img = this.container.querySelector('.popup-image');
+        if (!box || !img || !PopupManager.isMediaReady(img)) return;
+
+        const size = PopupManager.getMediaSize(img);
+        const ratio = size.width / size.height;
+        const slides = box.querySelector('.popup-slides');
+        if (slides) slides.style.aspectRatio = `${size.width} / ${size.height}`;
+
+        const footer = box.querySelector('.popup-footer');
+        const footerHeight = footer ? footer.offsetHeight : 0;
+        const boxWidth = Number(box.dataset.boxWidth) || PopupManager.DEFAULT_BOX_WIDTH;
+        const maxImageHeight = window.innerHeight * 0.85 - footerHeight;
+
+        let w = Math.min(window.innerWidth * 0.9, boxWidth);
+        if (w / ratio > maxImageHeight) w = maxImageHeight * ratio;
+        box.style.width = Math.round(Math.max(w, 1)) + 'px';
+    }
+
+    /**
+     * 첫 미디어 크기를 알게 되면 폭을 맞추고, 창 크기가 바뀌면 다시 맞춘다
+     */
+    bindFitBox() {
+        const img = this.container.querySelector('.popup-image');
+        if (img) {
+            if (PopupManager.isMediaReady(img)) {
+                this.fitBox();
+            } else {
+                const eventName = img.tagName === 'VIDEO' ? 'loadedmetadata' : 'load';
+                img.addEventListener(eventName, () => this.fitBox(), { once: true });
+            }
+        }
+        if (this._resizeHandler) {
+            window.removeEventListener('resize', this._resizeHandler);
+        }
+        this._resizeHandler = () => this.fitBox();
+        window.addEventListener('resize', this._resizeHandler);
     }
 
     /**
@@ -406,8 +487,49 @@ class PopupManager {
         };
         document.addEventListener('keydown', this._escHandler);
 
+        // 영상 재생/정지
+        this.bindVideoEvents();
+
         // 슬라이더 이벤트
         this.bindSliderEvents(popup);
+    }
+
+    /**
+     * 영상: 음소거 자동재생을 보장하고 재생/정지 버튼을 연결한다
+     * - 슬라이더 안의 영상은 보이는 슬라이드일 때만 재생한다
+     */
+    bindVideoEvents() {
+        this.container.querySelectorAll('.popup-video').forEach(video => {
+            video.muted = true;
+            const toggle = video.parentNode.querySelector('[data-action="toggle-video"]');
+            const syncToggle = () => {
+                if (!toggle) return;
+                toggle.textContent = video.paused ? '▶' : '❚❚';
+                toggle.setAttribute('aria-label', video.paused ? '영상 재생' : '영상 정지');
+            };
+            video.addEventListener('play', syncToggle);
+            video.addEventListener('pause', syncToggle);
+            if (toggle) {
+                // 링크 팝업이어도 버튼 클릭은 이동하지 않게 막는다
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if (video.paused) {
+                        video.play().catch(() => {});
+                    } else {
+                        video.pause();
+                    }
+                });
+            }
+
+            const slide = video.closest('.popup-slide');
+            if (slide && !slide.classList.contains('active')) {
+                video.pause();
+                syncToggle();
+                return;
+            }
+            video.play().catch(() => syncToggle());
+        });
     }
 
     /**
@@ -541,9 +663,16 @@ class PopupManager {
 
         this.sliderIndex = index;
 
-        // 슬라이드 활성화 (캐시된 DOM 사용)
+        // 슬라이드 활성화 (캐시된 DOM 사용). 영상은 보이는 슬라이드만 재생한다
         this._slides.forEach((slide, i) => {
             slide.classList.toggle('active', i === index);
+            const video = slide.querySelector('.popup-video');
+            if (!video) return;
+            if (i === index) {
+                video.play().catch(() => {});
+            } else {
+                video.pause();
+            }
         });
 
         // 도트 활성화 (캐시된 DOM 사용)
@@ -562,6 +691,10 @@ class PopupManager {
             document.removeEventListener('keydown', this._escHandler);
             this._escHandler = null;
         }
+        if (this._resizeHandler) {
+            window.removeEventListener('resize', this._resizeHandler);
+            this._resizeHandler = null;
+        }
         this.stopAutoPlay();
         this._slides = null;
         this._dots = null;
@@ -579,6 +712,9 @@ class PopupManager {
             this.show();
         } else {
             // 모든 팝업 닫기
+            if (this.isPreviewMode) {
+                this._previewDismissed = true;
+            }
             this.hide();
         }
     }
@@ -589,6 +725,8 @@ class PopupManager {
     updateFromPreview(popupData) {
         // 미리보기 모드 활성화
         this.isPreviewMode = true;
+        // 팝업 설정 자체가 변경된 경우 닫힘 플래그 리셋
+        this._previewDismissed = false;
 
         // 팝업 데이터 처리
         const popups = popupData?.popups || popupData || [];
@@ -607,6 +745,19 @@ class PopupManager {
 
 // 전역 인스턴스 생성
 window.PopupManager = PopupManager;
+
+// 팝업 폭을 고르지 않은 팝업의 기본 폭 (styles/popup.css .popup-content width 와 동일하게 유지)
+PopupManager.DEFAULT_BOX_WIDTH = 350;
+
+// 이미지·영상 원본 크기
+PopupManager.getMediaSize = (el) => (el.tagName === 'VIDEO'
+    ? { width: el.videoWidth, height: el.videoHeight }
+    : { width: el.naturalWidth, height: el.naturalHeight });
+
+// 크기를 알 수 있는 상태인지 (영상은 메타데이터 로드 이후)
+PopupManager.isMediaReady = (el) => (el.tagName === 'VIDEO'
+    ? el.readyState >= 1 && el.videoWidth > 0
+    : el.complete && el.naturalWidth > 0);
 
 // DOM 로드 완료 시 초기화
 if (document.readyState === 'loading') {
