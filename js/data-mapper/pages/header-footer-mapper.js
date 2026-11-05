@@ -96,6 +96,46 @@ class HeaderFooterMapper extends BaseDataMapper {
 
         // 예약 버튼에 realtimeBookingId 매핑
         this.mapReservationButtons();
+
+        // 신규 페이지 enabled 체크
+        this.mapNewPageMenuVisibility();
+    }
+
+    /**
+     * 신규 페이지 (nearbyAttractions, layoutMap) 메뉴 표시 여부 결정 (헤더 + 푸터)
+     */
+    mapNewPageMenuVisibility() {
+        if (!this.isDataLoaded) return;
+
+        // Nearby Attractions 메뉴 표시 여부
+        const nearbyAttractionsEnabled = this.safeGet(this.data, 'homepage.customFields.pages.nearbyAttractions.sections.0.enabled') === true;
+
+        // 헤더 메뉴
+        const nearbyAttractionsMenuItems = document.querySelectorAll('.nearby-attractions-menu');
+        nearbyAttractionsMenuItems.forEach(item => {
+            item.style.display = nearbyAttractionsEnabled ? '' : 'none';
+        });
+
+        // 푸터 메뉴
+        const nearbyAttractionsMenuLinks = document.querySelectorAll('.nearby-attractions-menu-link');
+        nearbyAttractionsMenuLinks.forEach(link => {
+            link.style.display = nearbyAttractionsEnabled ? '' : 'none';
+        });
+
+        // Layout Map 메뉴 표시 여부
+        const layoutMapEnabled = this.safeGet(this.data, 'homepage.customFields.pages.layoutMap.sections.0.enabled') === true;
+
+        // 헤더 메뉴
+        const layoutMapMenuItems = document.querySelectorAll('.layout-map-menu');
+        layoutMapMenuItems.forEach(item => {
+            item.style.display = layoutMapEnabled ? '' : 'none';
+        });
+
+        // 푸터 메뉴
+        const layoutMapMenuLinks = document.querySelectorAll('.layout-map-menu-link');
+        layoutMapMenuLinks.forEach(link => {
+            link.style.display = layoutMapEnabled ? '' : 'none';
+        });
     }
 
     /**
@@ -406,10 +446,36 @@ class HeaderFooterMapper extends BaseDataMapper {
     }
 
     /**
+     * 농어촌민박사업자 이미지 매핑 (로고 아래, 전화번호 위)
+     * customFields.footer.ruralStayMark → [data-footer-rural-stay-mark]
+     * 이미지가 있을 때만 노출하고, 없으면 숨겨 기존 푸터와 같다.
+     * 프리뷰는 같은 페이지에서 다시 매핑하므로 매번 표시 상태를 되돌린다.
+     */
+    mapRuralStayMark() {
+        const mark = this.safeGet(this.data, 'homepage.customFields.footer.ruralStayMark');
+        const markUrl = mark && mark.url ? String(mark.url) : '';
+
+        document.querySelectorAll('[data-footer-rural-stay-mark-wrap]').forEach(wrap => {
+            wrap.style.display = markUrl ? '' : 'none';
+        });
+        document.querySelectorAll('[data-footer-rural-stay-mark]').forEach(img => {
+            if (!markUrl) {
+                img.removeAttribute('src');
+                return;
+            }
+            img.src = markUrl;
+            img.alt = (mark.description && String(mark.description).trim()) || '농어촌민박사업자';
+        });
+    }
+
+    /**
      * Footer 사업자 정보 매핑
      */
     mapFooterInfo() {
         if (!this.isDataLoaded || !this.data.property) return;
+
+        // 농어촌민박사업자 이미지 - businessInfo 가 없어도 노출 여부는 매번 갱신한다
+        this.mapRuralStayMark();
 
         const property = this.data.property;
         const businessInfo = property.businessInfo;
@@ -460,7 +526,10 @@ class HeaderFooterMapper extends BaseDataMapper {
         const copyrightElement = this.safeSelect('[data-footer-copyright]');
         if (copyrightElement) {
             const currentYear = new Date().getFullYear();
-            copyrightElement.innerHTML = `<a href="https://sinbibook.com" target="_blank" style="color: inherit; text-decoration: none;">© ${currentYear} 신비서. All rights reserved.</a>`;
+            // property.tripProviderName(Trip11 공급자명) 이 있으면 그 이름으로, 없으면 기존 '신비서'
+            // innerHTML 에 들어가므로 태그로 해석될 문자는 제거한다
+            const provider = String(this.safeGet(this.data, 'property.tripProviderName') || '').trim().replace(/[&<>"]/g, '') || '신비서';
+            copyrightElement.innerHTML = `<a href="https://sinbibook.com" target="_blank" style="color: inherit; text-decoration: none;">© ${currentYear} ${provider}. All rights reserved.</a>`;
         }
     }
 

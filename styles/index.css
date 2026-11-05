@@ -354,8 +354,8 @@ body {
     .closing-section {
         position: relative !important;
         margin-top: 0 !important;
-        height: 100vh !important;
-        min-height: 100vh !important;
+        height: 60vh !important;
+        min-height: 60vh !important;
     }
 }
 
@@ -487,6 +487,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 /* 텍스트 영역 - 좌측에서 시작하여 이미지 위로 확장 */
@@ -622,6 +623,7 @@ body {
     width: 70%;
     height: 450px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 /* 썸네일 영역 */
@@ -843,23 +845,20 @@ body {
         display: flex;
         flex-direction: column;
         position: static;
-        padding: 30px;
+        padding: 30px 0;
     }
 
     .essence-left {
         position: static;
         width: 100%;
-        height: 60vh;
-        min-height: 400px;
         box-sizing: border-box;
         margin: 0;
     }
 
     .essence-image {
         width: 100%;
-        height: 100%;
+        height: 300px;
         object-fit: cover;
-        border-radius: 0;
     }
 
     .essence-right {
@@ -939,6 +938,10 @@ body {
 
     .essence-description {
         font-size: 0.9rem;
+    }
+
+    .closing-background {
+        height: 100%;
     }
 
     .closing-content {
@@ -1078,7 +1081,39 @@ body {
 
 
 /* ================================
-   모바일 히어로 섹션 100vh 설정  
+   비디오 지원
+   ================================ */
+
+/* Hero */
+[data-hero-slider] video.hero-video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-slider:has([data-hero-slider] video.hero-video) .hero-bottom-info { display: none; }
+
+/* Essence */
+.essence-left video.essence-video { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 8px; }
+.essence-container:has(.essence-left .essence-video) .essence-left { flex: 2; }
+.essence-container:has(.essence-left .essence-video) .essence-right { flex: 1; }
+
+/* Signature */
+.signature-right video.signature-video { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 8px; }
+
+/* Gallery */
+.gallery-video-container { max-width: 1200px; margin: 20px auto 0; padding: 0 20px; height: 60vh; overflow: hidden; border-radius: 8px; box-sizing: border-box; }
+.gallery-section:has(.gallery-video-container) { padding-bottom: 100px; }
+.gallery-video-container video { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 8px; }
+
+/* Closing */
+.closing-background .closing-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+
+@media (max-width: 768px) {
+    .gallery-section:has(.gallery-video-container) { padding-bottom: 60px; }
+    .closing-section:has(.closing-video) { min-height: unset; }
+    .essence-container:has(.essence-left .essence-video) { padding-left: 0; padding-right: 0; }
+    .essence-container:has(.essence-left .essence-video) .essence-left { flex: none; width: 100%; height: 60vh; min-height: 400px; }
+    .essence-left video.essence-video { height: 100%; min-height: 400px; }
+}
+
+/* ================================
+   모바일 히어로 섹션 100vh 설정
    ================================ */
 @media (max-width: 768px) {
     .hero-section {

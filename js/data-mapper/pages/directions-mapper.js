@@ -17,70 +17,14 @@ class DirectionsMapper extends BaseDataMapper {
     // ============================================================================
 
     /**
-     * Hero Slider 섹션 매핑
-     * homepage.customFields.pages.directions.sections[0].hero.images → [data-hero-slider]
+     * Hero 섹션 매핑 (단일 이미지)
+     * homepage.customFields.pages.directions.sections[0].hero.images → [data-hero-image]
      */
-    mapSliderSection() {
+    mapHeroSection() {
         if (!this.isDataLoaded) return;
 
         const directionsData = this.safeGet(this.data, 'homepage.customFields.pages.directions.sections.0');
-        if (!directionsData) return;
-
-        // 슬라이더 이미지 매핑
-        if (directionsData.hero?.images && Array.isArray(directionsData.hero.images)) {
-            this.mapHeroSlider(directionsData.hero.images);
-        }
-    }
-
-    /**
-     * Hero Slider 동적 생성
-     * homepage.customFields.pages.directions.sections[0].hero.images → [data-hero-slider]
-     */
-    mapHeroSlider(images) {
-        const sliderContainer = this.safeSelect('[data-hero-slider]');
-        if (!sliderContainer) return;
-
-        // ImageHelpers를 사용하여 선택된 이미지 필터링 및 정렬
-        const selectedImages = ImageHelpers.getSelectedImages(images);
-
-        // 슬라이더 초기화
-        sliderContainer.innerHTML = '';
-
-        if (selectedImages.length === 0) {
-            // 이미지가 없을 경우 placeholder 슬라이드 추가
-            const slideDiv = document.createElement('div');
-            slideDiv.className = 'hero-slide active';
-
-            const imgElement = document.createElement('img');
-            ImageHelpers.applyPlaceholder(imgElement);
-
-            slideDiv.appendChild(imgElement);
-            sliderContainer.appendChild(slideDiv);
-            return;
-        }
-
-        // 이미지 생성
-        selectedImages.forEach((img, index) => {
-            const slideDiv = document.createElement('div');
-            slideDiv.className = 'hero-slide';
-            if (index === 0) {
-                slideDiv.classList.add('active');
-            }
-
-            const imgElement = document.createElement('img');
-            imgElement.src = img.url;
-            imgElement.alt = this.sanitizeText(img.description, '오시는길 이미지');
-            imgElement.loading = index === 0 ? 'eager' : 'lazy';
-
-            slideDiv.appendChild(imgElement);
-            sliderContainer.appendChild(slideDiv);
-        });
-
-        // 네비게이션 총 개수 업데이트
-        const totalSlides = document.querySelector('[data-total-slides]');
-        if (totalSlides) {
-            totalSlides.textContent = String(selectedImages.length).padStart(2, '0');
-        }
+        this.mapHeroImage(directionsData?.hero?.images, '오시는길 이미지');
     }
 
     /**
@@ -266,7 +210,7 @@ class DirectionsMapper extends BaseDataMapper {
         }
 
         // 순차적으로 각 섹션 매핑
-        this.mapSliderSection(); // Hero 슬라이더 매핑
+        this.mapHeroSection(); // Hero 이미지 매핑
         this.mapLocationInfo(); // 숙소명, 주소 매핑
         this.mapNotesSection(); // 안내사항 매핑
         this.mapFullBanner(); // Full Banner 섹션 매핑
@@ -287,21 +231,8 @@ class DirectionsMapper extends BaseDataMapper {
         // E-commerce registration 매핑
         this.mapEcommerceRegistration();
 
-        // 슬라이더 재초기화 (동적 슬라이드 생성 후)
-        this.reinitializeSlider();
-
         // 페이지 스크립트 재초기화
         this.reinitializePageScripts();
-    }
-
-    /**
-     * 슬라이더 재초기화
-     */
-    reinitializeSlider() {
-        // Hero 슬라이더 재초기화
-        if (typeof window.initDirectionsHeroSlider === 'function') {
-            window.initDirectionsHeroSlider();
-        }
     }
 
     /**

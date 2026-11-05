@@ -13,55 +13,14 @@ class ReservationMapper extends BaseDataMapper {
     // ============================================================================
 
     /**
-     * Hero 섹션 매핑 (Hero Slider)
+     * Hero 섹션 매핑 (단일 이미지)
+     * homepage.customFields.pages.reservation.sections[0].hero.images → [data-hero-image]
      */
     mapHeroSection() {
         if (!this.isDataLoaded || !this.data.property) return;
 
         const reservationData = this.safeGet(this.data, 'homepage.customFields.pages.reservation.sections.0');
-        const slider = this.safeSelect('[data-hero-slider]');
-        if (!slider) return;
-
-        // Hero 이미지 필터링 및 정렬
-        const heroImages = reservationData?.hero?.images;
-        const selectedImages = ImageHelpers.getSelectedImages(heroImages);
-
-        // 슬라이더 초기화
-        slider.innerHTML = '';
-
-        if (selectedImages.length === 0) {
-            // 이미지가 없을 때 placeholder
-            const slide = document.createElement('div');
-            slide.className = 'hero-slide active';
-            const img = document.createElement('img');
-            ImageHelpers.applyPlaceholder(img);
-            slide.appendChild(img);
-            slider.appendChild(slide);
-        } else {
-            // 이미지가 있으면 슬라이드 생성
-            selectedImages.forEach((image, index) => {
-                const slide = document.createElement('div');
-                slide.className = `hero-slide${index === 0 ? ' active' : ''}`;
-                const img = document.createElement('img');
-                img.src = image.url;
-                img.alt = image.description || '예약안내';
-                img.loading = index === 0 ? 'eager' : 'lazy';
-                slide.appendChild(img);
-                slider.appendChild(slide);
-            });
-        }
-
-        // 슬라이더 인디케이터 매핑
-        const totalSlidesEl = this.safeSelect('[data-total-slides]');
-        if (totalSlidesEl) {
-            const count = selectedImages.length > 0 ? selectedImages.length : 1;
-            totalSlidesEl.textContent = count.toString().padStart(2, '0');
-        }
-
-        // 슬라이더 재초기화
-        if (typeof window.initReservationHeroSlider === 'function') {
-            window.initReservationHeroSlider();
-        }
+        this.mapHeroImage(reservationData?.hero?.images, '예약안내');
     }
 
     /**

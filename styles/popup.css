@@ -28,7 +28,8 @@
 /* Popup Content Container */
 .popup-content {
     position: relative;
-    width: 480px;
+    /* 폭은 팝업별 width(작게 290 / 기본 350 / 크게 600)로 popup.js 가 정한다. 아래는 기본값 */
+    width: 350px;
     max-width: 90vw;
     max-height: 85vh;
     background: var(--color-primary, #fff);
@@ -75,23 +76,55 @@
     color: inherit;
 }
 
-/* Popup Image Container */
-.popup-image {
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Popup Image — <img> 로 렌더링해 원본 비율 유지(잘림 없음), 박스 폭 100% */
+.popup-image-wrap {
     position: relative;
+    width: 100%;
+}
+
+.popup-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* 영상 (음소거 자동재생·반복). 크기 규칙은 이미지와 같다
+   슬라이더 높이와 영상 비율이 달라 남는 위아래 여백은 하단 바(.popup-footer)와 같은 색으로 채운다 */
+.popup-video {
+    background: var(--color-primary, #fff);
+}
+
+/* 영상 재생/정지 버튼 (텍스트 오버레이보다 위) */
+.popup-video-toggle {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.popup-video-toggle:hover {
+    background: rgba(0, 0, 0, 0.7);
 }
 
 /* Popup Text Content */
 .popup-text-content {
-    position: relative;
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
     z-index: 1;
     padding: 30px;
     text-align: center;
@@ -202,10 +235,16 @@
     transform: scale(1);
 }
 
+.popup-slide .popup-image-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+/* 슬라이더 높이는 첫 이미지 비율로 고정되므로 나머지 이미지는 잘리지 않게 안에 맞춘다 */
 .popup-slide .popup-image {
     width: 100%;
     height: 100%;
-    aspect-ratio: unset;
+    object-fit: contain;
 }
 
 /* Arrow Navigation */

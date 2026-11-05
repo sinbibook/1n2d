@@ -581,6 +581,11 @@
     margin: 0 auto 50px auto;
 }
 
+/* Room Information 섹션 미노출 시, 사라진 만큼의 하단 여백(80px top + 100px bottom)을 amenities에 보정 */
+.room-amenities-section.room-info-hidden {
+    padding-bottom: 180px;
+}
+
 .amenities-grid {
     display: flex;
     flex-wrap: wrap;
@@ -779,6 +784,18 @@
     flex: 1 !important;
     min-width: 200px !important;
     box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* 이미지 1장일 때: 아코디언 없이 풀 이미지로 표시 */
+.room-gallery-container.gallery-single .gallery-item {
+    flex: 1 1 100% !important;
+    min-width: 0 !important;
+    cursor: default;
+}
+
+.room-gallery-container.gallery-single .gallery-item .gallery-item-overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
 }
 
 /* Room Gallery Images - 줌 효과 제거 */
