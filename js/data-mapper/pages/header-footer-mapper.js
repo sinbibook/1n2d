@@ -447,24 +447,32 @@ class HeaderFooterMapper extends BaseDataMapper {
 
     /**
      * 농어촌민박사업자 이미지 매핑 (로고 아래, 전화번호 위)
-     * customFields.footer.ruralStayMark → [data-footer-rural-stay-mark]
+     * customFields.footer.ruralStayMarks (최대 두 장, 단일 ruralStayMark 호환) → [data-footer-rural-stay-mark]
      * 이미지가 있을 때만 노출하고, 없으면 숨겨 기존 푸터와 같다.
      * 프리뷰는 같은 페이지에서 다시 매핑하므로 매번 표시 상태를 되돌린다.
      */
     mapRuralStayMark() {
-        const mark = this.safeGet(this.data, 'homepage.customFields.footer.ruralStayMark');
-        const markUrl = mark && mark.url ? String(mark.url) : '';
+        const footer = this.safeGet(this.data, 'homepage.customFields.footer') || {};
+        const marks = Array.isArray(footer.ruralStayMarks)
+            ? footer.ruralStayMarks.slice(0, 2)
+            : [footer.ruralStayMark];
+        const count = marks.filter(mark => mark && mark.url).length;
 
         document.querySelectorAll('[data-footer-rural-stay-mark-wrap]').forEach(wrap => {
-            wrap.style.display = markUrl ? '' : 'none';
-        });
-        document.querySelectorAll('[data-footer-rural-stay-mark]').forEach(img => {
-            if (!markUrl) {
-                img.removeAttribute('src');
-                return;
-            }
-            img.src = markUrl;
-            img.alt = (mark.description && String(mark.description).trim()) || '농어촌민박사업자';
+            wrap.style.display = count ? '' : 'none';
+            wrap.querySelectorAll('[data-footer-rural-stay-mark]').forEach((img, index) => {
+                const mark = marks[index];
+                const url = mark && mark.url ? String(mark.url) : '';
+                img.style.display = url ? 'inline-block' : 'none';
+                img.style.maxWidth = count > 1 ? 'calc((100% - 12px) / 2)' : '';
+                img.style.marginLeft = index && url && marks[0] && marks[0].url ? '12px' : '';
+                if (!url) {
+                    img.removeAttribute('src');
+                    return;
+                }
+                img.src = url;
+                img.alt = (mark.description && String(mark.description).trim()) || '농어촌민박사업자';
+            });
         });
     }
 
@@ -474,8 +482,6 @@ class HeaderFooterMapper extends BaseDataMapper {
     mapFooterInfo() {
         if (!this.isDataLoaded || !this.data.property) return;
 
-        // 농어촌민박사업자 이미지 - businessInfo 가 없어도 노출 여부는 매번 갱신한다
-        this.mapRuralStayMark();
 
         const property = this.data.property;
         const businessInfo = property.businessInfo;
@@ -664,6 +670,26 @@ class HeaderFooterMapper extends BaseDataMapper {
         }
     }
 
+    /** 푸터 실시간 달력: HTTP(S) 링크만 새 탭으로 연결하고 없으면 숨긴다. */
+    mapFooterCalendar() {
+        const raw = this.safeGet(this.data, 'homepage.customFields.footer.calendarUrl');
+        const value = typeof raw === 'string' ? raw.trim() : '';
+        let valid = false;
+        if (/^https?:\/\//i.test(value)) {
+            try {
+                const parsed = new URL(value);
+                valid = (parsed.protocol === 'http:' || parsed.protocol === 'https:') && !!parsed.hostname;
+            } catch (error) {
+                valid = false;
+            }
+        }
+        document.querySelectorAll('[data-footer-calendar-link]').forEach(link => {
+            link.style.display = valid ? '' : 'none';
+            if (valid) link.setAttribute('href', value);
+            else link.removeAttribute('href');
+        });
+    }
+
     /**
      * Footer 전체 매핑 실행
      */
@@ -671,6 +697,9 @@ class HeaderFooterMapper extends BaseDataMapper {
         if (!this.isDataLoaded) {
             return;
         }
+
+        this.mapRuralStayMark();
+        this.mapFooterCalendar();
 
         // Footer 매핑
         this.mapFooterLogo();

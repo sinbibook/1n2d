@@ -534,3 +534,28 @@
         order: 2;
     }
 }
+
+/* 실시간 달력: 이 푸터의 글꼴·사업자 정보 텍스트 크기와 색을 따른다. */
+[data-footer-calendar-link][data-footer-calendar-link] {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+    color: #333;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin: 8px 0;
+    text-decoration: none;
+}
+[data-footer-calendar-link]:hover { opacity: 0.8; }
+[data-footer-calendar-link]:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+@media (max-width: 767px) {
+    [data-footer-calendar-link][data-footer-calendar-link] { font-size: 12px; }
+}

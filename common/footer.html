@@ -30,11 +30,13 @@
                         <div class="footer-logo">
                             <img data-footer-logo src="" alt="" class="footer-logo-img">
                         </div>
-                        <!-- data-* 속성 : data-footer-rural-stay-mark-wrap (customFields.footer.ruralStayMark 가 있을 때만 노출, 기본 숨김)
+                        <!-- data-* 속성 : data-footer-rural-stay-mark-wrap (customFields.footer.ruralStayMarks (최대 두 장, 단일 ruralStayMark 호환)가 있을 때만 노출, 기본 숨김)
                              data-footer-rural-stay-mark : 농어촌민박사업자 이미지 (표시마크 + 신고번호, alt = description) -->
                         <div class="footer-rural-stay-mark-wrap" data-footer-rural-stay-mark-wrap style="display: none;">
                             <img class="footer-rural-stay-mark" src="" alt="농어촌민박사업자" data-footer-rural-stay-mark>
+                            <img class="footer-rural-stay-mark" src="" alt="농어촌민박사업자" data-footer-rural-stay-mark>
                         </div>
+                        <a href="#" target="_blank" rel="noopener noreferrer" data-footer-calendar-link style="display: none;">실시간 달력</a>
                         <!-- 연락처 정보 -->
                         <div class="footer-contact-info">
                             <!-- 전화번호 : property.contactPhone 매핑 -->
