@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.105.0",
-    "generatedAt": "2026-11-05T07:54:28.005806813Z",
+    "version": "1.106.0",
+    "generatedAt": "2026-11-16T09:59:58.926971700Z",
     "templateType": "full_banner_accordion",
     "propertyId": "849d159f-fa84-412d-ab12-19ffb2ae06d9",
     "homepageId": "69d6ee66-68e7-4519-a8d5-8834bbabed7b"
@@ -2690,7 +2690,7 @@
     {
       "id": "94863de8-b79b-430e-80f2-f778cf399b81",
       "name": "패밀리B205(취사가능)",
-      "description": "원룸형, 거실1+침대룸(퀸침대2)+주방1+화장실1\r\n20평\r\n욕실용품,남녀공용,TV,금연,냉장고,에어컨,OTT,샴푸,린스,바디워시,드라이기,전자레인지,가족실",
+      "description": "분리형, 거실1+침대룸(퀸침대2)+주방1+화장실1\r\n20평\r\n욕실용품,남녀공용,TV,금연,냉장고,에어컨,OTT,샴푸,린스,바디워시,드라이기,전자레인지,가족실",
       "roomInfo": "침실분리형 : 거실 겸 주방+침대룸A(퀸1)+화장실1\n※ 애견동반 불가\n※ 취사 가능 \n※ 위 내용으로 취소 환불은 어렵습니다.\n\n[인원추가(1박기준/현장결제)]\n기준인원 초과 시 인원추가요금 발생\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "usageGuide": "침실분리형 : 거실 겸 주방+침대룸A(퀸1)+화장실1\r\n※ 객실 내 취사불가, 공용취사장 이용\r\n※ 애견동반 불가\r\n※ 위 내용으로 취소 환불은 어렵습니다.\r\n\r\n[인원추가(1박기준/현장결제)]\r\n기준인원 초과 시 인원추가요금 발생\r\n- 추가요금(1박기준/현장결제) : 만 13세 이상 1인  20,000원 / 만 12세 이하 1인10,000원",
       "group": "패밀리B205(취사X)",
@@ -2740,7 +2740,7 @@
       ],
       "roomViews": [ ],
       "roomStructures": [
-        "원룸형"
+        "분리형"
       ],
       "status": "active",
       "timeSettings": {
@@ -2758,7 +2758,7 @@
         {
           "thumbnail": [
             {
-              "id": "01a1aaae-f27a-71e5-b766-fdda88f507a2",
+              "id": "01a1e3cb-0296-76e8-bc71-0e1085288e77",
               "url": "https://bookingplay-media.s3.amazonaws.com/room_images/2026/08/07/ha3v5PHT6RLF.jpg",
               "sortOrder": 5,
               "description": "",
@@ -2768,7 +2768,7 @@
           ],
           "interior": [
             {
-              "id": "01a1aaae-f27a-726d-9bc4-6acb8b9d8b36",
+              "id": "01a1e3cb-0296-7d17-b5d0-386d85b79a2e",
               "url": "https://bookingplay-media.s3.amazonaws.com/room_images/2026/08/07/H2qpFB8uvaeI.jpg",
               "sortOrder": 6,
               "description": "",
@@ -2776,7 +2776,7 @@
               "blockId": null
             },
             {
-              "id": "01a1aaae-f27a-72d8-b63c-c3a6993ee3e6",
+              "id": "01a1e3cb-0296-7eb7-a6f8-47ac76442d20",
               "url": "https://bookingplay-media.s3.amazonaws.com/room_images/2026/08/07/HveGBjPgi9SU.jpg",
               "sortOrder": 7,
               "description": "",
@@ -2784,7 +2784,7 @@
               "blockId": null
             },
             {
-              "id": "01a1aaae-f27a-73aa-9fb7-d896a9fc1f74",
+              "id": "01a1e3cb-0296-7feb-9332-759f3e14cd6a",
               "url": "https://bookingplay-media.s3.amazonaws.com/room_images/2026/08/07/itJ39uDLMB4Z.jpg",
               "sortOrder": 8,
               "description": "",
@@ -2792,7 +2792,7 @@
               "blockId": null
             },
             {
-              "id": "01a1aaae-f27a-740d-94f6-3d4f54e980fc",
+              "id": "01a1e3cb-0297-70f1-8c1a-fc6c41b88b0b",
               "url": "https://bookingplay-media.s3.amazonaws.com/room_images/2026/08/07/XlVh2BLz915C.jpg",
               "sortOrder": 10,
               "description": "",
@@ -2800,7 +2800,7 @@
               "blockId": null
             },
             {
-              "id": "01a1aaae-f27a-745b-aef4-4012e3aeb7c3",
+              "id": "01a1e3cb-0297-7241-af7c-35d8167188f3",
               "url": "https://bookingplay-media.s3.amazonaws.com/room_images/2026/08/07/0vbhKpgJZO9r.jpg",
               "sortOrder": 11,
               "description": "",
@@ -2808,7 +2808,7 @@
               "blockId": null
             },
             {
-              "id": "01a1aaae-f27a-74e9-9574-98af808a4c8f",
+              "id": "01a1e3cb-0297-7372-a474-cdfde948dfa8",
               "url": "https://bookingplay-media.s3.amazonaws.com/room_images/2026/08/07/QrvaTzun3VJI.jpg",
               "sortOrder": 12,
               "description": "",
@@ -2816,7 +2816,7 @@
               "blockId": null
             },
             {
-              "id": "01a1aaae-f27a-756e-97f4-83af0e245d61",
+              "id": "01a1e3cb-0297-7548-ad4f-4b5f3fd6b9e2",
               "url": "https://bookingplay-media.s3.amazonaws.com/room_images/2026/08/07/4ZbsmcWM86PJ.jpg",
               "sortOrder": 13,
               "description": "",
@@ -2824,7 +2824,7 @@
               "blockId": null
             },
             {
-              "id": "01a1aaae-f27a-759a-9e65-26a059e33156",
+              "id": "01a1e3cb-0297-75eb-a19a-bfc573976d6d",
               "url": "https://bookingplay-media.s3.amazonaws.com/room_images/2026/08/07/EYkRHx5uDC9F.jpg",
               "sortOrder": 14,
               "description": "",
@@ -2832,7 +2832,7 @@
               "blockId": null
             },
             {
-              "id": "01a1aaae-f27a-75db-8b8f-310200cdfc0b",
+              "id": "01a1e3cb-0297-7706-8529-04a7bcac66f1",
               "url": "https://bookingplay-media.s3.amazonaws.com/room_images/2026/08/07/GvicmVEB83Ol.jpg",
               "sortOrder": 15,
               "description": "",
@@ -2840,7 +2840,7 @@
               "blockId": null
             },
             {
-              "id": "01a1aaae-f27a-7610-a8d0-d889146668e3",
+              "id": "01a1e3cb-0297-7790-b4d3-0f732e2e36a6",
               "url": "https://bookingplay-media.s3.amazonaws.com/room_images/2026/08/07/KRTou5hP7dym.jpg",
               "sortOrder": 16,
               "description": "",
@@ -2848,7 +2848,7 @@
               "blockId": null
             },
             {
-              "id": "01a1aaae-f27a-7640-8886-15f9bec24188",
+              "id": "01a1e3cb-0297-7811-b2ce-2bf6a401ced3",
               "url": "https://bookingplay-media.s3.amazonaws.com/room_images/2026/08/07/lVJ7zPAwr4US.jpg",
               "sortOrder": 17,
               "description": "",
@@ -6154,7 +6154,8 @@
         }
       ],
       "footer": {
-        "ruralStayMark": null
+        "ruralStayMark": null,
+        "ruralStayMarks": [ ]
       }
     }
   }
